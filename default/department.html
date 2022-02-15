@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>Project Listing | UBold - Responsive Admin Dashboard Template</title>
+        <title>Customers | UBold - Responsive Admin Dashboard Template</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
         <meta content="Coderthemes" name="author" />
@@ -10,15 +10,20 @@
         <!-- App favicon -->
         <link rel="shortcut icon" href="../assets/images/favicon.ico">
 
-        <!-- App css -->
-        <link href="../assets/css/config/default/bootstrap.min.css" rel="stylesheet" type="text/css" id="bs-default-stylesheet" />
-        <link href="../assets/css/config/default/app.min.css" rel="stylesheet" type="text/css" id="app-default-stylesheet" />
+        <!-- third party css -->
+        <link href="../assets/libs/datatables.net-bs5/css/dataTables.bootstrap5.min.css" rel="stylesheet" type="text/css" />
+        <link href="../assets/libs/datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css" rel="stylesheet" type="text/css" />
+        <!-- third party css end -->
+        
+	    <!-- App css -->
+	    <link href="../assets/css/config/default/bootstrap.min.css" rel="stylesheet" type="text/css" id="bs-default-stylesheet" />
+	    <link href="../assets/css/config/default/app.min.css" rel="stylesheet" type="text/css" id="app-default-stylesheet" />
 
-        <link href="../assets/css/config/default/bootstrap-dark.min.css" rel="stylesheet" type="text/css" id="bs-dark-stylesheet" />
-        <link href="../assets/css/config/default/app-dark.min.css" rel="stylesheet" type="text/css" id="app-dark-stylesheet" />
+	    <link href="../assets/css/config/default/bootstrap-dark.min.css" rel="stylesheet" type="text/css" id="bs-dark-stylesheet" />
+	    <link href="../assets/css/config/default/app-dark.min.css" rel="stylesheet" type="text/css" id="app-dark-stylesheet" />
 
-        <!-- icons -->
-        <link href="../assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+	    <!-- icons -->
+	    <link href="../assets/css/icons.min.css" rel="stylesheet" type="text/css" />
 
     </head>
 
@@ -537,7 +542,6 @@
             <div class="left-side-menu">
 
                 <div class="h-100" data-simplebar>
-
                     <!-- User box -->
                     <div class="user-box text-center">
                         <img src="../assets/images/users/user-1.jpg" alt="user-img" title="Mat Helme"
@@ -1323,8 +1327,10 @@
 
             <div class="content-page">
                 <div class="content">
+
                     <!-- Start Content-->
                     <div class="container-fluid">
+                        
                         <!-- start page title -->
                         <div class="row">
                             <div class="col-12">
@@ -1332,418 +1338,544 @@
                                     <div class="page-title-right">
                                         <ol class="breadcrumb m-0">
                                             <li class="breadcrumb-item"><a href="javascript: void(0);">UBold</a></li>
-                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Projects</a></li>
-                                            <li class="breadcrumb-item active">Projects List</li>
+                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Department</a></li>
+                                            <li class="breadcrumb-item active">Department</li>
                                         </ol>
                                     </div>
-                                    <h4 class="page-title">Projects List</h4>
+                                    <h4 class="page-title">Department</h4>
                                 </div>
                             </div>
                         </div>     
                         <!-- end page title --> 
-
-                        <div class="row mb-2">
-                            <div class="col-sm-4">
-                                <a href="project-create.html" class="btn btn-danger rounded-pill waves-effect waves-light mb-3"><i class="mdi mdi-plus"></i> Create Project</a>
-                            </div>
-                            <div class="col-sm-8">
-                                <div class="text-sm-end">
-                                    <div class="btn-group mb-3">
-                                        <button type="button" class="btn btn-primary">All</button>
-                                    </div>
-                                    <div class="btn-group mb-3 ms-1">
-                                        <button type="button" class="btn btn-light">Ongoing</button>
-                                        <button type="button" class="btn btn-light">Finished</button>
-                                    </div>
-                                    <div class="btn-group mb-3 ms-2 d-none d-sm-inline-block">
-                                        <button type="button" class="btn btn-dark"><i class="mdi mdi-apps"></i></button>
-                                    </div>
-                                    <div class="btn-group mb-3 d-none d-sm-inline-block">
-                                        <button type="button" class="btn btn-link text-dark"><i class="mdi mdi-format-list-bulleted-type"></i></button>
-                                    </div>
-                                </div>
-                            </div><!-- end col-->
-                        </div> 
-                        <!-- end row-->
-
-
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <div class="card project-box">
-                                    <div class="card-body">
-                                        <div class="dropdown float-end">
-                                            <a href="#" class="dropdown-toggle card-drop arrow-none" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="mdi mdi-dots-horizontal m-0 text-muted h3"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-end">
-                                                <a class="dropdown-item" href="#">Edit</a>
-                                                <a class="dropdown-item" href="#">Delete</a>
-                                                <a class="dropdown-item" href="#">Add Members</a>
-                                                <a class="dropdown-item" href="#">Add Due Date</a>
-                                            </div>
-                                        </div> <!-- end dropdown -->
-                                        <!-- Title-->
-                                        <h4 class="mt-0"><a href="singleprojectDashboard.html" class="text-dark">New Admin Design</a></h4>
-                                        <p class="text-muted text-uppercase"><i class="mdi mdi-account-circle"></i> <small>Orange Limited</small></p>
-                                        <div class="badge bg-soft-success text-success mb-3">Finished</div>
-                                        <!-- Desc-->
-                                        <p class="text-muted font-13 mb-3 sp-line-2">With supporting text below as a natural lead-in to additional contenposuere erat a
-                                            ante...<a href="javascript:void(0);" class="fw-bold text-muted">view more</a>
-                                        </p>
-                                        <!-- Task info-->
-                                        <p class="mb-1">
-                                            <span class="pe-2 text-nowrap mb-2 d-inline-block">
-                                                <i class="mdi mdi-format-list-bulleted-type text-muted"></i>
-                                                <b>78</b> Tasks
-                                            </span>
-                                            <span class="text-nowrap mb-2 d-inline-block">
-                                                <i class="mdi mdi-comment-multiple-outline text-muted"></i>
-                                                <b>214</b> Comments
-                                            </span>
-                                        </p>
-                                        <!-- Team-->
-                                        <div class="avatar-group mb-3" id="tooltips-container">
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-1.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mat Helme" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-2.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Michael Zenaty" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-3.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container" data-bs-toggle="tooltip" data-bs-placement="bottom" title="James Anderson" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-4.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mat Helme" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-5.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Username" />
-                                            </a>
-                                        </div>
-                                        <!-- Progress-->
-                                        <p class="mb-2 fw-semibold">Task completed: <span class="float-end">28/78</span></p>
-                                        <div class="progress mb-1" style="height: 7px;">
-                                            <div class="progress-bar"
-                                                 role="progressbar" aria-valuenow="34" aria-valuemin="0" aria-valuemax="100"
-                                                 style="width: 34%;">
-                                            </div><!-- /.progress-bar .progress-bar-danger -->
-                                        </div><!-- /.progress .no-rounded -->
-                                    </div>
-                                </div> <!-- end card box-->
-                            </div><!-- end col-->
-                            <div class="col-lg-4">
-                                <div class="card project-box">
-                                    <div class="card-body">
-                                        <div class="dropdown float-end">
-                                            <a href="#" class="dropdown-toggle card-drop arrow-none" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="mdi mdi-dots-horizontal m-0 text-muted h3"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-end">
-                                                <a class="dropdown-item" href="#">Edit</a>
-                                                <a class="dropdown-item" href="#">Delete</a>
-                                                <a class="dropdown-item" href="#">Add Members</a>
-                                                <a class="dropdown-item" href="#">Add Due Date</a>
-                                            </div>
-                                        </div> <!-- end dropdown -->
-                                        <!-- Title-->
-                                        <h4 class="mt-0"><a href="singleprojectDashboard.html" class="text-dark">App Design and Development</a></h4>
-                                        <p class="text-muted text-uppercase"><i class="mdi mdi-account-circle"></i> <small>Moondust Softwares</small></p>
-                                        <div class="badge bg-soft-secondary text-secondary mb-3">Ongoing</div>
-                                        <!-- Desc-->
-                                        <p class="text-muted font-13 mb-3 sp-line-2">A handful of model sentence structures, to generate Lorem Ipsum which looks reasonable...<a href="javascript:void(0);" class="fw-bold text-muted">view more</a>
-                                        </p>
-                                        <!-- Task info-->
-                                        <p class="mb-1">
-                                            <span class="pe-2 text-nowrap mb-2 d-inline-block">
-                                                <i class="mdi mdi-format-list-bulleted-type text-muted"></i>
-                                                <b>81</b> Tasks
-                                            </span>
-                                            <span class="text-nowrap mb-2 d-inline-block">
-                                                <i class="mdi mdi-comment-multiple-outline text-muted"></i>
-                                                <b>103</b> Comments
-                                            </span>
-                                        </p>
-                                        <!-- Team-->
-                                        <div class="avatar-group mb-3" id="tooltips-container1">
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-6.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container1" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mat Helme" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-7.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container1" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Michael Zenaty" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-8.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container1" data-bs-toggle="tooltip" data-bs-placement="bottom" title="James Anderson" />
-                                            </a>
-                                        </div>
-                                        <!-- Progress-->
-                                        <p class="mb-2 fw-semibold">Task completed: <span class="float-end">55/85</span></p>
-                                        <div class="progress mb-1" style="height: 7px;">
-                                            <div class="progress-bar"
-                                                 role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
-                                                 style="width: 80%;">
-                                            </div><!-- /.progress-bar .progress-bar-danger -->
-                                        </div><!-- /.progress .no-rounded -->
-                                    </div>
-                                </div> <!-- end card box-->
-                            </div><!-- end col-->
-                            <div class="col-lg-4">
-                                <div class="card project-box">
-                                    <div class="card-body">
-                                        <div class="dropdown float-end">
-                                            <a href="#" class="dropdown-toggle card-drop arrow-none" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="mdi mdi-dots-horizontal m-0 text-muted h3"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-end">
-                                                <a class="dropdown-item" href="#">Edit</a>
-                                                <a class="dropdown-item" href="#">Delete</a>
-                                                <a class="dropdown-item" href="#">Add Members</a>
-                                                <a class="dropdown-item" href="#">Add Due Date</a>
-                                            </div>
-                                        </div> <!-- end dropdown -->
-                                        <!-- Title-->
-                                        <h4 class="mt-0"><a href="singleprojectDashboard.html" class="text-dark">Landing page Design</a></h4>
-                                        <p class="text-muted text-uppercase"><i class="mdi mdi-account-circle"></i> <small>Rose Technologies</small></p>
-                                        <div class="badge bg-soft-success text-success mb-3">Finished</div>
-                                        <!-- Desc-->
-                                        <p class="text-muted font-13 mb-3 sp-line-2">You need to be sure there isn't anything embarrassing hidden in the middle of text...<a href="javascript:void(0);" class="fw-bold text-muted">view more</a>
-                                        </p>
-                                        <!-- Task info-->
-                                        <p class="mb-1">
-                                            <span class="pe-2 text-nowrap mb-2 d-inline-block">
-                                                <i class="mdi mdi-format-list-bulleted-type text-muted"></i>
-                                                <b>42</b> Tasks
-                                            </span>
-                                            <span class="text-nowrap mb-2 d-inline-block">
-                                                <i class="mdi mdi-comment-multiple-outline text-muted"></i>
-                                                <b>65</b> Comments
-                                            </span>
-                                        </p>
-                                        <!-- Team-->
-                                        <div class="avatar-group mb-3" id="tooltips-container2">
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-9.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mat Helme" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-10.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Michael Zenaty" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-1.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="James Anderson" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-3.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mat Helme" />
-                                            </a>
-                                        </div>
-                                        <!-- Progress-->
-                                        <p class="mb-2 fw-semibold">Task completed: <span class="float-end">21/42</span></p>
-                                        <div class="progress mb-1" style="height: 7px;">
-                                            <div class="progress-bar"
-                                                 role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
-                                                 style="width: 50%;">
-                                            </div><!-- /.progress-bar .progress-bar-danger -->
-                                        </div><!-- /.progress .no-rounded -->
-                                    </div>
-                                </div> <!-- end card box-->
-                            </div><!-- end col-->
-
-                        </div>
-                        <!-- end row -->
-
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <div class="card project-box">
-                                    <div class="card-body">
-                                        <div class="dropdown float-end">
-                                            <a href="#" class="dropdown-toggle card-drop arrow-none" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="mdi mdi-dots-horizontal m-0 text-muted h3"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-end">
-                                                <a class="dropdown-item" href="#">Edit</a>
-                                                <a class="dropdown-item" href="#">Delete</a>
-                                                <a class="dropdown-item" href="#">Add Members</a>
-                                                <a class="dropdown-item" href="#">Add Due Date</a>
-                                            </div>
-                                        </div> <!-- end dropdown -->
-                                        <!-- Title-->
-                                        <h4 class="mt-0"><a href="singleprojectDashboard.html" class="text-dark">Custom Software Development</a></h4>
-                                        <p class="text-muted text-uppercase"><i class="mdi mdi-account-circle"></i> <small>Apple Navigations</small></p>
-                                        <div class="badge bg-soft-secondary text-secondary mb-3">Ongoing</div>
-                                        <!-- Desc-->
-                                        <p class="text-muted font-13 mb-3 sp-line-2">You need to be sure there isn't anything embarrassing hidden in the middle of text...<a href="javascript:void(0);" class="fw-bold text-muted">view more</a>
-                                        </p>
-                                        <!-- Task info-->
-                                        <p class="mb-1">
-                                            <span class="pe-2 text-nowrap mb-2 d-inline-block">
-                                                <i class="mdi mdi-format-list-bulleted-type text-muted"></i>
-                                                <b>95</b> Tasks
-                                            </span>
-                                            <span class="text-nowrap mb-2 d-inline-block">
-                                                <i class="mdi mdi-comment-multiple-outline text-muted"></i>
-                                                <b>1.3k</b> Comments
-                                            </span>
-                                        </p>
-                                        <!-- Team-->
-                                        <div class="avatar-group mb-3" id="tooltips-container3">
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-5.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container3" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mat Helme" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-8.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container3" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Michael Zenaty" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-9.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container3" data-bs-toggle="tooltip" data-bs-placement="bottom" title="James Anderson" />
-                                            </a>
-                                        </div>
-                                        <!-- Progress-->
-                                        <p class="mb-2 fw-semibold">Task completed: <span class="float-end">70/95</span></p>
-                                        <div class="progress mb-1" style="height: 7px;">
-                                            <div class="progress-bar"
-                                                 role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100"
-                                                 style="width: 68%;">
-                                            </div><!-- /.progress-bar .progress-bar-danger -->
-                                        </div><!-- /.progress .no-rounded -->
-                                    </div>
-                                </div> <!-- end card box-->
-                            </div><!-- end col-->
-
-                            <div class="col-lg-4">
-                                <div class="card project-box">
-                                    <div class="card-body">
-                                        <div class="dropdown float-end">
-                                            <a href="#" class="dropdown-toggle card-drop arrow-none" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="mdi mdi-dots-horizontal m-0 text-muted h3"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-end">
-                                                <a class="dropdown-item" href="#">Edit</a>
-                                                <a class="dropdown-item" href="#">Delete</a>
-                                                <a class="dropdown-item" href="#">Add Members</a>
-                                                <a class="dropdown-item" href="#">Add Due Date</a>
-                                            </div>
-                                        </div> <!-- end dropdown -->
-                                        <!-- Title-->
-                                        <h4 class="mt-0"><a href="singleprojectDashboard.html" class="text-dark">Website Redesign</a></h4>
-                                        <p class="text-muted text-uppercase"><i class="mdi mdi-account-circle"></i> <small>Enigma Navigations</small></p>
-                                        <div class="badge bg-soft-secondary text-secondary mb-3">Ongoing</div>
-                                        <!-- Desc-->
-                                        <p class="text-muted font-13 mb-3 sp-line-2">There are many variations of passages of Lorem Ipsum available natural lead-in to additional...<a href="javascript:void(0);" class="fw-bold text-muted">view more</a>
-                                        </p>
-                                        <!-- Task info-->
-                                        <p class="mb-1">
-                                            <span class="pe-2 text-nowrap mb-2 d-inline-block">
-                                                <i class="mdi mdi-format-list-bulleted-type text-muted"></i>
-                                                <b>36</b> Tasks
-                                            </span>
-                                            <span class="text-nowrap mb-2 d-inline-block">
-                                                <i class="mdi mdi-comment-multiple-outline text-muted"></i>
-                                                <b>78</b> Comments
-                                            </span>
-                                        </p>
-                                        <!-- Team-->
-                                        <div class="avatar-group mb-3" id="tooltips-container4">
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-3.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container4" data-bs-toggle="tooltip" data-bs-placement="bottom" title="James Anderson" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-4.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container4" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mat Helme" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-5.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container4" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Username" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-1.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container4" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mat Helme" />
-                                            </a>
-                                        </div>
-                                        <!-- Progress-->
-                                        <p class="mb-2 fw-semibold">Task completed: <span class="float-end">12/36</span></p>
-                                        <div class="progress mb-1" style="height: 7px;">
-                                            <div class="progress-bar"
-                                                 role="progressbar" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100"
-                                                 style="width: 33%;">
-                                            </div><!-- /.progress-bar .progress-bar-danger -->
-                                        </div><!-- /.progress .no-rounded -->
-                                    </div>
-                                </div> <!-- end card box-->
-                            </div><!-- end col-->
-
-                            <div class="col-lg-4">
-                                <div class="card project-box">
-                                    <div class="card-body">
-                                        <div class="dropdown float-end">
-                                            <a href="#" class="dropdown-toggle card-drop arrow-none" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="mdi mdi-dots-horizontal m-0 text-muted h3"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-end">
-                                                <a class="dropdown-item" href="#">Edit</a>
-                                                <a class="dropdown-item" href="#">Delete</a>
-                                                <a class="dropdown-item" href="#">Add Members</a>
-                                                <a class="dropdown-item" href="#">Add Due Date</a>
-                                            </div>
-                                        </div> <!-- end dropdown -->
-                                        <!-- Title-->
-                                        <h4 class="mt-0"><a href="project-detail.html" class="text-dark">Multipurpose Landing Template</a></h4>
-                                        <p class="text-muted text-uppercase"><i class="mdi mdi-account-circle"></i> <small>Pride Softwares</small></p>
-                                        <div class="badge bg-soft-success text-success mb-3">Finished</div>
-                                        <!-- Desc-->
-                                        <p class="text-muted font-13 mb-3 sp-line-2">With supporting text below as a natural lead-in to additional contenposuere erat a
-                                            ante...<a href="javascript:void(0);" class="fw-bold text-muted">view more</a>
-                                        </p>
-                                        <!-- Task info-->
-                                        <p class="mb-1">
-                                            <span class="pe-2 text-nowrap mb-2 d-inline-block">
-                                                <i class="mdi mdi-format-list-bulleted-type text-muted"></i>
-                                                <b>30</b> Tasks
-                                            </span>
-                                            <span class="text-nowrap mb-2 d-inline-block">
-                                                <i class="mdi mdi-comment-multiple-outline text-muted"></i>
-                                                <b>148</b> Comments
-                                            </span>
-                                        </p>
-                                        <!-- Team-->
-                                        <div class="avatar-group mb-3" id="tooltips-container5">
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-6.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container5" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mat Helme" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-7.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container5" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Michael Zenaty" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-8.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container5" data-bs-toggle="tooltip" data-bs-placement="bottom" title="James Anderson" />
-                                            </a>
-                                        </div>
-                                        <!-- Progress-->
-                                        <p class="mb-2 fw-semibold">Task completed: <span class="float-end">28/30</span></p>
-                                        <div class="progress mb-1" style="height: 7px;">
-                                            <div class="progress-bar"
-                                                 role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"
-                                                 style="width: 95%;">
-                                            </div><!-- /.progress-bar .progress-bar-danger -->
-                                        </div><!-- /.progress .no-rounded -->
-                                    </div>
-                                </div> <!-- end card box-->
-                            </div><!-- end col-->
-                        </div>
-                        <!-- end row -->
-
                         <div class="row">
                             <div class="col-12">
-                                <div class="text-center mb-3">
-                                    <a href="javascript:void(0);" class="text-danger"><i class="mdi mdi-spin mdi-loading me-1"></i> Load more </a>
-                                </div>
-                            </div> <!-- end col-->
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="row mb-2">
+                                            <div class="col-sm-4">
+                                                <button type="button" class="btn btn-danger waves-effect waves-light" data-bs-toggle="modal" data-bs-target="#custom-modal"><i class="mdi mdi-plus-circle me-1"></i> Add Department Head</button>
+                                            </div>
+                                            <div class="col-sm-8">
+                                                <div class="text-sm-end mt-2 mt-sm-0">
+                                                    <button type="button" class="btn btn-success mb-2 me-1"><i class="mdi mdi-cog"></i></button>
+                                                    <button type="button" class="btn btn-light mb-2 me-1">Import</button>
+                                                    <button type="button" class="btn btn-light mb-2">Export</button>
+                                                </div>
+                                            </div><!-- end col-->
+                                        </div>
+                
+                                        <div class="table-responsive">
+                                            <table class="table table-centered table-nowrap table-striped" id="products-datatable">
+                                                <thead>
+                                                    <tr class="text-center">
+                                                        <th style="width: 20px;">
+                                                            <div class="form-check">
+                                                                <input type="checkbox" class="form-check-input" id="customCheck1">
+                                                                <label class="form-check-label" for="customCheck1">&nbsp;</label>
+                                                            </div>
+                                                        </th>
+                                                        <th>ID</th>
+                                                        <th>Department</th>
+                                                        <th>Department Head</th>
+                                                        <th>Underwork</th>
+                                                        <th>Contact</th>
+                                                        <th>Status</th>
+                                                        <th style="width: 85px;">Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="text-center">
+                                                        <td>
+                                                            <div class="form-check">
+                                                                <input type="checkbox" class="form-check-input" id="customCheck2">
+                                                                <label class="form-check-label" for="customCheck2">&nbsp;</label>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <span> EIT012 </span>
+                                                        </td>
+                                                        <td>                                               
+                                                           UI/UX
+                                                        </td>
+                                                        <td class="table-user">
+                                                            <img src="../assets/images/users/user-4.jpg" alt="table-user" class="me-2 rounded-circle">
+                                                            <a href="javascript:void(0);" class="text-body fw-semibold">Robert Huk</a>
+                                                        </td>
+                                                        <td>
+                                                            2
+                                                        </td>
+                                                        <td>
+                                                            <span>0123456789</span>
+                                                        </td>
+                                                        <td>
+                                                            <span class="badge bg-soft-success text-success">Active</span>
+                                                        </td>
+                    
+                                                        <td>
+                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
+                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="text-center">
+                                                        <td>
+                                                            <div class="form-check">
+                                                                <input type="checkbox" class="form-check-input" id="customCheck2">
+                                                                <label class="form-check-label" for="customCheck2">&nbsp;</label>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <span> EIT010 </span>
+                                                        </td>
+                                                        <td>                                               
+                                                           Front End
+                                                        </td>
+                                                        <td class="table-user">
+                                                            <img src="../assets/images/users/user-3.jpg" alt="table-user" class="me-2 rounded-circle">
+                                                            <a href="javascript:void(0);" class="text-body fw-semibold">Paul J. Friend</a>
+                                                        </td>
+                                                        <td>
+                                                            7
+                                                        </td>
+                                                        <td>
+                                                            <span>0123456789</span>
+                                                        </td>
+                                                        <td>
+                                                            <span class="badge bg-soft-success text-success">Active</span>
+                                                        </td>
+                    
+                                                        <td>
+                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
+                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="text-center">
+                                                        <td>
+                                                            <div class="form-check">
+                                                                <input type="checkbox" class="form-check-input" id="customCheck2">
+                                                                <label class="form-check-label" for="customCheck2">&nbsp;</label>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <span> EIT010 </span>
+                                                        </td>
+                                                        <td>                                               
+                                                           Back End
+                                                        </td>
+                                                        <td class="table-user">
+                                                            <img src="../assets/images/users/user-2.jpg" alt="table-user" class="me-2 rounded-circle">
+                                                            <a href="javascript:void(0);" class="text-body fw-semibold">Joe Biden</a>
+                                                        </td>
+                                                        <td>
+                                                            19
+                                                        </td>
+                                                        <td>
+                                                            <span>0123456789</span>
+                                                        </td>
+                                                        <td>
+                                                            <span class="badge bg-soft-success text-success">Active</span>
+                                                        </td>
+                    
+                                                        <td>
+                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
+                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="text-center">
+                                                        <td>
+                                                            <div class="form-check">
+                                                                <input type="checkbox" class="form-check-input" id="customCheck2">
+                                                                <label class="form-check-label" for="customCheck2">&nbsp;</label>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <span> EIT012 </span>
+                                                        </td>
+                                                        <td>                                               
+                                                           UI/UX
+                                                        </td>
+                                                        <td class="table-user">
+                                                            <img src="../assets/images/users/user-4.jpg" alt="table-user" class="me-2 rounded-circle">
+                                                            <a href="javascript:void(0);" class="text-body fw-semibold">Robert Huk</a>
+                                                        </td>
+                                                        <td>
+                                                            2
+                                                        </td>
+                                                        <td>
+                                                            <span>0123456789</span>
+                                                        </td>
+                                                        <td>
+                                                            <span class="badge bg-soft-success text-success">Active</span>
+                                                        </td>
+                    
+                                                        <td>
+                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
+                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="text-center">
+                                                        <td>
+                                                            <div class="form-check">
+                                                                <input type="checkbox" class="form-check-input" id="customCheck2">
+                                                                <label class="form-check-label" for="customCheck2">&nbsp;</label>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <span> EIT010 </span>
+                                                        </td>
+                                                        <td>                                               
+                                                           Front End
+                                                        </td>
+                                                        <td class="table-user">
+                                                            <img src="../assets/images/users/user-3.jpg" alt="table-user" class="me-2 rounded-circle">
+                                                            <a href="javascript:void(0);" class="text-body fw-semibold">Paul J. Friend</a>
+                                                        </td>
+                                                        <td>
+                                                            7
+                                                        </td>
+                                                        <td>
+                                                            <span>0123456789</span>
+                                                        </td>
+                                                        <td>
+                                                            <span class="badge bg-soft-success text-success">Active</span>
+                                                        </td>
+                    
+                                                        <td>
+                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
+                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="text-center">
+                                                        <td>
+                                                            <div class="form-check">
+                                                                <input type="checkbox" class="form-check-input" id="customCheck2">
+                                                                <label class="form-check-label" for="customCheck2">&nbsp;</label>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <span> EIT010 </span>
+                                                        </td>
+                                                        <td>                                               
+                                                           Back End
+                                                        </td>
+                                                        <td class="table-user">
+                                                            <img src="../assets/images/users/user-2.jpg" alt="table-user" class="me-2 rounded-circle">
+                                                            <a href="javascript:void(0);" class="text-body fw-semibold">Joe Biden</a>
+                                                        </td>
+                                                        <td>
+                                                            19
+                                                        </td>
+                                                        <td>
+                                                            <span>0123456789</span>
+                                                        </td>
+                                                        <td>
+                                                            <span class="badge bg-soft-success text-success">Active</span>
+                                                        </td>
+                    
+                                                        <td>
+                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
+                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="text-center">
+                                                        <td>
+                                                            <div class="form-check">
+                                                                <input type="checkbox" class="form-check-input" id="customCheck2">
+                                                                <label class="form-check-label" for="customCheck2">&nbsp;</label>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <span> EIT012 </span>
+                                                        </td>
+                                                        <td>                                               
+                                                           UI/UX
+                                                        </td>
+                                                        <td class="table-user">
+                                                            <img src="../assets/images/users/user-4.jpg" alt="table-user" class="me-2 rounded-circle">
+                                                            <a href="javascript:void(0);" class="text-body fw-semibold">Robert Huk</a>
+                                                        </td>
+                                                        <td>
+                                                            2
+                                                        </td>
+                                                        <td>
+                                                            <span>0123456789</span>
+                                                        </td>
+                                                        <td>
+                                                            <span class="badge bg-soft-success text-success">Active</span>
+                                                        </td>
+                    
+                                                        <td>
+                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
+                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="text-center">
+                                                        <td>
+                                                            <div class="form-check">
+                                                                <input type="checkbox" class="form-check-input" id="customCheck2">
+                                                                <label class="form-check-label" for="customCheck2">&nbsp;</label>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <span> EIT010 </span>
+                                                        </td>
+                                                        <td>                                               
+                                                           Front End
+                                                        </td>
+                                                        <td class="table-user">
+                                                            <img src="../assets/images/users/user-3.jpg" alt="table-user" class="me-2 rounded-circle">
+                                                            <a href="javascript:void(0);" class="text-body fw-semibold">Paul J. Friend</a>
+                                                        </td>
+                                                        <td>
+                                                            7
+                                                        </td>
+                                                        <td>
+                                                            <span>0123456789</span>
+                                                        </td>
+                                                        <td>
+                                                            <span class="badge bg-soft-success text-success">Active</span>
+                                                        </td>
+                    
+                                                        <td>
+                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
+                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="text-center">
+                                                        <td>
+                                                            <div class="form-check">
+                                                                <input type="checkbox" class="form-check-input" id="customCheck2">
+                                                                <label class="form-check-label" for="customCheck2">&nbsp;</label>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <span> EIT010 </span>
+                                                        </td>
+                                                        <td>                                               
+                                                           Back End
+                                                        </td>
+                                                        <td class="table-user">
+                                                            <img src="../assets/images/users/user-2.jpg" alt="table-user" class="me-2 rounded-circle">
+                                                            <a href="javascript:void(0);" class="text-body fw-semibold">Joe Biden</a>
+                                                        </td>
+                                                        <td>
+                                                            19
+                                                        </td>
+                                                        <td>
+                                                            <span>0123456789</span>
+                                                        </td>
+                                                        <td>
+                                                            <span class="badge bg-soft-success text-success">Active</span>
+                                                        </td>
+                    
+                                                        <td>
+                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
+                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="text-center">
+                                                        <td>
+                                                            <div class="form-check">
+                                                                <input type="checkbox" class="form-check-input" id="customCheck2">
+                                                                <label class="form-check-label" for="customCheck2">&nbsp;</label>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <span> EIT012 </span>
+                                                        </td>
+                                                        <td>                                               
+                                                           UI/UX
+                                                        </td>
+                                                        <td class="table-user">
+                                                            <img src="../assets/images/users/user-4.jpg" alt="table-user" class="me-2 rounded-circle">
+                                                            <a href="javascript:void(0);" class="text-body fw-semibold">Robert Huk</a>
+                                                        </td>
+                                                        <td>
+                                                            2
+                                                        </td>
+                                                        <td>
+                                                            <span>0123456789</span>
+                                                        </td>
+                                                        <td>
+                                                            <span class="badge bg-soft-success text-success">Active</span>
+                                                        </td>
+                    
+                                                        <td>
+                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
+                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="text-center">
+                                                        <td>
+                                                            <div class="form-check">
+                                                                <input type="checkbox" class="form-check-input" id="customCheck2">
+                                                                <label class="form-check-label" for="customCheck2">&nbsp;</label>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <span> EIT010 </span>
+                                                        </td>
+                                                        <td>                                               
+                                                           Front End
+                                                        </td>
+                                                        <td class="table-user">
+                                                            <img src="../assets/images/users/user-3.jpg" alt="table-user" class="me-2 rounded-circle">
+                                                            <a href="javascript:void(0);" class="text-body fw-semibold">Paul J. Friend</a>
+                                                        </td>
+                                                        <td>
+                                                            7
+                                                        </td>
+                                                        <td>
+                                                            <span>0123456789</span>
+                                                        </td>
+                                                        <td>
+                                                            <span class="badge bg-soft-success text-success">Active</span>
+                                                        </td>
+                    
+                                                        <td>
+                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
+                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="text-center">
+                                                        <td>
+                                                            <div class="form-check">
+                                                                <input type="checkbox" class="form-check-input" id="customCheck2">
+                                                                <label class="form-check-label" for="customCheck2">&nbsp;</label>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <span> EIT010 </span>
+                                                        </td>
+                                                        <td>                                               
+                                                           Back End
+                                                        </td>
+                                                        <td class="table-user">
+                                                            <img src="../assets/images/users/user-2.jpg" alt="table-user" class="me-2 rounded-circle">
+                                                            <a href="javascript:void(0);" class="text-body fw-semibold">Joe Biden</a>
+                                                        </td>
+                                                        <td>
+                                                            19
+                                                        </td>
+                                                        <td>
+                                                            <span>0123456789</span>
+                                                        </td>
+                                                        <td>
+                                                            <span class="badge bg-soft-success text-success">Active</span>
+                                                        </td>
+                    
+                                                        <td>
+                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
+                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="text-center">
+                                                        <td>
+                                                            <div class="form-check">
+                                                                <input type="checkbox" class="form-check-input" id="customCheck2">
+                                                                <label class="form-check-label" for="customCheck2">&nbsp;</label>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <span> EIT012 </span>
+                                                        </td>
+                                                        <td>                                               
+                                                           UI/UX
+                                                        </td>
+                                                        <td class="table-user">
+                                                            <img src="../assets/images/users/user-4.jpg" alt="table-user" class="me-2 rounded-circle">
+                                                            <a href="javascript:void(0);" class="text-body fw-semibold">Robert Huk</a>
+                                                        </td>
+                                                        <td>
+                                                            2
+                                                        </td>
+                                                        <td>
+                                                            <span>0123456789</span>
+                                                        </td>
+                                                        <td>
+                                                            <span class="badge bg-soft-success text-success">Active</span>
+                                                        </td>
+                    
+                                                        <td>
+                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
+                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="text-center">
+                                                        <td>
+                                                            <div class="form-check">
+                                                                <input type="checkbox" class="form-check-input" id="customCheck2">
+                                                                <label class="form-check-label" for="customCheck2">&nbsp;</label>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <span> EIT010 </span>
+                                                        </td>
+                                                        <td>                                               
+                                                           Front End
+                                                        </td>
+                                                        <td class="table-user">
+                                                            <img src="../assets/images/users/user-3.jpg" alt="table-user" class="me-2 rounded-circle">
+                                                            <a href="javascript:void(0);" class="text-body fw-semibold">Paul J. Friend</a>
+                                                        </td>
+                                                        <td>
+                                                            7
+                                                        </td>
+                                                        <td>
+                                                            <span>0123456789</span>
+                                                        </td>
+                                                        <td>
+                                                            <span class="badge bg-soft-success text-success">Active</span>
+                                                        </td>
+                    
+                                                        <td>
+                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
+                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="text-center">
+                                                        <td>
+                                                            <div class="form-check">
+                                                                <input type="checkbox" class="form-check-input" id="customCheck2">
+                                                                <label class="form-check-label" for="customCheck2">&nbsp;</label>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <span> EIT010 </span>
+                                                        </td>
+                                                        <td>                                               
+                                                           Back End
+                                                        </td>
+                                                        <td class="table-user">
+                                                            <img src="../assets/images/users/user-2.jpg" alt="table-user" class="me-2 rounded-circle">
+                                                            <a href="javascript:void(0);" class="text-body fw-semibold">Joe Biden</a>
+                                                        </td>
+                                                        <td>
+                                                            19
+                                                        </td>
+                                                        <td>
+                                                            <span>0123456789</span>
+                                                        </td>
+                                                        <td>
+                                                            <span class="badge bg-soft-success text-success">Active</span>
+                                                        </td>
+                    
+                                                        <td>
+                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
+                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                    
+
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+                                   
+
+                                    </div> <!-- end card-body-->
+                                </div> <!-- end card-->
+                            </div> <!-- end col -->
                         </div>
                         <!-- end row -->
                         
@@ -2179,8 +2311,57 @@
         <!-- Right bar overlay-->
         <div class="rightbar-overlay"></div>
 
+
+            <!-- Modal -->
+            <div class="modal fade" id="custom-modal" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header bg-light">
+                            <h4 class="modal-title" id="myCenterModalLabel">Add New Customers</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true"></button>
+                        </div>
+                        <div class="modal-body p-4">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Full Name</label>
+                                    <input type="text" class="form-control" id="name" placeholder="Enter full name">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="position" class="form-label">Phone</label>
+                                    <input type="text" class="form-control" id="position" placeholder="Enter phone number">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="category" class="form-label">Location</label>
+                                    <input type="text" class="form-control" id="category" placeholder="Enter Location">
+                                </div>
+            
+                                <div class="text-end">
+                                    <button type="submit" class="btn btn-success waves-effect waves-light">Save</button>
+                                    <button type="button" class="btn btn-danger waves-effect waves-light" data-bs-dismiss="modal">Continue</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+
         <!-- Vendor js -->
         <script src="../assets/js/vendor.min.js"></script>
+
+        <!-- third party js -->
+        <script src="../assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+        <script src="../assets/libs/datatables.net-bs5/js/dataTables.bootstrap5.min.js"></script>
+        <script src="../assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+        <script src="../assets/libs/datatables.net-responsive-bs5/js/responsive.bootstrap5.min.js"></script>
+        <script src="../assets/libs/jquery-datatables-checkboxes/js/dataTables.checkboxes.min.js"></script>
+        <!-- third party js ends -->
+
+        <!-- Datatables init -->
+        <script src="../assets/js/pages/customers.init.js"></script>
 
         <!-- App js -->
         <script src="../assets/js/app.min.js"></script>

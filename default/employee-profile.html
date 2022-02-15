@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>Project Listing | UBold - Responsive Admin Dashboard Template</title>
+        <title>Bootstrap Tables | UBold - Responsive Admin Dashboard Template</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
         <meta content="Coderthemes" name="author" />
@@ -10,15 +10,20 @@
         <!-- App favicon -->
         <link rel="shortcut icon" href="../assets/images/favicon.ico">
 
-        <!-- App css -->
-        <link href="../assets/css/config/default/bootstrap.min.css" rel="stylesheet" type="text/css" id="bs-default-stylesheet" />
-        <link href="../assets/css/config/default/app.min.css" rel="stylesheet" type="text/css" id="app-default-stylesheet" />
+        <!-- Bootstrap Tables css -->
+        <link href="../assets/libs/bootstrap-table/bootstrap-table.min.css" rel="stylesheet" type="text/css" />
 
-        <link href="../assets/css/config/default/bootstrap-dark.min.css" rel="stylesheet" type="text/css" id="bs-dark-stylesheet" />
-        <link href="../assets/css/config/default/app-dark.min.css" rel="stylesheet" type="text/css" id="app-dark-stylesheet" />
+    
+		<!-- App css -->
+		<link href="../assets/css/config/default/bootstrap.min.css" rel="stylesheet" type="text/css" id="bs-default-stylesheet" />
+		<link href="../assets/css/config/default/app.min.css" rel="stylesheet" type="text/css" id="app-default-stylesheet" />
+        <link href="../assets/css/config/main/main.css" rel="stylesheet" type="text/css">
 
-        <!-- icons -->
-        <link href="../assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+		<link href="../assets/css/config/default/bootstrap-dark.min.css" rel="stylesheet" type="text/css" id="bs-dark-stylesheet" />
+		<link href="../assets/css/config/default/app-dark.min.css" rel="stylesheet" type="text/css" id="app-dark-stylesheet" />
+
+		<!-- icons -->
+		<link href="../assets/css/icons.min.css" rel="stylesheet" type="text/css" />
 
     </head>
 
@@ -1323,8 +1328,10 @@
 
             <div class="content-page">
                 <div class="content">
+
                     <!-- Start Content-->
                     <div class="container-fluid">
+                        
                         <!-- start page title -->
                         <div class="row">
                             <div class="col-12">
@@ -1332,422 +1339,811 @@
                                     <div class="page-title-right">
                                         <ol class="breadcrumb m-0">
                                             <li class="breadcrumb-item"><a href="javascript: void(0);">UBold</a></li>
-                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Projects</a></li>
-                                            <li class="breadcrumb-item active">Projects List</li>
+                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Tables</a></li>
+                                            <li class="breadcrumb-item active"> Employee Profile</li>
                                         </ol>
                                     </div>
-                                    <h4 class="page-title">Projects List</h4>
+                                    <h4 class="page-title">Employee Profile</h4>
                                 </div>
                             </div>
                         </div>     
                         <!-- end page title --> 
 
-                        <div class="row mb-2">
-                            <div class="col-sm-4">
-                                <a href="project-create.html" class="btn btn-danger rounded-pill waves-effect waves-light mb-3"><i class="mdi mdi-plus"></i> Create Project</a>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="epinfo">
+                                            <h4>Employee Info </h4>
+                                            <div class="row align-items-center ep-ac-info">
+                                                <div class="col-lg-6">
+                                                    <div class="row align-items-center">
+                                                        <div class="col-md-3 col-sm-12">
+                                                            <div class="epa-single">
+                                                                <div class="epa-info-thumb d-flex justify-content-center">
+                                                                    <img src="../assets/images/users/user-3.jpg" class="rounded-circle img-thumbnail avatar-xl" alt="profile-image">
+                                                                </div>
+                                                            </div>
+                                                        </div> <!-- col end -->
+                                                        <div class="col-md-8 col-sm-12">
+                                                            <div class="epa-single">
+                                                                <div class="epa-info-content">
+                                                                    <ul>
+                                                                        <li class="row align-items-center">
+                                                                            <div class="col-6">
+                                                                                <p>Name</p>
+                                                                            </div>
+                                                                            <div class="col-6">
+                                                                                <p>Mr. Joe Biden Matha mota</p>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="row">
+                                                                            <div class="col-6">
+                                                                                <p>ID</p>
+                                                                            </div>
+                                                                            <div class="col-6">
+                                                                                <p>sdfsd215858</p>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="row">
+                                                                            <div class="col-6">
+                                                                                <p>User Name</p>
+                                                                            </div>
+                                                                            <div class="col-6">
+                                                                                <p>sdfse</p>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="row">
+                                                                            <div class="col-6">
+                                                                                <p>Designation</p>
+                                                                            </div>
+                                                                            <div class="col-6">
+                                                                                <p>BackEnd Developer</p>
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div> <!-- col end -->
+                                                    </div><!-- row end -->
+                                                </div> <!-- col end -->
+                                                <div class="col-lg-5">
+                                                    <div class="row align-items-center">
+                                                        <div class="col-md-12 col-sm-12">
+                                                            <div class="epa-single">
+                                                                <div class="epa-info-content">
+                                                                    <ul>
+                                                                        <li class="row">
+                                                                            <div class="col-6">
+                                                                                <p>Status</p>
+                                                                            </div>
+                                                                            <div class="col-6">
+                                                                                <p>active</p>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="row">
+                                                                            <div class="col-6">
+                                                                                <p>Password</p>
+                                                                            </div>
+                                                                            <div class="col-6">
+                                                                                <p>**********</p>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="row">
+                                                                            <div class="col-6 ">
+                                                                                <p>Upload CV</p>
+                                                                            </div>
+                                                                            <div class="col-6 ">
+                                                                                <p>fdasd.pdf</p>
+                                                                            </div>
+                                                                        </li>
+                            
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div> <!-- col end -->                         
+                                                    </div><!-- row end -->
+                                                </div> <!-- col end -->
+                                                <div class="col-lg-1">
+                                                    <div class="row align-items-center">
+                                                        <div class="col-md-12 col-sm-12">
+                                                            <div class="epa-single">
+                                                                <div class="epa-ed">
+                                                                    <a href="#"> <i class=" fas fa-pen-square"></i></a>
+                                                                    <a href="#" class="ac-btn" data-bs-toggle="modal" data-bs-target="#EditAcInfo"> <i class="fas fa-trash"></i>  </a>
+                                                                </div>
+                                                            </div>
+                                                        </div> <!-- col end -->                         
+                                                    </div><!-- row end -->
+                                                </div> <!-- col end -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> <!-- end card-->
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="ep-section-wrapper">
+                                            <div class="row  align-items-center">
+                                                <div class="col-lg-11">
+                                                    <div class="row">
+                                                        <div class="col-lg-12">
+                                                            <div class="row ep-personal-data">
+                                                                <h6 class="common-profile-heading">Personal Details </h6>
+                                                                <div class="col-md-6">
+                                                                    <div class="epa-single">
+                                                                        <div class="epa-info-content">
+                                                                            <ul>
+                                                                                <li class="row align-items-center">
+                                                                                    <div class="col-6">
+                                                                                        <p>Father's Name</p>
+                                                                                    </div>
+                                                                                    <div class="col-6">
+                                                                                        <p>Mr. Pong Pong</p>
+                                                                                    </div>
+                                                                                </li>                                        
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div> <!-- col end -->
+                                                                <div class="col-md-6">
+                                                                    <div class="epa-single">
+                                                                        <div class="epa-info-content">
+                                                                            <ul>
+                                                                                <li class="row">
+                                                                                    <div class="col-6">
+                                                                                        <p>Mother's Name</p>
+                                                                                    </div>
+                                                                                    <div class="col-6">
+                                                                                        <p>Mrs. Lorem, ipsum dolor.</p>
+                                                                                    </div>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div> <!-- col end -->
+                                                            </div>
+                                                            <div class="row ep-personal-data">
+                                                                <div class="col-md-6">
+                                                                    <div class="epa-single">
+                                                                        <div class="epa-info-content">
+                                                                            <ul>                                                        
+                                                                                <li class="row align-items-center">
+                                                                                    <div class="col-6">
+                                                                                        <p>Present Address</p>
+                                                                                    </div>
+                                                                                    <div class="col-6">
+                                                                                        <p> 14/2, Alhaz Samsuddin mension, Eskaton, Magbazar, Dhaka, Bangladesh</p>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li class="row align-items-center">
+                                                                                    <div class="col-6 ">
+                                                                                        <p>Permanent Address</p>
+                                                                                    </div>
+                                                                                    <div class="col-6 ">
+                                                                                        <p> Lorem ipsum dolor sit amet. feni, Noakhali, cummilla, Bangladesh,</p>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li class="row align-items-center">
+                                                                                    <div class="col-6 ">
+                                                                                        <p>About Employee</p>
+                                                                                    </div>
+                                                                                    <div class="col-6 ">
+                                                                                        <p> Lorem ipsum dolor sit amet conselectus quos reiciendis cumque sit illum!</p>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li class="row align-items-center">
+                                                                                    <div class="col-6 ">
+                                                                                        <p>Gender</p>
+                                                                                    </div>
+                                                                                    <div class="col-6 ">
+                                                                                        <p>Male</p>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li class="row align-items-center">
+                                                                                    <div class="col-6 ">
+                                                                                        <p>Phone No</p>
+                                                                                    </div>
+                                                                                    <div class="col-6 ">
+                                                                                        <p>012345678900</p>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li class="row align-items-center">
+                                                                                    <div class="col-6 ">
+                                                                                        <p>Emergency Contact</p>
+                                                                                    </div>
+                                                                                    <div class="col-6 ">
+                                                                                        <p>012345678900</p>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li class="row align-items-center">
+                                                                                    <div class="col-6 ">
+                                                                                        <p>Birth Certificate No</p>
+                                                                                    </div>
+                                                                                    <div class="col-6 ">
+                                                                                        <p>0998/345678900</p>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li class="row align-items-center">
+                                                                                    <div class="col-6 ">
+                                                                                        <p>Joining Date</p>
+                                                                                    </div>
+                                                                                    <div class="col-6 ">
+                                                                                        <p>dd/mm/yy</p>
+                                                                                    </div>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div> <!-- col end -->
+                                                                <div class="col-md-6">
+                                                                    <div class="epa-single">
+                                                                        <div class="epa-info-content">
+                                                                            <ul>
+                                                                                <li class="row">
+                                                                                    <div class="col-6">
+                                                                                        <p>Date of Birth </p>
+                                                                                    </div>
+                                                                                    <div class="col-6">
+                                                                                        <p> dd/mm/yy </p>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li class="row">
+                                                                                    <div class="col-6 ">
+                                                                                        <p>Merital Status</p>
+                                                                                    </div>
+                                                                                    <div class="col-6 ">
+                                                                                        <p>Married</p>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li class="row">
+                                                                                    <div class="col-6 ">
+                                                                                        <p>Religion</p>
+                                                                                    </div>
+                                                                                    <div class="col-6 ">
+                                                                                        <p>Islam</p>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li class="row">
+                                                                                    <div class="col-6 ">
+                                                                                        <p>E-mail</p>
+                                                                                    </div>
+                                                                                    <div class="col-6 ">
+                                                                                        <p>example@gmail.com</p>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li class="row">
+                                                                                    <div class="col-6 ">
+                                                                                        <p>NID No</p>
+                                                                                    </div>
+                                                                                    <div class="col-6 ">
+                                                                                        <p>025-11859847-52</p>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li class="row">
+                                                                                    <div class="col-6 ">
+                                                                                        <p>Passport No</p>
+                                                                                    </div>
+                                                                                    <div class="col-6 ">
+                                                                                        <p>025-11859847-52</p>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li class="row">
+                                                                                    <div class="col-6 ">
+                                                                                        <p>Bank Account No</p>
+                                                                                    </div>
+                                                                                    <div class="col-6 ">
+                                                                                        <p>025-11859847-52</p>
+                                                                                    </div>
+                                                                                </li>
+                                                                        
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div> <!-- col end -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row align-items-center ep-personal-reference">
+                                                        <h6 class="common-profile-heading">Reference </h6>
+                                                        <div class="col-md-6">
+                                                            <div class="epa-single">
+                                                                <div class="epa-info-content">
+                                                                    <ul>
+                                                                        <li class="row align-items-center">
+                                                                            <div class="col-6">
+                                                                                <p>Reference No 1</p>
+                                                                            </div>
+                                                                            <div class="col-6">
+                                                                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium, harum!</p>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="row align-items-center">
+                                                                            <div class="col-6">
+                                                                                <p>Reletion With Referel</p>
+                                                                            </div>
+                                                                            <div class="col-6">
+                                                                                <p>Lorem, ipsum.</p>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="row align-items-center">
+                                                                            <div class="col-6 ">
+                                                                                <p>Reference Contact No</p>
+                                                                            </div>
+                                                                            <div class="col-6 ">
+                                                                                <p>012345678902</p>
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div> <!-- col end -->
+                                                        <div class="col-md-6">
+                                                            <div class="epa-single">
+                                                                <div class="epa-info-content">
+                                                                    <ul>
+                                                                        <li class="row align-items-center">
+                                                                            <div class="col-6">
+                                                                                <p>Reference No 2</p>
+                                                                            </div>
+                                                                            <div class="col-6">
+                                                                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium, harum!</p>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="row align-items-center">
+                                                                            <div class="col-6">
+                                                                                <p>Reletion With Referel</p>
+                                                                            </div>
+                                                                            <div class="col-6">
+                                                                                <p>Lorem, ipsum.</p>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="row align-items-center">
+                                                                            <div class="col-6 ">
+                                                                                <p>Reference Contact No</p>
+                                                                            </div>
+                                                                            <div class="col-6 ">
+                                                                                <p>012345678902</p>
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div> <!-- col end -->
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-1">
+                                                    <div class="row align-items-center">
+                                                        <div class="col-md-12 col-sm-12">
+                                                            <div class="epa-single">
+                                                                <div class="epa-ed">
+                                                                    <a href="#"> <i class=" fas fa-pen-square"></i></a>
+                                                                    <a href="#" class="ac-btn" data-bs-toggle="modal" data-bs-target="#EditAcInfo"> <i class="fas fa-trash"></i>  </a>
+                                                                </div>
+                                                            </div>
+                                                        </div> <!-- col end -->                         
+                                                    </div><!-- row end -->
+                                                </div> <!-- col end -->
+                    
+                                            </div><!-- row end -->
+                                        </div>
+                                    </div>
+                                </div> <!--end card -->
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="row  align-items-center ep-section-wrapper">
+                                            <h6 class="common-profile-heading"> Education and Training Info </h6>
+                                            <div class="col-lg-11">
+                                                <div class="ep-et-info">
+                                                    <h6 class="common-profile-heading">Last Achieved Educational Degree</h6>
+                                                    <div class="row align-items-center">
+                                                        <div class="col-md-6">
+                                                            <div class="epa-single">
+                                                                <div class="epa-info-content">
+                                                                    <ul>
+                                                                        <li class="row align-items-center">
+                                                                            <div class="col-6">
+                                                                                <p>Degree Name</p>
+                                                                            </div>
+                                                                            <div class="col-6">
+                                                                                <p>Bsc(Eng) in Computer Science and Engineering</p>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="row align-items-center">
+                                                                            <div class="col-6">
+                                                                                <p> University/Institute Name </p>
+                                                                            </div>
+                                                                            <div class="col-6">
+                                                                                <p> University of Torento</p>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="row align-items-center">
+                                                                            <div class="col-6">
+                                                                                <p> Major Name </p>
+                                                                            </div>
+                                                                            <div class="col-6">
+                                                                                <p> Computer Science and Engineering </p>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="row align-items-center">
+                                                                            <div class="col-6">
+                                                                                <p> Upload Certificate </p>
+                                                                            </div>
+                                                                            <div class="col-6">
+                                                                                <p> Certificate.pdf/jpge/png </p>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="row align-items-center">
+                                                                            <div class="col-6">
+                                                                                <p> Achieved Reward <span>If any</span> </p>
+                                                                            </div>
+                                                                            <div class="col-6">
+                                                                                <p> N/A </p>
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div> <!-- col end -->
+                                                        <div class="col-md-6">
+                                                            <div class="epa-single">
+                                                                <div class="epa-info-content">
+                                                                    <ul>
+                                                                        <li class="row">
+                                                                            <div class="col-6">
+                                                                                <p>Result</p>
+                                                                            </div>
+                                                                            <div class="col-6">
+                                                                                <p> 3.75 </p>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="row">
+                                                                            <div class="col-6">
+                                                                                <p>Passing Year </p>
+                                                                            </div>
+                                                                            <div class="col-6">
+                                                                                <p> 2021 </p>
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div> <!-- col end -->
+                                                    </div>
+                                                    <div class="row align-items-center ">
+                                                        <h6 class="common-profile-heading"> Training </h6>
+                                                        <div class="col-md-6">
+                                                            <div class="epa-single">
+                                                                <div class="epa-info-content">
+                                                                    <ul>
+                                                                        <li class="row align-items-center">
+                                                                            <div class="col-6">
+                                                                                <p> Training Name </p>
+                                                                            </div>
+                                                                            <div class="col-6">
+                                                                                <p> Web Design </p>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="row align-items-center">
+                                                                            <div class="col-6">
+                                                                                <p> Institute Name </p>
+                                                                            </div>
+                                                                            <div class="col-6">
+                                                                                <p> Bangladesh Technical Board </p>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="row align-items-center">
+                                                                            <div class="col-6 ">
+                                                                                <p> Training Period </p>
+                                                                            </div>
+                                                                            <div class="col-6 ">
+                                                                                <p>3 days in a Week</p>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="row align-items-center">
+                                                                            <div class="col-6 ">
+                                                                                <p> Upload Document </p>
+                                                                            </div>
+                                                                            <div class="col-6 ">
+                                                                                <p> Training certificate.pdf (2.33kb) </p>
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div> <!-- col end -->
+                                                        <div class="col-md-6">
+                                                            <div class="epa-single">
+                                                                <div class="epa-info-content">
+                                                                    <ul>
+                                                                        <li class="row align-items-center">
+                                                                            <div class="col-6">
+                                                                                <p>Topics</p>
+                                                                            </div>
+                                                                            <div class="col-6">
+                                                                                <p>html, CSS</p>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="row align-items-center">
+                                                                            <div class="col-6">
+                                                                                <p>Duraition</p>
+                                                                            </div>
+                                                                            <div class="col-6">
+                                                                                <p>3 month</p>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="row align-items-center">
+                                                                            <div class="col-6 ">
+                                                                                <p>Location</p>
+                                                                            </div>
+                                                                            <div class="col-6 ">
+                                                                                <p>Dhaka, KawranBazar</p>
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>                           
+                                                        </div> <!-- col end -->
+                                                    </div>
+                                                    <div class="row align-items-center ">
+                                                        <h6 class="common-profile-heading"> Exprience Name </h6> 
+                                                        <div class="col-md-6">
+                                                            <div class="epa-single">
+                                                                <div class="epa-info-content">
+                                                                    <ul>
+                                                                        <li class="row align-items-center">
+                                                                            <div class="col-6">
+                                                                                <p> Company Name </p>
+                                                                            </div>
+                                                                            <div class="col-6">
+                                                                                <p> Addd IT Limited </p>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="row align-items-center">
+                                                                            <div class="col-6">
+                                                                                <p> Exprience Area </p>
+                                                                            </div>
+                                                                            <div class="col-6">
+                                                                                <p> Web Design </p>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="row align-items-center">
+                                                                            <div class="col-6 ">
+                                                                                <p> Form Date</p>
+                                                                            </div>
+                                                                            <div class="col-6 ">
+                                                                                <p> dd/mm/yy </p>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="row align-items-center">
+                                                                            <div class="col-6 ">
+                                                                                <p> Company Location </p>
+                                                                            </div>
+                                                                            <div class="col-6 ">
+                                                                                <p> Dhanmondi, Dhaka</p>
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div> <!-- col end -->
+                                                        <div class="col-md-6">
+                                                            <div class="epa-single">
+                                                                <div class="epa-info-content">
+                                                                    <ul>
+                                                                        <li class="row align-items-center">
+                                                                            <div class="col-6">
+                                                                                <p>Responsibilty</p>
+                                                                            </div>
+                                                                            <div class="col-6">
+                                                                                <p>Web Site Design</p>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="row align-items-center">
+                                                                            <div class="col-6">
+                                                                                <p>Duraition</p>
+                                                                            </div>
+                                                                            <div class="col-6">
+                                                                                <p>2 years 3 month</p>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="row align-items-center">
+                                                                            <div class="col-6 ">
+                                                                                <p>End Date</p>
+                                                                            </div>
+                                                                            <div class="col-6 ">
+                                                                                <p>dd/mm/yy</p>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="row align-items-center">
+                                                                            <div class="col-6 ">
+                                                                                <p>Upload Document</p>
+                                                                            </div>
+                                                                            <div class="col-6 ">
+                                                                                <p> Experience certificate.pdf (2.33kb)  </p>
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div> <!-- col end -->
+                                                    </div>
+                                                </div>
+                                            </div>  <!-- col end -->
+                                            <div class="col-lg-1">
+                                                <div class="row align-items-center">
+                                                    <div class="col-md-12 col-sm-12">
+                                                        <div class="epa-single">
+                                                            <div class="epa-ed">
+                                                                <a href="#"> <i class=" fas fa-pen-square"></i></a>
+                                                                <a href="#" class="ac-btn" data-bs-toggle="modal" data-bs-target="#EditAcInfo"> <i class="fas fa-trash"></i>  </a>
+                                                            </div>
+                                                        </div>
+                                                    </div> <!-- col end -->                         
+                                                </div><!-- row end -->
+                                            </div> <!-- col end -->
+                                        </div>
+                                    </div>
+                                </div> <!--end card-->
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="row  align-items-center ep-section-wrapper">
+                                            <h6 class="common-profile-heading"> Assign training Info </h6>
+                                            <div class="col-lg-11">
+                                                <div class="row align-items-center ep-assignment-wrapper">
+                                                    <h6 class="common-profile-heading">Training Assignment</h6>
+                                                    <div class="col-lg-12">
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <div class="epa-single">
+                                                                    <div class="epa-info-content">
+                                                                        <ul>
+                                                                            <li class="row align-items-center">
+                                                                                <div class="col-6">
+                                                                                    <p> Training Program Name </p>
+                                                                                </div>
+                                                                                <div class="col-6">
+                                                                                    <p>Digital Marketing</p>
+                                                                                </div>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div> <!-- col end -->
+                                                            <div class="col-md-6">
+                                                            </div> <!-- col end -->
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <div class="epa-single">
+                                                                    <div class="epa-info-content">
+                                                                        <ul>
+                                                                            <li class="row align-items-center">
+                                                                                <div class="col-6">
+                                                                                    <p> Training Start Date </p>
+                                                                                </div>
+                                                                                <div class="col-6">
+                                                                                    <p>dd/mm/yy </p>
+                                                                                </div>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div> <!-- col end -->
+                                                            <div class="col-md-6">
+                                                                <div class="epa-single">
+                                                                    <div class="epa-info-content">
+                                                                        <ul>
+                                                                            <li class="row align-items-center">
+                                                                                <div class="col-6">
+                                                                                    <p> End Date </p>
+                                                                                </div>
+                                                                                <div class="col-6">
+                                                                                    <p>dd/mm/yy </p>
+                                                                                </div>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div> <!-- col end -->
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <div class="epa-single">
+                                                                    <div class="epa-info-content">
+                                                                        <ul>
+                                                                            <li class="row align-items-center">
+                                                                                <div class="col-6">
+                                                                                    <p> Duration  </p>
+                                                                                </div>
+                                                                                <div class="col-6">
+                                                                                    <p> 3 days </p>
+                                                                                </div>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div> <!-- col end -->
+                                                            <div class="col-md-6">
+                                                                <div class="epa-single">
+                                                                    <div class="epa-info-content">
+                                                                        <ul>
+                                                                            <li class="row align-items-center">
+                                                                                <div class="col-6">
+                                                                                    <p> Location </p>
+                                                                                </div>
+                                                                                <div class="col-6">
+                                                                                    <p> Moghbazar, Dhaka </p>
+                                                                                </div>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div> <!-- col end -->
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <div class="epa-single">
+                                                                    <div class="epa-info-content">
+                                                                        <ul>
+                                                                            <li class="row align-items-center">
+                                                                                <div class="col-6">
+                                                                                    <p> Approval Doc Attachment  </p>
+                                                                                </div>
+                                                                                <div class="col-6">
+                                                                                    <p> No document attached </p>
+                                                                                </div>
+                                                                                <div class="col-6"></div>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div> <!-- col end -->
+                                                            <div class="col-md-6"></div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <div class="epa-single">
+                                                                    <div class="epa-info-content">
+                                                                        <ul>
+                                                                            <li class="row align-items-center">
+                                                                                <div class="col-6">
+                                                                                    <p> About Training </p>
+                                                                                </div>
+                                                                                <div class="col-6">
+                                                                                    <p> Lorem Ipsum is simply dummy text of the 
+                                                                                        printing and typesetting industry. Lorem
+                                                                                        Ipsum has been the industry's standard
+                                                                                        dummy text ever since the 1500s </p>
+                                                                                </div>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div> <!-- col end -->
+                                                            <div class="col-md-6"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>  <!-- col end -->
+                                            <div class="col-lg-1">
+                                                <div class="row align-items-center">
+                                                    <div class="col-md-12 col-sm-12">
+                                                        <div class="epa-single">
+                                                            <div class="epa-ed">
+                                                                <a href="#"> <i class=" fas fa-pen-square"></i></a>
+                                                                <a href="#" class="ac-btn" data-bs-toggle="modal" data-bs-target="#EditAcInfo"> <i class="fas fa-trash"></i>  </a>
+                                                            </div>
+                                                        </div>
+                                                    </div> <!-- col end -->                         
+                                                </div><!-- row end -->
+                                            </div> <!-- col end -->
+                                        </div>
+                                    </div>
+                                </div> <!--end card-->
                             </div>
-                            <div class="col-sm-8">
-                                <div class="text-sm-end">
-                                    <div class="btn-group mb-3">
-                                        <button type="button" class="btn btn-primary">All</button>
-                                    </div>
-                                    <div class="btn-group mb-3 ms-1">
-                                        <button type="button" class="btn btn-light">Ongoing</button>
-                                        <button type="button" class="btn btn-light">Finished</button>
-                                    </div>
-                                    <div class="btn-group mb-3 ms-2 d-none d-sm-inline-block">
-                                        <button type="button" class="btn btn-dark"><i class="mdi mdi-apps"></i></button>
-                                    </div>
-                                    <div class="btn-group mb-3 d-none d-sm-inline-block">
-                                        <button type="button" class="btn btn-link text-dark"><i class="mdi mdi-format-list-bulleted-type"></i></button>
-                                    </div>
-                                </div>
-                            </div><!-- end col-->
-                        </div> 
-                        <!-- end row-->
-
-
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <div class="card project-box">
-                                    <div class="card-body">
-                                        <div class="dropdown float-end">
-                                            <a href="#" class="dropdown-toggle card-drop arrow-none" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="mdi mdi-dots-horizontal m-0 text-muted h3"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-end">
-                                                <a class="dropdown-item" href="#">Edit</a>
-                                                <a class="dropdown-item" href="#">Delete</a>
-                                                <a class="dropdown-item" href="#">Add Members</a>
-                                                <a class="dropdown-item" href="#">Add Due Date</a>
-                                            </div>
-                                        </div> <!-- end dropdown -->
-                                        <!-- Title-->
-                                        <h4 class="mt-0"><a href="singleprojectDashboard.html" class="text-dark">New Admin Design</a></h4>
-                                        <p class="text-muted text-uppercase"><i class="mdi mdi-account-circle"></i> <small>Orange Limited</small></p>
-                                        <div class="badge bg-soft-success text-success mb-3">Finished</div>
-                                        <!-- Desc-->
-                                        <p class="text-muted font-13 mb-3 sp-line-2">With supporting text below as a natural lead-in to additional contenposuere erat a
-                                            ante...<a href="javascript:void(0);" class="fw-bold text-muted">view more</a>
-                                        </p>
-                                        <!-- Task info-->
-                                        <p class="mb-1">
-                                            <span class="pe-2 text-nowrap mb-2 d-inline-block">
-                                                <i class="mdi mdi-format-list-bulleted-type text-muted"></i>
-                                                <b>78</b> Tasks
-                                            </span>
-                                            <span class="text-nowrap mb-2 d-inline-block">
-                                                <i class="mdi mdi-comment-multiple-outline text-muted"></i>
-                                                <b>214</b> Comments
-                                            </span>
-                                        </p>
-                                        <!-- Team-->
-                                        <div class="avatar-group mb-3" id="tooltips-container">
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-1.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mat Helme" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-2.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Michael Zenaty" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-3.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container" data-bs-toggle="tooltip" data-bs-placement="bottom" title="James Anderson" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-4.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mat Helme" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-5.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Username" />
-                                            </a>
-                                        </div>
-                                        <!-- Progress-->
-                                        <p class="mb-2 fw-semibold">Task completed: <span class="float-end">28/78</span></p>
-                                        <div class="progress mb-1" style="height: 7px;">
-                                            <div class="progress-bar"
-                                                 role="progressbar" aria-valuenow="34" aria-valuemin="0" aria-valuemax="100"
-                                                 style="width: 34%;">
-                                            </div><!-- /.progress-bar .progress-bar-danger -->
-                                        </div><!-- /.progress .no-rounded -->
-                                    </div>
-                                </div> <!-- end card box-->
-                            </div><!-- end col-->
-                            <div class="col-lg-4">
-                                <div class="card project-box">
-                                    <div class="card-body">
-                                        <div class="dropdown float-end">
-                                            <a href="#" class="dropdown-toggle card-drop arrow-none" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="mdi mdi-dots-horizontal m-0 text-muted h3"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-end">
-                                                <a class="dropdown-item" href="#">Edit</a>
-                                                <a class="dropdown-item" href="#">Delete</a>
-                                                <a class="dropdown-item" href="#">Add Members</a>
-                                                <a class="dropdown-item" href="#">Add Due Date</a>
-                                            </div>
-                                        </div> <!-- end dropdown -->
-                                        <!-- Title-->
-                                        <h4 class="mt-0"><a href="singleprojectDashboard.html" class="text-dark">App Design and Development</a></h4>
-                                        <p class="text-muted text-uppercase"><i class="mdi mdi-account-circle"></i> <small>Moondust Softwares</small></p>
-                                        <div class="badge bg-soft-secondary text-secondary mb-3">Ongoing</div>
-                                        <!-- Desc-->
-                                        <p class="text-muted font-13 mb-3 sp-line-2">A handful of model sentence structures, to generate Lorem Ipsum which looks reasonable...<a href="javascript:void(0);" class="fw-bold text-muted">view more</a>
-                                        </p>
-                                        <!-- Task info-->
-                                        <p class="mb-1">
-                                            <span class="pe-2 text-nowrap mb-2 d-inline-block">
-                                                <i class="mdi mdi-format-list-bulleted-type text-muted"></i>
-                                                <b>81</b> Tasks
-                                            </span>
-                                            <span class="text-nowrap mb-2 d-inline-block">
-                                                <i class="mdi mdi-comment-multiple-outline text-muted"></i>
-                                                <b>103</b> Comments
-                                            </span>
-                                        </p>
-                                        <!-- Team-->
-                                        <div class="avatar-group mb-3" id="tooltips-container1">
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-6.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container1" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mat Helme" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-7.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container1" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Michael Zenaty" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-8.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container1" data-bs-toggle="tooltip" data-bs-placement="bottom" title="James Anderson" />
-                                            </a>
-                                        </div>
-                                        <!-- Progress-->
-                                        <p class="mb-2 fw-semibold">Task completed: <span class="float-end">55/85</span></p>
-                                        <div class="progress mb-1" style="height: 7px;">
-                                            <div class="progress-bar"
-                                                 role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
-                                                 style="width: 80%;">
-                                            </div><!-- /.progress-bar .progress-bar-danger -->
-                                        </div><!-- /.progress .no-rounded -->
-                                    </div>
-                                </div> <!-- end card box-->
-                            </div><!-- end col-->
-                            <div class="col-lg-4">
-                                <div class="card project-box">
-                                    <div class="card-body">
-                                        <div class="dropdown float-end">
-                                            <a href="#" class="dropdown-toggle card-drop arrow-none" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="mdi mdi-dots-horizontal m-0 text-muted h3"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-end">
-                                                <a class="dropdown-item" href="#">Edit</a>
-                                                <a class="dropdown-item" href="#">Delete</a>
-                                                <a class="dropdown-item" href="#">Add Members</a>
-                                                <a class="dropdown-item" href="#">Add Due Date</a>
-                                            </div>
-                                        </div> <!-- end dropdown -->
-                                        <!-- Title-->
-                                        <h4 class="mt-0"><a href="singleprojectDashboard.html" class="text-dark">Landing page Design</a></h4>
-                                        <p class="text-muted text-uppercase"><i class="mdi mdi-account-circle"></i> <small>Rose Technologies</small></p>
-                                        <div class="badge bg-soft-success text-success mb-3">Finished</div>
-                                        <!-- Desc-->
-                                        <p class="text-muted font-13 mb-3 sp-line-2">You need to be sure there isn't anything embarrassing hidden in the middle of text...<a href="javascript:void(0);" class="fw-bold text-muted">view more</a>
-                                        </p>
-                                        <!-- Task info-->
-                                        <p class="mb-1">
-                                            <span class="pe-2 text-nowrap mb-2 d-inline-block">
-                                                <i class="mdi mdi-format-list-bulleted-type text-muted"></i>
-                                                <b>42</b> Tasks
-                                            </span>
-                                            <span class="text-nowrap mb-2 d-inline-block">
-                                                <i class="mdi mdi-comment-multiple-outline text-muted"></i>
-                                                <b>65</b> Comments
-                                            </span>
-                                        </p>
-                                        <!-- Team-->
-                                        <div class="avatar-group mb-3" id="tooltips-container2">
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-9.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mat Helme" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-10.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Michael Zenaty" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-1.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="James Anderson" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-3.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mat Helme" />
-                                            </a>
-                                        </div>
-                                        <!-- Progress-->
-                                        <p class="mb-2 fw-semibold">Task completed: <span class="float-end">21/42</span></p>
-                                        <div class="progress mb-1" style="height: 7px;">
-                                            <div class="progress-bar"
-                                                 role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
-                                                 style="width: 50%;">
-                                            </div><!-- /.progress-bar .progress-bar-danger -->
-                                        </div><!-- /.progress .no-rounded -->
-                                    </div>
-                                </div> <!-- end card box-->
-                            </div><!-- end col-->
-
-                        </div>
-                        <!-- end row -->
-
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <div class="card project-box">
-                                    <div class="card-body">
-                                        <div class="dropdown float-end">
-                                            <a href="#" class="dropdown-toggle card-drop arrow-none" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="mdi mdi-dots-horizontal m-0 text-muted h3"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-end">
-                                                <a class="dropdown-item" href="#">Edit</a>
-                                                <a class="dropdown-item" href="#">Delete</a>
-                                                <a class="dropdown-item" href="#">Add Members</a>
-                                                <a class="dropdown-item" href="#">Add Due Date</a>
-                                            </div>
-                                        </div> <!-- end dropdown -->
-                                        <!-- Title-->
-                                        <h4 class="mt-0"><a href="singleprojectDashboard.html" class="text-dark">Custom Software Development</a></h4>
-                                        <p class="text-muted text-uppercase"><i class="mdi mdi-account-circle"></i> <small>Apple Navigations</small></p>
-                                        <div class="badge bg-soft-secondary text-secondary mb-3">Ongoing</div>
-                                        <!-- Desc-->
-                                        <p class="text-muted font-13 mb-3 sp-line-2">You need to be sure there isn't anything embarrassing hidden in the middle of text...<a href="javascript:void(0);" class="fw-bold text-muted">view more</a>
-                                        </p>
-                                        <!-- Task info-->
-                                        <p class="mb-1">
-                                            <span class="pe-2 text-nowrap mb-2 d-inline-block">
-                                                <i class="mdi mdi-format-list-bulleted-type text-muted"></i>
-                                                <b>95</b> Tasks
-                                            </span>
-                                            <span class="text-nowrap mb-2 d-inline-block">
-                                                <i class="mdi mdi-comment-multiple-outline text-muted"></i>
-                                                <b>1.3k</b> Comments
-                                            </span>
-                                        </p>
-                                        <!-- Team-->
-                                        <div class="avatar-group mb-3" id="tooltips-container3">
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-5.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container3" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mat Helme" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-8.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container3" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Michael Zenaty" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-9.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container3" data-bs-toggle="tooltip" data-bs-placement="bottom" title="James Anderson" />
-                                            </a>
-                                        </div>
-                                        <!-- Progress-->
-                                        <p class="mb-2 fw-semibold">Task completed: <span class="float-end">70/95</span></p>
-                                        <div class="progress mb-1" style="height: 7px;">
-                                            <div class="progress-bar"
-                                                 role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100"
-                                                 style="width: 68%;">
-                                            </div><!-- /.progress-bar .progress-bar-danger -->
-                                        </div><!-- /.progress .no-rounded -->
-                                    </div>
-                                </div> <!-- end card box-->
-                            </div><!-- end col-->
-
-                            <div class="col-lg-4">
-                                <div class="card project-box">
-                                    <div class="card-body">
-                                        <div class="dropdown float-end">
-                                            <a href="#" class="dropdown-toggle card-drop arrow-none" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="mdi mdi-dots-horizontal m-0 text-muted h3"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-end">
-                                                <a class="dropdown-item" href="#">Edit</a>
-                                                <a class="dropdown-item" href="#">Delete</a>
-                                                <a class="dropdown-item" href="#">Add Members</a>
-                                                <a class="dropdown-item" href="#">Add Due Date</a>
-                                            </div>
-                                        </div> <!-- end dropdown -->
-                                        <!-- Title-->
-                                        <h4 class="mt-0"><a href="singleprojectDashboard.html" class="text-dark">Website Redesign</a></h4>
-                                        <p class="text-muted text-uppercase"><i class="mdi mdi-account-circle"></i> <small>Enigma Navigations</small></p>
-                                        <div class="badge bg-soft-secondary text-secondary mb-3">Ongoing</div>
-                                        <!-- Desc-->
-                                        <p class="text-muted font-13 mb-3 sp-line-2">There are many variations of passages of Lorem Ipsum available natural lead-in to additional...<a href="javascript:void(0);" class="fw-bold text-muted">view more</a>
-                                        </p>
-                                        <!-- Task info-->
-                                        <p class="mb-1">
-                                            <span class="pe-2 text-nowrap mb-2 d-inline-block">
-                                                <i class="mdi mdi-format-list-bulleted-type text-muted"></i>
-                                                <b>36</b> Tasks
-                                            </span>
-                                            <span class="text-nowrap mb-2 d-inline-block">
-                                                <i class="mdi mdi-comment-multiple-outline text-muted"></i>
-                                                <b>78</b> Comments
-                                            </span>
-                                        </p>
-                                        <!-- Team-->
-                                        <div class="avatar-group mb-3" id="tooltips-container4">
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-3.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container4" data-bs-toggle="tooltip" data-bs-placement="bottom" title="James Anderson" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-4.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container4" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mat Helme" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-5.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container4" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Username" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-1.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container4" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mat Helme" />
-                                            </a>
-                                        </div>
-                                        <!-- Progress-->
-                                        <p class="mb-2 fw-semibold">Task completed: <span class="float-end">12/36</span></p>
-                                        <div class="progress mb-1" style="height: 7px;">
-                                            <div class="progress-bar"
-                                                 role="progressbar" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100"
-                                                 style="width: 33%;">
-                                            </div><!-- /.progress-bar .progress-bar-danger -->
-                                        </div><!-- /.progress .no-rounded -->
-                                    </div>
-                                </div> <!-- end card box-->
-                            </div><!-- end col-->
-
-                            <div class="col-lg-4">
-                                <div class="card project-box">
-                                    <div class="card-body">
-                                        <div class="dropdown float-end">
-                                            <a href="#" class="dropdown-toggle card-drop arrow-none" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="mdi mdi-dots-horizontal m-0 text-muted h3"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-end">
-                                                <a class="dropdown-item" href="#">Edit</a>
-                                                <a class="dropdown-item" href="#">Delete</a>
-                                                <a class="dropdown-item" href="#">Add Members</a>
-                                                <a class="dropdown-item" href="#">Add Due Date</a>
-                                            </div>
-                                        </div> <!-- end dropdown -->
-                                        <!-- Title-->
-                                        <h4 class="mt-0"><a href="project-detail.html" class="text-dark">Multipurpose Landing Template</a></h4>
-                                        <p class="text-muted text-uppercase"><i class="mdi mdi-account-circle"></i> <small>Pride Softwares</small></p>
-                                        <div class="badge bg-soft-success text-success mb-3">Finished</div>
-                                        <!-- Desc-->
-                                        <p class="text-muted font-13 mb-3 sp-line-2">With supporting text below as a natural lead-in to additional contenposuere erat a
-                                            ante...<a href="javascript:void(0);" class="fw-bold text-muted">view more</a>
-                                        </p>
-                                        <!-- Task info-->
-                                        <p class="mb-1">
-                                            <span class="pe-2 text-nowrap mb-2 d-inline-block">
-                                                <i class="mdi mdi-format-list-bulleted-type text-muted"></i>
-                                                <b>30</b> Tasks
-                                            </span>
-                                            <span class="text-nowrap mb-2 d-inline-block">
-                                                <i class="mdi mdi-comment-multiple-outline text-muted"></i>
-                                                <b>148</b> Comments
-                                            </span>
-                                        </p>
-                                        <!-- Team-->
-                                        <div class="avatar-group mb-3" id="tooltips-container5">
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-6.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container5" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mat Helme" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-7.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container5" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Michael Zenaty" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-8.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container5" data-bs-toggle="tooltip" data-bs-placement="bottom" title="James Anderson" />
-                                            </a>
-                                        </div>
-                                        <!-- Progress-->
-                                        <p class="mb-2 fw-semibold">Task completed: <span class="float-end">28/30</span></p>
-                                        <div class="progress mb-1" style="height: 7px;">
-                                            <div class="progress-bar"
-                                                 role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"
-                                                 style="width: 95%;">
-                                            </div><!-- /.progress-bar .progress-bar-danger -->
-                                        </div><!-- /.progress .no-rounded -->
-                                    </div>
-                                </div> <!-- end card box-->
-                            </div><!-- end col-->
-                        </div>
-                        <!-- end row -->
-
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="text-center mb-3">
-                                    <a href="javascript:void(0);" class="text-danger"><i class="mdi mdi-spin mdi-loading me-1"></i> Load more </a>
-                                </div>
-                            </div> <!-- end col-->
-                        </div>
-                        <!-- end row -->
+                        </div> <!-- row -->
                         
-                    </div> <!-- container -->
+                     
 
                 </div> <!-- content -->
 
@@ -2181,6 +2577,12 @@
 
         <!-- Vendor js -->
         <script src="../assets/js/vendor.min.js"></script>
+
+        <!-- Bootstrap Tables js -->
+        <script src="../assets/libs/bootstrap-table/bootstrap-table.min.js"></script>
+
+        <!-- Init js -->
+        <script src="../assets/js/pages/bootstrap-tables.init.js"></script>
 
         <!-- App js -->
         <script src="../assets/js/app.min.js"></script>

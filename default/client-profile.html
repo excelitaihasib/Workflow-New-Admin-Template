@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>Project Listing | UBold - Responsive Admin Dashboard Template</title>
+        <title>Bootstrap Tables | UBold - Responsive Admin Dashboard Template</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
         <meta content="Coderthemes" name="author" />
@@ -10,15 +10,20 @@
         <!-- App favicon -->
         <link rel="shortcut icon" href="../assets/images/favicon.ico">
 
-        <!-- App css -->
-        <link href="../assets/css/config/default/bootstrap.min.css" rel="stylesheet" type="text/css" id="bs-default-stylesheet" />
-        <link href="../assets/css/config/default/app.min.css" rel="stylesheet" type="text/css" id="app-default-stylesheet" />
+        <!-- Bootstrap Tables css -->
+        <link href="../assets/libs/bootstrap-table/bootstrap-table.min.css" rel="stylesheet" type="text/css" />
 
-        <link href="../assets/css/config/default/bootstrap-dark.min.css" rel="stylesheet" type="text/css" id="bs-dark-stylesheet" />
-        <link href="../assets/css/config/default/app-dark.min.css" rel="stylesheet" type="text/css" id="app-dark-stylesheet" />
+    
+		<!-- App css -->
+		<link href="../assets/css/config/default/bootstrap.min.css" rel="stylesheet" type="text/css" id="bs-default-stylesheet" />
+		<link href="../assets/css/config/default/app.min.css" rel="stylesheet" type="text/css" id="app-default-stylesheet" />
+        <link href="../assets/css/config/main/main.css" rel="stylesheet" type="text/css">
 
-        <!-- icons -->
-        <link href="../assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+		<link href="../assets/css/config/default/bootstrap-dark.min.css" rel="stylesheet" type="text/css" id="bs-dark-stylesheet" />
+		<link href="../assets/css/config/default/app-dark.min.css" rel="stylesheet" type="text/css" id="app-dark-stylesheet" />
+
+		<!-- icons -->
+		<link href="../assets/css/icons.min.css" rel="stylesheet" type="text/css" />
 
     </head>
 
@@ -1323,8 +1328,10 @@
 
             <div class="content-page">
                 <div class="content">
+
                     <!-- Start Content-->
                     <div class="container-fluid">
+                        
                         <!-- start page title -->
                         <div class="row">
                             <div class="col-12">
@@ -1332,420 +1339,884 @@
                                     <div class="page-title-right">
                                         <ol class="breadcrumb m-0">
                                             <li class="breadcrumb-item"><a href="javascript: void(0);">UBold</a></li>
-                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Projects</a></li>
-                                            <li class="breadcrumb-item active">Projects List</li>
+                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Tables</a></li>
+                                            <li class="breadcrumb-item active">Client Profile</li>
                                         </ol>
                                     </div>
-                                    <h4 class="page-title">Projects List</h4>
+                                    <h4 class="page-title">Client Profile</h4>
                                 </div>
                             </div>
                         </div>     
                         <!-- end page title --> 
 
-                        <div class="row mb-2">
-                            <div class="col-sm-4">
-                                <a href="project-create.html" class="btn btn-danger rounded-pill waves-effect waves-light mb-3"><i class="mdi mdi-plus"></i> Create Project</a>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class=" text-center card">
+                                    <div class="card-body">
+                                        <div class="pt-2 pb-2">
+                                            <img src="../assets/images/users/user-3.jpg" class="rounded-circle img-thumbnail avatar-xl" alt="profile-image">
+    
+                                            <h4 class="mt-3"><a href="extras-profile.html" class="text-dark">Freddie J. Plourde</a></h4>
+                                            <p class="text-muted">@Founder <span> | </span> <span> <a href="#" class="text-pink">websitename.com</a> </span></p>
+    
+                                            <button type="button" class="btn btn-primary btn-sm waves-effect waves-light">Message</button>
+                                            <a  href="client-profile.html" type="button" class="btn btn-light btn-sm waves-effect">View Profile</a>
+    
+                                            <div class="row mt-3">
+                                                <div class="col-12">
+                                                    <div class="cp-text-wrapper">
+                                                        <ul class="text-start cp-text-menu" >
+                                                            <li><a>Cell: 0123456789, 0123456789</a></li>
+                                                            <li><a>e-mail: user@domain.com </a></li>
+                                                        </ul>
+                                                        <p  class="text-start">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui sit modi obcaecati, vel repellat deleniti nobis reprehenderit, assumenda commodi inventore aliquam placeat? Sequi, optio nisi. Ducimus nesciunt quasi perspiciatis ea? </p>
+
+                                                    </div>
+                                                </div>
+
+                                            </div> <!-- end row-->
+    
+                                        </div> <!-- end .padding -->
+                                    </div>
+                                </div> <!-- end card-->
                             </div>
-                            <div class="col-sm-8">
-                                <div class="text-sm-end">
-                                    <div class="btn-group mb-3">
-                                        <button type="button" class="btn btn-primary">All</button>
-                                    </div>
-                                    <div class="btn-group mb-3 ms-1">
-                                        <button type="button" class="btn btn-light">Ongoing</button>
-                                        <button type="button" class="btn btn-light">Finished</button>
-                                    </div>
-                                    <div class="btn-group mb-3 ms-2 d-none d-sm-inline-block">
-                                        <button type="button" class="btn btn-dark"><i class="mdi mdi-apps"></i></button>
-                                    </div>
-                                    <div class="btn-group mb-3 d-none d-sm-inline-block">
-                                        <button type="button" class="btn btn-link text-dark"><i class="mdi mdi-format-list-bulleted-type"></i></button>
-                                    </div>
-                                </div>
-                            </div><!-- end col-->
-                        </div> 
-                        <!-- end row-->
-
-
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <div class="card project-box">
+                            <div class="col-md-8 col-sm-12 ">
+                                <div class="card">
                                     <div class="card-body">
-                                        <div class="dropdown float-end">
-                                            <a href="#" class="dropdown-toggle card-drop arrow-none" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="mdi mdi-dots-horizontal m-0 text-muted h3"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-end">
-                                                <a class="dropdown-item" href="#">Edit</a>
-                                                <a class="dropdown-item" href="#">Delete</a>
-                                                <a class="dropdown-item" href="#">Add Members</a>
-                                                <a class="dropdown-item" href="#">Add Due Date</a>
-                                            </div>
-                                        </div> <!-- end dropdown -->
-                                        <!-- Title-->
-                                        <h4 class="mt-0"><a href="singleprojectDashboard.html" class="text-dark">New Admin Design</a></h4>
-                                        <p class="text-muted text-uppercase"><i class="mdi mdi-account-circle"></i> <small>Orange Limited</small></p>
-                                        <div class="badge bg-soft-success text-success mb-3">Finished</div>
-                                        <!-- Desc-->
-                                        <p class="text-muted font-13 mb-3 sp-line-2">With supporting text below as a natural lead-in to additional contenposuere erat a
-                                            ante...<a href="javascript:void(0);" class="fw-bold text-muted">view more</a>
-                                        </p>
-                                        <!-- Task info-->
-                                        <p class="mb-1">
-                                            <span class="pe-2 text-nowrap mb-2 d-inline-block">
-                                                <i class="mdi mdi-format-list-bulleted-type text-muted"></i>
-                                                <b>78</b> Tasks
-                                            </span>
-                                            <span class="text-nowrap mb-2 d-inline-block">
-                                                <i class="mdi mdi-comment-multiple-outline text-muted"></i>
-                                                <b>214</b> Comments
-                                            </span>
-                                        </p>
-                                        <!-- Team-->
-                                        <div class="avatar-group mb-3" id="tooltips-container">
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-1.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mat Helme" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-2.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Michael Zenaty" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-3.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container" data-bs-toggle="tooltip" data-bs-placement="bottom" title="James Anderson" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-4.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mat Helme" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-5.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Username" />
-                                            </a>
-                                        </div>
-                                        <!-- Progress-->
-                                        <p class="mb-2 fw-semibold">Task completed: <span class="float-end">28/78</span></p>
-                                        <div class="progress mb-1" style="height: 7px;">
-                                            <div class="progress-bar"
-                                                 role="progressbar" aria-valuenow="34" aria-valuemin="0" aria-valuemax="100"
-                                                 style="width: 34%;">
-                                            </div><!-- /.progress-bar .progress-bar-danger -->
-                                        </div><!-- /.progress .no-rounded -->
-                                    </div>
-                                </div> <!-- end card box-->
-                            </div><!-- end col-->
-                            <div class="col-lg-4">
-                                <div class="card project-box">
-                                    <div class="card-body">
-                                        <div class="dropdown float-end">
-                                            <a href="#" class="dropdown-toggle card-drop arrow-none" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="mdi mdi-dots-horizontal m-0 text-muted h3"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-end">
-                                                <a class="dropdown-item" href="#">Edit</a>
-                                                <a class="dropdown-item" href="#">Delete</a>
-                                                <a class="dropdown-item" href="#">Add Members</a>
-                                                <a class="dropdown-item" href="#">Add Due Date</a>
-                                            </div>
-                                        </div> <!-- end dropdown -->
-                                        <!-- Title-->
-                                        <h4 class="mt-0"><a href="singleprojectDashboard.html" class="text-dark">App Design and Development</a></h4>
-                                        <p class="text-muted text-uppercase"><i class="mdi mdi-account-circle"></i> <small>Moondust Softwares</small></p>
-                                        <div class="badge bg-soft-secondary text-secondary mb-3">Ongoing</div>
-                                        <!-- Desc-->
-                                        <p class="text-muted font-13 mb-3 sp-line-2">A handful of model sentence structures, to generate Lorem Ipsum which looks reasonable...<a href="javascript:void(0);" class="fw-bold text-muted">view more</a>
-                                        </p>
-                                        <!-- Task info-->
-                                        <p class="mb-1">
-                                            <span class="pe-2 text-nowrap mb-2 d-inline-block">
-                                                <i class="mdi mdi-format-list-bulleted-type text-muted"></i>
-                                                <b>81</b> Tasks
-                                            </span>
-                                            <span class="text-nowrap mb-2 d-inline-block">
-                                                <i class="mdi mdi-comment-multiple-outline text-muted"></i>
-                                                <b>103</b> Comments
-                                            </span>
-                                        </p>
-                                        <!-- Team-->
-                                        <div class="avatar-group mb-3" id="tooltips-container1">
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-6.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container1" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mat Helme" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-7.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container1" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Michael Zenaty" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-8.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container1" data-bs-toggle="tooltip" data-bs-placement="bottom" title="James Anderson" />
-                                            </a>
-                                        </div>
-                                        <!-- Progress-->
-                                        <p class="mb-2 fw-semibold">Task completed: <span class="float-end">55/85</span></p>
-                                        <div class="progress mb-1" style="height: 7px;">
-                                            <div class="progress-bar"
-                                                 role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
-                                                 style="width: 80%;">
-                                            </div><!-- /.progress-bar .progress-bar-danger -->
-                                        </div><!-- /.progress .no-rounded -->
-                                    </div>
-                                </div> <!-- end card box-->
-                            </div><!-- end col-->
-                            <div class="col-lg-4">
-                                <div class="card project-box">
-                                    <div class="card-body">
-                                        <div class="dropdown float-end">
-                                            <a href="#" class="dropdown-toggle card-drop arrow-none" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="mdi mdi-dots-horizontal m-0 text-muted h3"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-end">
-                                                <a class="dropdown-item" href="#">Edit</a>
-                                                <a class="dropdown-item" href="#">Delete</a>
-                                                <a class="dropdown-item" href="#">Add Members</a>
-                                                <a class="dropdown-item" href="#">Add Due Date</a>
-                                            </div>
-                                        </div> <!-- end dropdown -->
-                                        <!-- Title-->
-                                        <h4 class="mt-0"><a href="singleprojectDashboard.html" class="text-dark">Landing page Design</a></h4>
-                                        <p class="text-muted text-uppercase"><i class="mdi mdi-account-circle"></i> <small>Rose Technologies</small></p>
-                                        <div class="badge bg-soft-success text-success mb-3">Finished</div>
-                                        <!-- Desc-->
-                                        <p class="text-muted font-13 mb-3 sp-line-2">You need to be sure there isn't anything embarrassing hidden in the middle of text...<a href="javascript:void(0);" class="fw-bold text-muted">view more</a>
-                                        </p>
-                                        <!-- Task info-->
-                                        <p class="mb-1">
-                                            <span class="pe-2 text-nowrap mb-2 d-inline-block">
-                                                <i class="mdi mdi-format-list-bulleted-type text-muted"></i>
-                                                <b>42</b> Tasks
-                                            </span>
-                                            <span class="text-nowrap mb-2 d-inline-block">
-                                                <i class="mdi mdi-comment-multiple-outline text-muted"></i>
-                                                <b>65</b> Comments
-                                            </span>
-                                        </p>
-                                        <!-- Team-->
-                                        <div class="avatar-group mb-3" id="tooltips-container2">
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-9.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mat Helme" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-10.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Michael Zenaty" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-1.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="James Anderson" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-3.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mat Helme" />
-                                            </a>
-                                        </div>
-                                        <!-- Progress-->
-                                        <p class="mb-2 fw-semibold">Task completed: <span class="float-end">21/42</span></p>
-                                        <div class="progress mb-1" style="height: 7px;">
-                                            <div class="progress-bar"
-                                                 role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
-                                                 style="width: 50%;">
-                                            </div><!-- /.progress-bar .progress-bar-danger -->
-                                        </div><!-- /.progress .no-rounded -->
-                                    </div>
-                                </div> <!-- end card box-->
-                            </div><!-- end col-->
+                                        <h4 class="header-title">Invoice</h4>
+                                        <table data-toggle="table" data-search="true" data-show-refresh="true" data-sort-name="id" data-page-list="[5, 10, 20]" 
+                                        data-page-size="5" data-pagination="true" data-show-pagination-switch="true" class="table-borderless">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th > Project Name</th>
+                                                <th > Project ID</th>
+                                                <th > Start Date</th>
+                                                <th > End Date </th>
+                                                <th > Total Cost </th>
+                                                <th > Paid </th>
+                                                <th >Due</th>
+                                                <th >Status </th>
+                               
+                                            </tr>
+                                        </thead>
+                                                                  
+                                        <tbody>
+                                            <tr>
+                                               <td>ShaplaCity</td>
+                                               <td>EIT02S</td>
+                                               <td> 22/02/22 </td>
+                                               <td> 22/02/22 </td>
+                                               <td> $1000</td>
+                                               <td> $00</td>
+                                               <td> $00</td>
+                                               <td> $Pending</td>
+                                            </tr>             
+                                            <tr>
+                                               <td>Excel IT</td>
+                                               <td>EIT03S</td>
+                                               <td> 22/02/22 </td>
+                                               <td> 22/02/22 </td>
+                                               <td> $1000</td>
+                                               <td> $00</td>
+                                               <td> $00</td>
+                                               <td> $Pending</td>
+                                            </tr>             
+                                            <tr>
+                                               <td> Doctor App </td>
+                                               <td>EIT04S</td>
+                                               <td> 22/02/22 </td>
+                                               <td> 22/02/22 </td>
+                                               <td> $1000</td>
+                                               <td> $00</td>
+                                               <td> $00</td>
+                                               <td> $Pending</td>
+                                            </tr>             
+                                            <tr>
+                                               <td>  CRM App </td>
+                                               <td>EIT05S</td>
+                                               <td> 22/02/22 </td>
+                                               <td> 22/02/22 </td>
+                                               <td> $1000</td>
+                                               <td> $00</td>
+                                               <td> $00</td>
+                                               <td> $Pending</td>
+                                            </tr>             
+                                            <tr>
+                                               <td>ShaplaCity</td>
+                                               <td>EIT02S</td>
+                                               <td> 22/02/22 </td>
+                                               <td> 22/02/22 </td>
+                                               <td> $1000</td>
+                                               <td> $00</td>
+                                               <td> $00</td>
+                                               <td> $Pending</td>
+                                            </tr>             
+                                            <tr>
+                                               <td>Excel IT</td>
+                                               <td>EIT03S</td>
+                                               <td> 22/02/22 </td>
+                                               <td> 22/02/22 </td>
+                                               <td> $1000</td>
+                                               <td> $00</td>
+                                               <td> $00</td>
+                                               <td> $Pending</td>
+                                            </tr>             
+                                            <tr>
+                                               <td> Doctor App </td>
+                                               <td>EIT04S</td>
+                                               <td> 22/02/22 </td>
+                                               <td> 22/02/22 </td>
+                                               <td> $1000</td>
+                                               <td> $00</td>
+                                               <td> $00</td>
+                                               <td> $Pending</td>
+                                            </tr>             
+                                            <tr>
+                                               <td>  CRM App </td>
+                                               <td>EIT05S</td>
+                                               <td> 22/02/22 </td>
+                                               <td> 22/02/22 </td>
+                                               <td> $1000</td>
+                                               <td> $00</td>
+                                               <td> $00</td>
+                                               <td> $Pending</td>
+                                            </tr>             
+                                            <tr>
+                                               <td>ShaplaCity</td>
+                                               <td>EIT02S</td>
+                                               <td> 22/02/22 </td>
+                                               <td> 22/02/22 </td>
+                                               <td> $1000</td>
+                                               <td> $00</td>
+                                               <td> $00</td>
+                                               <td> $Pending</td>
+                                            </tr>             
+                                            <tr>
+                                               <td>Excel IT</td>
+                                               <td>EIT03S</td>
+                                               <td> 22/02/22 </td>
+                                               <td> 22/02/22 </td>
+                                               <td> $1000</td>
+                                               <td> $00</td>
+                                               <td> $00</td>
+                                               <td> $Pending</td>
+                                            </tr>             
+                                            <tr>
+                                               <td> Doctor App </td>
+                                               <td>EIT04S</td>
+                                               <td> 22/02/22 </td>
+                                               <td> 22/02/22 </td>
+                                               <td> $1000</td>
+                                               <td> $00</td>
+                                               <td> $00</td>
+                                               <td> $Pending</td>
+                                            </tr>             
+                                            <tr>
+                                               <td>  CRM App </td>
+                                               <td>EIT05S</td>
+                                               <td> 22/02/22 </td>
+                                               <td> 22/02/22 </td>
+                                               <td> $1000</td>
+                                               <td> $00</td>
+                                               <td> $00</td>
+                                               <td> $Pending</td>
+                                            </tr>             
+                                            <tr>
+                                               <td>ShaplaCity</td>
+                                               <td>EIT02S</td>
+                                               <td> 22/02/22 </td>
+                                               <td> 22/02/22 </td>
+                                               <td> $1000</td>
+                                               <td> $00</td>
+                                               <td> $00</td>
+                                               <td> $Pending</td>
+                                            </tr>             
+                                            <tr>
+                                               <td>Excel IT</td>
+                                               <td>EIT03S</td>
+                                               <td> 22/02/22 </td>
+                                               <td> 22/02/22 </td>
+                                               <td> $1000</td>
+                                               <td> $00</td>
+                                               <td> $00</td>
+                                               <td> $Pending</td>
+                                            </tr>             
+                                            <tr>
+                                               <td> Doctor App </td>
+                                               <td>EIT04S</td>
+                                               <td> 22/02/22 </td>
+                                               <td> 22/02/22 </td>
+                                               <td> $1000</td>
+                                               <td> $00</td>
+                                               <td> $00</td>
+                                               <td> $Pending</td>
+                                            </tr>             
+                                            <tr>
+                                               <td>  CRM App </td>
+                                               <td>EIT05S</td>
+                                               <td> 22/02/22 </td>
+                                               <td> 22/02/22 </td>
+                                               <td> $1000</td>
+                                               <td> $00</td>
+                                               <td> $00</td>
+                                               <td> $Pending</td>
+                                            </tr>             
 
-                        </div>
-                        <!-- end row -->
+                                        </tbody>
+                                    </table>
 
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <div class="card project-box">
-                                    <div class="card-body">
-                                        <div class="dropdown float-end">
-                                            <a href="#" class="dropdown-toggle card-drop arrow-none" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="mdi mdi-dots-horizontal m-0 text-muted h3"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-end">
-                                                <a class="dropdown-item" href="#">Edit</a>
-                                                <a class="dropdown-item" href="#">Delete</a>
-                                                <a class="dropdown-item" href="#">Add Members</a>
-                                                <a class="dropdown-item" href="#">Add Due Date</a>
-                                            </div>
-                                        </div> <!-- end dropdown -->
-                                        <!-- Title-->
-                                        <h4 class="mt-0"><a href="singleprojectDashboard.html" class="text-dark">Custom Software Development</a></h4>
-                                        <p class="text-muted text-uppercase"><i class="mdi mdi-account-circle"></i> <small>Apple Navigations</small></p>
-                                        <div class="badge bg-soft-secondary text-secondary mb-3">Ongoing</div>
-                                        <!-- Desc-->
-                                        <p class="text-muted font-13 mb-3 sp-line-2">You need to be sure there isn't anything embarrassing hidden in the middle of text...<a href="javascript:void(0);" class="fw-bold text-muted">view more</a>
-                                        </p>
-                                        <!-- Task info-->
-                                        <p class="mb-1">
-                                            <span class="pe-2 text-nowrap mb-2 d-inline-block">
-                                                <i class="mdi mdi-format-list-bulleted-type text-muted"></i>
-                                                <b>95</b> Tasks
-                                            </span>
-                                            <span class="text-nowrap mb-2 d-inline-block">
-                                                <i class="mdi mdi-comment-multiple-outline text-muted"></i>
-                                                <b>1.3k</b> Comments
-                                            </span>
-                                        </p>
-                                        <!-- Team-->
-                                        <div class="avatar-group mb-3" id="tooltips-container3">
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-5.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container3" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mat Helme" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-8.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container3" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Michael Zenaty" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-9.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container3" data-bs-toggle="tooltip" data-bs-placement="bottom" title="James Anderson" />
-                                            </a>
-                                        </div>
-                                        <!-- Progress-->
-                                        <p class="mb-2 fw-semibold">Task completed: <span class="float-end">70/95</span></p>
-                                        <div class="progress mb-1" style="height: 7px;">
-                                            <div class="progress-bar"
-                                                 role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100"
-                                                 style="width: 68%;">
-                                            </div><!-- /.progress-bar .progress-bar-danger -->
-                                        </div><!-- /.progress .no-rounded -->
+
                                     </div>
-                                </div> <!-- end card box-->
-                            </div><!-- end col-->
-
-                            <div class="col-lg-4">
-                                <div class="card project-box">
-                                    <div class="card-body">
-                                        <div class="dropdown float-end">
-                                            <a href="#" class="dropdown-toggle card-drop arrow-none" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="mdi mdi-dots-horizontal m-0 text-muted h3"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-end">
-                                                <a class="dropdown-item" href="#">Edit</a>
-                                                <a class="dropdown-item" href="#">Delete</a>
-                                                <a class="dropdown-item" href="#">Add Members</a>
-                                                <a class="dropdown-item" href="#">Add Due Date</a>
-                                            </div>
-                                        </div> <!-- end dropdown -->
-                                        <!-- Title-->
-                                        <h4 class="mt-0"><a href="singleprojectDashboard.html" class="text-dark">Website Redesign</a></h4>
-                                        <p class="text-muted text-uppercase"><i class="mdi mdi-account-circle"></i> <small>Enigma Navigations</small></p>
-                                        <div class="badge bg-soft-secondary text-secondary mb-3">Ongoing</div>
-                                        <!-- Desc-->
-                                        <p class="text-muted font-13 mb-3 sp-line-2">There are many variations of passages of Lorem Ipsum available natural lead-in to additional...<a href="javascript:void(0);" class="fw-bold text-muted">view more</a>
-                                        </p>
-                                        <!-- Task info-->
-                                        <p class="mb-1">
-                                            <span class="pe-2 text-nowrap mb-2 d-inline-block">
-                                                <i class="mdi mdi-format-list-bulleted-type text-muted"></i>
-                                                <b>36</b> Tasks
-                                            </span>
-                                            <span class="text-nowrap mb-2 d-inline-block">
-                                                <i class="mdi mdi-comment-multiple-outline text-muted"></i>
-                                                <b>78</b> Comments
-                                            </span>
-                                        </p>
-                                        <!-- Team-->
-                                        <div class="avatar-group mb-3" id="tooltips-container4">
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-3.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container4" data-bs-toggle="tooltip" data-bs-placement="bottom" title="James Anderson" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-4.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container4" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mat Helme" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-5.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container4" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Username" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-1.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container4" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mat Helme" />
-                                            </a>
-                                        </div>
-                                        <!-- Progress-->
-                                        <p class="mb-2 fw-semibold">Task completed: <span class="float-end">12/36</span></p>
-                                        <div class="progress mb-1" style="height: 7px;">
-                                            <div class="progress-bar"
-                                                 role="progressbar" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100"
-                                                 style="width: 33%;">
-                                            </div><!-- /.progress-bar .progress-bar-danger -->
-                                        </div><!-- /.progress .no-rounded -->
-                                    </div>
-                                </div> <!-- end card box-->
-                            </div><!-- end col-->
-
-                            <div class="col-lg-4">
-                                <div class="card project-box">
-                                    <div class="card-body">
-                                        <div class="dropdown float-end">
-                                            <a href="#" class="dropdown-toggle card-drop arrow-none" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="mdi mdi-dots-horizontal m-0 text-muted h3"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-end">
-                                                <a class="dropdown-item" href="#">Edit</a>
-                                                <a class="dropdown-item" href="#">Delete</a>
-                                                <a class="dropdown-item" href="#">Add Members</a>
-                                                <a class="dropdown-item" href="#">Add Due Date</a>
-                                            </div>
-                                        </div> <!-- end dropdown -->
-                                        <!-- Title-->
-                                        <h4 class="mt-0"><a href="project-detail.html" class="text-dark">Multipurpose Landing Template</a></h4>
-                                        <p class="text-muted text-uppercase"><i class="mdi mdi-account-circle"></i> <small>Pride Softwares</small></p>
-                                        <div class="badge bg-soft-success text-success mb-3">Finished</div>
-                                        <!-- Desc-->
-                                        <p class="text-muted font-13 mb-3 sp-line-2">With supporting text below as a natural lead-in to additional contenposuere erat a
-                                            ante...<a href="javascript:void(0);" class="fw-bold text-muted">view more</a>
-                                        </p>
-                                        <!-- Task info-->
-                                        <p class="mb-1">
-                                            <span class="pe-2 text-nowrap mb-2 d-inline-block">
-                                                <i class="mdi mdi-format-list-bulleted-type text-muted"></i>
-                                                <b>30</b> Tasks
-                                            </span>
-                                            <span class="text-nowrap mb-2 d-inline-block">
-                                                <i class="mdi mdi-comment-multiple-outline text-muted"></i>
-                                                <b>148</b> Comments
-                                            </span>
-                                        </p>
-                                        <!-- Team-->
-                                        <div class="avatar-group mb-3" id="tooltips-container5">
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-6.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container5" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mat Helme" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-7.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container5" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Michael Zenaty" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-8.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container5" data-bs-toggle="tooltip" data-bs-placement="bottom" title="James Anderson" />
-                                            </a>
-                                        </div>
-                                        <!-- Progress-->
-                                        <p class="mb-2 fw-semibold">Task completed: <span class="float-end">28/30</span></p>
-                                        <div class="progress mb-1" style="height: 7px;">
-                                            <div class="progress-bar"
-                                                 role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"
-                                                 style="width: 95%;">
-                                            </div><!-- /.progress-bar .progress-bar-danger -->
-                                        </div><!-- /.progress .no-rounded -->
-                                    </div>
-                                </div> <!-- end card box-->
-                            </div><!-- end col-->
-                        </div>
-                        <!-- end row -->
-
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="text-center mb-3">
-                                    <a href="javascript:void(0);" class="text-danger"><i class="mdi mdi-spin mdi-loading me-1"></i> Load more </a>
-                                </div>
+                                </div> <!-- end card-->
                             </div> <!-- end col-->
                         </div>
-                        <!-- end row -->
+                        <!-- end row-->
+
+                        <div class="client-current-project">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <h3>Current Project</h3>                            
+                                </div>
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="col-lg-4">
+                                    <div class="card project-box">
+                                        <div class="card-body">
+                                            <div class="dropdown float-end">
+                                                <a href="#" class="dropdown-toggle card-drop arrow-none" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="mdi mdi-dots-horizontal m-0 text-muted h3"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" href="#">Edit</a>
+                                                    <a class="dropdown-item" href="#">Delete</a>
+                                                    <a class="dropdown-item" href="#">Add Members</a>
+                                                    <a class="dropdown-item" href="#">Add Due Date</a>
+                                                </div>
+                                            </div> <!-- end dropdown -->
+                                            <!-- Title-->
+                                            <h4 class="mt-0"><a href="project-detail.html" class="text-dark">Custom Software Development</a></h4>
+                                            <p class="text-muted text-uppercase"><i class="mdi mdi-account-circle"></i> <small>Apple Navigations</small></p>
+                                            <div class="badge bg-soft-secondary text-secondary mb-3">Ongoing</div>
+                                            <!-- Desc-->
+                                            <p class="text-muted font-13 mb-3 sp-line-2">You need to be sure there isn't anything embarrassing hidden in the middle of text...<a href="javascript:void(0);" class="fw-bold text-muted">view more</a>
+                                            </p>
+                                            <!-- Task info-->
+                                            <p class="mb-1">
+                                                <span class="pe-2 text-nowrap mb-2 d-inline-block">
+                                                    <i class="mdi mdi-format-list-bulleted-type text-muted"></i>
+                                                    <b>95</b> Tasks
+                                                </span>
+                                                <span class="text-nowrap mb-2 d-inline-block">
+                                                    <i class="mdi mdi-comment-multiple-outline text-muted"></i>
+                                                    <b>1.3k</b> Comments
+                                                </span>
+                                            </p>
+                                            <!-- Team-->
+                                            <div class="avatar-group mb-3" id="tooltips-container3">
+                                                <a href="javascript: void(0);" class="avatar-group-item">
+                                                    <img src="../assets/images/users/user-5.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container3" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mat Helme" />
+                                                </a>
+        
+                                                <a href="javascript: void(0);" class="avatar-group-item">
+                                                    <img src="../assets/images/users/user-8.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container3" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Michael Zenaty" />
+                                                </a>
+        
+                                                <a href="javascript: void(0);" class="avatar-group-item">
+                                                    <img src="../assets/images/users/user-9.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container3" data-bs-toggle="tooltip" data-bs-placement="bottom" title="James Anderson" />
+                                                </a>
+                                            </div>
+                                            <!-- Progress-->
+                                            <p class="mb-2 fw-semibold">Task completed: <span class="float-end">70/95</span></p>
+                                            <div class="progress mb-1" style="height: 7px;">
+                                                <div class="progress-bar"
+                                                     role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100"
+                                                     style="width: 68%;">
+                                                </div><!-- /.progress-bar .progress-bar-danger -->
+                                            </div><!-- /.progress .no-rounded -->
+                                        </div>
+                                    </div> <!-- end card box-->
+                                </div><!-- end col-->
+                                <div class="col-lg-4">
+                                    <div class="card project-box">
+                                        <div class="card-body">
+                                            <div class="dropdown float-end">
+                                                <a href="#" class="dropdown-toggle card-drop arrow-none" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="mdi mdi-dots-horizontal m-0 text-muted h3"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" href="#">Edit</a>
+                                                    <a class="dropdown-item" href="#">Delete</a>
+                                                    <a class="dropdown-item" href="#">Add Members</a>
+                                                    <a class="dropdown-item" href="#">Add Due Date</a>
+                                                </div>
+                                            </div> <!-- end dropdown -->
+                                            <!-- Title-->
+                                            <h4 class="mt-0"><a href="project-detail.html" class="text-dark">Custom Software Development</a></h4>
+                                            <p class="text-muted text-uppercase"><i class="mdi mdi-account-circle"></i> <small>Apple Navigations</small></p>
+                                            <div class="badge bg-soft-secondary text-secondary mb-3">Ongoing</div>
+                                            <!-- Desc-->
+                                            <p class="text-muted font-13 mb-3 sp-line-2">You need to be sure there isn't anything embarrassing hidden in the middle of text...<a href="javascript:void(0);" class="fw-bold text-muted">view more</a>
+                                            </p>
+                                            <!-- Task info-->
+                                            <p class="mb-1">
+                                                <span class="pe-2 text-nowrap mb-2 d-inline-block">
+                                                    <i class="mdi mdi-format-list-bulleted-type text-muted"></i>
+                                                    <b>95</b> Tasks
+                                                </span>
+                                                <span class="text-nowrap mb-2 d-inline-block">
+                                                    <i class="mdi mdi-comment-multiple-outline text-muted"></i>
+                                                    <b>1.3k</b> Comments
+                                                </span>
+                                            </p>
+                                            <!-- Team-->
+                                            <div class="avatar-group mb-3" id="tooltips-container3">
+                                                <a href="javascript: void(0);" class="avatar-group-item">
+                                                    <img src="../assets/images/users/user-5.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container3" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mat Helme" />
+                                                </a>
+        
+                                                <a href="javascript: void(0);" class="avatar-group-item">
+                                                    <img src="../assets/images/users/user-8.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container3" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Michael Zenaty" />
+                                                </a>
+        
+                                                <a href="javascript: void(0);" class="avatar-group-item">
+                                                    <img src="../assets/images/users/user-9.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container3" data-bs-toggle="tooltip" data-bs-placement="bottom" title="James Anderson" />
+                                                </a>
+                                            </div>
+                                            <!-- Progress-->
+                                            <p class="mb-2 fw-semibold">Task completed: <span class="float-end">70/95</span></p>
+                                            <div class="progress mb-1" style="height: 7px;">
+                                                <div class="progress-bar"
+                                                     role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100"
+                                                     style="width: 68%;">
+                                                </div><!-- /.progress-bar .progress-bar-danger -->
+                                            </div><!-- /.progress .no-rounded -->
+                                        </div>
+                                    </div> <!-- end card box-->
+                                </div><!-- end col-->
+                                <div class="col-lg-4">
+                                    <div class="card project-box">
+                                        <div class="card-body">
+                                            <div class="dropdown float-end">
+                                                <a href="#" class="dropdown-toggle card-drop arrow-none" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="mdi mdi-dots-horizontal m-0 text-muted h3"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" href="#">Edit</a>
+                                                    <a class="dropdown-item" href="#">Delete</a>
+                                                    <a class="dropdown-item" href="#">Add Members</a>
+                                                    <a class="dropdown-item" href="#">Add Due Date</a>
+                                                </div>
+                                            </div> <!-- end dropdown -->
+                                            <!-- Title-->
+                                            <h4 class="mt-0"><a href="project-detail.html" class="text-dark">Custom Software Development</a></h4>
+                                            <p class="text-muted text-uppercase"><i class="mdi mdi-account-circle"></i> <small>Apple Navigations</small></p>
+                                            <div class="badge bg-soft-secondary text-secondary mb-3">Ongoing</div>
+                                            <!-- Desc-->
+                                            <p class="text-muted font-13 mb-3 sp-line-2">You need to be sure there isn't anything embarrassing hidden in the middle of text...<a href="javascript:void(0);" class="fw-bold text-muted">view more</a>
+                                            </p>
+                                            <!-- Task info-->
+                                            <p class="mb-1">
+                                                <span class="pe-2 text-nowrap mb-2 d-inline-block">
+                                                    <i class="mdi mdi-format-list-bulleted-type text-muted"></i>
+                                                    <b>95</b> Tasks
+                                                </span>
+                                                <span class="text-nowrap mb-2 d-inline-block">
+                                                    <i class="mdi mdi-comment-multiple-outline text-muted"></i>
+                                                    <b>1.3k</b> Comments
+                                                </span>
+                                            </p>
+                                            <!-- Team-->
+                                            <div class="avatar-group mb-3" id="tooltips-container3">
+                                                <a href="javascript: void(0);" class="avatar-group-item">
+                                                    <img src="../assets/images/users/user-5.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container3" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mat Helme" />
+                                                </a>
+        
+                                                <a href="javascript: void(0);" class="avatar-group-item">
+                                                    <img src="../assets/images/users/user-8.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container3" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Michael Zenaty" />
+                                                </a>
+        
+                                                <a href="javascript: void(0);" class="avatar-group-item">
+                                                    <img src="../assets/images/users/user-9.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container3" data-bs-toggle="tooltip" data-bs-placement="bottom" title="James Anderson" />
+                                                </a>
+                                            </div>
+                                            <!-- Progress-->
+                                            <p class="mb-2 fw-semibold">Task completed: <span class="float-end">70/95</span></p>
+                                            <div class="progress mb-1" style="height: 7px;">
+                                                <div class="progress-bar"
+                                                     role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100"
+                                                     style="width: 68%;">
+                                                </div><!-- /.progress-bar .progress-bar-danger -->
+                                            </div><!-- /.progress .no-rounded -->
+                                        </div>
+                                    </div> <!-- end card box-->
+                                </div><!-- end col-->
+
+                         
+                            </div>
+                            <!-- pagination start -->
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="text-end">
+                                        <ul class="pagination pagination-rounded justify-content-end">
+                                            <li class="page-item">
+                                                <a class="page-link" href="javascript: void(0);" aria-label="Previous">
+                                                    <span aria-hidden="true">«</span>
+                                                    <span class="visually-hidden">Previous</span>
+                                                </a>
+                                            </li>
+                                            <li class="page-item active"><a class="page-link" href="javascript: void(0);">1</a></li>
+                                            <li class="page-item"><a class="page-link" href="javascript: void(0);">2</a></li>
+                                            <li class="page-item"><a class="page-link" href="javascript: void(0);">3</a></li>
+                                            <li class="page-item"><a class="page-link" href="javascript: void(0);">4</a></li>
+                                            <li class="page-item"><a class="page-link" href="javascript: void(0);">5</a></li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="javascript: void(0);" aria-label="Next">
+                                                    <span aria-hidden="true">»</span>
+                                                    <span class="visually-hidden">Next</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end row -->
+                        </div>
+                        <div class="client-delivered-project">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <h3>Delivered Project</h3>                            
+                                </div>
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="col-lg-4">
+                                    <div class="card project-box">
+                                        <div class="card-body">
+                                            <div class="dropdown float-end">
+                                                <a href="#" class="dropdown-toggle card-drop arrow-none" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="mdi mdi-dots-horizontal m-0 text-muted h3"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" href="#">Edit</a>
+                                                    <a class="dropdown-item" href="#">Delete</a>
+                                                    <a class="dropdown-item" href="#">Add Members</a>
+                                                    <a class="dropdown-item" href="#">Add Due Date</a>
+                                                </div>
+                                            </div> <!-- end dropdown -->
+                                            <!-- Title-->
+                                            <h4 class="mt-0"><a href="project-detail.html" class="text-dark">New Admin Design</a></h4>
+                                            <p class="text-muted text-uppercase"><i class="mdi mdi-account-circle"></i> <small>Orange Limited</small></p>
+                                            <div class="badge bg-soft-success text-success mb-3">Finished</div>
+                                            <!-- Desc-->
+                                            <p class="text-muted font-13 mb-3 sp-line-2">With supporting text below as a natural lead-in to additional contenposuere erat a
+                                                ante...<a href="javascript:void(0);" class="fw-bold text-muted">view more</a>
+                                            </p>
+                                            <!-- Task info-->
+                                            <p class="mb-1">
+                                                <span class="pe-2 text-nowrap mb-2 d-inline-block">
+                                                    <i class="mdi mdi-format-list-bulleted-type text-muted"></i>
+                                                    <b>78</b> Tasks
+                                                </span>
+                                                <span class="text-nowrap mb-2 d-inline-block">
+                                                    <i class="mdi mdi-comment-multiple-outline text-muted"></i>
+                                                    <b>214</b> Comments
+                                                </span>
+                                            </p>
+                                            <!-- Team-->
+                                            <div class="avatar-group mb-3" id="tooltips-container">
+                                                <a href="javascript: void(0);" class="avatar-group-item">
+                                                    <img src="../assets/images/users/user-1.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mat Helme" />
+                                                </a>
+        
+                                                <a href="javascript: void(0);" class="avatar-group-item">
+                                                    <img src="../assets/images/users/user-2.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Michael Zenaty" />
+                                                </a>
+        
+                                                <a href="javascript: void(0);" class="avatar-group-item">
+                                                    <img src="../assets/images/users/user-3.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container" data-bs-toggle="tooltip" data-bs-placement="bottom" title="James Anderson" />
+                                                </a>
+        
+                                                <a href="javascript: void(0);" class="avatar-group-item">
+                                                    <img src="../assets/images/users/user-4.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mat Helme" />
+                                                </a>
+        
+                                                <a href="javascript: void(0);" class="avatar-group-item">
+                                                    <img src="../assets/images/users/user-5.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Username" />
+                                                </a>
+                                            </div>
+                                            <!-- Progress-->
+                                            <p class="mb-2 fw-semibold">Task completed: <span class="float-end">28/78</span></p>
+                                            <div class="progress mb-1" style="height: 7px;">
+                                                <div class="progress-bar"
+                                                     role="progressbar" aria-valuenow="34" aria-valuemin="0" aria-valuemax="100"
+                                                     style="width: 34%;">
+                                                </div><!-- /.progress-bar .progress-bar-danger -->
+                                            </div><!-- /.progress .no-rounded -->
+                                        </div>
+                                    </div> <!-- end card box-->
+                                </div><!-- end col-->  
+                                <div class="col-lg-4">
+                                    <div class="card project-box">
+                                        <div class="card-body">
+                                            <div class="dropdown float-end">
+                                                <a href="#" class="dropdown-toggle card-drop arrow-none" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="mdi mdi-dots-horizontal m-0 text-muted h3"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" href="#">Edit</a>
+                                                    <a class="dropdown-item" href="#">Delete</a>
+                                                    <a class="dropdown-item" href="#">Add Members</a>
+                                                    <a class="dropdown-item" href="#">Add Due Date</a>
+                                                </div>
+                                            </div> <!-- end dropdown -->
+                                            <!-- Title-->
+                                            <h4 class="mt-0"><a href="project-detail.html" class="text-dark">New Admin Design</a></h4>
+                                            <p class="text-muted text-uppercase"><i class="mdi mdi-account-circle"></i> <small>Orange Limited</small></p>
+                                            <div class="badge bg-soft-success text-success mb-3">Finished</div>
+                                            <!-- Desc-->
+                                            <p class="text-muted font-13 mb-3 sp-line-2">With supporting text below as a natural lead-in to additional contenposuere erat a
+                                                ante...<a href="javascript:void(0);" class="fw-bold text-muted">view more</a>
+                                            </p>
+                                            <!-- Task info-->
+                                            <p class="mb-1">
+                                                <span class="pe-2 text-nowrap mb-2 d-inline-block">
+                                                    <i class="mdi mdi-format-list-bulleted-type text-muted"></i>
+                                                    <b>78</b> Tasks
+                                                </span>
+                                                <span class="text-nowrap mb-2 d-inline-block">
+                                                    <i class="mdi mdi-comment-multiple-outline text-muted"></i>
+                                                    <b>214</b> Comments
+                                                </span>
+                                            </p>
+                                            <!-- Team-->
+                                            <div class="avatar-group mb-3" id="tooltips-container">
+                                                <a href="javascript: void(0);" class="avatar-group-item">
+                                                    <img src="../assets/images/users/user-1.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mat Helme" />
+                                                </a>
+        
+                                                <a href="javascript: void(0);" class="avatar-group-item">
+                                                    <img src="../assets/images/users/user-2.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Michael Zenaty" />
+                                                </a>
+        
+                                                <a href="javascript: void(0);" class="avatar-group-item">
+                                                    <img src="../assets/images/users/user-3.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container" data-bs-toggle="tooltip" data-bs-placement="bottom" title="James Anderson" />
+                                                </a>
+        
+                                                <a href="javascript: void(0);" class="avatar-group-item">
+                                                    <img src="../assets/images/users/user-4.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mat Helme" />
+                                                </a>
+        
+                                                <a href="javascript: void(0);" class="avatar-group-item">
+                                                    <img src="../assets/images/users/user-5.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Username" />
+                                                </a>
+                                            </div>
+                                            <!-- Progress-->
+                                            <p class="mb-2 fw-semibold">Task completed: <span class="float-end">28/78</span></p>
+                                            <div class="progress mb-1" style="height: 7px;">
+                                                <div class="progress-bar"
+                                                     role="progressbar" aria-valuenow="34" aria-valuemin="0" aria-valuemax="100"
+                                                     style="width: 34%;">
+                                                </div><!-- /.progress-bar .progress-bar-danger -->
+                                            </div><!-- /.progress .no-rounded -->
+                                        </div>
+                                    </div> <!-- end card box-->
+                                </div><!-- end col-->  
+                                <div class="col-lg-4">
+                                    <div class="card project-box">
+                                        <div class="card-body">
+                                            <div class="dropdown float-end">
+                                                <a href="#" class="dropdown-toggle card-drop arrow-none" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="mdi mdi-dots-horizontal m-0 text-muted h3"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" href="#">Edit</a>
+                                                    <a class="dropdown-item" href="#">Delete</a>
+                                                    <a class="dropdown-item" href="#">Add Members</a>
+                                                    <a class="dropdown-item" href="#">Add Due Date</a>
+                                                </div>
+                                            </div> <!-- end dropdown -->
+                                            <!-- Title-->
+                                            <h4 class="mt-0"><a href="project-detail.html" class="text-dark">New Admin Design</a></h4>
+                                            <p class="text-muted text-uppercase"><i class="mdi mdi-account-circle"></i> <small>Orange Limited</small></p>
+                                            <div class="badge bg-soft-success text-success mb-3">Finished</div>
+                                            <!-- Desc-->
+                                            <p class="text-muted font-13 mb-3 sp-line-2">With supporting text below as a natural lead-in to additional contenposuere erat a
+                                                ante...<a href="javascript:void(0);" class="fw-bold text-muted">view more</a>
+                                            </p>
+                                            <!-- Task info-->
+                                            <p class="mb-1">
+                                                <span class="pe-2 text-nowrap mb-2 d-inline-block">
+                                                    <i class="mdi mdi-format-list-bulleted-type text-muted"></i>
+                                                    <b>78</b> Tasks
+                                                </span>
+                                                <span class="text-nowrap mb-2 d-inline-block">
+                                                    <i class="mdi mdi-comment-multiple-outline text-muted"></i>
+                                                    <b>214</b> Comments
+                                                </span>
+                                            </p>
+                                            <!-- Team-->
+                                            <div class="avatar-group mb-3" id="tooltips-container">
+                                                <a href="javascript: void(0);" class="avatar-group-item">
+                                                    <img src="../assets/images/users/user-1.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mat Helme" />
+                                                </a>
+        
+                                                <a href="javascript: void(0);" class="avatar-group-item">
+                                                    <img src="../assets/images/users/user-2.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Michael Zenaty" />
+                                                </a>
+        
+                                                <a href="javascript: void(0);" class="avatar-group-item">
+                                                    <img src="../assets/images/users/user-3.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container" data-bs-toggle="tooltip" data-bs-placement="bottom" title="James Anderson" />
+                                                </a>
+        
+                                                <a href="javascript: void(0);" class="avatar-group-item">
+                                                    <img src="../assets/images/users/user-4.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mat Helme" />
+                                                </a>
+        
+                                                <a href="javascript: void(0);" class="avatar-group-item">
+                                                    <img src="../assets/images/users/user-5.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Username" />
+                                                </a>
+                                            </div>
+                                            <!-- Progress-->
+                                            <p class="mb-2 fw-semibold">Task completed: <span class="float-end">28/78</span></p>
+                                            <div class="progress mb-1" style="height: 7px;">
+                                                <div class="progress-bar"
+                                                     role="progressbar" aria-valuenow="34" aria-valuemin="0" aria-valuemax="100"
+                                                     style="width: 34%;">
+                                                </div><!-- /.progress-bar .progress-bar-danger -->
+                                            </div><!-- /.progress .no-rounded -->
+                                        </div>
+                                    </div> <!-- end card box-->
+                                </div><!-- end col-->
+                                <div class="col-lg-4">
+                                    <div class="card project-box">
+                                        <div class="card-body">
+                                            <div class="dropdown float-end">
+                                                <a href="#" class="dropdown-toggle card-drop arrow-none" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="mdi mdi-dots-horizontal m-0 text-muted h3"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" href="#">Edit</a>
+                                                    <a class="dropdown-item" href="#">Delete</a>
+                                                    <a class="dropdown-item" href="#">Add Members</a>
+                                                    <a class="dropdown-item" href="#">Add Due Date</a>
+                                                </div>
+                                            </div> <!-- end dropdown -->
+                                            <!-- Title-->
+                                            <h4 class="mt-0"><a href="project-detail.html" class="text-dark">New Admin Design</a></h4>
+                                            <p class="text-muted text-uppercase"><i class="mdi mdi-account-circle"></i> <small>Orange Limited</small></p>
+                                            <div class="badge bg-soft-success text-success mb-3">Finished</div>
+                                            <!-- Desc-->
+                                            <p class="text-muted font-13 mb-3 sp-line-2">With supporting text below as a natural lead-in to additional contenposuere erat a
+                                                ante...<a href="javascript:void(0);" class="fw-bold text-muted">view more</a>
+                                            </p>
+                                            <!-- Task info-->
+                                            <p class="mb-1">
+                                                <span class="pe-2 text-nowrap mb-2 d-inline-block">
+                                                    <i class="mdi mdi-format-list-bulleted-type text-muted"></i>
+                                                    <b>78</b> Tasks
+                                                </span>
+                                                <span class="text-nowrap mb-2 d-inline-block">
+                                                    <i class="mdi mdi-comment-multiple-outline text-muted"></i>
+                                                    <b>214</b> Comments
+                                                </span>
+                                            </p>
+                                            <!-- Team-->
+                                            <div class="avatar-group mb-3" id="tooltips-container">
+                                                <a href="javascript: void(0);" class="avatar-group-item">
+                                                    <img src="../assets/images/users/user-1.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mat Helme" />
+                                                </a>
+        
+                                                <a href="javascript: void(0);" class="avatar-group-item">
+                                                    <img src="../assets/images/users/user-2.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Michael Zenaty" />
+                                                </a>
+        
+                                                <a href="javascript: void(0);" class="avatar-group-item">
+                                                    <img src="../assets/images/users/user-3.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container" data-bs-toggle="tooltip" data-bs-placement="bottom" title="James Anderson" />
+                                                </a>
+        
+                                                <a href="javascript: void(0);" class="avatar-group-item">
+                                                    <img src="../assets/images/users/user-4.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mat Helme" />
+                                                </a>
+        
+                                                <a href="javascript: void(0);" class="avatar-group-item">
+                                                    <img src="../assets/images/users/user-5.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Username" />
+                                                </a>
+                                            </div>
+                                            <!-- Progress-->
+                                            <p class="mb-2 fw-semibold">Task completed: <span class="float-end">28/78</span></p>
+                                            <div class="progress mb-1" style="height: 7px;">
+                                                <div class="progress-bar"
+                                                     role="progressbar" aria-valuenow="34" aria-valuemin="0" aria-valuemax="100"
+                                                     style="width: 34%;">
+                                                </div><!-- /.progress-bar .progress-bar-danger -->
+                                            </div><!-- /.progress .no-rounded -->
+                                        </div>
+                                    </div> <!-- end card box-->
+                                </div><!-- end col-->
+                                <div class="col-lg-4">
+                                    <div class="card project-box">
+                                        <div class="card-body">
+                                            <div class="dropdown float-end">
+                                                <a href="#" class="dropdown-toggle card-drop arrow-none" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="mdi mdi-dots-horizontal m-0 text-muted h3"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" href="#">Edit</a>
+                                                    <a class="dropdown-item" href="#">Delete</a>
+                                                    <a class="dropdown-item" href="#">Add Members</a>
+                                                    <a class="dropdown-item" href="#">Add Due Date</a>
+                                                </div>
+                                            </div> <!-- end dropdown -->
+                                            <!-- Title-->
+                                            <h4 class="mt-0"><a href="project-detail.html" class="text-dark">New Admin Design</a></h4>
+                                            <p class="text-muted text-uppercase"><i class="mdi mdi-account-circle"></i> <small>Orange Limited</small></p>
+                                            <div class="badge bg-soft-success text-success mb-3">Finished</div>
+                                            <!-- Desc-->
+                                            <p class="text-muted font-13 mb-3 sp-line-2">With supporting text below as a natural lead-in to additional contenposuere erat a
+                                                ante...<a href="javascript:void(0);" class="fw-bold text-muted">view more</a>
+                                            </p>
+                                            <!-- Task info-->
+                                            <p class="mb-1">
+                                                <span class="pe-2 text-nowrap mb-2 d-inline-block">
+                                                    <i class="mdi mdi-format-list-bulleted-type text-muted"></i>
+                                                    <b>78</b> Tasks
+                                                </span>
+                                                <span class="text-nowrap mb-2 d-inline-block">
+                                                    <i class="mdi mdi-comment-multiple-outline text-muted"></i>
+                                                    <b>214</b> Comments
+                                                </span>
+                                            </p>
+                                            <!-- Team-->
+                                            <div class="avatar-group mb-3" id="tooltips-container">
+                                                <a href="javascript: void(0);" class="avatar-group-item">
+                                                    <img src="../assets/images/users/user-1.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mat Helme" />
+                                                </a>
+        
+                                                <a href="javascript: void(0);" class="avatar-group-item">
+                                                    <img src="../assets/images/users/user-2.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Michael Zenaty" />
+                                                </a>
+        
+                                                <a href="javascript: void(0);" class="avatar-group-item">
+                                                    <img src="../assets/images/users/user-3.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container" data-bs-toggle="tooltip" data-bs-placement="bottom" title="James Anderson" />
+                                                </a>
+        
+                                                <a href="javascript: void(0);" class="avatar-group-item">
+                                                    <img src="../assets/images/users/user-4.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mat Helme" />
+                                                </a>
+        
+                                                <a href="javascript: void(0);" class="avatar-group-item">
+                                                    <img src="../assets/images/users/user-5.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Username" />
+                                                </a>
+                                            </div>
+                                            <!-- Progress-->
+                                            <p class="mb-2 fw-semibold">Task completed: <span class="float-end">28/78</span></p>
+                                            <div class="progress mb-1" style="height: 7px;">
+                                                <div class="progress-bar"
+                                                     role="progressbar" aria-valuenow="34" aria-valuemin="0" aria-valuemax="100"
+                                                     style="width: 34%;">
+                                                </div><!-- /.progress-bar .progress-bar-danger -->
+                                            </div><!-- /.progress .no-rounded -->
+                                        </div>
+                                    </div> <!-- end card box-->
+                                </div><!-- end col-->
+                                <div class="col-lg-4">
+                                    <div class="card project-box">
+                                        <div class="card-body">
+                                            <div class="dropdown float-end">
+                                                <a href="#" class="dropdown-toggle card-drop arrow-none" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="mdi mdi-dots-horizontal m-0 text-muted h3"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <a class="dropdown-item" href="#">Edit</a>
+                                                    <a class="dropdown-item" href="#">Delete</a>
+                                                    <a class="dropdown-item" href="#">Add Members</a>
+                                                    <a class="dropdown-item" href="#">Add Due Date</a>
+                                                </div>
+                                            </div> <!-- end dropdown -->
+                                            <!-- Title-->
+                                            <h4 class="mt-0"><a href="project-detail.html" class="text-dark">New Admin Design</a></h4>
+                                            <p class="text-muted text-uppercase"><i class="mdi mdi-account-circle"></i> <small>Orange Limited</small></p>
+                                            <div class="badge bg-soft-success text-success mb-3">Finished</div>
+                                            <!-- Desc-->
+                                            <p class="text-muted font-13 mb-3 sp-line-2">With supporting text below as a natural lead-in to additional contenposuere erat a
+                                                ante...<a href="javascript:void(0);" class="fw-bold text-muted">view more</a>
+                                            </p>
+                                            <!-- Task info-->
+                                            <p class="mb-1">
+                                                <span class="pe-2 text-nowrap mb-2 d-inline-block">
+                                                    <i class="mdi mdi-format-list-bulleted-type text-muted"></i>
+                                                    <b>78</b> Tasks
+                                                </span>
+                                                <span class="text-nowrap mb-2 d-inline-block">
+                                                    <i class="mdi mdi-comment-multiple-outline text-muted"></i>
+                                                    <b>214</b> Comments
+                                                </span>
+                                            </p>
+                                            <!-- Team-->
+                                            <div class="avatar-group mb-3" id="tooltips-container">
+                                                <a href="javascript: void(0);" class="avatar-group-item">
+                                                    <img src="../assets/images/users/user-1.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mat Helme" />
+                                                </a>
+        
+                                                <a href="javascript: void(0);" class="avatar-group-item">
+                                                    <img src="../assets/images/users/user-2.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Michael Zenaty" />
+                                                </a>
+        
+                                                <a href="javascript: void(0);" class="avatar-group-item">
+                                                    <img src="../assets/images/users/user-3.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container" data-bs-toggle="tooltip" data-bs-placement="bottom" title="James Anderson" />
+                                                </a>
+        
+                                                <a href="javascript: void(0);" class="avatar-group-item">
+                                                    <img src="../assets/images/users/user-4.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mat Helme" />
+                                                </a>
+        
+                                                <a href="javascript: void(0);" class="avatar-group-item">
+                                                    <img src="../assets/images/users/user-5.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Username" />
+                                                </a>
+                                            </div>
+                                            <!-- Progress-->
+                                            <p class="mb-2 fw-semibold">Task completed: <span class="float-end">28/78</span></p>
+                                            <div class="progress mb-1" style="height: 7px;">
+                                                <div class="progress-bar"
+                                                     role="progressbar" aria-valuenow="34" aria-valuemin="0" aria-valuemax="100"
+                                                     style="width: 34%;">
+                                                </div><!-- /.progress-bar .progress-bar-danger -->
+                                            </div><!-- /.progress .no-rounded -->
+                                        </div>
+                                    </div> <!-- end card box-->
+                                </div><!-- end col-->
+                         
+                            </div>
+                            <!-- pagination start -->
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="text-end">
+                                        <ul class="pagination pagination-rounded justify-content-end">
+                                            <li class="page-item">
+                                                <a class="page-link" href="javascript: void(0);" aria-label="Previous">
+                                                    <span aria-hidden="true">«</span>
+                                                    <span class="visually-hidden">Previous</span>
+                                                </a>
+                                            </li>
+                                            <li class="page-item active"><a class="page-link" href="javascript: void(0);">1</a></li>
+                                            <li class="page-item"><a class="page-link" href="javascript: void(0);">2</a></li>
+                                            <li class="page-item"><a class="page-link" href="javascript: void(0);">3</a></li>
+                                            <li class="page-item"><a class="page-link" href="javascript: void(0);">4</a></li>
+                                            <li class="page-item"><a class="page-link" href="javascript: void(0);">5</a></li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="javascript: void(0);" aria-label="Next">
+                                                    <span aria-hidden="true">»</span>
+                                                    <span class="visually-hidden">Next</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end row -->
+                        </div>
+
+
+
                         
                     </div> <!-- container -->
 
@@ -2181,6 +2652,12 @@
 
         <!-- Vendor js -->
         <script src="../assets/js/vendor.min.js"></script>
+
+        <!-- Bootstrap Tables js -->
+        <script src="../assets/libs/bootstrap-table/bootstrap-table.min.js"></script>
+
+        <!-- Init js -->
+        <script src="../assets/js/pages/bootstrap-tables.init.js"></script>
 
         <!-- App js -->
         <script src="../assets/js/app.min.js"></script>

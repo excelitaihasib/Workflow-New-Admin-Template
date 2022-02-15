@@ -1,0 +1,32 @@
+.content-page{
+    .content{
+        .client-end-wrapper{
+            .cew-top{
+                .client-regular-content{
+                    .cri-content{
+                        p{
+                            margin: 0;
+                        }
+                        color: $theme-black-color;
+                    }
+                    .cri-icon{
+                        
+                        background-color: $theme-base-color-opacity-less;
+                        padding: 15px;
+                        border-radius: 5px;
+                        p{
+                            margin: 0;
+                            i{
+                                font-size: 50px;
+                                color: $theme-base-color;
+                            }
+                        }
+                    }
+    
+                }
+            }
+
+        }
+    }
+
+}
