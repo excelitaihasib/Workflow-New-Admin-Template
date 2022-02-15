@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>Project Listing | UBold - Responsive Admin Dashboard Template</title>
+        <title>Bootstrap Tables | UBold - Responsive Admin Dashboard Template</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
         <meta content="Coderthemes" name="author" />
@@ -10,15 +10,20 @@
         <!-- App favicon -->
         <link rel="shortcut icon" href="../assets/images/favicon.ico">
 
-        <!-- App css -->
-        <link href="../assets/css/config/default/bootstrap.min.css" rel="stylesheet" type="text/css" id="bs-default-stylesheet" />
-        <link href="../assets/css/config/default/app.min.css" rel="stylesheet" type="text/css" id="app-default-stylesheet" />
+        <!-- Bootstrap Tables css -->
+        <link href="../assets/libs/bootstrap-table/bootstrap-table.min.css" rel="stylesheet" type="text/css" />
 
-        <link href="../assets/css/config/default/bootstrap-dark.min.css" rel="stylesheet" type="text/css" id="bs-dark-stylesheet" />
-        <link href="../assets/css/config/default/app-dark.min.css" rel="stylesheet" type="text/css" id="app-dark-stylesheet" />
+    
+		<!-- App css -->
+		<link href="../assets/css/config/default/bootstrap.min.css" rel="stylesheet" type="text/css" id="bs-default-stylesheet" />
+		<link href="../assets/css/config/default/app.min.css" rel="stylesheet" type="text/css" id="app-default-stylesheet" />
+        <link href="../assets/css/config/main/main.css" rel="stylesheet" type="text/css">
 
-        <!-- icons -->
-        <link href="../assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+		<link href="../assets/css/config/default/bootstrap-dark.min.css" rel="stylesheet" type="text/css" id="bs-dark-stylesheet" />
+		<link href="../assets/css/config/default/app-dark.min.css" rel="stylesheet" type="text/css" id="app-dark-stylesheet" />
+
+		<!-- icons -->
+		<link href="../assets/css/icons.min.css" rel="stylesheet" type="text/css" />
 
     </head>
 
@@ -265,7 +270,7 @@
                                         <div class="notify-icon bg-info">
                                             <i class="mdi mdi-comment-account-outline"></i>
                                         </div>
-                                        <p class="notify-details">Caleb Flakelar commented on Admin
+                                        <p class="notify-details"> Caleb Flakelar commented on Admin
                                             <small class="text-muted">4 days ago</small>
                                         </p>
                                     </a>
@@ -1324,7 +1329,7 @@
             <div class="content-page">
                 <div class="content">
                     <!-- Start Content-->
-                    <div class="container-fluid">
+                    <div class="container-fluid">                      
                         <!-- start page title -->
                         <div class="row">
                             <div class="col-12">
@@ -1332,423 +1337,559 @@
                                     <div class="page-title-right">
                                         <ol class="breadcrumb m-0">
                                             <li class="breadcrumb-item"><a href="javascript: void(0);">UBold</a></li>
-                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Projects</a></li>
-                                            <li class="breadcrumb-item active">Projects List</li>
+                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Tables</a></li>
+                                            <li class="breadcrumb-item active">Add Employee Information</li>
                                         </ol>
                                     </div>
-                                    <h4 class="page-title">Projects List</h4>
+                                    <h4 class="page-title"> Add Employee Information </h4>
                                 </div>
                             </div>
                         </div>     
                         <!-- end page title --> 
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <nav>
+                                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                              <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-accinfo" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Account Info</button>
+                                              <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-personalinfo" type="button" role="tab" aria-controls="nav-profile" aria-selected="false"> Personal Details </button>
+                                              <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-eduTraining" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Education and Training </button>
+                                              <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-promotion" type="button" role="tab" aria-controls="nav-contact" aria-selected="false"> Promotion Info </button>
+                                              <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-tassignment" type="button" role="tab" aria-controls="nav-contact" aria-selected="false"> Training Assignment  </button>
+                                            </div>
+                                          </nav>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="tab-content" id="nav-tabContent">
+                                            <div class="tab-pane fade show active" id="nav-accinfo" role="tabpanel" aria-labelledby="nav-home-tab">
+                                                <form>
+                                                    <div class="row">
+                                                        <div class="col-lg-6 col-md-6 col-12">
+                                                            <div class="mb-3">
+                                                                <label for="position" class="form-label"> Employee Name </label>
+                                                                <input type="text" class="form-control" id="position" placeholder="Enter position">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6 col-md-6 col-12">
+                                                            <div class="mb-3">
+                                                                <label for="company" class="form-label"> Employee ID </label>
+                                                                <input type="text" class="form-control" id="company" placeholder="Enter company">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-6">
+                                                            <div class="mb-3">
+                                                                <label for="exampleInputEmail1" class="form-label">User Name</label>
+                                                                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <div class="mb-3">
+                                                                <label for="exampleInputEmail1" class="form-label"> Password</label>
+                                                                <input type="password" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-6">
+                                                            <div class="mb-3">
+                                                                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <div class="mb-3">
+                                                                <label for="exampleInputEmail1" class="form-label">Phone</label>
+                                                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-6">
+                                                            <div class="mb-3">
+                                                                <label for="exampleInputEmail1" class="form-label">Client ID</label>
+                                                                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <div class="mb-3">
+                                                                <label for="exampleInputEmail1" class="form-label"> Upload Image </label>
+                                                                <input type="file" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row  ">
+                                                        <div class="col-12">
+                                                            <div class="mb-3">
+                                                                <label for="exampleInputEmail1" class="form-label">Description</label>
+                                                                <textarea class="form-control" placeholder="Write someting here" id="exampleInputEmail1" style="height: 100px"></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="text-end">
+                                                        <button type="submit" class="btn btn-success waves-effect waves-light">Save</button>
+                                                        <button type="button" class="btn btn-danger waves-effect waves-light" data-bs-dismiss="modal">Continue</button>
+                                                    </div>       
+                                                </form>
+                                            </div>
+                                            <div class="tab-pane fade" id="nav-personalinfo" role="tabpanel" aria-labelledby="nav-profile-tab">
+                                                <form>
+                                                    <div class="row">
+                                                        <div class="col-lg-6 col-md-6 col-12">
+                                                            <div class="mb-3">
+                                                                <label for="position" class="form-label"> Father's Name </label>
+                                                                <input type="text" class="form-control" id="position" placeholder="Enter position">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6 col-md-6 col-12">
+                                                            <div class="mb-3">
+                                                                <label for="company" class="form-label"> Mother's Name </label>
+                                                                <input type="text" class="form-control" id="company" placeholder="Enter company">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row  ">
+                                                        <div class="col-6">
+                                                            <div class="mb-3">
+                                                                <label for="exampleInputEmail1" class="form-label"> Present Address </label>
+                                                                <textarea class="form-control" placeholder="Write someting here" id="exampleInputEmail1" style="height: 100px"></textarea>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <div class="mb-3">
+                                                                <label for="exampleInputEmail1" class="form-label"> Permanent Address </label>
+                                                                <textarea class="form-control" placeholder="Write someting here" id="exampleInputEmail1" style="height: 100px"></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-6">
+                                                            <div class="mb-3">
+                                                                <label for="exampleInputEmail1" class="form-label"> Date of Birth </label>
+                                                                <input type="date" class="form-control" id="exampleInputEmail1" >
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <div class="mb-3">
+                                                                <label class="form-label"> Gender </label>  
+                                                                <select class="form-select" aria-label="Default select example">
+                                                                    <option selected>Male</option>
+                                                                    <option value="1">Female</option>
+                                                                  </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-6">
+                                                            <div class="mb-3">
+                                                                <label class="form-label">  Marital Status  </label>  
+                                                                <select class="form-select" aria-label="Default select example">
+                                                                    <option selected> Unmarried </option>
+                                                                    <option value="1"> Married </option>
+                                                                  </select>
+                                                            </div>
 
-                        <div class="row mb-2">
-                            <div class="col-sm-4">
-                                <a href="project-create.html" class="btn btn-danger rounded-pill waves-effect waves-light mb-3"><i class="mdi mdi-plus"></i> Create Project</a>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <div class="mb-3">
+                                                                <label class="form-label"> Religion </label>  
+                                                                <select class="form-select" aria-label="Default select example">
+                                                                    <option selected> Islam </option>
+                                                                    <option value="1"> Hindu </option>
+                                                                    <option value="2"> Christian </option>
+                                                                    <option value="3"> Buddhiest </option>
+                                                                    <option value="3"> Others </option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-6">
+                                                            <div class="mb-3">
+                                                                <label for="exampleInputEmail1" class="form-label"> Emmergency Contact </label>
+                                                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <div class="mb-3">
+                                                                <label for="exampleInputEmail1" class="form-label"> NID No </label>
+                                                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-6">
+                                                            <div class="mb-3">
+                                                                <label for="exampleInputEmail1" class="form-label"> Birth Certificate No </label>
+                                                                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <div class="mb-3">
+                                                                <label for="exampleInputEmail1" class="form-label"> Passport No </label>
+                                                                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-6">
+                                                            <div class="mb-3">
+                                                                <label for="exampleInputEmail1" class="form-label"> Reference No 1 (name) </label>
+                                                                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <div class="mb-3">
+                                                                <label for="exampleInputEmail1" class="form-label"> Reference No 2 (name) </label>
+                                                                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-6">
+                                                            <div class="mb-3">
+                                                                <label for="exampleInputEmail1" class="form-label"> Relation With Referral </label>
+                                                                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <div class="mb-3">
+                                                                <label for="exampleInputEmail1" class="form-label"> Relation With Referral </label>
+                                                                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-6">
+                                                            <div class="mb-3">
+                                                                <label for="exampleInputEmail1" class="form-label"> Reference Contact No </label>
+                                                                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <div class="mb-3">
+                                                                <label for="exampleInputEmail1" class="form-label"> Reference Contact No </label>
+                                                                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="text-end">
+                                                        <button type="submit" class="btn btn-success waves-effect waves-light">Save</button>
+                                                        <button type="button" class="btn btn-danger waves-effect waves-light" data-bs-dismiss="modal">Continue</button>
+                                                    </div>       
+                                                </form>
+                                            </div>
+                                            <div class="tab-pane fade" id="nav-eduTraining" role="tabpanel" aria-labelledby="nav-eduTraining">
+                                                <form>
+                                                    <div class="degree-wrapper">
+                                                        <h4 class="mb-3"> Last Achieved Educational Degree </h4>
+                                                        <div class="row">
+                                                            <div class="col-lg-6 col-md-6 col-12">
+                                                                <div class="mb-3">
+                                                                    <label for="position" class="form-label"> Degree Name </label>
+                                                                    <input type="text" class="form-control" id="position" placeholder="Enter position">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-6 col-md-6 col-12">
+                                                                <div class="mb-3">
+                                                                    <label for="company" class="form-label">  University/Institute </label>
+                                                                    <input type="text" class="form-control" id="company" placeholder="Enter company">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-lg-4 col-md-6 col-12">
+                                                                <div class="mb-3">
+                                                                    <label for="position" class="form-label"> Passing Year </label>
+                                                                    <input type="number"class="form-control" id="position" placeholder="Enter passing year"> 
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-4 col-md-6 col-12">
+                                                                <div class="mb-3">
+                                                                    <label for="company" class="form-label">  Result </label>
+                                                                    <input type="text" class="form-control" id="company" placeholder="Enter Result">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-4 col-md-6 col-12">
+                                                                <div class="mb-3">
+                                                                    <label for="company" class="form-label">  Upload Certificate  </label>
+                                                                    <input type="file" class="form-control" id="company">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-lg-4 col-md-6 col-12">
+                                                                <div class="mb-3">
+                                                                    <label for="position" class="form-label"> Major (Subject's Name) </label>
+                                                                    <input type="text"class="form-control" id="position" placeholder="Enter subject name"> 
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-4 col-md-6 col-12">
+                                                                <div class="mb-3">
+                                                                    <label for="company" class="form-label">  Result </label>
+                                                                    <input type="text" class="form-control" id="company" placeholder="Enter Result">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-4 col-md-6 col-12">
+                                                                <div class="mb-3">
+                                                                    <label for="company" class="form-label">  Achieved Reward (if any) </label>
+                                                                    <input type="text" class="form-control" id="company" placeholder="Enter Result">
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="training-wrapper">
+                                                        <h4 class="mb-3"> Training </h4>
+                                                        <div class="row">
+                                                            <div class="col-lg-4 col-md-6 col-12">
+                                                                <div class="mb-3">
+                                                                    <label for="position" class="form-label"> Training Name </label>
+                                                                    <input type="text" class="form-control" id="position" placeholder="Enter position">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-4 col-md-6 col-12">
+                                                                <div class="mb-3">
+                                                                    <label for="company" class="form-label"> Training Period  </label>
+                                                                    <input type="text" class="form-control" id="company" placeholder="Enter company">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-4 col-md-6 col-12">
+                                                                <div class="mb-3">
+                                                                    <label for="company" class="form-label">  Upload Document  </label>
+                                                                    <input type="file" class="form-control" id="company" placeholder="Enter Topic Name ">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-lg-6 col-md-6 col-12">
+                                                                <div class="mb-3">
+                                                                    <label for="position" class="form-label"> Institute Name </label>
+                                                                    <input type="text" class="form-control" id="position" placeholder="Enter position">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-6 col-md-6 col-12">
+                                                                <div class="mb-3">
+                                                                    <label for="company" class="form-label">  Location  </label>
+                                                                    <input type="text" class="form-control" id="company" placeholder="Enter company">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="experience-wrapper">
+                                                        <div class="ex-title d-flex justify-content-between mb-3">
+                                                            <h4> Experience </h4>
+                                                            <div class="addex">
+                                                                <button>Add More</button>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <div class="row">
+                                                            <div class="col-lg-4 col-md-6 col-12">
+                                                                <div class="mb-3">
+                                                                    <label for="position" class="form-label"> Company Name </label>
+                                                                    <input type="text" class="form-control" id="position" placeholder="Enter position">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-4 col-md-6 col-12">
+                                                                <div class="mb-3">
+                                                                    <label for="company" class="form-label"> Job Title  </label>
+                                                                    <input type="text" class="form-control" id="company" placeholder="Enter company">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-4 col-md-6 col-12">
+                                                                <div class="mb-3">
+                                                                    <label for="company" class="form-label">  Responsibility </label>
+                                                                    <input type="text" class="form-control" id="company" placeholder="Enter Topic Name ">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-lg-4 col-md-6 col-12">
+                                                                <div class="mb-3">
+                                                                    <label for="position" class="form-label"> From </label>
+                                                                    <input type="date" class="form-control" id="position" placeholder="Enter position">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-4 col-md-6 col-12">
+                                                                <div class="mb-3">
+                                                                    <label for="company" class="form-label">  End </label>
+                                                                    <input type="date" class="form-control" id="company" placeholder="Enter company">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-4 col-md-6 col-12">
+                                                                <div class="mb-3">
+                                                                    <label for="company" class="form-label">  Duration  </label>
+                                                                    <input type="text/number" class="form-control" id="company" placeholder="Enter Duration time">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-lg-5 col-md-6 col-12">
+                                                                <div class="mb-3">
+                                                                    <label for="position" class="form-label"> Upload Document </label>
+                                                                    <input type="file" class="form-control" id="position" placeholder="Enter position">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-7 col-md-6 col-12">
+                                                                <div class="mb-3">
+                                                                    <label for="company" class="form-label">  Location  </label>
+                                                                    <input type="text" class="form-control" id="company" placeholder="Enter company">
+                                                                </div>
+                                                            </div>
+
+                                                           
+                                                        </div>
+                                                    </div>
+
+                                    
+
+
+
+                                                    <div class="text-end">
+                                                        <button type="submit" class="btn btn-success waves-effect waves-light">Save</button>
+                                                        <button type="button" class="btn btn-danger waves-effect waves-light" data-bs-dismiss="modal">Continue</button>
+                                                    </div>       
+                                                </form>
+                                            </div>
+                                            <div class="tab-pane fade" id="nav-promotion" role="tabpanel" aria-labelledby="nav-eduTraining">
+                                                <form>
+                                                    <div class="promoinfo">
+                                                        <h4 class="mb-3"> Promotion Details </h4>
+                                                        <div class="row">
+                                                            <div class="col-lg-6 col-md-6 col-12">
+                                                                <div class="mb-3">
+                                                                    <label for="position" class="form-label"> Promotion Letter Issuing Date </label>
+                                                                    <input type="date" class="form-control" id="position" placeholder="Enter position">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-6 col-md-6 col-12">
+                                                                <div class="mb-3">
+                                                                    <label for="company" class="form-label">  Effective Date </label>
+                                                                    <input type="date" class="form-control" id="company" placeholder="Enter company">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-lg-4 col-md-6 col-12">
+                                                                <div class="mb-3">
+                                                                    <label for="position" class="form-label"> Previous Designation </label>
+                                                                    <input type="text"class="form-control" id="position" placeholder="Enter passing year"> 
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-4 col-md-6 col-12">
+                                                                <div class="mb-3">
+                                                                    <label for="company" class="form-label">  Promoted Designation </label>
+                                                                    <input type="text" class="form-control" id="company" placeholder="Enter Result">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-4 col-md-6 col-12">
+                                                                <div class="mb-3">
+                                                                    <label for="company" class="form-label">  Approval Doc Attachment  </label>
+                                                                    <input type="file" class="form-control" id="company">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-lg-4 col-md-6 col-12">
+                                                                <div class="mb-3">
+                                                                    <label for="position" class="form-label"> Increment Amount </label>
+                                                                    <input type="number"class="form-control" id="position" placeholder="Enter subject name"> 
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-2 col-md-6 col-12">
+                                                                <div class="mb-3">
+                                                                    <label for="company" class="form-label">  Previous Basic </label>
+                                                                    <input type="text" class="form-control" id="company" placeholder="Enter Previous Basic Amount">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-2 col-md-6 col-12">
+                                                                <div class="mb-3">
+                                                                    <label for="company" class="form-label">  New Basic </label>
+                                                                    <input type="text" class="form-control" id="company" placeholder="Enter Result">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-2 col-md-6 col-12">
+                                                                <div class="mb-3">
+                                                                    <label for="company" class="form-label">  Previous Received Salary </label>
+                                                                    <input type="text" class="form-control" id="company" placeholder="Enter Result">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-2 col-md-6 col-12">
+                                                                <div class="mb-3">
+                                                                    <label for="company" class="form-label">  New Gross Salary </label>
+                                                                    <input type="text" class="form-control" id="company" placeholder="Enter New Gross Amount">
+                                                                </div>
+                                                            </div>                                             
+                                                        </div>
+                                                    </div>                              
+                                                    <div class="text-end">
+                                                        <button type="submit" class="btn btn-success waves-effect waves-light">Save</button>
+                                                        <button type="button" class="btn btn-danger waves-effect waves-light" data-bs-dismiss="modal">Continue</button>
+                                                    </div>       
+                                                </form>
+                                            </div>
+                                            <div class="tab-pane fade" id="nav-tassignment" role="tabpanel" aria-labelledby="nav-eduTraining">
+                                                <form>
+                                                    <div class="promoinfo">
+                                                        <h4 class="mb-3">  Training Assignment </h4>
+                                                        <div class="row">
+                                                            <div class="col-lg-6 col-md-6 col-12">
+                                                                <div class="mb-3">
+                                                                    <label for="position" class="form-label"> Training Program Name </label>
+                                                                    <input type="text" class="form-control" id="position" placeholder="Enter position">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-3 col-md-6 col-12">
+                                                                <div class="mb-3">
+                                                                    <label for="company" class="form-label">  Start Date </label>
+                                                                    <input type="date" class="form-control" id="company" placeholder="Enter company">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-3 col-md-6 col-12">
+                                                                <div class="mb-3">
+                                                                    <label for="company" class="form-label">  End Date </label>
+                                                                    <input type="date" class="form-control" id="company" placeholder="Enter company">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-lg-3 col-md-6 col-12">
+                                                                <div class="mb-3">
+                                                                    <label for="position" class="form-label"> Duration </label>
+                                                                    <input type="text"class="form-control" id="position" placeholder="Enter passing year"> 
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-3 col-md-6 col-12">
+                                                                <div class="mb-3">
+                                                                    <label for="company" class="form-label">  Attachment </label>
+                                                                    <input type="file" class="form-control" id="company" >
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-6 col-md-6 col-12">
+                                                                <div class="mb-3">
+                                                                    <label for="company" class="form-label">  Location  </label>
+                                                                    <input type="text" class="form-control" id="company">
+                                                                </div>
+                                                            </div>
+                                                        </div>                                          
+                                                    </div>                              
+                                                    <div class="text-end">
+                                                        <button type="submit" class="btn btn-success waves-effect waves-light">Save</button>
+                                                        <button type="button" class="btn btn-danger waves-effect waves-light" data-bs-dismiss="modal">Continue</button>
+                                                    </div>       
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>                           
+                                </div>
                             </div>
-                            <div class="col-sm-8">
-                                <div class="text-sm-end">
-                                    <div class="btn-group mb-3">
-                                        <button type="button" class="btn btn-primary">All</button>
-                                    </div>
-                                    <div class="btn-group mb-3 ms-1">
-                                        <button type="button" class="btn btn-light">Ongoing</button>
-                                        <button type="button" class="btn btn-light">Finished</button>
-                                    </div>
-                                    <div class="btn-group mb-3 ms-2 d-none d-sm-inline-block">
-                                        <button type="button" class="btn btn-dark"><i class="mdi mdi-apps"></i></button>
-                                    </div>
-                                    <div class="btn-group mb-3 d-none d-sm-inline-block">
-                                        <button type="button" class="btn btn-link text-dark"><i class="mdi mdi-format-list-bulleted-type"></i></button>
-                                    </div>
-                                </div>
-                            </div><!-- end col-->
-                        </div> 
-                        <!-- end row-->
-
-
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <div class="card project-box">
-                                    <div class="card-body">
-                                        <div class="dropdown float-end">
-                                            <a href="#" class="dropdown-toggle card-drop arrow-none" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="mdi mdi-dots-horizontal m-0 text-muted h3"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-end">
-                                                <a class="dropdown-item" href="#">Edit</a>
-                                                <a class="dropdown-item" href="#">Delete</a>
-                                                <a class="dropdown-item" href="#">Add Members</a>
-                                                <a class="dropdown-item" href="#">Add Due Date</a>
-                                            </div>
-                                        </div> <!-- end dropdown -->
-                                        <!-- Title-->
-                                        <h4 class="mt-0"><a href="singleprojectDashboard.html" class="text-dark">New Admin Design</a></h4>
-                                        <p class="text-muted text-uppercase"><i class="mdi mdi-account-circle"></i> <small>Orange Limited</small></p>
-                                        <div class="badge bg-soft-success text-success mb-3">Finished</div>
-                                        <!-- Desc-->
-                                        <p class="text-muted font-13 mb-3 sp-line-2">With supporting text below as a natural lead-in to additional contenposuere erat a
-                                            ante...<a href="javascript:void(0);" class="fw-bold text-muted">view more</a>
-                                        </p>
-                                        <!-- Task info-->
-                                        <p class="mb-1">
-                                            <span class="pe-2 text-nowrap mb-2 d-inline-block">
-                                                <i class="mdi mdi-format-list-bulleted-type text-muted"></i>
-                                                <b>78</b> Tasks
-                                            </span>
-                                            <span class="text-nowrap mb-2 d-inline-block">
-                                                <i class="mdi mdi-comment-multiple-outline text-muted"></i>
-                                                <b>214</b> Comments
-                                            </span>
-                                        </p>
-                                        <!-- Team-->
-                                        <div class="avatar-group mb-3" id="tooltips-container">
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-1.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mat Helme" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-2.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Michael Zenaty" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-3.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container" data-bs-toggle="tooltip" data-bs-placement="bottom" title="James Anderson" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-4.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mat Helme" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-5.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Username" />
-                                            </a>
-                                        </div>
-                                        <!-- Progress-->
-                                        <p class="mb-2 fw-semibold">Task completed: <span class="float-end">28/78</span></p>
-                                        <div class="progress mb-1" style="height: 7px;">
-                                            <div class="progress-bar"
-                                                 role="progressbar" aria-valuenow="34" aria-valuemin="0" aria-valuemax="100"
-                                                 style="width: 34%;">
-                                            </div><!-- /.progress-bar .progress-bar-danger -->
-                                        </div><!-- /.progress .no-rounded -->
-                                    </div>
-                                </div> <!-- end card box-->
-                            </div><!-- end col-->
-                            <div class="col-lg-4">
-                                <div class="card project-box">
-                                    <div class="card-body">
-                                        <div class="dropdown float-end">
-                                            <a href="#" class="dropdown-toggle card-drop arrow-none" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="mdi mdi-dots-horizontal m-0 text-muted h3"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-end">
-                                                <a class="dropdown-item" href="#">Edit</a>
-                                                <a class="dropdown-item" href="#">Delete</a>
-                                                <a class="dropdown-item" href="#">Add Members</a>
-                                                <a class="dropdown-item" href="#">Add Due Date</a>
-                                            </div>
-                                        </div> <!-- end dropdown -->
-                                        <!-- Title-->
-                                        <h4 class="mt-0"><a href="singleprojectDashboard.html" class="text-dark">App Design and Development</a></h4>
-                                        <p class="text-muted text-uppercase"><i class="mdi mdi-account-circle"></i> <small>Moondust Softwares</small></p>
-                                        <div class="badge bg-soft-secondary text-secondary mb-3">Ongoing</div>
-                                        <!-- Desc-->
-                                        <p class="text-muted font-13 mb-3 sp-line-2">A handful of model sentence structures, to generate Lorem Ipsum which looks reasonable...<a href="javascript:void(0);" class="fw-bold text-muted">view more</a>
-                                        </p>
-                                        <!-- Task info-->
-                                        <p class="mb-1">
-                                            <span class="pe-2 text-nowrap mb-2 d-inline-block">
-                                                <i class="mdi mdi-format-list-bulleted-type text-muted"></i>
-                                                <b>81</b> Tasks
-                                            </span>
-                                            <span class="text-nowrap mb-2 d-inline-block">
-                                                <i class="mdi mdi-comment-multiple-outline text-muted"></i>
-                                                <b>103</b> Comments
-                                            </span>
-                                        </p>
-                                        <!-- Team-->
-                                        <div class="avatar-group mb-3" id="tooltips-container1">
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-6.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container1" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mat Helme" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-7.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container1" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Michael Zenaty" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-8.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container1" data-bs-toggle="tooltip" data-bs-placement="bottom" title="James Anderson" />
-                                            </a>
-                                        </div>
-                                        <!-- Progress-->
-                                        <p class="mb-2 fw-semibold">Task completed: <span class="float-end">55/85</span></p>
-                                        <div class="progress mb-1" style="height: 7px;">
-                                            <div class="progress-bar"
-                                                 role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
-                                                 style="width: 80%;">
-                                            </div><!-- /.progress-bar .progress-bar-danger -->
-                                        </div><!-- /.progress .no-rounded -->
-                                    </div>
-                                </div> <!-- end card box-->
-                            </div><!-- end col-->
-                            <div class="col-lg-4">
-                                <div class="card project-box">
-                                    <div class="card-body">
-                                        <div class="dropdown float-end">
-                                            <a href="#" class="dropdown-toggle card-drop arrow-none" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="mdi mdi-dots-horizontal m-0 text-muted h3"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-end">
-                                                <a class="dropdown-item" href="#">Edit</a>
-                                                <a class="dropdown-item" href="#">Delete</a>
-                                                <a class="dropdown-item" href="#">Add Members</a>
-                                                <a class="dropdown-item" href="#">Add Due Date</a>
-                                            </div>
-                                        </div> <!-- end dropdown -->
-                                        <!-- Title-->
-                                        <h4 class="mt-0"><a href="singleprojectDashboard.html" class="text-dark">Landing page Design</a></h4>
-                                        <p class="text-muted text-uppercase"><i class="mdi mdi-account-circle"></i> <small>Rose Technologies</small></p>
-                                        <div class="badge bg-soft-success text-success mb-3">Finished</div>
-                                        <!-- Desc-->
-                                        <p class="text-muted font-13 mb-3 sp-line-2">You need to be sure there isn't anything embarrassing hidden in the middle of text...<a href="javascript:void(0);" class="fw-bold text-muted">view more</a>
-                                        </p>
-                                        <!-- Task info-->
-                                        <p class="mb-1">
-                                            <span class="pe-2 text-nowrap mb-2 d-inline-block">
-                                                <i class="mdi mdi-format-list-bulleted-type text-muted"></i>
-                                                <b>42</b> Tasks
-                                            </span>
-                                            <span class="text-nowrap mb-2 d-inline-block">
-                                                <i class="mdi mdi-comment-multiple-outline text-muted"></i>
-                                                <b>65</b> Comments
-                                            </span>
-                                        </p>
-                                        <!-- Team-->
-                                        <div class="avatar-group mb-3" id="tooltips-container2">
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-9.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mat Helme" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-10.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Michael Zenaty" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-1.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="James Anderson" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-3.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mat Helme" />
-                                            </a>
-                                        </div>
-                                        <!-- Progress-->
-                                        <p class="mb-2 fw-semibold">Task completed: <span class="float-end">21/42</span></p>
-                                        <div class="progress mb-1" style="height: 7px;">
-                                            <div class="progress-bar"
-                                                 role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
-                                                 style="width: 50%;">
-                                            </div><!-- /.progress-bar .progress-bar-danger -->
-                                        </div><!-- /.progress .no-rounded -->
-                                    </div>
-                                </div> <!-- end card box-->
-                            </div><!-- end col-->
-
-                        </div>
-                        <!-- end row -->
-
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <div class="card project-box">
-                                    <div class="card-body">
-                                        <div class="dropdown float-end">
-                                            <a href="#" class="dropdown-toggle card-drop arrow-none" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="mdi mdi-dots-horizontal m-0 text-muted h3"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-end">
-                                                <a class="dropdown-item" href="#">Edit</a>
-                                                <a class="dropdown-item" href="#">Delete</a>
-                                                <a class="dropdown-item" href="#">Add Members</a>
-                                                <a class="dropdown-item" href="#">Add Due Date</a>
-                                            </div>
-                                        </div> <!-- end dropdown -->
-                                        <!-- Title-->
-                                        <h4 class="mt-0"><a href="singleprojectDashboard.html" class="text-dark">Custom Software Development</a></h4>
-                                        <p class="text-muted text-uppercase"><i class="mdi mdi-account-circle"></i> <small>Apple Navigations</small></p>
-                                        <div class="badge bg-soft-secondary text-secondary mb-3">Ongoing</div>
-                                        <!-- Desc-->
-                                        <p class="text-muted font-13 mb-3 sp-line-2">You need to be sure there isn't anything embarrassing hidden in the middle of text...<a href="javascript:void(0);" class="fw-bold text-muted">view more</a>
-                                        </p>
-                                        <!-- Task info-->
-                                        <p class="mb-1">
-                                            <span class="pe-2 text-nowrap mb-2 d-inline-block">
-                                                <i class="mdi mdi-format-list-bulleted-type text-muted"></i>
-                                                <b>95</b> Tasks
-                                            </span>
-                                            <span class="text-nowrap mb-2 d-inline-block">
-                                                <i class="mdi mdi-comment-multiple-outline text-muted"></i>
-                                                <b>1.3k</b> Comments
-                                            </span>
-                                        </p>
-                                        <!-- Team-->
-                                        <div class="avatar-group mb-3" id="tooltips-container3">
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-5.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container3" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mat Helme" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-8.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container3" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Michael Zenaty" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-9.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container3" data-bs-toggle="tooltip" data-bs-placement="bottom" title="James Anderson" />
-                                            </a>
-                                        </div>
-                                        <!-- Progress-->
-                                        <p class="mb-2 fw-semibold">Task completed: <span class="float-end">70/95</span></p>
-                                        <div class="progress mb-1" style="height: 7px;">
-                                            <div class="progress-bar"
-                                                 role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100"
-                                                 style="width: 68%;">
-                                            </div><!-- /.progress-bar .progress-bar-danger -->
-                                        </div><!-- /.progress .no-rounded -->
-                                    </div>
-                                </div> <!-- end card box-->
-                            </div><!-- end col-->
-
-                            <div class="col-lg-4">
-                                <div class="card project-box">
-                                    <div class="card-body">
-                                        <div class="dropdown float-end">
-                                            <a href="#" class="dropdown-toggle card-drop arrow-none" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="mdi mdi-dots-horizontal m-0 text-muted h3"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-end">
-                                                <a class="dropdown-item" href="#">Edit</a>
-                                                <a class="dropdown-item" href="#">Delete</a>
-                                                <a class="dropdown-item" href="#">Add Members</a>
-                                                <a class="dropdown-item" href="#">Add Due Date</a>
-                                            </div>
-                                        </div> <!-- end dropdown -->
-                                        <!-- Title-->
-                                        <h4 class="mt-0"><a href="singleprojectDashboard.html" class="text-dark">Website Redesign</a></h4>
-                                        <p class="text-muted text-uppercase"><i class="mdi mdi-account-circle"></i> <small>Enigma Navigations</small></p>
-                                        <div class="badge bg-soft-secondary text-secondary mb-3">Ongoing</div>
-                                        <!-- Desc-->
-                                        <p class="text-muted font-13 mb-3 sp-line-2">There are many variations of passages of Lorem Ipsum available natural lead-in to additional...<a href="javascript:void(0);" class="fw-bold text-muted">view more</a>
-                                        </p>
-                                        <!-- Task info-->
-                                        <p class="mb-1">
-                                            <span class="pe-2 text-nowrap mb-2 d-inline-block">
-                                                <i class="mdi mdi-format-list-bulleted-type text-muted"></i>
-                                                <b>36</b> Tasks
-                                            </span>
-                                            <span class="text-nowrap mb-2 d-inline-block">
-                                                <i class="mdi mdi-comment-multiple-outline text-muted"></i>
-                                                <b>78</b> Comments
-                                            </span>
-                                        </p>
-                                        <!-- Team-->
-                                        <div class="avatar-group mb-3" id="tooltips-container4">
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-3.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container4" data-bs-toggle="tooltip" data-bs-placement="bottom" title="James Anderson" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-4.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container4" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mat Helme" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-5.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container4" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Username" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-1.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container4" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mat Helme" />
-                                            </a>
-                                        </div>
-                                        <!-- Progress-->
-                                        <p class="mb-2 fw-semibold">Task completed: <span class="float-end">12/36</span></p>
-                                        <div class="progress mb-1" style="height: 7px;">
-                                            <div class="progress-bar"
-                                                 role="progressbar" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100"
-                                                 style="width: 33%;">
-                                            </div><!-- /.progress-bar .progress-bar-danger -->
-                                        </div><!-- /.progress .no-rounded -->
-                                    </div>
-                                </div> <!-- end card box-->
-                            </div><!-- end col-->
-
-                            <div class="col-lg-4">
-                                <div class="card project-box">
-                                    <div class="card-body">
-                                        <div class="dropdown float-end">
-                                            <a href="#" class="dropdown-toggle card-drop arrow-none" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="mdi mdi-dots-horizontal m-0 text-muted h3"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-end">
-                                                <a class="dropdown-item" href="#">Edit</a>
-                                                <a class="dropdown-item" href="#">Delete</a>
-                                                <a class="dropdown-item" href="#">Add Members</a>
-                                                <a class="dropdown-item" href="#">Add Due Date</a>
-                                            </div>
-                                        </div> <!-- end dropdown -->
-                                        <!-- Title-->
-                                        <h4 class="mt-0"><a href="project-detail.html" class="text-dark">Multipurpose Landing Template</a></h4>
-                                        <p class="text-muted text-uppercase"><i class="mdi mdi-account-circle"></i> <small>Pride Softwares</small></p>
-                                        <div class="badge bg-soft-success text-success mb-3">Finished</div>
-                                        <!-- Desc-->
-                                        <p class="text-muted font-13 mb-3 sp-line-2">With supporting text below as a natural lead-in to additional contenposuere erat a
-                                            ante...<a href="javascript:void(0);" class="fw-bold text-muted">view more</a>
-                                        </p>
-                                        <!-- Task info-->
-                                        <p class="mb-1">
-                                            <span class="pe-2 text-nowrap mb-2 d-inline-block">
-                                                <i class="mdi mdi-format-list-bulleted-type text-muted"></i>
-                                                <b>30</b> Tasks
-                                            </span>
-                                            <span class="text-nowrap mb-2 d-inline-block">
-                                                <i class="mdi mdi-comment-multiple-outline text-muted"></i>
-                                                <b>148</b> Comments
-                                            </span>
-                                        </p>
-                                        <!-- Team-->
-                                        <div class="avatar-group mb-3" id="tooltips-container5">
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-6.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container5" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mat Helme" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-7.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container5" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Michael Zenaty" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-8.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container5" data-bs-toggle="tooltip" data-bs-placement="bottom" title="James Anderson" />
-                                            </a>
-                                        </div>
-                                        <!-- Progress-->
-                                        <p class="mb-2 fw-semibold">Task completed: <span class="float-end">28/30</span></p>
-                                        <div class="progress mb-1" style="height: 7px;">
-                                            <div class="progress-bar"
-                                                 role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"
-                                                 style="width: 95%;">
-                                            </div><!-- /.progress-bar .progress-bar-danger -->
-                                        </div><!-- /.progress .no-rounded -->
-                                    </div>
-                                </div> <!-- end card box-->
-                            </div><!-- end col-->
-                        </div>
-                        <!-- end row -->
-
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="text-center mb-3">
-                                    <a href="javascript:void(0);" class="text-danger"><i class="mdi mdi-spin mdi-loading me-1"></i> Load more </a>
-                                </div>
-                            </div> <!-- end col-->
-                        </div>
-                        <!-- end row -->
-                        
+                        </div> <!-- row -->                     
                     </div> <!-- container -->
-
                 </div> <!-- content -->
 
                 <!-- Footer Start -->
@@ -2181,6 +2322,12 @@
 
         <!-- Vendor js -->
         <script src="../assets/js/vendor.min.js"></script>
+
+        <!-- Bootstrap Tables js -->
+        <script src="../assets/libs/bootstrap-table/bootstrap-table.min.js"></script>
+
+        <!-- Init js -->
+        <script src="../assets/js/pages/bootstrap-tables.init.js"></script>
 
         <!-- App js -->
         <script src="../assets/js/app.min.js"></script>

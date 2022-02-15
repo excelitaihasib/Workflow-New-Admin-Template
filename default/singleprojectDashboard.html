@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>Project Listing | UBold - Responsive Admin Dashboard Template</title>
+        <title>Kanban Board | UBold - Responsive Admin Dashboard Template</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
         <meta content="Coderthemes" name="author" />
@@ -10,15 +10,15 @@
         <!-- App favicon -->
         <link rel="shortcut icon" href="../assets/images/favicon.ico">
 
-        <!-- App css -->
-        <link href="../assets/css/config/default/bootstrap.min.css" rel="stylesheet" type="text/css" id="bs-default-stylesheet" />
-        <link href="../assets/css/config/default/app.min.css" rel="stylesheet" type="text/css" id="app-default-stylesheet" />
+		<!-- App css -->
+		<link href="../assets/css/config/default/bootstrap.min.css" rel="stylesheet" type="text/css" id="bs-default-stylesheet" />
+		<link href="../assets/css/config/default/app.min.css" rel="stylesheet" type="text/css" id="app-default-stylesheet" />
 
-        <link href="../assets/css/config/default/bootstrap-dark.min.css" rel="stylesheet" type="text/css" id="bs-dark-stylesheet" />
-        <link href="../assets/css/config/default/app-dark.min.css" rel="stylesheet" type="text/css" id="app-dark-stylesheet" />
+		<link href="../assets/css/config/default/bootstrap-dark.min.css" rel="stylesheet" type="text/css" id="bs-dark-stylesheet" />
+		<link href="../assets/css/config/default/app-dark.min.css" rel="stylesheet" type="text/css" id="app-dark-stylesheet" />
 
-        <!-- icons -->
-        <link href="../assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+		<!-- icons -->
+		<link href="../assets/css/icons.min.css" rel="stylesheet" type="text/css" />
 
     </head>
 
@@ -535,9 +535,7 @@
 
             <!-- ========== Left Sidebar Start ========== -->
             <div class="left-side-menu">
-
                 <div class="h-100" data-simplebar>
-
                     <!-- User box -->
                     <div class="user-box text-center">
                         <img src="../assets/images/users/user-1.jpg" alt="user-img" title="Mat Helme"
@@ -575,7 +573,6 @@
                         </div>
                         <p class="text-muted">Admin Head</p>
                     </div>
-
                     <!--- Sidemenu -->
                     <div id="sidebar-menu">
 
@@ -1308,9 +1305,7 @@
 
                     </div>
                     <!-- End Sidebar -->
-
                     <div class="clearfix"></div>
-
                 </div>
                 <!-- Sidebar -left -->
 
@@ -1323,8 +1318,10 @@
 
             <div class="content-page">
                 <div class="content">
+
                     <!-- Start Content-->
                     <div class="container-fluid">
+                        
                         <!-- start page title -->
                         <div class="row">
                             <div class="col-12">
@@ -1332,421 +1329,949 @@
                                     <div class="page-title-right">
                                         <ol class="breadcrumb m-0">
                                             <li class="breadcrumb-item"><a href="javascript: void(0);">UBold</a></li>
-                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Projects</a></li>
-                                            <li class="breadcrumb-item active">Projects List</li>
+                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Tasks</a></li>
+                                            <li class="breadcrumb-item active">Shapla City</li>
                                         </ol>
                                     </div>
-                                    <h4 class="page-title">Projects List</h4>
+                                    <h4 class="page-title">Shapla City (Single Project Dashboard)</h4>
                                 </div>
                             </div>
                         </div>     
                         <!-- end page title --> 
 
-                        <div class="row mb-2">
-                            <div class="col-sm-4">
-                                <a href="project-create.html" class="btn btn-danger rounded-pill waves-effect waves-light mb-3"><i class="mdi mdi-plus"></i> Create Project</a>
+                        <div class="row">
+                            <div class="card">
+                                <div class="card-body">
+                                    <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                          <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-overView" type="button" role="tab" aria-controls="pills-home" aria-selected="true"> Overview </button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                          <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false"> Task List </button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                          <button class="nav-link" id="pills-spKanban-tab" data-bs-toggle="pill" data-bs-target="#pills-spKanban" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Task Kanban </button>
+                                        </li>
+                                      </ul>
+                                </div>
                             </div>
-                            <div class="col-sm-8">
-                                <div class="text-sm-end">
-                                    <div class="btn-group mb-3">
-                                        <button type="button" class="btn btn-primary">All</button>
-                                    </div>
-                                    <div class="btn-group mb-3 ms-1">
-                                        <button type="button" class="btn btn-light">Ongoing</button>
-                                        <button type="button" class="btn btn-light">Finished</button>
-                                    </div>
-                                    <div class="btn-group mb-3 ms-2 d-none d-sm-inline-block">
-                                        <button type="button" class="btn btn-dark"><i class="mdi mdi-apps"></i></button>
-                                    </div>
-                                    <div class="btn-group mb-3 d-none d-sm-inline-block">
-                                        <button type="button" class="btn btn-link text-dark"><i class="mdi mdi-format-list-bulleted-type"></i></button>
+
+                              <div class="tab-content" id="pills-tabContent">
+                                <div class="tab-pane fade show active" id="pills-overView" role="tabpanel" aria-labelledby="pills-home-tab">
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi modi, velit quia laborum nobis deserunt corporis porro saepe dignissimos impedit explicabo. Illo molestias porro impedit ipsam, odio numquam inventore quo.</p>
+                                </div>
+                                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                                    <div class="dashb-singleProject-wrapper-overview">
+                                        <div class="dashb-chartboard-wrapper">
+                                            <div class="dashboard-chartboard-item">
+                                                <div class="dci-chartboard-inner">
+                                                    <div class="dci-bg">
+                                                        <div class="dci-chartboard-content--wrapper">
+                                                            <div class="dci-thumb-bg">
+                                                                <div class="dci-thumb-bg-inside">
+                                                                    <div class="dci-thumb">
+                                                                        <img src="assets/images/employee/avatar1.jpg">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="dci-chartboard-content">
+                                                                <div class="row">
+                                                                    <div class="col-4">
+                                                                        <div class="dci-chartboard-content-single-text">
+                                                                            <p> Project Name </p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-6 Offset-2">
+                                                                        <div class="dci-chartboard-content-single-text">
+                                                                            <p> Project Management </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-4">
+                                                                        <div class="dci-chartboard-content-single-text">
+                                                                            <p> Client Name </p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-6 Offset-2">
+                                                                        <div class="dci-chartboard-content-single-text">
+                                                                            <p> Shapla City </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-4">
+                                                                        <div class="dci-chartboard-content-single-text">
+                                                                            <p> Start Date </p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-6 Offset-2">
+                                                                        <div class="dci-chartboard-content-single-text">
+                                                                            <p> dd/mm/yy </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-4">
+                                                                        <div class="dci-chartboard-content-single-text">
+                                                                            <p> Deadline </p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-6 Offset-2">
+                                                                        <div class="dci-chartboard-content-single-text">
+                                                                            <p> dd/mm/yy </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-4">
+                                                                        <div class="dci-chartboard-content-single-text">
+                                                                            <p> Project Status </p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-6 Offset-2">
+                                                                        <div class="dci-chartboard-content-single-text">
+                                                                            <p> Active </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+    
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="dashboard-chartboard-item">
+                                                <div class="dci-chartboard-inner">
+                                                    <div class="dci-chartboard-content--wrapper">
+                                                        <div class="dci-chartboard-content">
+                                                            <div class="dougnut-container">
+                                                                <canvas id="doughnut-chart-admin" width="398" height="398" style="display: block; box-sizing: border-box; height: 398px; width: 398px;"></canvas>  
+                                                            </div>
+                                                        </div>
+                                                    </div>
+    
+                                                </div>
+                                            </div>
+                                            <div class="dashboard-chartboard-item">
+                                                <div class="dci-chartboard-inner">
+                                                    <div class="dci-chartboard-content--wrapper">
+                                                        <div class="dci-chartboard-content">
+                                                            <div class="row align-items-center dci-chartboard-progress-wrapper">
+                                                                <div class="col-6">
+                                                                    <div class="dci-chartboard-progress-text">
+                                                                        <p> UI/UX Design </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-6 ">
+                                                                    <div class="dci-chartboard-progressber">
+                                                                        <div class="dci-chartboard-progressber-inner" style="width: 85%;"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row align-items-center dci-chartboard-progress-wrapper">
+                                                                <div class="col-6">
+                                                                    <div class="dci-chartboard-progress-text">
+                                                                        <p> FrontEnd Developemnt </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-6 ">
+                                                                    <div class="dci-chartboard-progressber">
+                                                                        <div class="dci-chartboard-progressber-inner" style="width: 75%;"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row align-items-center dci-chartboard-progress-wrapper">
+                                                                <div class="col-6">
+                                                                    <div class="dci-chartboard-progress-text">
+                                                                        <p> Developemnt </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-6 ">
+                                                                    <div class="dci-chartboard-progressber">
+                                                                        <div class="dci-chartboard-progressber-inner" style="width: 55%;"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row align-items-center dci-chartboard-progress-wrapper">
+                                                                <div class="col-6">
+                                                                    <div class="dci-chartboard-progress-text">
+                                                                        <p> Coding </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-6 ">
+                                                                    <div class="dci-chartboard-progressber">
+                                                                        <div class="dci-chartboard-progressber-inner" style="width: 45%;"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row align-items-center dci-chartboard-progress-wrapper">
+                                                                <div class="col-6">
+                                                                    <div class="dci-chartboard-progress-text">
+                                                                        <p> Testing </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-6 ">
+                                                                    <div class="dci-chartboard-progressber">
+                                                                        <div class="dci-chartboard-progressber-inner" style="width: 35%;"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row align-items-center dci-chartboard-progress-wrapper">
+                                                                <div class="col-6">
+                                                                    <div class="dci-chartboard-progress-text">
+                                                                        <p> Developemnt </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-6 ">
+                                                                    <div class="dci-chartboard-progressber">
+                                                                        <div class="dci-chartboard-progressber-inner" style="width: 55%;"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row align-items-center dci-chartboard-progress-wrapper">
+                                                                <div class="col-6">
+                                                                    <div class="dci-chartboard-progress-text">
+                                                                        <p> Alpha Testing </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-6 ">
+                                                                    <div class="dci-chartboard-progressber">
+                                                                        <div class="dci-chartboard-progressber-inner" style="width: 3%;"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row align-items-center dci-chartboard-progress-wrapper">
+                                                                <div class="col-6">
+                                                                    <div class="dci-chartboard-progress-text">
+                                                                        <p> Beta Testing </p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-6 ">
+                                                                    <div class="dci-chartboard-progressber">
+                                                                        <div class="dci-chartboard-progressber-inner" style="width: 1%;"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="dashb-chartboard-info-wrapper">
+                                            <div class="dashb-ciw-item">
+                                                <div class="dashb-ciw-inner">
+                                                    <div class="dashb-ciw-content">
+                                                        <h6>Client Details</h6>
+                                                        <div class="row">
+                                                            <div class="col-5">
+                                                                <div class="dashb-ciw-content-single-text">
+                                                                    <p> Client Name </p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-7">
+                                                                <div class="dashb-ciw-content-single-text">
+                                                                    <p> Shapla City </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-5">
+                                                                <div class="dashb-ciw-content-single-text">
+                                                                    <p> Contact </p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-7">
+                                                                <div class="dashb-ciw-content-single-text">
+                                                                    <p> +80123456789 </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-5">
+                                                                <div class="dashb-ciw-content-single-text">
+                                                                    <p> Email </p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-7">
+                                                                <div class="dashb-ciw-content-single-text">
+                                                                    <p> abc@example.com </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-5">
+                                                                <div class="dashb-ciw-content-single-text">
+                                                                    <p> Address </p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-7">
+                                                                <div class="dashb-ciw-content-single-text">
+                                                                    <p> 14, NewYork, Vanila, Dhaka </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="dashb-ciw-item">
+                                                <div class="dashb-ciw-inner">
+                                                    <div class="dashb-ciw-content">
+                                                        <div class="row">
+                                                            <div class="col-5">
+                                                                <div class="dashb-ciw-content-single-text">
+                                                                    <p> Add Employee </p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-7">
+                                                                <div class="dashb-ciw-content-single-text">
+                                                                    <select class="select-common">
+                                                                        <option>Mr. Jakarbark</option>
+                                                                        <option>Mr. Matha mota</option>
+                                                                        <option>Mr. Trump Paglu </option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-5">
+                                                                <div class="dashb-ciw-content-single-text">
+                                                                    <p> Attachment </p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-7">
+                                                                <div class="dashb-ciw-content-single-text">
+                                                                    <p> fsdawe4D.pdf </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+    
+    
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="dashb-ciw-item">
+                                                <div class="dashb-ciw-inner">
+                                                    <div class="dashb-ciw-content">
+                                                        <h6>About Project</h6>
+                                                        <div class="dashb-ciw-content-single-text">
+                                                            <p> Lorem ipsum, dolor sit amet connimi amet et! Quos fugit,
+                                                                veniam ut itaque, alias error non quam.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="dashb-chartboard-assign-person-wrapper">
+                                            <div class="dashb-cbap-inner">
+                                                <h6>Assigned Employee</h6>
+                                                <div class="swiper swiper-main-wrapper swiper-initialized swiper-horizontal swiper-pointer-events">
+                                                    <div class="swiper-wrapper" id="swiper-wrapper-cef5ad46e3ddaf4f" aria-live="polite" style="transform: translate3d(-1474px, 0px, 0px); transition-duration: 0ms;"><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="3" role="group" aria-label="4 / 9" style="width: 205.667px; margin-right: 40px;">
+                                                            <div class="dashb-cap-single">
+                                                                <div class="dashb-caps-thumb">
+                                                                    <img src="assets/images/employee/avatar4.jpg">
+                                                                </div>
+                                                                <div class="dashb-caps-Content">
+                                                                    <p>Sakura barbara</p>
+                                                                    <h6>Web Developer</h6>
+                                                                </div>
+                                                            </div>
+                                                        </div><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="4" role="group" aria-label="5 / 9" style="width: 205.667px; margin-right: 40px;">
+                                                            <div class="dashb-cap-single">
+                                                                <div class="dashb-caps-thumb">
+                                                                    <img src="assets/images/employee/avatar5.jpg">
+                                                                </div>
+                                                                <div class="dashb-caps-Content">
+                                                                    <p>Sakura barbara</p>
+                                                                    <h6>Web Developer</h6>
+                                                                </div>
+                                                            </div>
+                                                        </div><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="5" role="group" aria-label="6 / 9" style="width: 205.667px; margin-right: 40px;">
+                                                            <div class="dashb-cap-single">
+                                                                <div class="dashb-caps-thumb">
+                                                                    <img src="assets/images/employee/avatar6.jpg">
+                                                                </div>
+                                                                <div class="dashb-caps-Content">
+                                                                    <p>Sakura barbara</p>
+                                                                    <h6>Web Developer</h6>
+                                                                </div>
+                                                            </div>
+                                                        </div><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="6" role="group" aria-label="7 / 9" style="width: 205.667px; margin-right: 40px;">
+                                                            <div class="dashb-cap-single">
+                                                                <div class="dashb-caps-thumb">
+                                                                    <img src="assets/images/employee/avatar7.jpg">
+                                                                </div>
+                                                                <div class="dashb-caps-Content">
+                                                                    <p>Sakura barbara</p>
+                                                                    <h6>Web Developer</h6>
+                                                                </div>
+                                                            </div>
+                                                        </div><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="7" role="group" aria-label="8 / 9" style="width: 205.667px; margin-right: 40px;">
+                                                            <div class="dashb-cap-single">
+                                                                <div class="dashb-caps-thumb">
+                                                                    <img src="assets/images/employee/avatar8.jpg">
+                                                                </div>
+                                                                <div class="dashb-caps-Content">
+                                                                    <p>Sakura barbara</p>
+                                                                    <h6>Web Developer</h6>
+                                                                </div>
+                                                            </div>
+                                                        </div><div class="swiper-slide swiper-slide-duplicate swiper-slide-prev" data-swiper-slide-index="8" role="group" aria-label="9 / 9" style="width: 205.667px; margin-right: 40px;">
+                                                            <div class="dashb-cap-single">
+                                                                <div class="dashb-caps-thumb">
+                                                                    <img src="assets/images/employee/avatar9.jpg">
+                                                                </div>
+                                                                <div class="dashb-caps-Content">
+                                                                    <p>Sakura barbara</p>
+                                                                    <h6>Web Developer</h6>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="0" role="group" aria-label="1 / 9" style="width: 205.667px; margin-right: 40px;">
+                                                            <div class="dashb-cap-single">
+                                                                <div class="dashb-caps-thumb">
+                                                                    <img src="assets/images/employee/avatar1.jpg">
+                                                                </div>
+                                                                <div class="dashb-caps-Content">
+                                                                    <p>Sakura barbara</p>
+                                                                    <h6>Web Developer</h6>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper-slide swiper-slide-next" data-swiper-slide-index="1" role="group" aria-label="2 / 9" style="width: 205.667px; margin-right: 40px;">
+                                                            <div class="dashb-cap-single">
+                                                                <div class="dashb-caps-thumb">
+                                                                    <img src="assets/images/employee/avatar2.jpg">
+                                                                </div>
+                                                                <div class="dashb-caps-Content">
+                                                                    <p>Sakura barbara</p>
+                                                                    <h6>Web Developer</h6>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper-slide" data-swiper-slide-index="2" role="group" aria-label="3 / 9" style="width: 205.667px; margin-right: 40px;">
+                                                            <div class="dashb-cap-single">
+                                                                <div class="dashb-caps-thumb">
+                                                                    <img src="assets/images/employee/avatar3.jpg">
+                                                                </div>
+                                                                <div class="dashb-caps-Content">
+                                                                    <p>Sakura barbara</p>
+                                                                    <h6>Web Developer</h6>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper-slide" data-swiper-slide-index="3" role="group" aria-label="4 / 9" style="width: 205.667px; margin-right: 40px;">
+                                                            <div class="dashb-cap-single">
+                                                                <div class="dashb-caps-thumb">
+                                                                    <img src="assets/images/employee/avatar4.jpg">
+                                                                </div>
+                                                                <div class="dashb-caps-Content">
+                                                                    <p>Sakura barbara</p>
+                                                                    <h6>Web Developer</h6>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper-slide" data-swiper-slide-index="4" role="group" aria-label="5 / 9" style="width: 205.667px; margin-right: 40px;">
+                                                            <div class="dashb-cap-single">
+                                                                <div class="dashb-caps-thumb">
+                                                                    <img src="assets/images/employee/avatar5.jpg">
+                                                                </div>
+                                                                <div class="dashb-caps-Content">
+                                                                    <p>Sakura barbara</p>
+                                                                    <h6>Web Developer</h6>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper-slide" data-swiper-slide-index="5" role="group" aria-label="6 / 9" style="width: 205.667px; margin-right: 40px;">
+                                                            <div class="dashb-cap-single">
+                                                                <div class="dashb-caps-thumb">
+                                                                    <img src="assets/images/employee/avatar6.jpg">
+                                                                </div>
+                                                                <div class="dashb-caps-Content">
+                                                                    <p>Sakura barbara</p>
+                                                                    <h6>Web Developer</h6>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper-slide" data-swiper-slide-index="6" role="group" aria-label="7 / 9" style="width: 205.667px; margin-right: 40px;">
+                                                            <div class="dashb-cap-single">
+                                                                <div class="dashb-caps-thumb">
+                                                                    <img src="assets/images/employee/avatar7.jpg">
+                                                                </div>
+                                                                <div class="dashb-caps-Content">
+                                                                    <p>Sakura barbara</p>
+                                                                    <h6>Web Developer</h6>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper-slide" data-swiper-slide-index="7" role="group" aria-label="8 / 9" style="width: 205.667px; margin-right: 40px;">
+                                                            <div class="dashb-cap-single">
+                                                                <div class="dashb-caps-thumb">
+                                                                    <img src="assets/images/employee/avatar8.jpg">
+                                                                </div>
+                                                                <div class="dashb-caps-Content">
+                                                                    <p>Sakura barbara</p>
+                                                                    <h6>Web Developer</h6>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper-slide swiper-slide-duplicate-prev" data-swiper-slide-index="8" role="group" aria-label="9 / 9" style="width: 205.667px; margin-right: 40px;">
+                                                            <div class="dashb-cap-single">
+                                                                <div class="dashb-caps-thumb">
+                                                                    <img src="assets/images/employee/avatar9.jpg">
+                                                                </div>
+                                                                <div class="dashb-caps-Content">
+                                                                    <p>Sakura barbara</p>
+                                                                    <h6>Web Developer</h6>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+    
+                                                    <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="0" role="group" aria-label="1 / 9" style="width: 205.667px; margin-right: 40px;">
+                                                            <div class="dashb-cap-single">
+                                                                <div class="dashb-caps-thumb">
+                                                                    <img src="assets/images/employee/avatar1.jpg">
+                                                                </div>
+                                                                <div class="dashb-caps-Content">
+                                                                    <p>Sakura barbara</p>
+                                                                    <h6>Web Developer</h6>
+                                                                </div>
+                                                            </div>
+                                                        </div><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next" data-swiper-slide-index="1" role="group" aria-label="2 / 9" style="width: 205.667px; margin-right: 40px;">
+                                                            <div class="dashb-cap-single">
+                                                                <div class="dashb-caps-thumb">
+                                                                    <img src="assets/images/employee/avatar2.jpg">
+                                                                </div>
+                                                                <div class="dashb-caps-Content">
+                                                                    <p>Sakura barbara</p>
+                                                                    <h6>Web Developer</h6>
+                                                                </div>
+                                                            </div>
+                                                        </div><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="2" role="group" aria-label="3 / 9" style="width: 205.667px; margin-right: 40px;">
+                                                            <div class="dashb-cap-single">
+                                                                <div class="dashb-caps-thumb">
+                                                                    <img src="assets/images/employee/avatar3.jpg">
+                                                                </div>
+                                                                <div class="dashb-caps-Content">
+                                                                    <p>Sakura barbara</p>
+                                                                    <h6>Web Developer</h6>
+                                                                </div>
+                                                            </div>
+                                                        </div><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="3" role="group" aria-label="4 / 9" style="width: 205.667px; margin-right: 40px;">
+                                                            <div class="dashb-cap-single">
+                                                                <div class="dashb-caps-thumb">
+                                                                    <img src="assets/images/employee/avatar4.jpg">
+                                                                </div>
+                                                                <div class="dashb-caps-Content">
+                                                                    <p>Sakura barbara</p>
+                                                                    <h6>Web Developer</h6>
+                                                                </div>
+                                                            </div>
+                                                        </div><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="4" role="group" aria-label="5 / 9" style="width: 205.667px; margin-right: 40px;">
+                                                            <div class="dashb-cap-single">
+                                                                <div class="dashb-caps-thumb">
+                                                                    <img src="assets/images/employee/avatar5.jpg">
+                                                                </div>
+                                                                <div class="dashb-caps-Content">
+                                                                    <p>Sakura barbara</p>
+                                                                    <h6>Web Developer</h6>
+                                                                </div>
+                                                            </div>
+                                                        </div><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="5" role="group" aria-label="6 / 9" style="width: 205.667px; margin-right: 40px;">
+                                                            <div class="dashb-cap-single">
+                                                                <div class="dashb-caps-thumb">
+                                                                    <img src="assets/images/employee/avatar6.jpg">
+                                                                </div>
+                                                                <div class="dashb-caps-Content">
+                                                                    <p>Sakura barbara</p>
+                                                                    <h6>Web Developer</h6>
+                                                                </div>
+                                                            </div>
+                                                        </div></div>
+                                                    <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-cef5ad46e3ddaf4f"> <svg class="svg-inline--fa fa-angles-right" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angles-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M246.6 233.4l-160-160c-12.5-12.5-32.75-12.5-45.25 0s-12.5 32.75 0 45.25L178.8 256l-137.4 137.4c-12.5 12.5-12.5 32.75 0 45.25C47.63 444.9 55.81 448 64 448s16.38-3.125 22.62-9.375l160-160C259.1 266.1 259.1 245.9 246.6 233.4zM438.6 233.4l-160-160c-12.5-12.5-32.75-12.5-45.25 0s-12.5 32.75 0 45.25L370.8 256l-137.4 137.4c-12.5 12.5-12.5 32.75 0 45.25C239.6 444.9 247.8 448 256 448s16.38-3.125 22.62-9.375l160-160C451.1 266.1 451.1 245.9 438.6 233.4z"></path></svg><!-- <i class="fas fa-angle-double-right"></i> Font Awesome fontawesome.com --> </div>
+                                                    <div class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-cef5ad46e3ddaf4f"> <svg class="svg-inline--fa fa-angles-left" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angles-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M77.25 256l137.4-137.4c12.5-12.5 12.5-32.75 0-45.25s-32.75-12.5-45.25 0l-160 160c-12.5 12.5-12.5 32.75 0 45.25l160 160C175.6 444.9 183.8 448 192 448s16.38-3.125 22.62-9.375c12.5-12.5 12.5-32.75 0-45.25L77.25 256zM269.3 256l137.4-137.4c12.5-12.5 12.5-32.75 0-45.25s-32.75-12.5-45.25 0l-160 160c-12.5 12.5-12.5 32.75 0 45.25l160 160C367.6 444.9 375.8 448 384 448s16.38-3.125 22.62-9.375c12.5-12.5 12.5-32.75 0-45.25L269.3 256z"></path></svg><!-- <i class="fas fa-angle-double-left"></i> Font Awesome fontawesome.com --></div>
+                                                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+                                            </div>
+                                            <!-- Swiper -->
+                                        </div>
+                                        <!-- dashb-chartboard-assign-person-wrapper end -->
+                                        <div class="dashb-chartboard-project-relatedData-wrapper">
+                                            <div class="dashb-chartboard-prw-item">
+                                                <div class="dashb-chartboard-prw-inner">
+                                                    <div class="dashb-chartboard-prw-content">
+                                                        <p>Total Hours Work : &nbsp; &nbsp; &nbsp; &nbsp; 158 Hours 55 min
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="dashb-chartboard-prw-item">
+                                                <div class="dashb-chartboard-prw-inner">
+                                                    <div class="dashb-chartboard-prw-content">
+                                                        <p>Total Assigned Employee : &nbsp; &nbsp; &nbsp; &nbsp; 11 </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="dashb-chartboard-prw-item">
+                                                <div class="dashb-chartboard-prw-inner">
+                                                    <div class="dashb-chartboard-prw-content">
+                                                        <p> Complete Work : &nbsp; &nbsp; &nbsp; &nbsp; </p>
+                                                        <div class="dashb-chartboard-prw-circle">
+                                                            <div class="box">
+                                                                <div class="progress" id="progress">
+                                                                    <div class="inner">
+                                                                        70%
+                                                                    </div>
+                                                                <svg viewBox="0 0 100 100" style="display: block; width: 100%;"><path d="M 50,50 m 0,-45 a 45,45 0 1 1 0,90 a 45,45 0 1 1 0,-90" stroke="#7B2182" stroke-width="10" fill-opacity="0" style="stroke-dasharray: 282.783, 282.783; stroke-dashoffset: 104.63;"></path></svg></div>
+                                                            </div>
+    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div><!-- end col-->
-                        </div> 
-                        <!-- end row-->
-
-
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <div class="card project-box">
-                                    <div class="card-body">
-                                        <div class="dropdown float-end">
-                                            <a href="#" class="dropdown-toggle card-drop arrow-none" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="mdi mdi-dots-horizontal m-0 text-muted h3"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-end">
-                                                <a class="dropdown-item" href="#">Edit</a>
-                                                <a class="dropdown-item" href="#">Delete</a>
-                                                <a class="dropdown-item" href="#">Add Members</a>
-                                                <a class="dropdown-item" href="#">Add Due Date</a>
+                                <div class="tab-pane fade" id="pills-spKanban" role="tabpanel" aria-labelledby="pills-contact-tab">
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <div class="dropdown float-end">
+                                                        <a href="#" class="dropdown-toggle arrow-none" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <i class="mdi mdi-dots-vertical m-0 text-muted h3"></i>
+                                                        </a>
+                                                        <div class="dropdown-menu dropdown-menu-end">
+                                                            <a class="dropdown-item" href="#">Edit</a>
+                                                            <a class="dropdown-item" href="#">Delete</a>
+                                                            <a class="dropdown-item" href="#">Add Members</a>
+                                                            <a class="dropdown-item" href="#">Add Due Date</a>
+                                                        </div>
+                                                    </div> <!-- end dropdown -->
+                                                    
+                                                    <h4 class="header-title">Upcoming</h4>
+                                                    <p class="sub-header">
+                                                        Your awesome text goes here. Your awesome text goes here.
+                                                    </p>
+                
+                                                    <ul class="sortable-list tasklist list-unstyled" id="upcoming">
+                                                        <li id="task1">
+                                                            <span class="badge bg-soft-danger text-danger float-end">High</span>
+                                                            <h5 class="mt-0"><a href="javascript: void(0);" class="text-dark">iOS App home page</a></h5>
+                                                            <div class="form-check float-end ps-0">
+                                                                <input class="form-check-input" type="checkbox" value="">
+                                                            </div>
+                                                            <p>There are many variations of passages of Lorem Ipsum available.</p>
+                                                            <div class="clearfix"></div>
+                                                            <div class="row">
+                                                                <div class="col">
+                                                                    <p class="font-13 mt-2 mb-0"><i class="mdi mdi-calendar"></i> Oct 16, 2018</p>
+                                                                </div>
+                                                                <div class="col-auto">
+                                                                    <div class="text-end">
+                                                                        <a href="javascript: void(0);" class="text-muted">
+                                                                            <img src="../assets/images/users/user-1.jpg" alt="task-user" class="avatar-sm img-thumbnail rounded-circle">
+                                                                        </a> 
+                                                                        <a href="javascript: void(0);" class="text-muted">
+                                                                            <img src="../assets/images/users/user-3.jpg" alt="task-user" class="avatar-sm img-thumbnail rounded-circle">
+                                                                        </a> 
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li id="task2">
+                                                            <span class="badge bg-soft-success text-success float-end">Low</span>
+                                                            <h5 class="mt-0"><a href="javascript: void(0);" class="text-dark">Topnav layout design</a></h5>
+                                                            <div class="form-check float-end ps-0">
+                                                                <input class="form-check-input" type="checkbox" value="">
+                                                            </div>
+                                                            <p>Many desktop publishing packages and web page.</p>
+                                                            <div class="clearfix"></div>
+                                                            <div class="row">
+                                                                <div class="col">
+                                                                    <p class="font-13 mt-2 mb-0"><i class="mdi mdi-calendar"></i> Nov 22, 2018</p>
+                                                                </div>
+                                                                <div class="col-auto">
+                                                                    <div class="text-end">
+                                                                        <a href="javascript: void(0);" class="text-muted">
+                                                                            <img src="../assets/images/users/user-2.jpg" alt="task-user" class="avatar-sm img-thumbnail rounded-circle">
+                                                                        </a> 
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li id="task3">
+                                                            <span class="badge bg-soft-danger text-danger float-end">High</span>
+                                                            <h5 class="mt-0"><a href="javascript: void(0);" class="text-dark">Invite user to a project</a></h5>
+                                                            <div class="form-check float-end ps-0">
+                                                                <input class="form-check-input" type="checkbox" value="">
+                                                            </div>
+                                                            <p>If you are going to use a passage of Lorem Ipsum.</p>
+                                                            <div class="clearfix"></div>
+                                                            <div class="row">
+                                                                <div class="col">
+                                                                    <p class="font-13 mt-2 mb-0"><i class="mdi mdi-calendar"></i> Oct 15, 2018</p>
+                                                                </div>
+                                                                <div class="col-auto">
+                                                                    <div class="text-end">
+                                                                        <a href="javascript: void(0);" class="text-muted">
+                                                                            <img src="../assets/images/users/user-5.jpg" alt="task-user" class="avatar-sm img-thumbnail rounded-circle">
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="task-info" id="task4">
+                                                            <span class="badge bg-soft-warning text-warning float-end">Medium</span>
+                                                            <h5 class="mt-0"><a href="javascript: void(0);" class="text-dark">Write a release note</a></h5>
+                                                            <div class="form-check float-end ps-0">
+                                                                <input class="form-check-input" type="checkbox" value="">
+                                                            </div>
+                                                            <p>There are many variations of passages of Lorem Ipsum available.</p>
+                                                            <div class="clearfix"></div>
+                                                            <div class="row">
+                                                                <div class="col">
+                                                                    <p class="font-13 mt-2 mb-0"><i class="mdi mdi-calendar"></i> Dec 03, 2018</p>
+                                                                </div>
+                                                                <div class="col-auto">
+                                                                    <div class="text-end">
+                                                                        <a href="javascript: void(0);" class="text-muted">
+                                                                            <img src="../assets/images/users/user-6.jpg" alt="task-user" class="avatar-sm img-thumbnail rounded-circle">
+                                                                        </a> 
+                                                                        <a href="javascript: void(0);" class="text-muted">
+                                                                            <img src="../assets/images/users/user-7.jpg" alt="task-user" class="avatar-sm img-thumbnail rounded-circle">
+                                                                        </a> 
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        
+                                                    </ul>
+                                                    <a href="javascript: void(0);" class="btn btn-primary w-100 mt-3 waves-effect waves-light"><i class="mdi mdi-plus-circle"></i> Add New</a>
+                                                </div>
                                             </div>
-                                        </div> <!-- end dropdown -->
-                                        <!-- Title-->
-                                        <h4 class="mt-0"><a href="singleprojectDashboard.html" class="text-dark">New Admin Design</a></h4>
-                                        <p class="text-muted text-uppercase"><i class="mdi mdi-account-circle"></i> <small>Orange Limited</small></p>
-                                        <div class="badge bg-soft-success text-success mb-3">Finished</div>
-                                        <!-- Desc-->
-                                        <p class="text-muted font-13 mb-3 sp-line-2">With supporting text below as a natural lead-in to additional contenposuere erat a
-                                            ante...<a href="javascript:void(0);" class="fw-bold text-muted">view more</a>
-                                        </p>
-                                        <!-- Task info-->
-                                        <p class="mb-1">
-                                            <span class="pe-2 text-nowrap mb-2 d-inline-block">
-                                                <i class="mdi mdi-format-list-bulleted-type text-muted"></i>
-                                                <b>78</b> Tasks
-                                            </span>
-                                            <span class="text-nowrap mb-2 d-inline-block">
-                                                <i class="mdi mdi-comment-multiple-outline text-muted"></i>
-                                                <b>214</b> Comments
-                                            </span>
-                                        </p>
-                                        <!-- Team-->
-                                        <div class="avatar-group mb-3" id="tooltips-container">
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-1.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mat Helme" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-2.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Michael Zenaty" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-3.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container" data-bs-toggle="tooltip" data-bs-placement="bottom" title="James Anderson" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-4.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mat Helme" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-5.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Username" />
-                                            </a>
-                                        </div>
-                                        <!-- Progress-->
-                                        <p class="mb-2 fw-semibold">Task completed: <span class="float-end">28/78</span></p>
-                                        <div class="progress mb-1" style="height: 7px;">
-                                            <div class="progress-bar"
-                                                 role="progressbar" aria-valuenow="34" aria-valuemin="0" aria-valuemax="100"
-                                                 style="width: 34%;">
-                                            </div><!-- /.progress-bar .progress-bar-danger -->
-                                        </div><!-- /.progress .no-rounded -->
+                                        </div> <!-- end col -->
+                                        <div class="col-lg-4">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <div class="dropdown float-end">
+                                                        <a href="#" class="dropdown-toggle arrow-none" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <i class="mdi mdi-dots-vertical m-0 text-muted h3"></i>
+                                                        </a>
+                                                        <div class="dropdown-menu dropdown-menu-end">
+                                                            <a class="dropdown-item" href="#">Edit</a>
+                                                            <a class="dropdown-item" href="#">Delete</a>
+                                                            <a class="dropdown-item" href="#">Add Members</a>
+                                                            <a class="dropdown-item" href="#">Add Due Date</a>
+                                                        </div>
+                                                    </div> <!-- end dropdown -->
+                
+                                                    <h4 class="header-title">In Progress</h4>
+                                                    <p class="sub-header">
+                                                        Your awesome text goes here.
+                                                    </p>
+                
+                                                    <ul class="sortable-list tasklist list-unstyled" id="inprogress">
+                                                        <li id="task6">
+                                                            <span class="badge bg-soft-warning text-warning float-end">Medium</span>
+                                                            <h5 class="mt-0"><a href="javascript: void(0);" class="text-dark">Enable analytics tracking</a></h5>
+                                                            <div class="form-check float-end ps-0">
+                                                                <input class="form-check-input" type="checkbox" value="">
+                                                            </div>
+                                                            <p>It has roots in a piece of classical Latin literature from 45 BC.</p>
+                                                            <div class="clearfix"></div>
+                                                            <div class="row">
+                                                                <div class="col">
+                                                                    <p class="font-13 mt-2 mb-0"><i class="mdi mdi-calendar"></i> Sep 18, 2018</p>
+                                                                </div>
+                                                                <div class="col-auto">
+                                                                    <div class="text-end">
+                                                                        <a href="javascript: void(0);" class="text-muted">
+                                                                            <img src="../assets/images/users/user-8.jpg" alt="task-user" class="avatar-sm img-thumbnail rounded-circle">
+                                                                        </a> 
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="task-info" id="task7">
+                                                            <span class="badge bg-soft-danger text-danger float-end">High</span>
+                                                            <h5 class="mt-0"><a href="javascript: void(0);" class="text-dark">Kanban board design</a></h5>
+                                                            <div class="form-check float-end ps-0">
+                                                                <input class="form-check-input" type="checkbox" value="">
+                                                            </div>
+                                                            <p>All the Lorem Ipsum generators on the Internet tend to repeat predefined.</p>
+                                                            <div class="clearfix"></div>
+                                                            <div class="row">
+                                                                <div class="col">
+                                                                    <p class="font-13 mt-2 mb-0"><i class="mdi mdi-calendar"></i> Oct 30, 2018</p>
+                                                                </div>
+                                                                <div class="col-auto">
+                                                                    <div class="text-end">
+                                                                        <a href="javascript: void(0);" class="text-muted">
+                                                                            <img src="../assets/images/users/user-9.jpg" alt="task-user" class="avatar-sm img-thumbnail rounded-circle">
+                                                                        </a> 
+                                                                        <a href="javascript: void(0);" class="text-muted">
+                                                                            <img src="../assets/images/users/user-10.jpg" alt="task-user" class="avatar-sm img-thumbnail rounded-circle">
+                                                                        </a> 
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="task-danger" id="task8">
+                                                            <span class="badge bg-soft-success text-success float-end">Low</span>
+                                                            <h5 class="mt-0"><a href="javascript: void(0);" class="text-dark">Code HTML email template</a></h5>
+                                                            <div class="form-check float-end ps-0">
+                                                                <input class="form-check-input" type="checkbox" value="">
+                                                            </div>
+                                                            <p>There are many variations of passages of Lorem Ipsum available.</p>
+                                                            <div class="clearfix"></div>
+                                                            <div class="row">
+                                                                <div class="col">
+                                                                    <p class="font-13 mt-2 mb-0"><i class="mdi mdi-calendar"></i> Nov 23, 2018</p>
+                                                                </div>
+                                                                <div class="col-auto">
+                                                                    <div class="text-end">
+                                                                        <a href="javascript: void(0);" class="text-muted">
+                                                                            <img src="../assets/images/users/user-1.jpg" alt="task-user" class="avatar-sm img-thumbnail rounded-circle">
+                                                                        </a> 
+                                                                        <a href="javascript: void(0);" class="text-muted">
+                                                                            <img src="../assets/images/users/user-3.jpg" alt="task-user" class="avatar-sm img-thumbnail rounded-circle">
+                                                                        </a> 
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        
+                                                    </ul>
+                                                    <a href="javascript: void(0);" class="btn btn-primary w-100 mt-3 waves-effect waves-light"><i class="mdi mdi-plus-circle"></i> Add New</a>
+                                                </div>
+                                            </div> <!-- end card -->
+                                        </div> <!-- end col -->
+                                        <div class="col-lg-4">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <div class="dropdown float-end">
+                                                        <a href="#" class="dropdown-toggle arrow-none" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <i class="mdi mdi-dots-vertical m-0 text-muted h3"></i>
+                                                        </a>
+                                                        <div class="dropdown-menu dropdown-menu-end">
+                                                            <a class="dropdown-item" href="#">Edit</a>
+                                                            <a class="dropdown-item" href="#">Delete</a>
+                                                            <a class="dropdown-item" href="#">Add Members</a>
+                                                            <a class="dropdown-item" href="#">Add Due Date</a>
+                                                        </div>
+                                                    </div> <!-- end dropdown -->
+                
+                                                    <h4 class="header-title">Completed</h4>
+                                                    <p class="sub-header">
+                                                        Your awesome text goes here. Your awesome text goes here.
+                                                    </p>
+                
+                                                    <ul class="sortable-list tasklist list-unstyled" id="completed">
+                                                        <li class="task-warning" id="task10">
+                                                            <span class="badge bg-soft-success text-success float-end">Low</span>
+                                                            <h5 class="mt-0"><a href="javascript: void(0);" class="text-dark">Brand logo design</a></h5>
+                                                            <div class="form-check float-end ps-0">
+                                                                <input class="form-check-input" type="checkbox" value="">
+                                                            </div>
+                                                            <p>Various versions have evolved over the years, sometimes by accident.</p>
+                                                            <div class="clearfix"></div>
+                                                            <div class="row">
+                                                                <div class="col">
+                                                                    <p class="font-13 mt-2 mb-0"><i class="mdi mdi-calendar"></i> Jun 13, 2018</p>
+                                                                </div>
+                                                                <div class="col-auto">
+                                                                    <div class="text-end">
+                                                                        <a href="javascript: void(0);" class="text-muted">
+                                                                            <img src="../assets/images/users/user-3.jpg" alt="task-user" class="avatar-sm img-thumbnail rounded-circle">
+                                                                        </a> 
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="task-success" id="task11">
+                                                            <span class="badge bg-soft-warning text-warning float-end">Medium</span>
+                                                            <h5 class="mt-0"><a href="javascript: void(0);" class="text-dark">Improve animation loader</a></h5>
+                                                            <div class="form-check float-end ps-0">
+                                                                <input class="form-check-input" type="checkbox" value="">
+                                                            </div>
+                                                            <p>A handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.</p>
+                                                            <div class="clearfix"></div>
+                                                            <div class="row">
+                                                                <div class="col">
+                                                                    <p class="font-13 mt-2 mb-0"><i class="mdi mdi-calendar"></i> Oct 16, 2018</p>
+                                                                </div>
+                                                                <div class="col-auto">
+                                                                    <div class="text-end">
+                                                                        <a href="javascript: void(0);" class="text-muted">
+                                                                            <img src="../assets/images/users/user-4.jpg" alt="task-user" class="avatar-sm img-thumbnail rounded-circle">
+                                                                        </a> 
+                                                                        <a href="javascript: void(0);" class="text-muted">
+                                                                            <img src="../assets/images/users/user-7.jpg" alt="task-user" class="avatar-sm img-thumbnail rounded-circle">
+                                                                        </a> 
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li id="task12">
+                                                            <span class="badge bg-soft-danger text-danger float-end">High</span>
+                                                            <h5 class="mt-0"><a href="javascript: void(0);" class="text-dark">Dashboard Re-design</a></h5>
+                                                            <div class="form-check float-end ps-0">
+                                                                <input class="form-check-input" type="checkbox" value="">
+                                                            </div>
+                                                            <p>There are many variations of passages of Lorem Ipsum available.</p>
+                                                            <div class="clearfix"></div>
+                                                            <div class="row">
+                                                                <div class="col">
+                                                                    <p class="font-13 mt-2 mb-0"><i class="mdi mdi-calendar"></i> Oct 16, 2018</p>
+                                                                </div>
+                                                                <div class="col-auto">
+                                                                    <div class="text-end">
+                                                                        <a href="javascript: void(0);" class="text-muted">
+                                                                            <img src="../assets/images/users/user-5.jpg" alt="task-user" class="avatar-sm img-thumbnail rounded-circle">
+                                                                        </a> 
+                                                                        <a href="javascript: void(0);" class="text-muted">
+                                                                            <img src="../assets/images/users/user-9.jpg" alt="task-user" class="avatar-sm img-thumbnail rounded-circle">
+                                                                        </a> 
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="task-info" id="task13">
+                                                            <span class="badge bg-soft-success text-success float-end">Low</span>
+                                                            <h5 class="mt-0"><a href="javascript: void(0);" class="text-dark">iOS App home page</a></h5>
+                                                            <div class="form-check float-end ps-0">
+                                                                <input class="form-check-input" type="checkbox" value="">
+                                                            </div>
+                                                            <p>you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
+                                                            <div class="clearfix"></div>
+                                                            <div class="row">
+                                                                <div class="col">
+                                                                    <p class="font-13 mt-2 mb-0"><i class="mdi mdi-calendar"></i> Oct 16, 2018</p>
+                                                                </div>
+                                                                <div class="col-auto">
+                                                                    <div class="text-end">
+                                                                        <a href="javascript: void(0);" class="text-muted">
+                                                                            <img src="../assets/images/users/user-10.jpg" alt="task-user" class="avatar-sm img-thumbnail rounded-circle">
+                                                                        </a> 
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                    <a href="javascript: void(0);" class="btn btn-primary w-100 mt-3 waves-effect waves-light"><i class="mdi mdi-plus-circle"></i> Add New</a>
+                                                </div>
+                                            </div> <!-- end card -->
+                                        </div> <!-- end col -->
                                     </div>
-                                </div> <!-- end card box-->
-                            </div><!-- end col-->
-                            <div class="col-lg-4">
-                                <div class="card project-box">
-                                    <div class="card-body">
-                                        <div class="dropdown float-end">
-                                            <a href="#" class="dropdown-toggle card-drop arrow-none" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="mdi mdi-dots-horizontal m-0 text-muted h3"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-end">
-                                                <a class="dropdown-item" href="#">Edit</a>
-                                                <a class="dropdown-item" href="#">Delete</a>
-                                                <a class="dropdown-item" href="#">Add Members</a>
-                                                <a class="dropdown-item" href="#">Add Due Date</a>
-                                            </div>
-                                        </div> <!-- end dropdown -->
-                                        <!-- Title-->
-                                        <h4 class="mt-0"><a href="singleprojectDashboard.html" class="text-dark">App Design and Development</a></h4>
-                                        <p class="text-muted text-uppercase"><i class="mdi mdi-account-circle"></i> <small>Moondust Softwares</small></p>
-                                        <div class="badge bg-soft-secondary text-secondary mb-3">Ongoing</div>
-                                        <!-- Desc-->
-                                        <p class="text-muted font-13 mb-3 sp-line-2">A handful of model sentence structures, to generate Lorem Ipsum which looks reasonable...<a href="javascript:void(0);" class="fw-bold text-muted">view more</a>
-                                        </p>
-                                        <!-- Task info-->
-                                        <p class="mb-1">
-                                            <span class="pe-2 text-nowrap mb-2 d-inline-block">
-                                                <i class="mdi mdi-format-list-bulleted-type text-muted"></i>
-                                                <b>81</b> Tasks
-                                            </span>
-                                            <span class="text-nowrap mb-2 d-inline-block">
-                                                <i class="mdi mdi-comment-multiple-outline text-muted"></i>
-                                                <b>103</b> Comments
-                                            </span>
-                                        </p>
-                                        <!-- Team-->
-                                        <div class="avatar-group mb-3" id="tooltips-container1">
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-6.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container1" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mat Helme" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-7.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container1" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Michael Zenaty" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-8.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container1" data-bs-toggle="tooltip" data-bs-placement="bottom" title="James Anderson" />
-                                            </a>
-                                        </div>
-                                        <!-- Progress-->
-                                        <p class="mb-2 fw-semibold">Task completed: <span class="float-end">55/85</span></p>
-                                        <div class="progress mb-1" style="height: 7px;">
-                                            <div class="progress-bar"
-                                                 role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
-                                                 style="width: 80%;">
-                                            </div><!-- /.progress-bar .progress-bar-danger -->
-                                        </div><!-- /.progress .no-rounded -->
-                                    </div>
-                                </div> <!-- end card box-->
-                            </div><!-- end col-->
-                            <div class="col-lg-4">
-                                <div class="card project-box">
-                                    <div class="card-body">
-                                        <div class="dropdown float-end">
-                                            <a href="#" class="dropdown-toggle card-drop arrow-none" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="mdi mdi-dots-horizontal m-0 text-muted h3"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-end">
-                                                <a class="dropdown-item" href="#">Edit</a>
-                                                <a class="dropdown-item" href="#">Delete</a>
-                                                <a class="dropdown-item" href="#">Add Members</a>
-                                                <a class="dropdown-item" href="#">Add Due Date</a>
-                                            </div>
-                                        </div> <!-- end dropdown -->
-                                        <!-- Title-->
-                                        <h4 class="mt-0"><a href="singleprojectDashboard.html" class="text-dark">Landing page Design</a></h4>
-                                        <p class="text-muted text-uppercase"><i class="mdi mdi-account-circle"></i> <small>Rose Technologies</small></p>
-                                        <div class="badge bg-soft-success text-success mb-3">Finished</div>
-                                        <!-- Desc-->
-                                        <p class="text-muted font-13 mb-3 sp-line-2">You need to be sure there isn't anything embarrassing hidden in the middle of text...<a href="javascript:void(0);" class="fw-bold text-muted">view more</a>
-                                        </p>
-                                        <!-- Task info-->
-                                        <p class="mb-1">
-                                            <span class="pe-2 text-nowrap mb-2 d-inline-block">
-                                                <i class="mdi mdi-format-list-bulleted-type text-muted"></i>
-                                                <b>42</b> Tasks
-                                            </span>
-                                            <span class="text-nowrap mb-2 d-inline-block">
-                                                <i class="mdi mdi-comment-multiple-outline text-muted"></i>
-                                                <b>65</b> Comments
-                                            </span>
-                                        </p>
-                                        <!-- Team-->
-                                        <div class="avatar-group mb-3" id="tooltips-container2">
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-9.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mat Helme" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-10.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Michael Zenaty" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-1.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="James Anderson" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-3.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mat Helme" />
-                                            </a>
-                                        </div>
-                                        <!-- Progress-->
-                                        <p class="mb-2 fw-semibold">Task completed: <span class="float-end">21/42</span></p>
-                                        <div class="progress mb-1" style="height: 7px;">
-                                            <div class="progress-bar"
-                                                 role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
-                                                 style="width: 50%;">
-                                            </div><!-- /.progress-bar .progress-bar-danger -->
-                                        </div><!-- /.progress .no-rounded -->
-                                    </div>
-                                </div> <!-- end card box-->
-                            </div><!-- end col-->
+                                    <!-- end row -->
 
-                        </div>
-                        <!-- end row -->
-
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <div class="card project-box">
-                                    <div class="card-body">
-                                        <div class="dropdown float-end">
-                                            <a href="#" class="dropdown-toggle card-drop arrow-none" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="mdi mdi-dots-horizontal m-0 text-muted h3"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-end">
-                                                <a class="dropdown-item" href="#">Edit</a>
-                                                <a class="dropdown-item" href="#">Delete</a>
-                                                <a class="dropdown-item" href="#">Add Members</a>
-                                                <a class="dropdown-item" href="#">Add Due Date</a>
-                                            </div>
-                                        </div> <!-- end dropdown -->
-                                        <!-- Title-->
-                                        <h4 class="mt-0"><a href="singleprojectDashboard.html" class="text-dark">Custom Software Development</a></h4>
-                                        <p class="text-muted text-uppercase"><i class="mdi mdi-account-circle"></i> <small>Apple Navigations</small></p>
-                                        <div class="badge bg-soft-secondary text-secondary mb-3">Ongoing</div>
-                                        <!-- Desc-->
-                                        <p class="text-muted font-13 mb-3 sp-line-2">You need to be sure there isn't anything embarrassing hidden in the middle of text...<a href="javascript:void(0);" class="fw-bold text-muted">view more</a>
-                                        </p>
-                                        <!-- Task info-->
-                                        <p class="mb-1">
-                                            <span class="pe-2 text-nowrap mb-2 d-inline-block">
-                                                <i class="mdi mdi-format-list-bulleted-type text-muted"></i>
-                                                <b>95</b> Tasks
-                                            </span>
-                                            <span class="text-nowrap mb-2 d-inline-block">
-                                                <i class="mdi mdi-comment-multiple-outline text-muted"></i>
-                                                <b>1.3k</b> Comments
-                                            </span>
-                                        </p>
-                                        <!-- Team-->
-                                        <div class="avatar-group mb-3" id="tooltips-container3">
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-5.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container3" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mat Helme" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-8.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container3" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Michael Zenaty" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-9.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container3" data-bs-toggle="tooltip" data-bs-placement="bottom" title="James Anderson" />
-                                            </a>
-                                        </div>
-                                        <!-- Progress-->
-                                        <p class="mb-2 fw-semibold">Task completed: <span class="float-end">70/95</span></p>
-                                        <div class="progress mb-1" style="height: 7px;">
-                                            <div class="progress-bar"
-                                                 role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100"
-                                                 style="width: 68%;">
-                                            </div><!-- /.progress-bar .progress-bar-danger -->
-                                        </div><!-- /.progress .no-rounded -->
-                                    </div>
-                                </div> <!-- end card box-->
-                            </div><!-- end col-->
-
-                            <div class="col-lg-4">
-                                <div class="card project-box">
-                                    <div class="card-body">
-                                        <div class="dropdown float-end">
-                                            <a href="#" class="dropdown-toggle card-drop arrow-none" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="mdi mdi-dots-horizontal m-0 text-muted h3"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-end">
-                                                <a class="dropdown-item" href="#">Edit</a>
-                                                <a class="dropdown-item" href="#">Delete</a>
-                                                <a class="dropdown-item" href="#">Add Members</a>
-                                                <a class="dropdown-item" href="#">Add Due Date</a>
-                                            </div>
-                                        </div> <!-- end dropdown -->
-                                        <!-- Title-->
-                                        <h4 class="mt-0"><a href="singleprojectDashboard.html" class="text-dark">Website Redesign</a></h4>
-                                        <p class="text-muted text-uppercase"><i class="mdi mdi-account-circle"></i> <small>Enigma Navigations</small></p>
-                                        <div class="badge bg-soft-secondary text-secondary mb-3">Ongoing</div>
-                                        <!-- Desc-->
-                                        <p class="text-muted font-13 mb-3 sp-line-2">There are many variations of passages of Lorem Ipsum available natural lead-in to additional...<a href="javascript:void(0);" class="fw-bold text-muted">view more</a>
-                                        </p>
-                                        <!-- Task info-->
-                                        <p class="mb-1">
-                                            <span class="pe-2 text-nowrap mb-2 d-inline-block">
-                                                <i class="mdi mdi-format-list-bulleted-type text-muted"></i>
-                                                <b>36</b> Tasks
-                                            </span>
-                                            <span class="text-nowrap mb-2 d-inline-block">
-                                                <i class="mdi mdi-comment-multiple-outline text-muted"></i>
-                                                <b>78</b> Comments
-                                            </span>
-                                        </p>
-                                        <!-- Team-->
-                                        <div class="avatar-group mb-3" id="tooltips-container4">
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-3.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container4" data-bs-toggle="tooltip" data-bs-placement="bottom" title="James Anderson" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-4.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container4" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mat Helme" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-5.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container4" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Username" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-1.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container4" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mat Helme" />
-                                            </a>
-                                        </div>
-                                        <!-- Progress-->
-                                        <p class="mb-2 fw-semibold">Task completed: <span class="float-end">12/36</span></p>
-                                        <div class="progress mb-1" style="height: 7px;">
-                                            <div class="progress-bar"
-                                                 role="progressbar" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100"
-                                                 style="width: 33%;">
-                                            </div><!-- /.progress-bar .progress-bar-danger -->
-                                        </div><!-- /.progress .no-rounded -->
-                                    </div>
-                                </div> <!-- end card box-->
-                            </div><!-- end col-->
-
-                            <div class="col-lg-4">
-                                <div class="card project-box">
-                                    <div class="card-body">
-                                        <div class="dropdown float-end">
-                                            <a href="#" class="dropdown-toggle card-drop arrow-none" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="mdi mdi-dots-horizontal m-0 text-muted h3"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-end">
-                                                <a class="dropdown-item" href="#">Edit</a>
-                                                <a class="dropdown-item" href="#">Delete</a>
-                                                <a class="dropdown-item" href="#">Add Members</a>
-                                                <a class="dropdown-item" href="#">Add Due Date</a>
-                                            </div>
-                                        </div> <!-- end dropdown -->
-                                        <!-- Title-->
-                                        <h4 class="mt-0"><a href="project-detail.html" class="text-dark">Multipurpose Landing Template</a></h4>
-                                        <p class="text-muted text-uppercase"><i class="mdi mdi-account-circle"></i> <small>Pride Softwares</small></p>
-                                        <div class="badge bg-soft-success text-success mb-3">Finished</div>
-                                        <!-- Desc-->
-                                        <p class="text-muted font-13 mb-3 sp-line-2">With supporting text below as a natural lead-in to additional contenposuere erat a
-                                            ante...<a href="javascript:void(0);" class="fw-bold text-muted">view more</a>
-                                        </p>
-                                        <!-- Task info-->
-                                        <p class="mb-1">
-                                            <span class="pe-2 text-nowrap mb-2 d-inline-block">
-                                                <i class="mdi mdi-format-list-bulleted-type text-muted"></i>
-                                                <b>30</b> Tasks
-                                            </span>
-                                            <span class="text-nowrap mb-2 d-inline-block">
-                                                <i class="mdi mdi-comment-multiple-outline text-muted"></i>
-                                                <b>148</b> Comments
-                                            </span>
-                                        </p>
-                                        <!-- Team-->
-                                        <div class="avatar-group mb-3" id="tooltips-container5">
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-6.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container5" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mat Helme" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-7.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container5" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Michael Zenaty" />
-                                            </a>
-    
-                                            <a href="javascript: void(0);" class="avatar-group-item">
-                                                <img src="../assets/images/users/user-8.jpg" class="rounded-circle avatar-sm" alt="friend" data-bs-container="#tooltips-container5" data-bs-toggle="tooltip" data-bs-placement="bottom" title="James Anderson" />
-                                            </a>
-                                        </div>
-                                        <!-- Progress-->
-                                        <p class="mb-2 fw-semibold">Task completed: <span class="float-end">28/30</span></p>
-                                        <div class="progress mb-1" style="height: 7px;">
-                                            <div class="progress-bar"
-                                                 role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"
-                                                 style="width: 95%;">
-                                            </div><!-- /.progress-bar .progress-bar-danger -->
-                                        </div><!-- /.progress .no-rounded -->
-                                    </div>
-                                </div> <!-- end card box-->
-                            </div><!-- end col-->
-                        </div>
-                        <!-- end row -->
-
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="text-center mb-3">
-                                    <a href="javascript:void(0);" class="text-danger"><i class="mdi mdi-spin mdi-loading me-1"></i> Load more </a>
                                 </div>
-                            </div> <!-- end col-->
+                              </div>
                         </div>
-                        <!-- end row -->
-                        
+
+
+
+         
                     </div> <!-- container -->
 
                 </div> <!-- content -->
@@ -2182,8 +2707,14 @@
         <!-- Vendor js -->
         <script src="../assets/js/vendor.min.js"></script>
 
+        <script src="../assets/libs/sortablejs/Sortable.min.js"></script>
+
+        <!-- Init -->
+        <script src="../assets/js/pages/kanban.init.js"></script>
+
         <!-- App js -->
         <script src="../assets/js/app.min.js"></script>
+
         
     </body>
 </html>
