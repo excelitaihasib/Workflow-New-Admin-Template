@@ -10,6 +10,13 @@
         <!-- App favicon -->
         <link rel="shortcut icon" href="../assets/images/favicon.ico">
 
+        <!-- third party css -->
+        <link href="../assets/libs/datatables.net-bs5/css/dataTables.bootstrap5.min.css" rel="stylesheet" type="text/css" />
+        <link href="../assets/libs/datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css" rel="stylesheet" type="text/css" />
+        <link href="../assets/libs/datatables.net-buttons-bs5/css/buttons.bootstrap5.min.css" rel="stylesheet" type="text/css" />
+        <link href="../assets/libs/datatables.net-select-bs5/css//select.bootstrap5.min.css" rel="stylesheet" type="text/css" />
+        <!-- third party css end -->
+
         <!-- App css -->
         <link href="../assets/css/config/default/bootstrap.min.css" rel="stylesheet" type="text/css" id="bs-default-stylesheet" />
         <link href="../assets/css/config/default/app.min.css" rel="stylesheet" type="text/css" id="app-default-stylesheet" />
@@ -20,13 +27,15 @@
         <!-- icons -->
         <link href="../assets/css/icons.min.css" rel="stylesheet" type="text/css" />
 
+        <link rel="stylesheet" href="../assets/css/sStyle.css">
+
     </head>
 
     <!-- body start -->
-    <body class="loading" data-layout='{"mode": "light", "width": "fluid", "menuPosition": "fixed", "sidebar": { "color": "light", "size": "default", "showuser": false}, "topbar": {"color": "dark"}, "showRightSidebarOnPageLoad": true}'>
+    <body class="loading" id="assign-project" data-layout='{"mode": "light", "width": "fluid", "menuPosition": "fixed", "sidebar": { "color": "light", "size": "default", "showuser": false}, "topbar": {"color": "dark"}, "showRightSidebarOnPageLoad": true}'>
 
         <!-- Begin page -->
-        <div id="wrapper">
+        <div id="wrapper" >
 
             <!-- Topbar Start -->
             <div class="navbar-custom">
@@ -1326,277 +1335,390 @@
 
                     <!-- Start Content-->
                     <div class="container-fluid">
-                        
-                        <!-- start page title -->
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="page-title-box">
-                                    <div class="page-title-right">
-                                        <ol class="breadcrumb m-0">
-                                            <li class="breadcrumb-item"><a href="javascript: void(0);">UBold</a></li>
-                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Contacts</a></li>
-                                            <li class="breadcrumb-item active">Contacts List</li>
-                                        </ol>
-                                    </div>
-                                    <h4 class="page-title">Clients List</h4>
-                                </div>
-                            </div>
-                        </div>     
-                        <!-- end page title --> 
+                      <div class="row mt-4">
+                        <div class="col-12">
+                          <div class="card">
+                            <div class="card-body">
+                              <h4 class="header-title mb-4">Task Name</h4>
 
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="row justify-content-between">
-                                            <div class="col-md-8">
-                                                <form class="d-flex flex-wrap align-items-center">
-                                                    <label for="inputPassword2" class="visually-hidden">Search</label>
-                                                    <div class="me-3">
-                                                        <input type="search" class="form-control my-1 my-md-0" id="inputPassword2" placeholder="Search...">
+                                <ul class="nav nav-tabs nav-bordered">
+                                  <li class="nav-item">
+                                      <a href="#task-list-1" data-bs-toggle="tab" aria-expanded="false" class="nav-link active">
+                                          Task List
+                                      </a>
+                                  </li>
+                             
+                                  <li class="nav-item">
+                                      <a href="#kanban-1" data-bs-toggle="tab" aria-expanded="false" class="nav-link">
+                                          Task Kanban
+                                      </a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a href="#files-1" data-bs-toggle="tab" aria-expanded="true" class="nav-link">
+                                        Files
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#timeline-1" data-bs-toggle="tab" aria-expanded="false" class="nav-link">
+                                        Activity Log
+                                    </a>
+                                </li>
+                              </ul>
+                              <div class="tab-content">
+    <!--============================Start Task List============================= 2023 -->                                
+                                  <div class="tab-pane active" id="task-list-1">
+                                      <div class="row">
+                                        <div class="col-12">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <div class="mb-2">
+                                                        <div class="row row-cols-sm-auto g-2 align-items-center">
+                                                            <div class="col-12 text-sm-center">
+                                                                <select id="demo-foo-filter-status" class="form-select form-select-sm">
+                                                                    <option value="">Show all</option>
+                                                                    <option value="active">Active</option>
+                                                                    <option value="disabled">Disabled</option>
+                                                                    <option value="suspended">Suspended</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <input id="demo-foo-search" type="text" placeholder="Search" class="form-control form-control-sm" autocomplete="on">
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                    <label for="status-select" class="me-2">Sort By</label>
-                                                    <div class="me-sm-3">
-                                                        <select class="form-select my-1 my-md-0" id="status-select">
-                                                            <option selected="">All</option>
-                                                            <option value="1">Name</option>
-                                                            <option value="2">Post</option>
-                                                            <option value="3">Followers</option>
-                                                            <option value="4">Followings</option>
-                                                        </select>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="text-md-end mt-3 mt-md-0">
-                                                    <button type="button" class="btn btn-success waves-effect waves-light me-1"><i class="mdi mdi-cog"></i></button>
-                                                    <button type="button" class="btn btn-danger waves-effect waves-light" data-bs-toggle="modal" data-bs-target="#custom-modal"><i class="mdi mdi-plus-circle me-1"></i> Add New</button>
+                                                    
+                                                    <div class="table-responsive">
+                                                        <table id="demo-foo-filtering" class="table table-bordered toggle-circle mb-0" data-page-size="7">
+                                                            <thead>
+                                                            <tr>
+                                                                <th data-toggle="true">ID</th>
+                                                                <th>Task Name</th>
+                                                                <th >Start Date</th>
+                                                                <th>Deadline</th>
+                                                                <th>Status</th>
+                                                                <th >Task Type</th>
+                                                                <th>Task Update</th>
+                                                            </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                            <tr>
+                                                                <td>16</td>
+                                                                <td>Employee Page=> My Profile, My Projects, Attendance, Official Calendar, Chat</td>
+                                                                <td>15 Feb 2022</td>
+                                                                <td>22 Feb 2022</td>
+                                                                <td><span class="badge label-table bg-success">TO DO</span></td>
+                                                                <td><a class="btn btn-outline-primary btn-sm waves-effect waves-light show-btn m-0" data-bs-toggle="modal" data-bs-target="#showtask">Show</a></td>
+                                                                <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>17</td>
+                                                                <td>Employee Page=> My Profile, My Projects, Attendance, Official Calendar, Chat</td>
+                                                                <td>15 Feb 2022</td>
+                                                                <td>22 Feb 2022</td>
+                                                                <td><span class="badge label-table bg-success">TO DO</span></td>
+                                                                <td><a class="btn btn-outline-primary btn-sm waves-effect waves-light show-btn m-0" data-bs-toggle="modal" data-bs-target="#showtask">Show</a></td>
+                                                                <td></td>
+                                                            </tr>
+
+                                                            </tbody>
+                                                            <tfoot>
+                                                            <tr class="active">
+                                                                <td colspan="7">
+                                                                    <div class="text-end">
+                                                                        <ul class="pagination pagination-rounded justify-content-end footable-pagination mb-0"></ul>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            </tfoot>
+                                                        </table>
+                                                    </div> <!-- end .table-responsive-->
                                                 </div>
-                                            </div><!-- end col-->
-                                        </div> <!-- end row -->
-                                    </div>
-                                </div> <!-- end card -->
-                            </div><!-- end col-->
-                        </div>
-                        <!-- end row -->        
-
-                        <div class="row">
-                            <div class="col-lg-3">
-                                <div class="text-center card">
-                                    <div class="card-body">
-                                        <div class="pt-2 pb-2">
-                                            <img src="../assets/images/users/user-3.jpg" class="rounded-circle img-thumbnail avatar-xl" alt="profile-image">
-    
-                                            <h4 class="mt-3"><a href="extras-profile.html" class="text-dark">Freddie J. Plourde</a></h4>
-                                            <p class="text-muted">@Founder <span> | </span> <span> <a href="#" class="text-pink">websitename.com</a> </span></p>    
-                                            <button type="button" class="btn btn-primary btn-sm waves-effect waves-light">Message</button>
-                                            <a  href="client-profile.html" type="button" class="btn btn-light btn-sm waves-effect">View Profile</a>
-                                            <div class="row">
-                                                <div class="col-12">
-                                                    <div class="mt-3">                                                       
-                                                        <p  class="text-start">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui sit modi obcaecati, vel repellat deleniti nobis reprehenderit, assumenda commodi inventore aliquam placeat? Sequi, optio nisi. Ducimus nesciunt quasi perspiciatis ea? </p>
-                                                    </div>
-                                                </div>
-
-                                            </div> <!-- end row-->
-    
-                                        </div> <!-- end .padding -->
-                                    </div>
-                                </div> <!-- end card-->
-                            </div> <!-- end col -->
-                            <div class="col-lg-3">
-                                <div class="text-center card">
-                                    <div class="card-body">
-                                        <div class="pt-2 pb-2">
-                                            <img src="../assets/images/users/user-3.jpg" class="rounded-circle img-thumbnail avatar-xl" alt="profile-image">
-    
-                                            <h4 class="mt-3"><a href="extras-profile.html" class="text-dark">Freddie J. Plourde</a></h4>
-                                            <p class="text-muted">@Founder <span> | </span> <span> <a href="#" class="text-pink">websitename.com</a> </span></p>    
-                                            <button type="button" class="btn btn-primary btn-sm waves-effect waves-light">Message</button>
-                                            <a  href="client-profile.html" type="button" class="btn btn-light btn-sm waves-effect">View Profile</a>
-                                            <div class="row">
-                                                <div class="col-12">
-                                                    <div class="mt-3">                                                       
-                                                        <p  class="text-start">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui sit modi obcaecati, vel repellat deleniti nobis reprehenderit, assumenda commodi inventore aliquam placeat? Sequi, optio nisi. Ducimus nesciunt quasi perspiciatis ea? </p>
-                                                    </div>
-                                                </div>
-
-                                            </div> <!-- end row-->
-    
-                                        </div> <!-- end .padding -->
-                                    </div>
-                                </div> <!-- end card-->
-                            </div> <!-- end col -->
-                            <div class="col-lg-3">
-                                <div class="text-center card">
-                                    <div class="card-body">
-                                        <div class="pt-2 pb-2">
-                                            <img src="../assets/images/users/user-3.jpg" class="rounded-circle img-thumbnail avatar-xl" alt="profile-image">
-    
-                                            <h4 class="mt-3"><a href="extras-profile.html" class="text-dark">Freddie J. Plourde</a></h4>
-                                            <p class="text-muted">@Founder <span> | </span> <span> <a href="#" class="text-pink">websitename.com</a> </span></p>    
-                                            <button type="button" class="btn btn-primary btn-sm waves-effect waves-light">Message</button>
-                                            <a  href="client-profile.html" type="button" class="btn btn-light btn-sm waves-effect">View Profile</a>
-                                            <div class="row">
-                                                <div class="col-12">
-                                                    <div class="mt-3">                                                       
-                                                        <p  class="text-start">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui sit modi obcaecati, vel repellat deleniti nobis reprehenderit, assumenda commodi inventore aliquam placeat? Sequi, optio nisi. Ducimus nesciunt quasi perspiciatis ea? </p>
-                                                    </div>
-                                                </div>
-
-                                            </div> <!-- end row-->
-    
-                                        </div> <!-- end .padding -->
-                                    </div>
-                                </div> <!-- end card-->
-                            </div> <!-- end col -->
-                            <div class="col-lg-3">
-                                <div class="text-center card">
-                                    <div class="card-body">
-                                        <div class="pt-2 pb-2">
-                                            <img src="../assets/images/users/user-3.jpg" class="rounded-circle img-thumbnail avatar-xl" alt="profile-image">
-    
-                                            <h4 class="mt-3"><a href="extras-profile.html" class="text-dark">Freddie J. Plourde</a></h4>
-                                            <p class="text-muted">@Founder <span> | </span> <span> <a href="#" class="text-pink">websitename.com</a> </span></p>    
-                                            <button type="button" class="btn btn-primary btn-sm waves-effect waves-light">Message</button>
-                                            <a  href="client-profile.html" type="button" class="btn btn-light btn-sm waves-effect">View Profile</a>
-                                            <div class="row">
-                                                <div class="col-12">
-                                                    <div class="mt-3">                                                       
-                                                        <p  class="text-start">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui sit modi obcaecati, vel repellat deleniti nobis reprehenderit, assumenda commodi inventore aliquam placeat? Sequi, optio nisi. Ducimus nesciunt quasi perspiciatis ea? </p>
-                                                    </div>
-                                                </div>
-
-                                            </div> <!-- end row-->
-    
-                                        </div> <!-- end .padding -->
-                                    </div>
-                                </div> <!-- end card-->
-                            </div> <!-- end col -->
-                            <div class="col-lg-3">
-                                <div class="text-center card">
-                                    <div class="card-body">
-                                        <div class="pt-2 pb-2">
-                                            <img src="../assets/images/users/user-3.jpg" class="rounded-circle img-thumbnail avatar-xl" alt="profile-image">
-    
-                                            <h4 class="mt-3"><a href="extras-profile.html" class="text-dark">Freddie J. Plourde</a></h4>
-                                            <p class="text-muted">@Founder <span> | </span> <span> <a href="#" class="text-pink">websitename.com</a> </span></p>    
-                                            <button type="button" class="btn btn-primary btn-sm waves-effect waves-light">Message</button>
-                                            <a  href="client-profile.html" type="button" class="btn btn-light btn-sm waves-effect">View Profile</a>
-                                            <div class="row">
-                                                <div class="col-12">
-                                                    <div class="mt-3">                                                       
-                                                        <p  class="text-start">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui sit modi obcaecati, vel repellat deleniti nobis reprehenderit, assumenda commodi inventore aliquam placeat? Sequi, optio nisi. Ducimus nesciunt quasi perspiciatis ea? </p>
+                                            </div> <!-- end card -->
+                                        </div> <!-- end col -->
+                                      </div>
+                                                                 
+                                      
+                                 
+                                 
+                                  </div>
+    <!--============================End Task List============================= -->   
+    <!--============================Start Kanban Board=============================  -->                            
+                                  <div class="tab-pane" id="kanban-1">
+                                      <div class="row">
+                                          <div class="col-lg-3">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                                                                            
+                                                        <h4 class="header-title bg-primary text-center" style="font-size: 25px; color: white;" >TO DO</h4>
+                                                        <ul class="sortable-list tasklist list-unstyled" id="upcoming">
+                                                            <li id="task1">
+                                                                <span class="badge bg-soft-danger text-danger float-end">High</span>
+                                                                <h5 class="mt-0"><a href="javascript: void(0);" class="text-dark"> Task Title</a></h5>
+                                                               
+                                                                <p>Task Info</p>
+                                                                <div class="clearfix"></div>
+                                                                <div class="row">
+                                                                    <div class="col">
+                                                                        <p class="font-13 mt-2 mb-0"><i class="mdi mdi-calendar"></i>  Oct 16, 2018</p>
+                                                                    </div>
+                                                                    <div class="col-auto">
+                                                                        <div class="text-end">
+                                                                            <a href="javascript: void(0);" class="text-muted">
+                                                                                <img src="../assets/images/users/user-1.jpg" alt="task-user" class="avatar-sm img-thumbnail rounded-circle">
+                                                                            </a> 
+                                                                            <a href="javascript: void(0);" class="text-muted">
+                                                                                <img src="../assets/images/users/user-3.jpg" alt="task-user" class="avatar-sm img-thumbnail rounded-circle">
+                                                                            </a> 
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                      
+                                                            
+                                                        </ul>
+                                                      
                                                     </div>
                                                 </div>
-
-                                            </div> <!-- end row-->
-    
-                                        </div> <!-- end .padding -->
-                                    </div>
-                                </div> <!-- end card-->
-                            </div> <!-- end col -->
-                            <div class="col-lg-3">
-                                <div class="text-center card">
-                                    <div class="card-body">
-                                        <div class="pt-2 pb-2">
-                                            <img src="../assets/images/users/user-3.jpg" class="rounded-circle img-thumbnail avatar-xl" alt="profile-image">
-    
-                                            <h4 class="mt-3"><a href="extras-profile.html" class="text-dark">Freddie J. Plourde</a></h4>
-                                            <p class="text-muted">@Founder <span> | </span> <span> <a href="#" class="text-pink">websitename.com</a> </span></p>    
-                                            <button type="button" class="btn btn-primary btn-sm waves-effect waves-light">Message</button>
-                                            <a  href="client-profile.html" type="button" class="btn btn-light btn-sm waves-effect">View Profile</a>
-                                            <div class="row">
-                                                <div class="col-12">
-                                                    <div class="mt-3">                                                       
-                                                        <p  class="text-start">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui sit modi obcaecati, vel repellat deleniti nobis reprehenderit, assumenda commodi inventore aliquam placeat? Sequi, optio nisi. Ducimus nesciunt quasi perspiciatis ea? </p>
+                                          </div> <!-- end col -->
+                                          <div class="col-lg-3">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                    
+                                                        
+                                                        <h4 class="header-title bg-blue text-center" style="font-size: 25px; color: white;" >In Progress</h4>
+                                                        <ul class="sortable-list tasklist list-unstyled" id="upcoming">
+                                                            <li id="task1">
+                                                                <span class="badge bg-soft-danger text-danger float-end">High</span>
+                                                                <h5 class="mt-0"><a href="javascript: void(0);" class="text-dark">Task Title</a></h5>
+                                                               
+                                                                <p>Task Info</p>
+                                                                <div class="clearfix"></div>
+                                                                <div class="row">
+                                                                    <div class="col">
+                                                                        <p class="font-13 mt-2 mb-0"><i class="mdi mdi-calendar"></i> Oct 16, 2018</p>
+                                                                    </div>
+                                                                    <div class="col-auto">
+                                                                        <div class="text-end">
+                                                                            <a href="javascript: void(0);" class="text-muted">
+                                                                                <img src="../assets/images/users/user-1.jpg" alt="task-user" class="avatar-sm img-thumbnail rounded-circle">
+                                                                            </a> 
+                                                                            <a href="javascript: void(0);" class="text-muted">
+                                                                                <img src="../assets/images/users/user-3.jpg" alt="task-user" class="avatar-sm img-thumbnail rounded-circle">
+                                                                            </a> 
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                         
+                                                            
+                                                        </ul>
+                                                      
                                                     </div>
                                                 </div>
-
-                                            </div> <!-- end row-->
-    
-                                        </div> <!-- end .padding -->
-                                    </div>
-                                </div> <!-- end card-->
-                            </div> <!-- end col -->
-                            <div class="col-lg-3">
-                                <div class="text-center card">
-                                    <div class="card-body">
-                                        <div class="pt-2 pb-2">
-                                            <img src="../assets/images/users/user-3.jpg" class="rounded-circle img-thumbnail avatar-xl" alt="profile-image">
-    
-                                            <h4 class="mt-3"><a href="extras-profile.html" class="text-dark">Freddie J. Plourde</a></h4>
-                                            <p class="text-muted">@Founder <span> | </span> <span> <a href="#" class="text-pink">websitename.com</a> </span></p>    
-                                            <button type="button" class="btn btn-primary btn-sm waves-effect waves-light">Message</button>
-                                            <a  href="client-profile.html" type="button" class="btn btn-light btn-sm waves-effect">View Profile</a>
-                                            <div class="row">
-                                                <div class="col-12">
-                                                    <div class="mt-3">                                                       
-                                                        <p  class="text-start">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui sit modi obcaecati, vel repellat deleniti nobis reprehenderit, assumenda commodi inventore aliquam placeat? Sequi, optio nisi. Ducimus nesciunt quasi perspiciatis ea? </p>
+                                          </div> <!-- end col -->
+                                          <div class="col-lg-3">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                                       
+                                                        <h4 class="header-title bg-danger text-center" style="font-size: 25px; color: white;" >Testing</h4>
+                                                        <ul class="sortable-list tasklist list-unstyled" id="inprogress">
+                                                            <li id="task6">
+                                                                <span class="badge bg-soft-warning text-warning float-end">Medium</span>
+                                                                <h5 class="mt-0"><a href="javascript: void(0);" class="text-dark">Task Title</a></h5>
+                                                             
+                                                                <p>Task Info</p>
+                                                                <div class="clearfix"></div>
+                                                                <div class="row">
+                                                                    <div class="col">
+                                                                        <p class="font-13 mt-2 mb-0"><i class="mdi mdi-calendar"></i> Sep 18, 2018</p>
+                                                                    </div>
+                                                                    <div class="col-auto">
+                                                                        <div class="text-end">
+                                                                            <a href="javascript: void(0);" class="text-muted">
+                                                                                <img src="../assets/images/users/user-8.jpg" alt="task-user" class="avatar-sm img-thumbnail rounded-circle">
+                                                                            </a> 
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                         
+                                                            
+                                                        </ul>
+                                                     
                                                     </div>
-                                                </div>
-
-                                            </div> <!-- end row-->
-    
-                                        </div> <!-- end .padding -->
+                                                </div> <!-- end card -->
+                                          </div> <!-- end col -->
+                                          <div class="col-lg-3">
+                                                <div class="card">
+                                                    <div class="card-body">                                                    
+                    
+                                                        <h4 class="header-title bg-success text-center" style="font-size: 25px; color: white;" >Done</h4>
+                                                        <ul class="sortable-list tasklist list-unstyled" id="completed">
+                                                            <li class="task-warning" id="task10">
+                                                                <span class="badge bg-soft-success text-success float-end">Low</span>
+                                                                <h5 class="mt-0"><a href="javascript: void(0);" class="text-dark">Task Title</a></h5>
+                                                             
+                                                                <p>Task Info</p>
+                                                                <div class="clearfix"></div>
+                                                                <div class="row">
+                                                                    <div class="col">
+                                                                        <p class="font-13 mt-2 mb-0"><i class="mdi mdi-calendar"></i> Jun 13, 2018</p>
+                                                                    </div>
+                                                                    <div class="col-auto">
+                                                                        <div class="text-end">
+                                                                            <a href="javascript: void(0);" class="text-muted">
+                                                                                <img src="../assets/images/users/user-3.jpg" alt="task-user" class="avatar-sm img-thumbnail rounded-circle">
+                                                                            </a> 
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                       
+                                                        </ul>
+                                                     
+                                                    </div>
+                                                </div> <!-- end card -->
+                                          </div> <!-- end col -->
+                                      </div>
+                                  </div>
+   <!--============================End Kanban Board=============================  -->
+   <!--============================Start Files Table========================  -->
+                                  <div class="tab-pane" id="files-1">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <table id="datatable-buttons" class="table table-striped dt-responsive nowrap w-100 project-content-table">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Sl No</th>
+                                                                <th>File Information</th> 
+                                                                <th>View File</th>
+                                                                <th>Uploaded By</th>
+                                                                <th>Created Date</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>01</td>
+                                                                <td>Page Design and login Function info</td>   
+                                                                <td> <a href="#" class="btn btn-success">View</a></td>
+                                                                <td>MR. ABC</td>
+                                                                <td>20-03-2022</td>
+                                                            </tr>
+                                                           
+                                                        </tbody>
+                                                    </table>
+                                                    
+                                                </div> <!-- end card body-->
+                                            </div> <!-- end card -->
+                                        </div><!-- end col-->
                                     </div>
-                                </div> <!-- end card-->
-                            </div> <!-- end col -->
-                            <div class="col-lg-3">
-                                <div class="text-center card">
-                                    <div class="card-body">
-                                        <div class="pt-2 pb-2">
-                                            <img src="../assets/images/users/user-3.jpg" class="rounded-circle img-thumbnail avatar-xl" alt="profile-image">
-    
-                                            <h4 class="mt-3"><a href="extras-profile.html" class="text-dark">Freddie J. Plourde</a></h4>
-                                            <p class="text-muted">@Founder <span> | </span> <span> <a href="#" class="text-pink">websitename.com</a> </span></p>    
-                                            <button type="button" class="btn btn-primary btn-sm waves-effect waves-light">Message</button>
-                                            <a  href="client-profile.html" type="button" class="btn btn-light btn-sm waves-effect">View Profile</a>
-                                            <div class="row">
-                                                <div class="col-12">
-                                                    <p  class="text-start">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui sit modi obcaecati, vel repellat deleniti nobis reprehenderit, assumenda commodi inventore aliquam placeat? Sequi, optio nisi. Ducimus nesciunt quasi perspiciatis ea? </p>
-                                                </div>
-
-                                            </div> <!-- end row-->
-    
-                                        </div> <!-- end .padding -->
-                                    </div>
-                                </div> <!-- end card-->
-                            </div> <!-- end col -->
-
-                        </div>
-
-
-
-                        <!-- end row -->
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="text-end">
-                                    <ul class="pagination pagination-rounded justify-content-end">
-                                        <li class="page-item">
-                                            <a class="page-link" href="javascript: void(0);" aria-label="Previous">
-                                                <span aria-hidden="true">«</span>
-                                                <span class="visually-hidden">Previous</span>
-                                            </a>
-                                        </li>
-                                        <li class="page-item active"><a class="page-link" href="javascript: void(0);">1</a></li>
-                                        <li class="page-item"><a class="page-link" href="javascript: void(0);">2</a></li>
-                                        <li class="page-item"><a class="page-link" href="javascript: void(0);">3</a></li>
-                                        <li class="page-item"><a class="page-link" href="javascript: void(0);">4</a></li>
-                                        <li class="page-item"><a class="page-link" href="javascript: void(0);">5</a></li>
-                                        <li class="page-item">
-                                            <a class="page-link" href="javascript: void(0);" aria-label="Next">
-                                                <span aria-hidden="true">»</span>
-                                                <span class="visually-hidden">Next</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end row -->
-
+                                    <!-- end row-->
+                                  </div>
+    <!--============================End Files Table===========================  -->
+   <!--============================Start Active Log Time========================  -->
+                                  <div class="tab-pane" id="timeline-1" style="background-color: #f7f7f7">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="timeline">
             
+                                                <article class="timeline-item">
+                                                    <h2 class="m-0 d-none">&nbsp;</h2>
+                                                    <div class="time-show mt-0">
+                                                        <a href="#" class="btn btn-primary width-lg">Today</a>
+                                                    </div>
+                                                </article>
+            
+                                                <article class="timeline-item timeline-item-left">
+                                                    <div class="timeline-desk">
+                                                        <div class="timeline-box">
+                                                            <span class="arrow-alt"></span>
+                                                            <span class="timeline-icon"><i class="mdi mdi-adjust"></i></span>
+                                                            <h4 class="mt-0 font-16">1 hour ago</h4>
+                                                            <p class="text-muted"><small>Create Time: 10:30 am</small></p>
+                                                            <p class="mb-0"> Work Info:: Project Add (Only show Assign Employee -Event Fire), File Add, New Task Add, New Assiend Employee, </p> <br>
+
+                                                            <p class="mb-0">
+
+                                                                <span>Assign by: Mr. Hasibur Rahman </span>  <br>
+                                                                <span>Project Name: <a href="#">HRMS</a></span> 
+                                                            
+                                                            </p>
+                                                           
+                                                        </div>
+                                                    </div>
+                                                </article>
+            
+                                                <article class="timeline-item">
+                                                    <div class="timeline-desk">
+                                                        <div class="timeline-box">
+                                                            <span class="arrow"></span>
+                                                            <span class="timeline-icon"><i class="mdi mdi-adjust"></i></span>
+                                                            <h4 class="mt-0 font-16">1 hours ago</h4>
+                                                            <p class=" text-muted"><small> Uploaded Time: <span>10:30 am</span> </small></p>
+                                                            <p class="mb-0"> 
+                                                                
+                                                            <span>File Name: <a href="#">abc.pdf</a> </span>
+                                                            <span>Uploaded by: <b>Hasibur Rahman</b>  </span>    
+
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </article>
+            
+                                                <article class="timeline-item timeline-item-left">
+                                                    <div class="timeline-desk">
+                                                        <div class="timeline-box">
+                                                            <span class="arrow-alt"></span>
+                                                            <span class="timeline-icon"><i class="mdi mdi-adjust"></i></span>
+                                                            <h4 class="mt-0 font-16">1 hours ago</h4>
+                                                            <p class="text-muted"><small> Create Time: <b>10:30 am</b></small></p>
+                                                            <p>
+                                                                <span> Task Name: <b>Home Page Bug Fix</b> </span> <br>
+
+                                                                <span> Assigned: <b>Mr. Saddam</b> </span>
+                                                                
+                                                                <span> Assign by: <b> Hasibur Rahman</b> </span>
+
+                                                            
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </article>
+            
+                                                <article class="timeline-item">
+                                                    <div class="timeline-desk">
+                                                        <div class="timeline-box">
+                                                            <span class="arrow"></span>
+                                                            <span class="timeline-icon"><i class="mdi mdi-adjust"></i></span>
+                                                            <h4 class="mt-0 font-16">1 hours ago</h4>
+                                                            <p class="text-muted"><small> Crate Time: 10:30 am</small></p>
+                                                            <p class="mb-0"> 
+                                                                <span> Project Name: <b>HRMS</b>  </span> <br>
+                                                                <span>Newly Assigned Employee: <b>Laboni Akther</b></span>
+                                                                <span>Assign by: <b>Hasibur Rahman</b></span>
+
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </article>
+            
+                                        
+            
+            
+                                            </div>
+                                            <!-- end timeline -->
+                                        </div> <!-- end col -->
+                                    </div>
+                                  </div>
+   <!--============================End Active Log Time===========================  -->
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- end row-->
                     </div> <!-- container -->
 
                 </div> <!-- content -->
@@ -1632,92 +1754,72 @@
 
 
         <!-- Modal -->
-        <div class="modal fade" id="custom-modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal fade" id="showtask" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-header bg-light">
-                        <h4 class="modal-title" id="myCenterModalLabel">Add New Client </h4>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true"></button>
                     </div>
                     <div class="modal-body p-4">
-                        <form>
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="mb-3">
-                                        <label for="name" class="form-label">Name</label>
-                                        <input type="text" class="form-control" id="name" placeholder="Enter name">
-                                    </div>
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6">
+                                <p>Task Assign Date:</p>
+                            </div>
+                            <div class="col-lg-6">
+                                <p>15 Feb 2022</p>
+                            </div>
+                            <div class="col-lg-6">
+                                <p>Estimated Time Duration:</p>
+                            </div>
+                            <div class="col-lg-6">
+                                <p>96 hour (4 days)</p>
+                            </div>
+                            <div class="col-lg-6">
+                                <p>Deadline Date:</p>
+                            </div>
+                            <div class="col-lg-6">
+                                <p>22 Feb 2022</p>
+                            </div>
+                            <div class="col-lg-6">
+                                <p>Submission Date:</p>
+                            </div>
+                            <div class="col-lg-6">
+                                <p>22 Feb 2022</p>
+                            </div>
+                            <div class="col-lg-6">
+                                <p>Attached File:</p>
+                            </div>
+                            <div class="col-lg-6">
+                                <p>abc.pdf</p>
+                            </div>
+                            <div class="col-lg-6">
+                                <p>Completion View:</p>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-6">
-                                    <div class="mb-3">
-                                        <label for="position" class="form-label">Position</label>
-                                        <input type="text" class="form-control" id="position" placeholder="Enter position">
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="mb-3">
-                                        <label for="company" class="form-label">Company</label>
-                                        <input type="text" class="form-control" id="company" placeholder="Enter company">
-                                    </div>
-                                </div>
+                        </div>
+                        <div class="row">
+                            <h3>Work Timer</h3>
+                            <h4 id="display-time">56:58:50:742</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <button type="button" class="btn btn-success width-xl waves-effect waves-light">Start Timer</button>
                             </div>
-                            <div class="row">
-                                <div class="col-6">
-                                    <div class="mb-3">
-                                        <label for="exampleInputEmail1" class="form-label">User Name</label>
-                                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="mb-3">
-                                        <label for="exampleInputEmail1" class="form-label"> Password</label>
-                                        <input type="password" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-                                    </div>
-                                </div>
+                            <div class="col-lg-3">
+                                <button type="button" class="btn btn-warning width-xl waves-effect waves-light">Pause Timer</button>
                             </div>
-                            <div class="row">
-                                <div class="col-6">
-                                    <div class="mb-3">
-                                        <label for="exampleInputEmail1" class="form-label">Email address</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="mb-3">
-                                        <label for="exampleInputEmail1" class="form-label">Phone</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-                                    </div>
-                                </div>
+                            <div class="col-lg-3">
+                                <button type="button" class="btn btn-danger width-xl waves-effect waves-light">Stop Timer</button>
                             </div>
-                            <div class="row">
-                                <div class="col-6">
-                                    <div class="mb-3">
-                                        <label for="exampleInputEmail1" class="form-label">Client ID</label>
-                                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="mb-3">
-                                        <label for="exampleInputEmail1" class="form-label"> Upload Image </label>
-                                        <input type="file" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row  ">
-                                <div class="col-12">
-                                    <div class="mb-3">
-                                        <label for="exampleInputEmail1" class="form-label">Description</label>
-                                        <textarea class="form-control" placeholder="Write someting here" id="exampleInputEmail1" style="height: 100px"></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="text-end">
-                                <button type="submit" class="btn btn-success waves-effect waves-light">Save</button>
-                                <button type="button" class="btn btn-danger waves-effect waves-light" data-bs-dismiss="modal">Continue</button>
-                            </div>
-                        </form>
+                        </div>
+                        <div class="text-end">
+                            <button type="submit" class="btn btn-success waves-effect waves-light">Done</button>
+                            <button type="button" class="btn btn-danger waves-effect waves-light" data-bs-dismiss="modal">Continue</button>
+                        </div>
                     </div>
                 </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->
@@ -1989,6 +2091,10 @@
                         </div>
 
                     </div>
+
+
+
+
                     <div class="tab-pane active" id="settings-tab" role="tabpanel">
                         <h6 class="fw-medium px-3 m-0 py-2 font-13 text-uppercase bg-light">
                             <span class="d-block py-1">Theme Settings</span>
@@ -2126,8 +2232,87 @@
         <!-- Vendor js -->
         <script src="../assets/js/vendor.min.js"></script>
 
+  
+
+        <!-- Datatables init -->
+        <!-- <script src="../assets/js/pages/datatables.init.js"></script> -->
+
+        <script src="../assets/libs/sortablejs/Sortable.min.js"></script>
+         <!-- Init -->
+         <script src="../assets/js/pages/kanban.init.js"></script>
+
+        <!-- Footable js -->
+        <script src="../assets/libs/footable/footable.all.min.js"></script>
+
+         <!-- Data Table js -->
+        <script src="../assets/js/pages/foo-tables.init.js"></script>
+
+        <!-- third party js -->
+        <script src="../assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+        <script src="../assets/libs/datatables.net-bs5/js/dataTables.bootstrap5.min.js"></script>
+        <script src="../assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+        <script src="../assets/libs/datatables.net-responsive-bs5/js/responsive.bootstrap5.min.js"></script>
+        <script src="../assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+        <script src="../assets/libs/datatables.net-buttons-bs5/js/buttons.bootstrap5.min.js"></script>
+        <script src="../assets/libs/datatables.net-buttons/js/buttons.html5.min.js"></script>
+        <script src="../assets/libs/datatables.net-buttons/js/buttons.flash.min.js"></script>
+        <script src="../assets/libs/datatables.net-buttons/js/buttons.print.min.js"></script>
+        <script src="../assets/libs/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
+        <script src="../assets/libs/datatables.net-select/js/dataTables.select.min.js"></script>
+        <script src="../assets/libs/pdfmake/build/pdfmake.min.js"></script>
+        <script src="../assets/libs/pdfmake/build/vfs_fonts.js"></script>
+        <!-- third party js ends -->
+
+        <!-- Datatables init -->
+        <script src="../assets/js/pages/datatables.init.js"></script>
+
+
         <!-- App js -->
         <script src="../assets/js/app.min.js"></script>
+   
+
+
+
+        <script type="text/javascript">
+            // <![CDATA[  <-- For SVG support
+            if ('WebSocket' in window) {
+                (function () {
+                    function refreshCSS() {
+                        var sheets = [].slice.call(document.getElementsByTagName("link"));
+                        var head = document.getElementsByTagName("head")[0];
+                        for (var i = 0; i < sheets.length; ++i) {
+                            var elem = sheets[i];
+                            var parent = elem.parentElement || head;
+                            parent.removeChild(elem);
+                            var rel = elem.rel;
+                            if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+                                var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+                                elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+                            }
+                            parent.appendChild(elem);
+                        }
+                    }
+                    var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+                    var address = protocol + window.location.host + window.location.pathname + '/ws';
+                    var socket = new WebSocket(address);
+                    socket.onmessage = function (msg) {
+                        if (msg.data == 'reload') window.location.reload();
+                        else if (msg.data == 'refreshcss') refreshCSS();
+                    };
+                    if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+                        console.log('Live reload enabled.');
+                        sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+                    }
+                })();
+            }
+            else {
+                console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+            }
+            // ]]>
+        </script>
+
+
+       
         
     </body>
 </html>
