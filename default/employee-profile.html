@@ -10,10 +10,14 @@
         <!-- App favicon -->
         <link rel="shortcut icon" href="../assets/images/favicon.ico">
 
+        <!-- Plugins css -->
+        
+        <link href="../assets/libs/flatpickr/flatpickr.min.css" rel="stylesheet" type="text/css" />
+        <link href="../assets/libs/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css" />
+        <link href="../assets/libs/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css" />
+
         <!-- Bootstrap Tables css -->
         <link href="../assets/libs/bootstrap-table/bootstrap-table.min.css" rel="stylesheet" type="text/css" />
-
-    
 		<!-- App css -->
 		<link href="../assets/css/config/default/bootstrap.min.css" rel="stylesheet" type="text/css" id="bs-default-stylesheet" />
 		<link href="../assets/css/config/default/app.min.css" rel="stylesheet" type="text/css" id="app-default-stylesheet" />
@@ -1331,24 +1335,15 @@
 
                     <!-- Start Content-->
                     <div class="container-fluid">
-                        
                         <!-- start page title -->
                         <div class="row">
                             <div class="col-12">
                                 <div class="page-title-box">
-                                    <div class="page-title-right">
-                                        <ol class="breadcrumb m-0">
-                                            <li class="breadcrumb-item"><a href="javascript: void(0);">UBold</a></li>
-                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Tables</a></li>
-                                            <li class="breadcrumb-item active"> Employee Profile</li>
-                                        </ol>
-                                    </div>
                                     <h4 class="page-title">Employee Profile</h4>
                                 </div>
                             </div>
                         </div>     
                         <!-- end page title --> 
-
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="card">
@@ -1449,8 +1444,7 @@
                                                         <div class="col-md-12 col-sm-12">
                                                             <div class="epa-single">
                                                                 <div class="epa-ed">
-                                                                    <a href="#"> <i class=" fas fa-pen-square"></i></a>
-                                                                    <a href="#" class="ac-btn" data-bs-toggle="modal" data-bs-target="#EditAcInfo"> <i class="fas fa-trash"></i>  </a>
+                                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#editAcInfo"> <i class=" fas fa-pen-square" style="font-size: 24px;"></i></a>
                                                                 </div>
                                                             </div>
                                                         </div> <!-- col end -->                         
@@ -1468,7 +1462,7 @@
                                                     <div class="row">
                                                         <div class="col-lg-12">
                                                             <div class="row ep-personal-data">
-                                                                <h6 class="common-profile-heading">Personal Details </h6>
+                                                                <h4 class="common-profile-heading">Personal Details </h4>
                                                                 <div class="col-md-6">
                                                                     <div class="epa-single">
                                                                         <div class="epa-info-content">
@@ -1644,7 +1638,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="row align-items-center ep-personal-reference">
-                                                        <h6 class="common-profile-heading">Reference </h6>
+                                                        <h4 class="common-profile-heading">Reference </h4>
                                                         <div class="col-md-6">
                                                             <div class="epa-single">
                                                                 <div class="epa-info-content">
@@ -1716,8 +1710,7 @@
                                                         <div class="col-md-12 col-sm-12">
                                                             <div class="epa-single">
                                                                 <div class="epa-ed">
-                                                                    <a href="#"> <i class=" fas fa-pen-square"></i></a>
-                                                                    <a href="#" class="ac-btn" data-bs-toggle="modal" data-bs-target="#EditAcInfo"> <i class="fas fa-trash"></i>  </a>
+                                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#editAcPersonalInfo"> <i class=" fas fa-pen-square" style="font-size: 24px;"></i></a>
                                                                 </div>
                                                             </div>
                                                         </div> <!-- col end -->                         
@@ -1731,10 +1724,10 @@
                                 <div class="card">
                                     <div class="card-body">
                                         <div class="row  align-items-center ep-section-wrapper">
-                                            <h6 class="common-profile-heading"> Education and Training Info </h6>
+                                            <h4 class="common-profile-heading"> Education and Training Info </h4>
                                             <div class="col-lg-11">
                                                 <div class="ep-et-info">
-                                                    <h6 class="common-profile-heading">Last Achieved Educational Degree</h6>
+                                                    <h5 class="common-profile-heading">Last Achieved Educational Degree</h5>
                                                     <div class="row align-items-center">
                                                         <div class="col-md-6">
                                                             <div class="epa-single">
@@ -1810,7 +1803,7 @@
                                                         </div> <!-- col end -->
                                                     </div>
                                                     <div class="row align-items-center ">
-                                                        <h6 class="common-profile-heading"> Training </h6>
+                                                        <h5 class="common-profile-heading"> Training </h5>
                                                         <div class="col-md-6">
                                                             <div class="epa-single">
                                                                 <div class="epa-info-content">
@@ -1885,7 +1878,7 @@
                                                         </div> <!-- col end -->
                                                     </div>
                                                     <div class="row align-items-center ">
-                                                        <h6 class="common-profile-heading"> Exprience Name </h6> 
+                                                        <h5 class="common-profile-heading"> Exprience Name </h5> 
                                                         <div class="col-md-6">
                                                             <div class="epa-single">
                                                                 <div class="epa-info-content">
@@ -1974,8 +1967,7 @@
                                                     <div class="col-md-12 col-sm-12">
                                                         <div class="epa-single">
                                                             <div class="epa-ed">
-                                                                <a href="#"> <i class=" fas fa-pen-square"></i></a>
-                                                                <a href="#" class="ac-btn" data-bs-toggle="modal" data-bs-target="#EditAcInfo"> <i class="fas fa-trash"></i>  </a>
+                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#editAcEducationalInfo"> <i class=" fas fa-pen-square" style="font-size: 24px;"></i></a>
                                                             </div>
                                                         </div>
                                                     </div> <!-- col end -->                         
@@ -1987,10 +1979,131 @@
                                 <div class="card">
                                     <div class="card-body">
                                         <div class="row  align-items-center ep-section-wrapper">
-                                            <h6 class="common-profile-heading"> Assign training Info </h6>
+                                            <h4 class="common-profile-heading"> Promotion Info </h4>
+                                            <div class="col-lg-11">
+                                                <div class="ep-et-info">
+                                                    <div class="row align-items-center">
+                                                        <div class="col-md-6">
+                                                            <div class="epa-single">
+                                                                <div class="epa-info-content">
+                                                                    <ul>
+                                                                        <li class="row align-items-center">
+                                                                            <div class="col-6 ">
+                                                                                <p>Promotion Letter Issure Date</p>
+                                                                            </div>
+                                                                            <div class="col-6 ">
+                                                                                <p>dd/mm/yy</p>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="row align-items-center">
+                                                                            <div class="col-6">
+                                                                                <p>Previous Designation</p>
+                                                                            </div>
+                                                                            <div class="col-6">
+                                                                                <p>FrontEnd Developer</p>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="row align-items-center">
+                                                                            <div class="col-6">
+                                                                                <p>Approval Doc Attachment</p>
+                                                                            </div>
+                                                                            <div class="col-6">
+                                                                                <p>fdasd.pdf</p>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="row align-items-center">
+                                                                            <div class="col-6">
+                                                                                <p>Previous Basic</p>
+                                                                            </div>
+                                                                            <div class="col-6">
+                                                                                <p>20000</p>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="row align-items-center">
+                                                                            <div class="col-6">
+                                                                                <p>Previously Received/Gross Salary</p>
+                                                                            </div>
+                                                                            <div class="col-6">
+                                                                                <p>20000</p>
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div> <!-- col end -->
+                                                        <div class="col-md-6">
+                                                            <div class="epa-single">
+                                                                <div class="epa-info-content">
+                                                                    <ul>
+                                                                        <li class="row align-items-center">
+                                                                            <div class="col-6 ">
+                                                                                <p>Effective Date</p>
+                                                                            </div>
+                                                                            <div class="col-6 ">
+                                                                                <p>dd/mm/yy</p>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="row align-items-center">
+                                                                            <div class="col-6">
+                                                                                <p>Promoted Designation</p>
+                                                                            </div>
+                                                                            <div class="col-6">
+                                                                                <p>FrontEnd Developer</p>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="row align-items-center">
+                                                                            <div class="col-6">
+                                                                                <p>Increment Amount</p>
+                                                                            </div>
+                                                                            <div class="col-6">
+                                                                                <p>2000</p>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="row align-items-center">
+                                                                            <div class="col-6">
+                                                                                <p>New Basic</p>
+                                                                            </div>
+                                                                            <div class="col-6">
+                                                                                <p>20000</p>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="row align-items-center">
+                                                                            <div class="col-6">
+                                                                                <p>New Gross Salary</p>
+                                                                            </div>
+                                                                            <div class="col-6">
+                                                                                <p>20000</p>
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div> <!-- col end -->
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>  <!-- col end -->
+                                            <div class="col-lg-1">
+                                                <div class="row align-items-center">
+                                                    <div class="col-md-12 col-sm-12">
+                                                        <div class="epa-single">
+                                                            <div class="epa-ed">
+                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#editAcPromotionalInfo"> <i class=" fas fa-pen-square" style="font-size: 24px;"></i></a>
+                                                            </div>
+                                                        </div>
+                                                    </div> <!-- col end -->                         
+                                                </div><!-- row end -->
+                                            </div> <!-- col end -->
+                                        </div>
+                                    </div>
+                                </div> <!--end card-->
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="row  align-items-center ep-section-wrapper">
+                                            <h4 class="common-profile-heading"> Assign training Info </h4>
                                             <div class="col-lg-11">
                                                 <div class="row align-items-center ep-assignment-wrapper">
-                                                    <h6 class="common-profile-heading">Training Assignment</h6>
+                                                    <h5 class="common-profile-heading">Training Assignment</h5>
                                                     <div class="col-lg-12">
                                                         <div class="row">
                                                             <div class="col-md-6">
@@ -2130,8 +2243,7 @@
                                                     <div class="col-md-12 col-sm-12">
                                                         <div class="epa-single">
                                                             <div class="epa-ed">
-                                                                <a href="#"> <i class=" fas fa-pen-square"></i></a>
-                                                                <a href="#" class="ac-btn" data-bs-toggle="modal" data-bs-target="#EditAcInfo"> <i class="fas fa-trash"></i>  </a>
+                                                                <a href="#" data-bs-toggle="modal" data-bs-target="#editAcAssignmentInfo"> <i class=" fas fa-pen-square" style="font-size: 24px;"></i></a>
                                                             </div>
                                                         </div>
                                                     </div> <!-- col end -->                         
@@ -2142,10 +2254,7 @@
                                 </div> <!--end card-->
                             </div>
                         </div> <!-- row -->
-                        
-                     
-
-                </div> <!-- content -->
+                    </div> <!-- content -->
 
                 <!-- Footer Start -->
                 <footer class="footer">
@@ -2575,6 +2684,675 @@
         <!-- Right bar overlay-->
         <div class="rightbar-overlay"></div>
 
+
+        <!-- Employee Edit Info Modal -->
+        <div class="modal fade" id="editAcInfo" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header bg-light">
+                        <h4 class="modal-title" id="myCenterModalLabel">Edit </h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true"></button>
+                    </div>
+                    <div class="modal-body p-4">
+                        <form>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label for="name" class="form-label">Name</label>
+                                        <input type="text" class="form-control" id="name" placeholder="Enter name">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="password" class="form-label">Password</label>
+                                        <input type="password" class="form-control" id="password" placeholder="Enter password">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="designation" class="form-label">Designation</label>
+                                        <input type="text" class="form-control" id="designation" placeholder="Enter designation">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="updatepic" class="form-label"> Update Photo </label>
+                                        <input type="file" class="form-control" id="updatepic">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="update" class="form-label"> Update CV </label>
+                                        <input type="file" class="form-control" id="update">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-end">
+                                <button type="submit" class="btn btn-success waves-effect waves-light">Save</button>
+                                <button type="button" class="btn btn-danger waves-effect waves-light" data-bs-dismiss="modal">Continue</button>
+                            </div>
+                        </form>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.Employee Edit Info Modal -->
+        <!-- Employee Personal Details Modal -->
+        <div class="modal fade" id="editAcPersonalInfo" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header bg-light">
+                        <h4 class="modal-title" id="myCenterModalLabel">Edit </h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true"></button>
+                    </div>
+                    <div class="modal-body p-4">
+                        <form>
+                            <h4>Personal Details</h4>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="f-name" class="form-label">Father's Name</label>
+                                        <input type="text" class="form-control" id="f-name" placeholder="Enter father's name">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="m-name" class="form-label">Mother's Name</label>
+                                        <input type="text" class="form-control" id="m-name" placeholder="Enter mother's name">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label for="present-add" class="form-label">Present Address</label>
+                                        <input type="text" class="form-control" id="present-add" placeholder="Enter present address">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label for="permanent-add" class="form-label">Permanent Address</label>
+                                        <input type="text" class="form-control" id="permanent-add" placeholder="Enter permanent address">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="about" class="form-label">About Employee</label>
+                                        <textarea class="form-control" placeholder="Write someting here" id="about" style="height: 100px"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="example-date" class="form-label">Date</label>
+                                        <input type="text" id="basic-datepicker" class="form-control flatpickr-input" placeholder="Select Date">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="mb-3">
+                                        <label for="inputGender" class="form-label">Gender</label>
+                                        <select id="inputGender" class="form-select">
+                                            <option>Male</option>
+                                            <option>Femnale</option>
+                                            <option>Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="mb-3">
+                                        <label for="inputMaritalStatus" class="form-label">Marital Status</label>
+                                        <select id="inputMaritalStatus" class="form-select">
+                                            <option>Unmarried</option>
+                                            <option>Married</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="mb-3">
+                                        <label for="inputReligion" class="form-label">Religion</label>
+                                        <select id="inputReligion" class="form-select">
+                                            <option>Muslim</option>
+                                            <option>Hindu</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="e-contact" class="form-label">Emmergency Contact</label>
+                                        <input type="number" class="form-control" id="e-contact" placeholder="Enter emmergency contact">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">E-mail</label>
+                                        <input type="email" class="form-control" id="email" placeholder="Enter email">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="contact" class="form-label">Phone No</label>
+                                        <input type="number" class="form-control" id="contact" placeholder="Enter phone no">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="nid" class="form-label">NID No</label>
+                                        <input type="number" class="form-control" id="nid" placeholder="Enter NID">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="birth-certificate" class="form-label">Birth Certificate No</label>
+                                        <input type="number" class="form-control" id="birth-certificate" placeholder="Enter birth certificate no">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="passport" class="form-label">Passport No</label>
+                                        <input type="number" class="form-control" id="passport" placeholder="Enter passport no">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="bank-account" class="form-label">Bank Account No</label>
+                                        <input type="number" class="form-control" id="bank-account" placeholder="Enter bank account no">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="example-date2" class="form-label">Joining Date</label>
+                                        <input type="text" id="humanfd-datepicker" class="form-control flatpickr-input" placeholder="Select date">
+                                    </div>
+                                </div>
+                            </div>
+                            <h4>Reference</h4>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="ref-name1" class="form-label">Reference Info 1</label>
+                                        <textarea class="form-control" placeholder="Write name here" id="ref-name1" style="height: 100px"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="ref-name2" class="form-label">Reference Info 2</label>
+                                        <textarea class="form-control" placeholder="Write name here" id="ref-name2" style="height: 100px"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="ref-relation1" class="form-label">Relation With Referel 1</label>
+                                        <input type="text" class="form-control" id="ref-relation1" placeholder="Relation">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="ref-relation2" class="form-label">Relation With Referel 2</label>
+                                        <input type="text" class="form-control" id="ref-relation2"  placeholder="Relation">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="ref-contact1" class="form-label">Reference Contact No</label>
+                                        <input type="number" class="form-control" id="ref-contact1" placeholder="Enter phone no">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="ref-contact2" class="form-label">Reference Contact No</label>
+                                        <input type="number" class="form-control" id="ref-contact2" placeholder="Enter phone no">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-end">
+                                <button type="submit" class="btn btn-success waves-effect waves-light">Save</button>
+                                <button type="button" class="btn btn-danger waves-effect waves-light" data-bs-dismiss="modal">Continue</button>
+                            </div>
+                        </form>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.Employee Personal Details Modal -->
+         <!-- Employee Educational Details Modal -->
+         <div class="modal fade" id="editAcEducationalInfo" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header bg-light">
+                        <h4 class="modal-title" id="myCenterModalLabel">Edit </h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true"></button>
+                    </div>
+                    <div class="modal-body p-4">
+                        <form>
+                            <h4>Last Achieved Educational Degree</h4>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label for="degree-name" class="form-label">Degree Name</label>
+                                        <input type="text" class="form-control" id="degree-name" placeholder="Enter degree name">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label for="uni-name" class="form-label">University / Institute</label>
+                                        <input type="text" class="form-control" id="uni-name" placeholder="Enter university name">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="mb-3">
+                                        <label for="inputYear" class="form-label">Passing Year</label>
+                                        <select id="inputYear" class="form-select">
+                                            <option value="">
+                                                Choose passing year
+                                            </option>
+                                            <option value="2025">
+                                                2025
+                                            </option>
+                                            <option value="2024">
+                                                2024
+                                            </option>
+                                            <option value="2023">
+                                                2023
+                                            </option>
+                                            <option value="2022">
+                                                2022
+                                            </option>
+                                            <option value="2021">
+                                                2021
+                                            </option>
+                                            <option value="2020">
+                                                2020
+                                            </option>
+                                            <option value="2019">
+                                                2019
+                                            </option>
+                                            <option value="2018">
+                                                2018
+                                            </option>
+                                            <option value="2017">
+                                                2017
+                                            </option>
+                                            <option value="2016">
+                                                2016
+                                            </option>
+                                            <option value="2015">
+                                                2015
+                                            </option>
+                                            <option value="2014">
+                                                2014
+                                            </option>
+                                            <option value="2013">
+                                                2013
+                                            </option>
+                                            <option value="2012">
+                                                2012
+                                            </option>
+                                            <option value="2011">
+                                                2011
+                                            </option>
+                                            <option value="2010">
+                                                2010
+                                            </option>
+                                            <option value="2009">
+                                                2009
+                                            </option>
+                                            <option value="2008">
+                                                2008
+                                            </option>
+                                            <option value="2007">
+                                                2007
+                                            </option>
+                                            <option value="2006">
+                                                2006
+                                            </option>
+                                            <option value="2005">
+                                                2005
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="mb-3">
+                                        <label for="result" class="form-label">Result</label>
+                                        <input type="text" class="form-control" id="result" placeholder="Enter result">
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="mb-3">
+                                        <label for="uploadcv" class="form-label"> Upload CV </label>
+                                        <input type="file" class="form-control" id="uploadcv" placeholder="Enter email">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label for="major-name" class="form-label">Major Name</label>
+                                        <input type="text" class="form-control" id="major-name" placeholder="Enter major name">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label for="reward-name" class="form-label">Achieved Reward <span style="display:block; font-size:10px;">(If any)</span></label>
+                                        <input type="text" class="form-control" id="reward-name" placeholder="Enter reward name">
+                                    </div>
+                                </div>
+                            </div>
+                            <h4>Training</h4>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="training-name" class="form-label">Training Name</label>
+                                        <input type="text" class="form-control" id="training-name" placeholder="Enter training name">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="topic" class="form-label">Topic</label>
+                                        <input type="text" class="form-control" id="topic" placeholder="Enter topic">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="institute-name" class="form-label">Institute Name</label>
+                                        <input type="text" class="form-control" id="institute-name" placeholder="Enter institute name">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="date" class="form-label">Duration</label>
+                                        <input type="text" id="inputDate" class="form-control flatpickr-input" placeholder="Select Date">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="date1" class="form-label">Training Period</label>
+                                        <input class="form-control" id="date1" type="date" name="date">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="location" class="form-label">Location</label>
+                                        <input type="text" class="form-control" id="location" placeholder="Enter location name">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label for="uploaddoc" class="form-label"> Upload Document </label>
+                                        <input type="file" class="form-control" id="uploaddoc">
+                                    </div>
+                                </div>
+                            </div>
+                            <h4>Experience</h4>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="company-name" class="form-label">Company Name</label>
+                                        <input type="text" class="form-control" id="company-name" placeholder="Enter company name">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="respons" class="form-label">Responsibility</label>
+                                        <input type="text" class="form-control" id="respons" placeholder="Enter responsibility">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="experience" class="form-label">Experience Area</label>
+                                        <input type="text" class="form-control" id="experience" placeholder="Enter experience">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="date2" class="form-label">Duration</label>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="date3" class="form-label">From Date</label>
+                                        <input type="text" id="basic-datepicker" class="form-control flatpickr-input" placeholder="Select Date">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="date4" class="form-label">End Date</label>
+                                        <input class="form-control" id="date4" type="date" name="date">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="location" class="form-label">Company Location</label>
+                                        <input type="text" class="form-control" id="location" placeholder="Enter location">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="uploaddocment" class="form-label"> Upload Document </label>
+                                        <input type="file" class="form-control" id="uploaddocment">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-end">
+                                <button type="submit" class="btn btn-success waves-effect waves-light">Save</button>
+                                <button type="button" class="btn btn-danger waves-effect waves-light" data-bs-dismiss="modal">Continue</button>
+                            </div>
+                        </form>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.Employee Educational Details Modal -->
+        <!-- Employee Promotional Info Modal -->
+        <div class="modal fade" id="editAcPromotionalInfo" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header bg-light">
+                        <h4 class="modal-title" id="myCenterModalLabel">Edit </h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true"></button>
+                    </div>
+                    <div class="modal-body p-4">
+                        <form>
+                            <h4>Promotion Info</h4>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="date7" class="form-label">Promotion Letter Issue Date</label>
+                                        <input class="form-control" id="date7" type="date" name="date">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="date8" class="form-label">Effective Date</label>
+                                        <input class="form-control" id="date8" type="date" name="date">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="prev-desig" class="form-label">Previous Designation</label>
+                                        <input type="text" class="form-control" id="prev-desig" placeholder="Enter location">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="promoted-desig" class="form-label">Promoted Designation</label>
+                                        <input type="text" class="form-control" id="promoted-desig" placeholder="Enter location">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="approvaldoc" class="form-label">Approval Doc Attachment </label>
+                                        <input type="file" class="form-control" id="approvaldoc">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="inc-amount" class="form-label">Increment Amount</label>
+                                        <input type="number" class="form-control" id="inc-amount" placeholder="Enter amount">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="pre-basic" class="form-label">Previous Basic</label>
+                                        <input type="number" class="form-control" id="pre-basic">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="new-basic" class="form-label">New Basic</label>
+                                        <input type="number" class="form-control" id="new-basic">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="pre-salary" class="form-label">Previous Received Salary</label>
+                                        <input type="number" class="form-control" id="pre-salary">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="new-salary" class="form-label">New Gross Salary</label>
+                                        <input type="number" class="form-control" id="new-salary">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-end">
+                                <button type="submit" class="btn btn-success waves-effect waves-light">Save</button>
+                                <button type="button" class="btn btn-danger waves-effect waves-light" data-bs-dismiss="modal">Continue</button>
+                            </div>
+                        </form>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.Employee Promotional Info Modal -->
+        <!-- Employee Assignment Info Modal -->
+        <div class="modal fade" id="editAcAssignmentInfo" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header bg-light">
+                        <h4 class="modal-title" id="myCenterModalLabel">Edit </h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true"></button>
+                    </div>
+                    <div class="modal-body p-4">
+                        <form>
+                            <h4>Training Assignment</h4>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label for="training-name" class="form-label">Training Program Name</label>
+                                        <input type="text" class="form-control" id="training-name" placeholder="Enter training program name">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="date5" class="form-label">Training Start Date</label>
+                                        <input class="form-control" id="date5" type="date" name="date">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="date6" class="form-label">End Date</label>
+                                        <input class="form-control" id="date6" type="date" name="date">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="date2" class="form-label">Duration</label>
+                                        <input class="form-control" id="date2" type="date" name="date">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="mb-3">
+                                        <label for="location" class="form-label">Location</label>
+                                        <input type="text" class="form-control" id="location" placeholder="Enter location">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label for="uploadapproval" class="form-label"> Approval Doc Attachment </label>
+                                        <input type="file" class="form-control" id="uploadapproval">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label for="abouttraining" class="form-label">About Training</label>
+                                        <textarea class="form-control" placeholder="Write someting here" id="abouttraining" style="height: 100px"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-end">
+                                <button type="submit" class="btn btn-success waves-effect waves-light">Save</button>
+                                <button type="button" class="btn btn-danger waves-effect waves-light" data-bs-dismiss="modal">Continue</button>
+                            </div>
+                        </form>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.Employee Assignment Info Modal -->
+
+
+
+        <script>
+            $(function () {
+                $('#inputDate').flatpicker({
+            enableTime: true,
+            dateFormat: "Y-m-d H:i",
+        });
+    });
+        </script>
         <!-- Vendor js -->
         <script src="../assets/js/vendor.min.js"></script>
 
@@ -2583,6 +3361,13 @@
 
         <!-- Init js -->
         <script src="../assets/js/pages/bootstrap-tables.init.js"></script>
+
+         <!-- Plugins js-->
+         <script src="../assets/libs/flatpickr/flatpickr.min.js"></script>
+         <script src="../assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+
+         <!-- Init js-->
+        <script src="../assets/js/pages/form-pickers.init.js"></script>
 
         <!-- App js -->
         <script src="../assets/js/app.min.js"></script>

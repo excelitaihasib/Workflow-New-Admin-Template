@@ -1,0 +1,64 @@
+#assign-project{
+    table {
+        tr {
+            vertical-align: middle;
+        }
+        tbody {           
+                 tr{
+                     a{
+                        margin: 0 0 10px -12px;
+                    
+                     }
+                     td{ 
+                            .avatar-group-item-add{
+                                border-radius: 50%;
+                                color: #fff;
+                                background-color: #6658dd;
+                                border-color: #6658dd;
+                                padding: 10px;
+                                justify-content: center;
+                                align-items: center;
+                                padding-left: 12px;
+                            }
+                        
+                     }
+                 }
+             }
+         }
+         #assignedEmployee{
+             .modal-body{
+                 .employee-modal-inner{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background: #6658dd;
+                    color: #fff !important;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    margin-bottom: 20px;
+                    border-radius: 5px;
+                    box-shadow: 0 3px 6px #6658dd;
+                    .employee-img img{
+                        width: 65px;
+                        height: 65px;
+                        padding: 10px;
+                        border-radius: 50%;
+
+                    }
+                    .employee-info h4{
+                        color: #fff;
+                    }
+                 }
+
+             }
+
+         }
+         
+}
+table {
+    tr {
+        vertical-align: middle;
+    }
+}
+
+   
