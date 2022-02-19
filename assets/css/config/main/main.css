@@ -446,4 +446,81 @@
   padding: 5px 0;
 }
 
+.spd-bottom .spdb-assign-person-wrapper .spdb-assign-person-inner {
+  display: flex;
+  justify-content: space-between;
+}
+.spd-bottom .spdb-assign-person-wrapper .spdb-assign-person-inner .spdb-assign-person-single {
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.spd-bottom .spdb-assign-person-wrapper .spdb-assign-person-inner .spdb-assign-person-single .spdb-aps-thumb {
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 2px 2px #000;
+}
+.spd-bottom .spdb-assign-person-wrapper .spdb-assign-person-inner .spdb-assign-person-single .spdb-aps-thumb a {
+  width: 100px;
+  height: 100px;
+  display: block;
+}
+.spd-bottom .spdb-assign-person-wrapper .spdb-assign-person-inner .spdb-assign-person-single .spdb-aps-thumb a img {
+  width: 100%;
+  height: 100%;
+}
+.spd-bottom .spdb-assign-person-wrapper .spdb-assign-person-inner .spdb-assign-person-single .spdb-aps-content h4 {
+  text-align: center;
+  font-size: 16px;
+}
+.spd-bottom .spdb-assign-person-wrapper .spdb-assign-person-inner .spdb-assign-person-single .spdb-aps-content h4 .ap-name {
+  display: block;
+  font-size: 14px;
+}
+
+#assign-project table tr {
+  vertical-align: middle;
+}
+#assign-project table tbody tr a {
+  margin: 0 0 10px -12px;
+}
+#assign-project table tbody tr td .avatar-group-item-add {
+  border-radius: 50%;
+  color: #fff;
+  background-color: #6658dd;
+  border-color: #6658dd;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  padding-left: 12px;
+}
+#assign-project #assignedEmployee .modal-body .employee-modal-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #6658dd;
+  color: #fff !important;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 3px 6px #6658dd;
+}
+#assign-project #assignedEmployee .modal-body .employee-modal-inner .employee-img img {
+  width: 65px;
+  height: 65px;
+  padding: 10px;
+  border-radius: 50%;
+}
+#assign-project #assignedEmployee .modal-body .employee-modal-inner .employee-info h4 {
+  color: #fff;
+}
+
+table tr {
+  vertical-align: middle;
+}
+
 /*# sourceMappingURL=main.css.map */
