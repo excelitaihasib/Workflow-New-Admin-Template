@@ -37,3 +37,51 @@
 
     }
 }
+
+//single project 
+.spd-bottom{
+    .spdb-assign-person-wrapper{
+        .spdb-assign-person-inner{
+            display: flex;
+            justify-content: space-between;
+            .spdb-assign-person-single{
+                padding: 10px;
+                border-radius: 5px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+
+
+                .spdb-aps-thumb{
+                    overflow: hidden;
+                    border-radius: 50%;
+                    box-shadow: 2px 2px #000;
+                    a{
+                        width: 100px;
+                        height: 100px;
+                        display: block;
+                        img{
+                            width: 100%;
+                            height: 100%;                  
+                        }
+                    }
+  
+
+
+                }
+                .spdb-aps-content{
+                    h4{
+                        text-align: center;
+                        font-size: 16px;
+                        .ap-name{
+                            display: block;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
