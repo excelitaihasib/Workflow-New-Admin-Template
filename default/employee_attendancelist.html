@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-
         <meta charset="utf-8" />
-        <title>Dashboard 2 | UBold - Responsive Admin Dashboard Template</title>
+        <title>Contacts & Members Listing | UBold - Responsive Admin Dashboard Template</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
         <meta content="Coderthemes" name="author" />
@@ -11,13 +10,16 @@
         <!-- App favicon -->
         <link rel="shortcut icon" href="../assets/images/favicon.ico">
 
-        <!-- plugin css -->
-        <link href="../assets/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css" />
+        <!-- third party css -->
+        <link href="../assets/libs/datatables.net-bs5/css/dataTables.bootstrap5.min.css" rel="stylesheet" type="text/css" />
+        <link href="../assets/libs/datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css" rel="stylesheet" type="text/css" />
+        <link href="../assets/libs/datatables.net-buttons-bs5/css/buttons.bootstrap5.min.css" rel="stylesheet" type="text/css" />
+        <link href="../assets/libs/datatables.net-select-bs5/css//select.bootstrap5.min.css" rel="stylesheet" type="text/css" />
+        <!-- third party css end -->
 
         <!-- App css -->
         <link href="../assets/css/config/default/bootstrap.min.css" rel="stylesheet" type="text/css" id="bs-default-stylesheet" />
         <link href="../assets/css/config/default/app.min.css" rel="stylesheet" type="text/css" id="app-default-stylesheet" />
-        <link href="../assets/css/config/main/main.css" rel="stylesheet" type="text/css" />
 
         <link href="../assets/css/config/default/bootstrap-dark.min.css" rel="stylesheet" type="text/css" id="bs-dark-stylesheet" />
         <link href="../assets/css/config/default/app-dark.min.css" rel="stylesheet" type="text/css" id="app-dark-stylesheet" />
@@ -25,13 +27,15 @@
         <!-- icons -->
         <link href="../assets/css/icons.min.css" rel="stylesheet" type="text/css" />
 
+        <link rel="stylesheet" href="../assets/css/sStyle.css">
+
     </head>
 
     <!-- body start -->
-    <body class="loading" data-layout='{"mode": "light", "width": "fluid", "menuPosition": "fixed", "sidebar": { "color": "light", "size": "default", "showuser": false}, "topbar": {"color": "dark"}, "showRightSidebarOnPageLoad": true}'>
+    <body class="loading" id="assign-project" data-layout='{"mode": "light", "width": "fluid", "menuPosition": "fixed", "sidebar": { "color": "light", "size": "default", "showuser": false}, "topbar": {"color": "dark"}, "showRightSidebarOnPageLoad": true}'>
 
         <!-- Begin page -->
-        <div id="wrapper">
+        <div id="wrapper" >
 
             <!-- Topbar Start -->
             <div class="navbar-custom">
@@ -1320,7 +1324,7 @@
                 <!-- Sidebar -left -->
 
             </div>
-            <!-- Left Sidebar End -->
+            <!-- ========== Left Sidebar End ========== -->
 
             <!-- ============================================================== -->
             <!-- Start Page Content here -->
@@ -1330,498 +1334,68 @@
                 <div class="content">
 
                     <!-- Start Content-->
-                    <div class="container-fluid ">
-                        
+                    <div class="container-fluid">
                         <!-- start page title -->
                         <div class="row">
                             <div class="col-12">
                                 <div class="page-title-box">
-                                    <div class="page-title-right">
-                                        <ol class="breadcrumb m-0">
-                                            <li class="breadcrumb-item"><a href="javascript: void(0);">UBold</a></li>
-                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboards</a></li>
-                                            <li class="breadcrumb-item active">Dashboard 2</li>
-                                        </ol>
-                                    </div>
-                                    <h4 class="page-title">Dashboard 2(Employee)</h4>
+                                    <h4 class="page-title">Employee Attendance List</h4>
                                 </div>
                             </div>
                         </div>     
                         <!-- end page title --> 
-                        <div class="row employee-daily-info">
-                            <div class="col-md-6 col-xl-4">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="row employee-winfo-item align-items-center">
-                                            <div class="col-md-6">
-                                                <div class="ewi-icon " style=" background:#2f647c;border-radius: 30px; color:  #ffffff;">
-                                                    <p style="color:white">Check In & <span style="color:white"> Check Out </span></p> 
-                                                  
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6 d-flex ">
-                                                <div class="ewi-content">
-                                                    <div class="row">
-                                                        <div class="col-12">
-                                                            <p style="color:green; font-weight:bold" > Check In Time <span>  8:55 AM</span></p> <br>
-                                                            <p style="color:red; font-weight:bold" > Check Out Time <span>  5:00 PM</span></p>
-                                                        </div>
-                                                    </div>                                    
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> <!-- end card-->
-                            </div> <!-- end col -->
-                            <div class="col-md-6 col-xl-4">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="row employee-winfo-item align-items-center">
-                                            <div class="col-md-6">
-                                                <div class="ewi-icon">
-                                                    <p> Projects <span>  </span></p>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6 d-flex ">
-                                                <div class="ewi-content">
-                                                    <div class="row">
-                                                        <div class="col-md-6">
-                                                            <p>In Progress</p>
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <p> 5</p>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="row">
-                                                        <div class="col-md-6">
-                                                            <p> Done </p>
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <p> 20 </p>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> <!-- end card-->
-                            </div> <!-- end col -->
-                            <div class="col-md-6 col-xl-4">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="row employee-winfo-item align-items-center">
-                                            <div class="col-md-6">
-                                                <div class="ewi-icon">
-                                                    <p> Task <span>  </span></p>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6 d-flex ">
-                                                <div class="ewi-content">
-                                                    <div class="row">
-                                                        <div class="col-md-6">
-                                                            <p>In Progress</p>
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <p> 10</p>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="row">
-                                                        <div class="col-md-6">
-                                                            <p> Done </p>
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <p> 10 </p>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="row">
-                                                        <div class="col-md-6">
-                                                            <p> Deadline Over </p>
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <p> 10 </p>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> <!-- end card-->
-                            </div> <!-- end col -->
-                            <div class="col-md-6 col-xl-4">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="row employee-winfo-item align-items-center">
-                                            <div class="col-md-6">
-                                                <div class="ewi-icon">
-                                                    <p> Attendance <span>  </span></p>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6 d-flex ">
-                                                <div class="ewi-content">
-                                                    <div class="row align-items-center">
-                                                        <div class="col-md-6">
-                                                            <p>Working Day Of this Month</p>
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <p> 22</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-md-6">
-                                                            <p> My Attendance </p>
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <p> 20 </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> <!-- end card-->
-                            </div> <!-- end col -->
-                            <div class="col-md-6 col-xl-4">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="row employee-winfo-item align-items-center">
-                                            <div class="col-md-6">
-                                                <div class="ewi-icon">
-                                                    <p> Leave <span>  </span></p>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6 d-flex ">
-                                                <div class="ewi-content">
-                                                    <div class="row align-items-center">
-                                                        <div class="col-md-6">
-                                                            <p>Total Leave </p>
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <p> 22</p>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> <!-- end card-->
-                            </div> <!-- end col -->
-                            <div class="col-md-6 col-xl-4">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="row employee-winfo-item align-items-center">
-                                            <div class="col-md-6">
-                                                <div class="ewi-icon">
-                                                    <p>Training Assignment <span>  </span></p>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6 d-flex ">
-                                                <div class="ewi-content">
-                                                    <div class="row align-items-center">
-                                                        <div class="col-md-6">
-                                                            <p>Total  </p>
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <p> 01</p>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> <!-- end card-->
-                            </div> <!-- end col -->
-
-                        </div> <!-- end row -->
-                        <div class="row eeca-wrapper">
-                            <div class="col-lg-8">
-                                <!-- chart content start -->
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <div class="dchart-item">
-                                                    <p>My Project</p>
-                                                    <div class="dchart-figure">
-                                                        <canvas id="myproject"></canvas>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div><!-- end col-->
-                                    
-                                    <div class="col-md-6">
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <div class="dchart-item">
-                                                    <p>My Tickets</p>
-                                                    <div class="dchart-figure">
-                                                        <canvas id="myticket"></canvas>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div><!-- end col-->
-                                </div> <!--end row-->
-                                <!-- chart content end -->
-                                <div class="row leave-event">
-                                    <div class="col-md-6">
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <div class="leave-event-item">
-                                                        <h6>Leave-List</h6>
-                                                        <div class="leave-wrapper">
-                                                            <div class="leave-according-person">
-                                                                <div class="lap-wrapper">
-                                                                    <ul class="lap-menu">
-                                                                        <li><p>Total Leave <span> 22</span> </p></li>
-                                                                        <li><p>Spend <span> 10 </span> </p></li>
-                                                                        <li><p>Available <span> 12 </span> </p></li>
-                                                                    </ul>
-                                                                </div>
-
-                                                                <ul class="leave-menu">
-                                                                    <li> 
-                                                                         <p>  <i class="fas fa-check-circle"></i>  10 February 22 </p>
-                                                                    </li>
-                                                                    <li> 
-                                                                         <p>  <i class="fas fa-check-circle"></i>  14 February 22 </p>
-                                                                    </li>
-                                                                    <li> 
-                                                                         <p>  <i class="fas fa-check-circle"></i>  21 February 22 </p>
-                                                                    </li>
-                                                                    <li> 
-                                                                         <p> <i class="fas fa-check-circle"></i> 09 March 22 </p>
-                                                                    </li>
-                                                                    <li> 
-                                                                         <p> <i class="fas fa-check-circle"></i> 09 March 22 </p>
-                                                                    </li>
-                                                                    <li> 
-                                                                         <p> <i class="fas fa-check-circle"></i> 09 March 22 </p>
-                                                                    </li>
-                                                                    <li> 
-                                                                         <p> <i class="fas fa-check-circle"></i> 09 March 22 </p>
-                                                                    </li>
-
-                                                                </ul>
-                                                            </div>
-                                                        </div>                                                  
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div> <!-- end col-->
-                                    <div class="col-md-6">
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <div class="leave-event-item">
-                                                        <h6>Event & Announcement</h6>
-                                                        <div class="event-Announcement" >
-                                                            <ul>
-                                                                <li > 
-                                                                    <a href="#" > <i class="far fa-calendar"></i>  <p> 50% sale on software <span> 50% sale on CRM </span></p></a>                                                            
-                                                                </li>                                           
-                                                                <li > 
-                                                                    <a href="#" > <i class="far fa-calendar"></i>  <p> 50% sale on software <span> 50% sale on CRM </span></p></a> 
-                                                                    
-                                                                </li>   
-                
-                                                                <li > 
-                                                                    <a href="#" > <i class="fas fa-bullhorn announce-icon text-danger"></i>  <p>  Resheduling Team Meeting <span> Meeting will held at 4.00 p.m</span></p>  </a> 
-                                                                    
-                                                                </li>                                           
-                                                   
-                                                                <li > 
-                                                                    <a href="#" > <i class="fas fa-bullhorn announce-icon text-danger"></i>  <p>  Resheduling Team Meeting <span> Meeting will held at 4.00 p.m</span></p>  </a> 
-                                                                    
-                                                                </li>  
-                
-                                                                <li > 
-                                                                    <a href="#" > <i class="far fa-calendar"></i>  <p> 50% sale on software <span> 50% sale on CRM </span></p></a> 
-                                                                    
-                                                                </li>                                           
-                                                                <li > 
-                                                                    <a href="#" > <i class="far fa-calendar"></i>  <p> 50% sale on software <span> 50% sale on CRM </span></p></a> 
-                                                                    
-                                                                </li>   
-                                                                <li > 
-                                                                    <a href="#" > <i class="fas fa-bullhorn announce-icon text-danger"></i>  <p>  Resheduling Team Meeting <span> Meeting will held at 4.00 p.m</span></p>  </a> 
-                                                                    
-                                                                </li>                                           
-                                                   
-                                                                <li > 
-                                                                    <a href="#" > <i class="fas fa-bullhorn announce-icon text-danger"></i>  <p>  Resheduling Team Meeting <span> Meeting will held at 4.00 p.m</span></p>  </a> 
-                                                                    
-                                                                </li>                                                                                                                    
-                                                            </ul>                          
-                                                        </div>
-                         
-                                                    
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div> <!-- end col-->
-                                </div>
-                            </div> <!-- end col-->
-
-                            <div class="col-lg-4">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <!--Activity log part-->
-                                        <div class="adbw-right-wrapper">
-                                            <div class="timeline-wrapper">
-                                                <h6>Project Activity Log</h6>
-                                                <div class="activity-log-container"> 
-                                                    <div class="timeline" >
-                                                        <div class="today mb-3">
-                                                            <p>Today</p>
-                                                        </div>
-                                                        <div class="timeline-container">
-                                                            <div class="timeline-icon"></div>
-                                                            <div class="timeline-body">
-                                                                <p>1 Hours Ago</p>
-                                                                <p><i class="fas fa-clock"></i> 10.10 A.M</p>
-                                                                <p class="timeline-text">
-                                                                    <a href="#" class="employee-name"> Mr. Akkhor </a> edited the milestone of project <a href="#" class="employee-name"> CRM </a>
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="timeline-container">
-                                                            <div class="timeline-icon"></div>
-                                                            <div class="timeline-body">
-                                                                <p>1 Hours Ago</p>
-                                                                <p><i class="fas fa-clock"></i> 10.10 A.M</p>
-                                                                <p class="timeline-text">
-                                                                    <a href="#" class="employee-name"> Mr. Akkhor </a> edited the milestone of project <a href="#" class="employee-name"> CRM </a>
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="timeline-container">
-                                                            <div class="timeline-icon"></div>
-                                                            <div class="timeline-body">
-                                                                <p>1 Hours Ago</p>
-                                                                <p><i class="fas fa-clock"></i> 10.10 A.M</p>
-                                                                <p class="timeline-text">
-                                                                    <a href="#" class="employee-name"> Mr. Akkhor </a> edited the milestone of project <a href="#" class="employee-name"> CRM </a>
-                                                                </p>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="today mb-3">
-                                                            <p>Yesterday</p>
-                                                        </div>
-                                                        <div class="timeline-container">
-                                                            <div class="timeline-icon"></div>
-                                                            <div class="timeline-body">
-                                                                <p>1 Hours Ago</p>
-                                                                <p><i class="fas fa-clock"></i> 10.10 A.M</p>
-                                                                <p class="timeline-text">
-                                                                    <a href="#" class="employee-name"> Mr. Akkhor </a> edited the milestone of project <a href="#" class="employee-name"> CRM </a>
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="timeline-container">
-                                                            <div class="timeline-icon"></div>
-                                                            <div class="timeline-body">
-                                                                <p>1 Hours Ago</p>
-                                                                <p><i class="fas fa-clock"></i> 10.10 A.M</p>
-                                                                <p class="timeline-text">
-                                                                    <a href="#" class="employee-name"> Mr. Akkhor </a> edited the milestone of project <a href="#" class="employee-name"> CRM </a>
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="timeline-container">
-                                                            <div class="timeline-icon"></div>
-                                                            <div class="timeline-body">
-                                                                <p>1 Hours Ago</p>
-                                                                <p><i class="fas fa-clock"></i> 10.10 A.M</p>
-                                                                <p class="timeline-text">
-                                                                    <a href="#" class="employee-name"> Mr. Akkhor </a> edited the milestone of project <a href="#" class="employee-name"> CRM </a>
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="timeline-container">
-                                                            <div class="timeline-icon"></div>
-                                                            <div class="timeline-body">
-                                                                <p>1 Hours Ago</p>
-                                                                <p><i class="fas fa-clock"></i> 10.10 A.M</p>
-                                                                <p class="timeline-text">
-                                                                    <a href="#" class="employee-name"> Mr. Akkhor </a> edited the milestone of project <a href="#" class="employee-name"> CRM </a>
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="timeline-container">
-                                                            <div class="timeline-icon"></div>
-                                                            <div class="timeline-body">
-                                                                <p>1 Hours Ago</p>
-                                                                <p><i class="fas fa-clock"></i> 10.10 A.M</p>
-                                                                <p class="timeline-text">
-                                                                    <a href="#" class="employee-name"> Mr. Akkhor </a> edited the milestone of project <a href="#" class="employee-name"> CRM </a>
-                                                                </p>
-                                                            </div>
-                                                        </div>                                  
-                                                        <div class="today mb-3">
-                                                            <p>Last Weak</p>
-                                                        </div>
-                                                        <div class="timeline-container">
-                                                            <div class="timeline-icon"></div>
-                                                            <div class="timeline-body">
-                                                                <p>1 Hours Ago</p>
-                                                                <p><i class="fas fa-clock"></i> 10.10 A.M</p>
-                                                                <p class="timeline-text">
-                                                                    <a href="#" class="employee-name"> Mr. Akkhor </a> edited the milestone of project <a href="#" class="employee-name"> CRM </a>
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="timeline-container">
-                                                            <div class="timeline-icon"></div>
-                                                            <div class="timeline-body">
-                                                                <p>1 Hours Ago</p>
-                                                                <p><i class="fas fa-clock"></i> 10.10 A.M</p>
-                                                                <p class="timeline-text">
-                                                                    <a href="#" class="employee-name"> Mr. Akkhor </a> edited the milestone of project <a href="#" class="employee-name"> CRM </a>
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="timeline-container">
-                                                            <div class="timeline-icon"></div>
-                                                            <div class="timeline-body">
-                                                                <p>1 Hours Ago</p>
-                                                                <p><i class="fas fa-clock"></i> 10.10 A.M</p>
-                                                                <p class="timeline-text">
-                                                                    <a href="#" class="employee-name"> Mr. Akkhor </a> edited the milestone of project <a href="#" class="employee-name"> CRM </a>
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="timeline-container">
-                                                            <div class="timeline-icon"></div>
-                                                            <div class="timeline-body">
-                                                                <p>1 Hours Ago</p>
-                                                                <p><i class="fas fa-clock"></i> 10.10 A.M</p>
-                                                                <p class="timeline-text">
-                                                                    <a href="#" class="employee-name"> Mr. Akkhor </a> edited the milestone of project <a href="#" class="employee-name"> CRM </a>
-                                                                </p>
-                                                            </div>
-                                                        </div>                              
-                                                    </div>  
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!--Activity log part-->
-                                    </div>
-                                </div>
-                            </div> <!-- end col-->
-
-                           
-                        </div> <!-- end row -->
-
-
-
+                        <div class="row">
+                          <div class="col-12">
+                              <div class="card">
+                                  <div class="card-body">
+                                      <table id="datatable-buttons" class="table table-striped dt-responsive nowrap w-100 project-content-table">
+                                          <thead>
+                                              <tr>
+                                                  <th>Sl.No</th>
+                                                  <th>DATE</th>
+                                                  <th>EMPLOYEE</th>
+                                                  <th>CLOCK IN</th>
+                                                  <th>CLOCK OUT</th>
+                                                  <th>TOTAL HOURS</th>
+                                                  <th>LATE IN HOURS</th>
+                                                  <th>OVER TIME HOURS</th>
+                                                  <th>STATUS(IN/OUT)</th>
+                                                  <th>ACTIONS</th>
+                                              </tr>
+                                          </thead>
+                                          <tbody>
+                                              <tr>
+                                                  <td>1</td>
+                                                  <td>2022/01/27</td>
+                                                  <td>Freddie</td>
+                                                  <td>08:56:15</td>
+                                                  <td>16:34:07</td>
+                                                  <td>7 hrs 37 mins</td>
+                                                  <td>0 hrs 0 mins</td>
+                                                  <td>0 hrs 0 mins</td>
+                                                  <td>on_time</td>
+                                                  <td><i class="fas fa-trash"></i></td>
+                                              </tr>
+                                              <tr>
+                                                <td>2</td>
+                                                <td>2022/01/27</td>
+                                                <td>Frena</td>
+                                                <td>08:56:15</td>
+                                                <td>16:34:07</td>
+                                                <td>7 hrs 37 mins</td>
+                                                <td>0 hrs 0 mins</td>
+                                                <td>0 hrs 0 mins</td>
+                                                <td>on_time</td>
+                                                <td><i class="fas fa-trash"></i></td>
+                                              </tr>
+                                          </tbody>
+                                      </table>
+                                      
+                                  </div> <!-- end card body-->
+                              </div> <!-- end card -->
+                          </div><!-- end col-->
+                        </div>
+                        <!-- end row-->
                     </div> <!-- container -->
 
                 </div> <!-- content -->
@@ -1850,10 +1424,50 @@
             <!-- ============================================================== -->
             <!-- End Page content -->
             <!-- ============================================================== -->
-
-
         </div>
         <!-- END wrapper -->
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="assignedEmployee" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header bg-light">
+                        <h4 class="modal-title" id="myCenterModalLabel">Employee Assigned Project List</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true"></button>
+                    </div>
+                    <div class="modal-body p-4">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-3">
+                                <div class="employee-modal-inner">
+                                    <div class="employee-img">
+                                        <img src="../assets/images/users/user-1.jpg" alt="">
+                                    </div>
+                                    <!-- end employee-img  -->
+                                    <div class="employee-info">
+                                        <h4>Mat Helme</h4>
+                                        <p>Front End</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="employee-modal-inner">
+                                    <div class="employee-img">
+                                        <img src="../assets/images/users/user-2.jpg" alt="">
+                                    </div>
+                                    <!-- end employee-img  -->
+                                    <div class="employee-info">
+                                        <h4>Michael Zenaty</h4>
+                                        <p>Front End</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
 
         <!-- Right Sidebar -->
         <div class="right-bar">
@@ -2257,129 +1871,27 @@
         <!-- Vendor js -->
         <script src="../assets/js/vendor.min.js"></script>
 
-        <!-- Plugins js-->
-        <script src="../assets/libs/jquery-sparkline/jquery.sparkline.min.js"></script>
-        <script src="../assets/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.min.js"></script>
-        <script src="../assets/libs/admin-resources/jquery.vectormap/maps/jquery-jvectormap-world-mill-en.js"></script>
+        <!-- third party js -->
+        <script src="../assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+        <script src="../assets/libs/datatables.net-bs5/js/dataTables.bootstrap5.min.js"></script>
+        <script src="../assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+        <script src="../assets/libs/datatables.net-responsive-bs5/js/responsive.bootstrap5.min.js"></script>
+        <script src="../assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+        <script src="../assets/libs/datatables.net-buttons-bs5/js/buttons.bootstrap5.min.js"></script>
+        <script src="../assets/libs/datatables.net-buttons/js/buttons.html5.min.js"></script>
+        <script src="../assets/libs/datatables.net-buttons/js/buttons.flash.min.js"></script>
+        <script src="../assets/libs/datatables.net-buttons/js/buttons.print.min.js"></script>
+        <script src="../assets/libs/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
+        <script src="../assets/libs/datatables.net-select/js/dataTables.select.min.js"></script>
+        <script src="../assets/libs/pdfmake/build/pdfmake.min.js"></script>
+        <script src="../assets/libs/pdfmake/build/vfs_fonts.js"></script>
+        <!-- third party js ends -->
 
-        <!-- Dashboard 2 init -->
-        <script src="../assets/js/pages/dashboard-2.init.js"></script>
+        <!-- Datatables init -->
+        <script src="../assets/js/pages/datatables.init.js"></script>
 
-        <!-- App js-->
+        <!-- App js -->
         <script src="../assets/js/app.min.js"></script>
-
-        <!-- chartjs cdn -->
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-        <script>
-
-            function myproject(){
-                        const data = {
-                    labels: [
-                        'In Progress',
-                        'Complete',
-                        'Upcoming'
-                    ],
-                    datasets: [{
-                        data: [50, 30, 20],
-                        backgroundColor: [
-                            '#FE8F1C',
-                            '#099F0B',
-                            '#49C9E2'
-                        ],
-                        hoverOffset: 4,
-                        borderWidth: [.5, .5, .5, .5]
-                    }]
-                };
-            
-                // ------------------- Chart Options ------------------
-                const chartOptions = {
-                    plugins: {
-                        responsive: true,
-                        legend: {
-                            labels: {
-                                font: {
-                                    size: 16
-                                },
-                                boxWidth: 48,
-                                padding: 20
-                            },
-                            display: true,
-                            position: "right",
-                            align: "center"
-            
-                        }
-                    }
-                }
-            
-                // ------------------- Chart Config ------------------
-                const config = {
-                    type: 'doughnut',
-                    data: data,
-                    options: chartOptions
-                };
-            
-                // ------------------- Initialize Chart ------------------
-                const myChart = new Chart(
-                    document.getElementById('myproject'),
-                    config
-                );
-            }
-            function myticket(){
-                        const data = {
-                    labels: [
-                        'In Progress',
-                        'Complete',
-                        'In Queue'
-                    ],
-                    datasets: [{
-                        data: [50,20,30],
-                        backgroundColor: [
-                            '#B0DDF9',
-                            '#7B2182',
-                            '#34c4a7'
-                        ],
-                        hoverOffset: 4,
-                        borderWidth: [.5, .5, .5, .5]
-                    }]
-                };
-            
-                // ------------------- Chart Options ------------------
-                const chartOptions = {
-                    plugins: {
-                        responsive: true,
-                        legend: {
-                            labels: {
-                                font: {
-                                    size: 16
-                                },
-                                boxWidth: 48,
-                                padding: 20
-                            },
-                            display: true,
-                            position: "right",
-                            align: "center"
-                        }
-                    }
-                }
-            
-                // ------------------- Chart Config ------------------
-                const config = {
-                    type: 'doughnut',
-                    data: data,
-                    options: chartOptions
-                };
-            
-                // ------------------- Initialize Chart ------------------
-                const myChart = new Chart(
-                    document.getElementById('myticket'),
-                    config
-                );
-            }
-
-            myticket()
-            myproject()
-
-        </script>
-
+        
     </body>
 </html>
