@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Support Tickets & Helpdesk | UBold - Responsive Admin Dashboard Template</title>
+    <title>Datatables | UBold - Responsive Admin Dashboard Template</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
     <meta content="Coderthemes" name="author" />
@@ -14,6 +14,10 @@
     <!-- third party css -->
     <link href="../assets/libs/datatables.net-bs5/css/dataTables.bootstrap5.min.css" rel="stylesheet" type="text/css" />
     <link href="../assets/libs/datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css" rel="stylesheet"
+        type="text/css" />
+    <link href="../assets/libs/datatables.net-buttons-bs5/css/buttons.bootstrap5.min.css" rel="stylesheet"
+        type="text/css" />
+    <link href="../assets/libs/datatables.net-select-bs5/css//select.bootstrap5.min.css" rel="stylesheet"
         type="text/css" />
     <!-- third party css end -->
 
@@ -30,6 +34,10 @@
 
     <!-- icons -->
     <link href="../assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+
+
+    <!-- ---------- Custom CSS ----------- -->
+    <link href="../assets/css/custom.css" rel="stylesheet" type="text/css">
 
 </head>
 
@@ -1374,184 +1382,382 @@
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="javascript: void(0);">UBold</a></li>
-                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Tickets</a></li>
-                                        <li class="breadcrumb-item active">Ticket List</li>
+                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Tables</a></li>
+                                        <li class="breadcrumb-item active">Attendance Report</li>
                                     </ol>
                                 </div>
-                                <h4 class="page-title">Ticket List</h4>
+                                <h4 class="page-title">Attendance Report</h4>
                             </div>
                         </div>
                     </div>
                     <!-- end page title -->
-
-                    <div class="row">
-                        <div class="col-md-6 col-xl-3">
-                            <div class="widget-rounded-circle card">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <div class="avatar-lg rounded-circle bg-primary">
-                                                <i class="fe-tag font-22 avatar-title text-white"></i>
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <div class="text-end">
-                                                <h3 class="text-dark mt-1"><span data-plugin="counterup">3,947</span>
-                                                </h3>
-                                                <p class="text-muted mb-1 text-truncate">Total Tickets</p>
-                                            </div>
-                                        </div>
-                                    </div> <!-- end row-->
-                                </div>
-                            </div> <!-- end widget-rounded-circle-->
-                        </div> <!-- end col-->
-
-                        <div class="col-md-6 col-xl-3">
-                            <div class="widget-rounded-circle card">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <div class="avatar-lg rounded-circle bg-warning">
-                                                <i class="fe-clock font-22 avatar-title text-white"></i>
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <div class="text-end">
-                                                <h3 class="text-dark mt-1"><span data-plugin="counterup">624</span></h3>
-                                                <p class="text-muted mb-1 text-truncate">Pending Tickets</p>
-                                            </div>
-                                        </div>
-                                    </div> <!-- end row-->
-                                </div>
-                            </div> <!-- end widget-rounded-circle-->
-                        </div> <!-- end col-->
-
-                        <div class="col-md-6 col-xl-3">
-                            <div class="widget-rounded-circle card">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <div class="avatar-lg rounded-circle bg-success">
-                                                <i class="fe-check-circle font-22 avatar-title text-white"></i>
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <div class="text-end">
-                                                <h3 class="text-dark mt-1"><span data-plugin="counterup">3195</span>
-                                                </h3>
-                                                <p class="text-muted mb-1 text-truncate">Closed Tickets</p>
-                                            </div>
-                                        </div>
-                                    </div> <!-- end row-->
-                                </div>
-                            </div> <!-- end widget-rounded-circle-->
-                        </div> <!-- end col-->
-
-                        <div class="col-md-6 col-xl-3">
-                            <div class="widget-rounded-circle card">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <div class="avatar-lg rounded-circle bg-danger">
-                                                <i class="fe-trash-2 font-22 avatar-title text-white"></i>
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <div class="text-end">
-                                                <h3 class="text-dark mt-1"><span data-plugin="counterup">128</span></h3>
-                                                <p class="text-muted mb-1 text-truncate">Deleted Tickets</p>
-                                            </div>
-                                        </div>
-                                    </div> <!-- end row-->
-                                </div>
-                            </div> <!-- end widget-rounded-circle-->
-                        </div> <!-- end col-->
-                    </div>
-                    <!-- end row -->
-
                     <div class="row">
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-body">
-                                    <button type="button" data-bs-toggle="modal" data-bs-target="#add-ticket-modal"
-                                        class="btn btn-sm btn-blue waves-effect waves-light float-end">
-                                        <i class="mdi mdi-plus-circle"></i> Add Ticket
-                                    </button>
-                                    <h4 class="header-title mb-4">Manage Tickets</h4>
+                                    <div class="attendance-report-table-cont">
+                                        <div class="mb-2 row">
+                                            <div class="col-md-7">
+                                                <h4>Report of Ahmed Musaberul Khan</h4>
+                                            </div>
+                                            <div class="col-md-5">
 
-                                    <div class="table-responsive">
-                                        <table class="table table-hover m-0 table-centered dt-responsive nowrap w-100"
-                                            id="tickets-table">
-                                            <thead>
-                                                <tr>
-                                                    <th>Sl. No.</th>
-                                                    <th>Ticket ID</th>
-                                                    <th>Project ID</th>
-                                                    <th>Client ID</th>
-                                                    <th>Subject</th>
-                                                    <th>Priority</th>
-                                                    <th>Created Date</th>
-                                                    <th>Deadline Date</th>
-                                                    <th>Status</th>
-                                                    <th class="hidden-sm">Action</th>
-                                                </tr>
-                                            </thead>
-
-                                            <tbody>
-                                                <tr>
-                                                    <td>41256</td>
-                                                    <td>41256</td>
-                                                    <td>41256</td>
-                                                    <td>41256</td>
-                                                    <td>
-                                                        Support for theme
-                                                    </td>
-
-                                                    <td>
-                                                        <span class="badge bg-soft-secondary text-secondary">Low</span>
-                                                    </td>
-                                                    <td>
-                                                        2017/04/28
-                                                    </td>
-
-                                                    <td>
-                                                        2017/04/28
-                                                    </td>
-                                                    <td>
-                                                        <span class="badge bg-success">Open</span>
-                                                    </td>
-                                                    <td>
-                                                        <div class="btn-group dropdown">
-                                                            <a href="javascript: void(0);"
-                                                                class="table-action-btn dropdown-toggle arrow-none btn btn-light btn-sm"
-                                                                data-bs-toggle="dropdown" aria-expanded="false"><i
-                                                                    class="mdi mdi-dots-horizontal"></i></a>
-                                                            <div class="dropdown-menu dropdown-menu-end">
-                                                                <a class="dropdown-item" href="#"><i
-                                                                        class="mdi mdi-pencil me-2 text-muted font-18 vertical-middle"></i>Edit
-                                                                    Ticket</a>
-                                                                <a class="dropdown-item" href="#"><i
-                                                                        class="mdi mdi-check-all me-2 text-muted font-18 vertical-middle"></i>Close</a>
-                                                                <a class="dropdown-item" href="#"><i
-                                                                        class="mdi mdi-delete me-2 text-muted font-18 vertical-middle"></i>Remove</a>
-                                                                <a class="dropdown-item" href="#"><i
-                                                                        class="mdi mdi-star me-2 font-18 text-muted vertical-middle"></i>Mark
-                                                                    as Unread</a>
-                                                            </div>
+                                                <div class="row">
+                                                    <div class="col-5">
+                                                        <p class="mb-0"><span
+                                                                class="mdi mdi-checkbox-blank-circle text-danger me-1"></span>Late/Less
+                                                            working time</p>
+                                                        <p class="mb-0"><span
+                                                                class="mdi mdi-checkbox-blank-circle text-success me-1"></span>Working
+                                                            time</p>
+                                                        <p class="mb-0"><span
+                                                                class="mdi mdi-checkbox-blank-circle text-warning me-1"></span>Late/Less
+                                                            working time</p>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <p class="mb-0"><span
+                                                                class="mdi mdi-checkbox-blank-circle text-primary me-1"></span>Overtime
+                                                        </p>
+                                                        <p class="mb-0"><span
+                                                                class="mdi mdi-checkbox-blank-circle text-dark me-1"></span>Holiday
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-3">
+                                                        <div>
+                                                            <button data-bs-toggle="modal"
+                                                                data-bs-target="#change-request-modal"
+                                                                class="btn btn-primary">Change Request</button>
                                                         </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div style="overflow-x:auto;">
+                                            <!-- ------------  Report Table ---------------- -->
+                                            <table>
+                                                <!-- ------------  1st Row Week ---------------- -->
+                                                <tr>
+                                                    <th class="no-border-right p-2 transfrom-50">Week</th>
+                                                    <td class="no-border">
+                                                        <table class="inner-table">
+                                                            <tr>
+                                                                <td colspan="7" class="no-border-right">Q1</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Sat</td>
+                                                                <td>Sun</td>
+                                                                <td>Mon</td>
+                                                                <td>Tue</td>
+                                                                <td>Wed</td>
+                                                                <td>Thu</td>
+                                                                <td class="no-border-right">Fri</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="7" class="no-border-right"> <span
+                                                                        class="mdi mdi-checkbox-blank text-danger"></span>
+                                                                    0
+                                                                    Hrs 0 Mins</td>
+                                                            </tr>
+                                                        </table>
                                                     </td>
-                                                </tr>                                                
-                                            </tbody>
+                                                    <td class="no-border">
+                                                        <table class="inner-table">
+                                                            <tr>
+                                                                <th colspan="7" class="no-border-right">Q2</th>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Sat</td>
+                                                                <td>Sun</td>
+                                                                <td>Mon</td>
+                                                                <td>Tue</td>
+                                                                <td>Wed</td>
+                                                                <td>Thu</td>
+                                                                <td class="no-border-right">Fri</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="7" class="no-border-right"> <span
+                                                                        class="mdi mdi-checkbox-blank text-danger"></span>
+                                                                    0
+                                                                    Hrs 0 Mins</td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class="no-border">
+                                                        <table class="inner-table">
+                                                            <tr>
+                                                                <th colspan="7" class="no-border-right">Q3</th>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Sat</td>
+                                                                <td>Sun</td>
+                                                                <td>Mon</td>
+                                                                <td>Tue</td>
+                                                                <td>Wed</td>
+                                                                <td>Thu</td>
+                                                                <td class="no-border-right">Fri</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="7" class="no-border-right"> <span
+                                                                        class="mdi mdi-checkbox-blank text-danger"></span>
+                                                                    0
+                                                                    Hrs 0 Mins</td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class="no-border">
+                                                        <table class="inner-table">
+                                                            <tr>
+                                                                <th colspan="7">Q4</th>
+                                                                <th colspan="3">Q5</th>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Sat</td>
+                                                                <td>Sun</td>
+                                                                <td>Mon</td>
+                                                                <td>Tue</td>
+                                                                <td>Wed</td>
+                                                                <td>Thu</td>
+                                                                <td>Fri</td>
+                                                                <td>Sat</td>
+                                                                <td>Sun</td>
+                                                                <td>Mon</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="7"><span
+                                                                        class="mdi mdi-checkbox-blank text-danger"></span>
+                                                                    0
+                                                                    Hrs 0 Mins</td>
+                                                                <td colspan="3"><span
+                                                                        class="mdi mdi-checkbox-blank text-danger"></span>
+                                                                    0
+                                                                    Hrs 0 Mins</td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <!-- ------------  2nd Row Month ---------------- -->
+                                                <tr>
+                                                    <th class="no-border-right p-2 transfrom-50">Month</th>
+                                                    <td class="no-border">
+                                                        <table class="inner-table">
+                                                            <tr>
+                                                                <td class="no-border-top"><span
+                                                                        class="mdi mdi-checkbox-blank text-success"></span>
+                                                                    Jan</td>
+                                                                <td class="no-border-top"> <span
+                                                                        class="mdi mdi-checkbox-blank text-danger"></span>
+                                                                    Feb</td>
+                                                                <td class="no-border-top no-border-right"><span
+                                                                        class="mdi mdi-checkbox-blank text-success"></span>
+                                                                    Mar</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>0 hrs <br>
+                                                                    0 Mins
+                                                                </td>
+                                                                <td>0 hrs <br>
+                                                                    0 Mins
+                                                                </td>
+                                                                <td class="no-border-right">
+                                                                    0 hrs <br>
+                                                                    0 Mins
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class="no-border">
+                                                        <table class="inner-table">
+                                                            <tr>
+                                                                <td class="no-border-top"><span
+                                                                        class="mdi mdi-checkbox-blank text-success"></span>
+                                                                    Apr</td>
+                                                                <td class="no-border-top"><span
+                                                                        class="mdi mdi-checkbox-blank text-success"></span>
+                                                                    May</td>
+                                                                <td class="no-border-top no-border-right"><span
+                                                                        class="mdi mdi-checkbox-blank text-success"></span>
+                                                                    Jun</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>0 hrs <br>
+                                                                    0 Mins
+                                                                </td>
+                                                                <td>0 hrs <br>
+                                                                    0 Mins
+                                                                </td>
+                                                                <td class="no-border-right">
+                                                                    0 hrs <br>
+                                                                    0 Mins
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class="no-border">
+                                                        <table class="inner-table">
+                                                            <tr>
+                                                                <td class="no-border-top"><span
+                                                                        class="mdi mdi-checkbox-blank text-warning"></span>
+                                                                    Jul</td>
+                                                                <td class="no-border-top"><span
+                                                                        class="mdi mdi-checkbox-blank text-primary"></span>
+                                                                    Aug</td>
+                                                                <td class="no-border-top no-border-right"><span
+                                                                        class="mdi mdi-checkbox-blank text-success"></span>
+                                                                    Sep</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>0 hrs <br>
+                                                                    0 Mins
+                                                                </td>
+                                                                <td>0 hrs <br>
+                                                                    0 Mins
+                                                                </td>
+                                                                <td class="no-border-right">
+                                                                    0 hrs <br>
+                                                                    0 Mins
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class="no-border">
+                                                        <table class="inner-table">
+                                                            <tr>
+                                                                <td class="no-border-top"><span
+                                                                        class="mdi mdi-checkbox-blank text-primary"></span>
+                                                                    Oct</td>
+                                                                <td class="no-border-top"><span
+                                                                        class="mdi mdi-checkbox-blank text-warning"></span>
+                                                                    Nov</td>
+                                                                <td class="no-border-top"><span
+                                                                        class="mdi mdi-checkbox-blank text-danger"></span>
+                                                                    Dec</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>0 hrs <br>
+                                                                    0 Mins
+                                                                </td>
+                                                                <td>0 hrs <br>
+                                                                    0 Mins
+                                                                </td>
+                                                                <td>
+                                                                    0 hrs <br>
+                                                                    0 Mins
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
 
+                                                </tr>
+                                                <!-- ------------  3rd Row Year ---------------- -->
+                                                <tr>
+                                                    <th class="no-border-right p-2 transfrom-50">Year</th>
+                                                    <td class="no-border">
+                                                        <table class="inner-table">
+                                                            <tr>
+                                                                <td class="no-border-top no-border-right">
+                                                                    <div class="rounded-year">
+                                                                        <div class="rounded-year-inner">
+                                                                            <span>2022</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
 
+                                                    </td>
+                                                    <td class="no-border">
+                                                        <table class="inner-table">
+                                                            <tr>
+                                                                <td class="no-border-top no-border-right">
+                                                                    <div class="rounded-year">
+                                                                        <div class="rounded-year-inner">
+                                                                            <span>2021</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class="no-border">
+                                                        <table class="inner-table">
+                                                            <tr>
+                                                                <td class="no-border-top no-border-right">
+                                                                    <div class="rounded-year">
+                                                                        <div class="rounded-year-inner">
+                                                                            <span>2020</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td class="no-border">
+                                                        <table class="inner-table">
+                                                            <tr>
+                                                                <td class="no-border-top">
+                                                                    <div class="rounded-year">
+                                                                        <div class="rounded-year-inner">
+                                                                            <span>2019</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
 
-                                        </table>
+                                                </tr>
+                                                <!-- ------------  4th Row Year ---------------- -->
+                                                <tr>
+                                                    <th class="no-border-right p-2 transfrom-50">Day</th>
+                                                    <td class="no-border" colspan="2">
+                                                        <table class="inner-table">
+                                                            <tr>
+                                                                <td class="no-border-top no-border-right">
+                                                                    <p>Previous Day</p>
+                                                                    <div class="progress mb-2 progress-xl">
+                                                                        <div class="progress-bar bg-success"
+                                                                            role="progressbar" style="width: 75%"
+                                                                            aria-valuenow="75" aria-valuemin="0"
+                                                                            aria-valuemax="100"></div>
+                                                                    </div>
+                                                                    <p class="mb-0">Absent</p>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+
+                                                    </td>
+                                                    <td class="no-border" colspan="2">
+                                                        <table class="inner-table">
+                                                            <tr>
+                                                                <td class="no-border-top">
+                                                                    <p>Today</p>
+                                                                    <div class="progress mb-2 progress-xl">
+                                                                        <div class="progress-bar bg-primary"
+                                                                            role="progressbar" style="width: 75%"
+                                                                            aria-valuenow="75" aria-valuemin="0"
+                                                                            aria-valuemax="100"></div>
+                                                                    </div>
+                                                                    <p class="mb-0">00:00</p>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+
+                                        </div>
+
                                     </div>
-                                </div>
-                            </div>
-                        </div><!-- end col -->
+                                </div> <!-- end card body-->
+                            </div> <!-- end card -->
+                        </div><!-- end col-->
                     </div>
-                    <!-- end row -->
+                    <!-- end row-->
+
+
+
+
 
                 </div> <!-- container -->
 
@@ -2018,97 +2224,55 @@
 
 
 
-     <!-- -----------------------------------------------------------------------------------------
-    -------------------------------  Add Ticket List Modal Start   --------------------------------
+
+    <!-- -----------------------------------------------------------------------------------------
+    -------------------------------  Change Request Modal Start   --------------------------------
     -------------------------------------------------------------------------------------------- -->
-    <div id="add-ticket-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    <div id="change-request-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
         aria-hidden="true" style="display: none;">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <form action="">
                     <div class="modal-header">
-                        <h4 class="modal-title">Add Ticket</h4>
+                        <h4 class="modal-title">Change Request</h4>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body p-4">
                         <div class="row">
+
                             <div class="col-12">
                                 <div class="mb-3">
-                                    <label for="field-1" class="form-label">Subject</label>
-                                    <input type="text" class="form-control" id="field-1" placeholder="Subject">
+                                    <label for="field-1" class="form-label">Date</label>
+                                    <input type="date" class="form-control" id="field-1">
                                 </div>
                             </div>
-                            <div class="col-6">
+                            <div class="col-12">
                                 <div class="mb-3">
-                                    <label for="field-2" class="form-label">Ticket ID</label>
-                                    <input type="text" class="form-control" id="field-2" placeholder="Ticket ID">
+                                    <label for="field-3" class="form-label">Attachment</label>
+                                    <input type="file" class="form-control" id="field-3">
                                 </div>
                             </div>
-                            <div class="col-6">
+                            <div class="col-12">
                                 <div class="mb-3">
-                                    <label for="field-3" class="form-label">Project ID</label>
-                                    <input type="text" class="form-control" id="field-3" placeholder="Project ID">
+                                    <label for="field-4" class="form-label">Reason</label>
+                                    <textarea rows="4" class="form-control" id="field-4"
+                                        placeholder="Reason"></textarea>
                                 </div>
                             </div>
-                            <div class="col-6">
-                                <div class="mb-3">
-                                    <label for="field-4" class="form-label">Client ID</label>
-                                    <input type="text" class="form-control" id="field-4" placeholder="Client ID">
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="mb-3">
-                                    <label for="field-5" class="form-label">Created Date</label>
-                                    <input type="date" class="form-control" id="field-5">
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="mb-3">
-                                    <label for="field-6" class="form-label">Deadline Date</label>
-                                    <input type="date" class="form-control" id="field-6">
-                                </div>
-                            </div>
-
-                            <div class="col-6">
-                                <div class="mb-3">
-                                    <label for="field-1" class="form-label">Priority</label>
-                                    <select class="form-select" id="field-7">
-                                        <option value="low">Low</option>
-                                        <option value="bank">Medium</option>
-                                        <option value="bank">High</option>                                       
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="col-6">
-                                <div class="mb-3">
-                                    <label for="field-1" class="form-label">Status</label>
-                                    <select class="form-select" id="field-7">
-                                        <option value="completed">Completed</option>
-                                        <option value="inprogress">In Progress</option>
-                                        <option value="close">Close</option>                                       
-                                    </select>
-                                </div>
-                            </div>
-
-                           
-                           
-                           
                         </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary waves-effect"
                             data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-info waves-effect waves-light">Add</button>
+                        <button type="button" class="btn btn-info waves-effect waves-light">Submit</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
     <!-- -----------------------------------------------------------------------------------------
-    --------------------------------   Add Ticket List Modal End   -------------------------------
+    --------------------------------   Change Request Modal End   --------------------------------
     -------------------------------------------------------------------------------------------- -->
-
 
 
 
@@ -2120,10 +2284,19 @@
     <script src="../assets/libs/datatables.net-bs5/js/dataTables.bootstrap5.min.js"></script>
     <script src="../assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
     <script src="../assets/libs/datatables.net-responsive-bs5/js/responsive.bootstrap5.min.js"></script>
+    <script src="../assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="../assets/libs/datatables.net-buttons-bs5/js/buttons.bootstrap5.min.js"></script>
+    <script src="../assets/libs/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="../assets/libs/datatables.net-buttons/js/buttons.flash.min.js"></script>
+    <script src="../assets/libs/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="../assets/libs/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
+    <script src="../assets/libs/datatables.net-select/js/dataTables.select.min.js"></script>
+    <script src="../assets/libs/pdfmake/build/pdfmake.min.js"></script>
+    <script src="../assets/libs/pdfmake/build/vfs_fonts.js"></script>
     <!-- third party js ends -->
 
-    <!-- Tickets js -->
-    <script src="../assets/js/pages/tickets.js"></script>
+    <!-- Datatables init -->
+    <script src="../assets/js/pages/datatables.init.js"></script>
 
     <!-- App js -->
     <script src="../assets/js/app.min.js"></script>

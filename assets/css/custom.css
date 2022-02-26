@@ -1,0 +1,199 @@
+/*----------------- Product List ----------------- */
+.project-list-card-table {
+    padding: 5px;
+}
+
+.project-list-card-table tr td {
+    padding: 6px;
+    vertical-align: center;
+}
+
+.project-list-card-table tr td span {
+    display: block;
+    background-color: #F4F5F7;
+    border: 1px solid #dadada;
+    padding: 4px 15px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.project-list-nav-tab .nav-tabs {
+    border: none;
+}
+
+.project-list-nav-tab .nav-tabs .nav-link {
+    color: rgb(102, 102, 102);
+    padding: 8px 20px;
+}
+
+.project-list-nav-tab .nav-tabs .nav-link.active {
+    border: none;
+    background-color: #e7e7e7;
+    border-radius: 5px;
+}
+
+
+/*----------------- Single Project Dashboard ----------------- */
+.spd-overview .spd-top {
+    margin-bottom: 30px;
+}
+
+.spd-overview .spd-Overview-top-item {
+    height: 100%;
+}
+
+.spd-overview .spd-Overview-top-item .card {
+    height: 100%;
+}
+
+.spd-overview .spd-middle {
+    margin-bottom: 30px;
+}
+
+.spd-overview .col-lg-4 .card {
+    height: 100%;
+}
+
+.spd-overview .completed-work-circular-progress-bar {
+    width: 100px;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    vertical-align: top;
+}
+
+.spd-overview .completed-work-circular-progress-bar canvas {
+    max-width: 60px;
+    height: auto;
+}
+
+.spd-overview .completed-work-circular-progress-bar strong {
+    position: absolute;
+    top: 9px;
+    left: 3px;
+    width: 100%;
+    text-align: center;
+    line-height: 45px;
+    font-size: 14px;
+}
+
+
+/*----------------- Single Project Milestone ----------------- */
+.project-list-milestone-due-date {
+    display: flex;
+}
+
+.project-list-milestone-due-date div {
+    background-color: #dadada;
+}
+
+.project-list-milestone-due-date div {
+    background-color: #dadada;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.project-list-milestone-due-date div p {
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.project-list-milestone-due-date div p:nth-child(1) {
+    background-color: #e43e3e;
+    padding: 3px 18px;
+    color: white;
+}
+
+.project-list-milestone-due-date div p:nth-child(2) {
+    padding: 15px 18px;
+    color: rgb(39, 39, 39);
+}
+
+.project-list-milestone-due-date div p:nth-child(3) {
+    padding: 0px 10px 5px 10px;
+    color: rgb(39, 39, 39);
+}
+
+
+
+/*----------------- Attendance Report Table ----------------- */
+.attendance-report-table-cont table {
+    width: 100%;
+    border-collapse: collapse;
+    height: 100%;
+}
+
+.attendance-report-table-cont table tr th {
+    border: 1px solid gray;
+    padding: 0px;
+}
+
+.attendance-report-table-cont table tr td {
+    border: 1px solid gray;
+    padding: 0px;
+}
+
+.attendance-report-table-cont table .no-border {
+    border: 0 !important;
+}
+
+.attendance-report-table-cont table .no-border-right {
+    border-right: 0 !important;
+}
+
+.attendance-report-table-cont table .no-border-top {
+    border-top: 0 !important;
+}
+
+.attendance-report-table-cont table .no-border-bottom {
+    border-bottom: 0 !important;
+}
+
+.attendance-report-table-cont table .no-border-left {
+    border-left: 0 !important;
+}
+
+.attendance-report-table-cont .inner-table tr td,
+.attendance-report-table-cont .inner-table tr th {
+    padding: 10px;
+    text-align: center;
+}
+
+.attendance-report-table-cont .transfrom-50 {
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    text-align: center;
+}
+
+.attendance-report-table-cont .rounded-year {
+    display: flex;
+    justify-content: center;
+}
+
+.attendance-report-table-cont .rounded-year .rounded-year-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1ABC9C;
+    color: white;
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
+    -webkit-box-shadow: inset 3px 5px 16px -3px #FFFFFF;
+    box-shadow: inset 3px 5px 16px -3px #FFFFFF;
+}
+
+/* .attendance-report-table-cont .rounded-year{
+    display: inline-block;
+    background-color: #1ABC9C;    
+} */
+.attendance-table-header ul{
+    list-style: none;
+    padding-left: 0;
+}
+.attendance-table-header ul li{
+    display: inline;  
+    margin-right: 8px; 
+}
+.attendance-table-header ul li i{
+    margin-right: 4px;
+}

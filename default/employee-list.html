@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Support Tickets & Helpdesk | UBold - Responsive Admin Dashboard Template</title>
+    <title>Bootstrap Tables | UBold - Responsive Admin Dashboard Template</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
     <meta content="Coderthemes" name="author" />
@@ -11,17 +11,30 @@
     <!-- App favicon -->
     <link rel="shortcut icon" href="../assets/images/favicon.ico">
 
-    <!-- third party css -->
-    <link href="../assets/libs/datatables.net-bs5/css/dataTables.bootstrap5.min.css" rel="stylesheet" type="text/css" />
-    <link href="../assets/libs/datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css" rel="stylesheet"
+
+    <!-- Plugins css -->
+    <link href="../assets/libs/spectrum-colorpicker2/spectrum.min.css" rel="stylesheet" type="text/css">
+    <link href="../assets/libs/flatpickr/flatpickr.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/libs/clockpicker/bootstrap-clockpicker.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/libs/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet"
         type="text/css" />
-    <!-- third party css end -->
+    <link href="../assets/libs/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet"
+        type="text/css" />
+
+
+
+    <!-- Bootstrap Tables css -->
+    <link href="../assets/libs/datatables.net-bs5/css/dataTables.bootstrap5.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/libs/bootstrap-table/bootstrap-table.min.css" rel="stylesheet" type="text/css" />
+
+
 
     <!-- App css -->
     <link href="../assets/css/config/default/bootstrap.min.css" rel="stylesheet" type="text/css"
         id="bs-default-stylesheet" />
     <link href="../assets/css/config/default/app.min.css" rel="stylesheet" type="text/css"
         id="app-default-stylesheet" />
+    <link href="../assets/css/config/main/main.css" rel="stylesheet" type="text/css">
 
     <link href="../assets/css/config/default/bootstrap-dark.min.css" rel="stylesheet" type="text/css"
         id="bs-dark-stylesheet" />
@@ -299,7 +312,7 @@
                                     <div class="notify-icon bg-info">
                                         <i class="mdi mdi-comment-account-outline"></i>
                                     </div>
-                                    <p class="notify-details">Caleb Flakelar commented on Admin
+                                    <p class="notify-details"> Caleb Flakelar commented on Admin
                                         <small class="text-muted">4 days ago</small>
                                     </p>
                                 </a>
@@ -1363,10 +1376,8 @@
 
         <div class="content-page">
             <div class="content">
-
                 <!-- Start Content-->
                 <div class="container-fluid">
-
                     <!-- start page title -->
                     <div class="row">
                         <div class="col-12">
@@ -1374,187 +1385,68 @@
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="javascript: void(0);">UBold</a></li>
-                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Tickets</a></li>
-                                        <li class="breadcrumb-item active">Ticket List</li>
+                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Tables</a></li>
+                                        <li class="breadcrumb-item active">View Employee</li>
                                     </ol>
                                 </div>
-                                <h4 class="page-title">Ticket List</h4>
+                                <h4 class="page-title"> View Employee </h4>
                             </div>
                         </div>
                     </div>
-                    <!-- end page title -->
 
-                    <div class="row">
-                        <div class="col-md-6 col-xl-3">
-                            <div class="widget-rounded-circle card">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <div class="avatar-lg rounded-circle bg-primary">
-                                                <i class="fe-tag font-22 avatar-title text-white"></i>
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <div class="text-end">
-                                                <h3 class="text-dark mt-1"><span data-plugin="counterup">3,947</span>
-                                                </h3>
-                                                <p class="text-muted mb-1 text-truncate">Total Tickets</p>
-                                            </div>
-                                        </div>
-                                    </div> <!-- end row-->
-                                </div>
-                            </div> <!-- end widget-rounded-circle-->
-                        </div> <!-- end col-->
-
-                        <div class="col-md-6 col-xl-3">
-                            <div class="widget-rounded-circle card">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <div class="avatar-lg rounded-circle bg-warning">
-                                                <i class="fe-clock font-22 avatar-title text-white"></i>
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <div class="text-end">
-                                                <h3 class="text-dark mt-1"><span data-plugin="counterup">624</span></h3>
-                                                <p class="text-muted mb-1 text-truncate">Pending Tickets</p>
-                                            </div>
-                                        </div>
-                                    </div> <!-- end row-->
-                                </div>
-                            </div> <!-- end widget-rounded-circle-->
-                        </div> <!-- end col-->
-
-                        <div class="col-md-6 col-xl-3">
-                            <div class="widget-rounded-circle card">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <div class="avatar-lg rounded-circle bg-success">
-                                                <i class="fe-check-circle font-22 avatar-title text-white"></i>
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <div class="text-end">
-                                                <h3 class="text-dark mt-1"><span data-plugin="counterup">3195</span>
-                                                </h3>
-                                                <p class="text-muted mb-1 text-truncate">Closed Tickets</p>
-                                            </div>
-                                        </div>
-                                    </div> <!-- end row-->
-                                </div>
-                            </div> <!-- end widget-rounded-circle-->
-                        </div> <!-- end col-->
-
-                        <div class="col-md-6 col-xl-3">
-                            <div class="widget-rounded-circle card">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <div class="avatar-lg rounded-circle bg-danger">
-                                                <i class="fe-trash-2 font-22 avatar-title text-white"></i>
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <div class="text-end">
-                                                <h3 class="text-dark mt-1"><span data-plugin="counterup">128</span></h3>
-                                                <p class="text-muted mb-1 text-truncate">Deleted Tickets</p>
-                                            </div>
-                                        </div>
-                                    </div> <!-- end row-->
-                                </div>
-                            </div> <!-- end widget-rounded-circle-->
-                        </div> <!-- end col-->
-                    </div>
-                    <!-- end row -->
-
+                    <!-- ---------------------------  Add Employee Form Start  --------------------------------- -->
                     <div class="row">
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-body">
-                                    <button type="button" data-bs-toggle="modal" data-bs-target="#add-ticket-modal"
-                                        class="btn btn-sm btn-blue waves-effect waves-light float-end">
-                                        <i class="mdi mdi-plus-circle"></i> Add Ticket
-                                    </button>
-                                    <h4 class="header-title mb-4">Manage Tickets</h4>
-
-                                    <div class="table-responsive">
-                                        <table class="table table-hover m-0 table-centered dt-responsive nowrap w-100"
-                                            id="tickets-table">
+                                    <div style="overflow-x:auto;">
+                                        <table id="datatable-buttons"
+                                            class="table dt-responsive nowrap w-100 datatable-buttons">
                                             <thead>
                                                 <tr>
-                                                    <th>Sl. No.</th>
-                                                    <th>Ticket ID</th>
-                                                    <th>Project ID</th>
-                                                    <th>Client ID</th>
-                                                    <th>Subject</th>
-                                                    <th>Priority</th>
-                                                    <th>Created Date</th>
-                                                    <th>Deadline Date</th>
-                                                    <th>Status</th>
-                                                    <th class="hidden-sm">Action</th>
+                                                    <th>Id</th>
+                                                    <th>Photo</th>
+                                                    <th>Name</th>
+                                                    <th>Department</th>
+                                                    <th>Designation</th>
+                                                    <th>Phone</th>
+                                                    <th>Task Status</th>
+                                                    <th>Action</th>
                                                 </tr>
                                             </thead>
-
                                             <tbody>
                                                 <tr>
-                                                    <td>41256</td>
-                                                    <td>41256</td>
-                                                    <td>41256</td>
-                                                    <td>41256</td>
-                                                    <td>
-                                                        Support for theme
+                                                    <td>101</td>
+                                                    <td><img height="80" width="80" class="img-fluid"
+                                                            src="../assets/images/users/user-5.jpg" alt="" srcset="">
                                                     </td>
-
-                                                    <td>
-                                                        <span class="badge bg-soft-secondary text-secondary">Low</span>
+                                                    <td>Jackson Adam</td>
+                                                    <td>Web Development</td>
+                                                    <td>Lead Frontend Developer</td>
+                                                    <td>017987987984</td>
+                                                    <td>1</td>
+                                                    <td>                                                      
+                                                        <button 
+                                                            type="button"
+                                                            data-bs-toggle="modal" 
+                                                            data-bs-target="#add-task-modal"
+                                                            class="btn fs-3 p-0"><span
+                                                                class="mdi mdi-playlist-plus"></span></button>
+                                                        <a href="./employee-profile.html" class="btn fs-3 p-0"><span
+                                                                class="mdi mdi-eye"></span></a>
                                                     </td>
-                                                    <td>
-                                                        2017/04/28
-                                                    </td>
-
-                                                    <td>
-                                                        2017/04/28
-                                                    </td>
-                                                    <td>
-                                                        <span class="badge bg-success">Open</span>
-                                                    </td>
-                                                    <td>
-                                                        <div class="btn-group dropdown">
-                                                            <a href="javascript: void(0);"
-                                                                class="table-action-btn dropdown-toggle arrow-none btn btn-light btn-sm"
-                                                                data-bs-toggle="dropdown" aria-expanded="false"><i
-                                                                    class="mdi mdi-dots-horizontal"></i></a>
-                                                            <div class="dropdown-menu dropdown-menu-end">
-                                                                <a class="dropdown-item" href="#"><i
-                                                                        class="mdi mdi-pencil me-2 text-muted font-18 vertical-middle"></i>Edit
-                                                                    Ticket</a>
-                                                                <a class="dropdown-item" href="#"><i
-                                                                        class="mdi mdi-check-all me-2 text-muted font-18 vertical-middle"></i>Close</a>
-                                                                <a class="dropdown-item" href="#"><i
-                                                                        class="mdi mdi-delete me-2 text-muted font-18 vertical-middle"></i>Remove</a>
-                                                                <a class="dropdown-item" href="#"><i
-                                                                        class="mdi mdi-star me-2 font-18 text-muted vertical-middle"></i>Mark
-                                                                    as Unread</a>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>                                                
+                                                </tr>
                                             </tbody>
-
-
 
                                         </table>
                                     </div>
-                                </div>
-                            </div>
-                        </div><!-- end col -->
+
+                                </div> <!-- end card-body -->
+                            </div> <!-- end card-->
+                        </div> <!-- end col -->
                     </div>
-                    <!-- end row -->
-
+                    <!-- ---------------------------  Add Employee Form End  --------------------------------- -->
                 </div> <!-- container -->
-
             </div> <!-- content -->
 
             <!-- Footer Start -->
@@ -2003,12 +1895,9 @@
                             <a href="https://1.envato.market/uboldadmin" class="btn btn-danger mt-3" target="_blank"><i
                                     class="mdi mdi-basket me-1"></i> Purchase Now</a>
                         </div>
-
                     </div>
-
                 </div>
             </div>
-
         </div> <!-- end slimscroll-menu-->
     </div>
     <!-- /Right-bar -->
@@ -2018,82 +1907,78 @@
 
 
 
-     <!-- -----------------------------------------------------------------------------------------
-    -------------------------------  Add Ticket List Modal Start   --------------------------------
+    <!-- -----------------------------------------------------------------------------------------
+    --------------------------------  Add Task Modal Start   ---------------------------------
     -------------------------------------------------------------------------------------------- -->
-    <div id="add-ticket-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    <div id="add-task-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
         aria-hidden="true" style="display: none;">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <form action="">
                     <div class="modal-header">
-                        <h4 class="modal-title">Add Ticket</h4>
+                        <h4 class="modal-title">Add Task</h4>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body p-4">
                         <div class="row">
+
                             <div class="col-12">
                                 <div class="mb-3">
-                                    <label for="field-1" class="form-label">Subject</label>
-                                    <input type="text" class="form-control" id="field-1" placeholder="Subject">
+                                    <label for="field-1" class="form-label">Title</label>
+                                    <input type="text" class="form-control" id="field-1" placeholder="Title">
                                 </div>
                             </div>
-                            <div class="col-6">
+                            <div class="col-12">
                                 <div class="mb-3">
-                                    <label for="field-2" class="form-label">Ticket ID</label>
-                                    <input type="text" class="form-control" id="field-2" placeholder="Ticket ID">
+                                    <label for="field-2" class="form-label">Description</label>
+                                    <textarea id="field-2" class="form-control" rows="3" ></textarea>                                    
                                 </div>
                             </div>
-                            <div class="col-6">
+                            <div class="col-lg-12">
                                 <div class="mb-3">
-                                    <label for="field-3" class="form-label">Project ID</label>
-                                    <input type="text" class="form-control" id="field-3" placeholder="Project ID">
+                                    <label for="field-3" class="form-label">Assign To</label>
+                                    <select class="form-select" name="" id="field-3">
+                                        <option value="" selected disabled>Select Employee</option>
+                                        <option value="">Employee 1</option>
+                                        <option value="">Employee 2</option>
+                                        <option value="">Employee 3</option>
+                                        <option value="">Employee 4</option>
+                                    </select>                                   
                                 </div>
                             </div>
-                            <div class="col-6">
+                            <div class="col-12">
                                 <div class="mb-3">
-                                    <label for="field-4" class="form-label">Client ID</label>
-                                    <input type="text" class="form-control" id="field-4" placeholder="Client ID">
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="mb-3">
-                                    <label for="field-5" class="form-label">Created Date</label>
-                                    <input type="date" class="form-control" id="field-5">
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="mb-3">
-                                    <label for="field-6" class="form-label">Deadline Date</label>
-                                    <input type="date" class="form-control" id="field-6">
+                                    <label for="field-4" class="form-label">Status</label>
+                                    <select class="form-select" name="" id="field-4">
+                                        <option value="" selected disabled>Select Status</option>
+                                        <option value="">To do</option>
+                                        <option value="">In Progress 2</option>
+                                        <option value="">Testing</option>
+                                        <option value="">Done</option>
+                                    </select>     
                                 </div>
                             </div>
 
-                            <div class="col-6">
+                            <div class="col-lg-6 col-12">
                                 <div class="mb-3">
-                                    <label for="field-1" class="form-label">Priority</label>
-                                    <select class="form-select" id="field-7">
-                                        <option value="low">Low</option>
-                                        <option value="bank">Medium</option>
-                                        <option value="bank">High</option>                                       
-                                    </select>
+                                    <label for="field-5" class="form-label">Start Date</label>
+                                    <input type="date" class="form-control" id="field-5">                              
                                 </div>
                             </div>
 
-                            <div class="col-6">
+                            <div class="col-lg-6 col-12">
                                 <div class="mb-3">
-                                    <label for="field-1" class="form-label">Status</label>
-                                    <select class="form-select" id="field-7">
-                                        <option value="completed">Completed</option>
-                                        <option value="inprogress">In Progress</option>
-                                        <option value="close">Close</option>                                       
-                                    </select>
+                                    <label for="field-6" class="form-label">Deadline</label>
+                                    <input type="date" class="form-control" id="field-6">                              
                                 </div>
                             </div>
 
-                           
-                           
-                           
+                            <div class="col-12">
+                                <div class="mb-3">
+                                    <label for="field-6" class="form-label">Upload Doc</label>
+                                    <input type="file" class="form-control" id="field-6">                              
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -2106,24 +1991,60 @@
         </div>
     </div>
     <!-- -----------------------------------------------------------------------------------------
-    --------------------------------   Add Ticket List Modal End   -------------------------------
+    ---------------------------------    Add Task   Modal End   ----------------------------------
     -------------------------------------------------------------------------------------------- -->
-
 
 
 
     <!-- Vendor js -->
     <script src="../assets/js/vendor.min.js"></script>
 
+
+    <!-- Init js-->
+    <script src="../assets/js/pages/form-wizard.init.js"></script>
+
+
+    <!-- Bootstrap Tables js -->
+    <script src="../assets/libs/bootstrap-table/bootstrap-table.min.js"></script>
+
+
+    <!-- Plugins js-->
+    <script src="../assets/libs/twitter-bootstrap-wizard/jquery.bootstrap.wizard.min.js"></script>
+
+
+    <!-- Init js -->
+    <script src="../assets/js/pages/bootstrap-tables.init.js"></script>
+
+
+
+    <script src="../assets/libs/flatpickr/flatpickr.min.js"></script>
+    <script src="../assets/libs/spectrum-colorpicker2/spectrum.min.js"></script>
+    <script src="../assets/libs/clockpicker/bootstrap-clockpicker.min.js"></script>
+    <script src="../assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+    <!-- Init js-->
+    <script src="../assets/js/pages/form-pickers.init.js"></script>
+
+
     <!-- third party js -->
     <script src="../assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
     <script src="../assets/libs/datatables.net-bs5/js/dataTables.bootstrap5.min.js"></script>
     <script src="../assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
     <script src="../assets/libs/datatables.net-responsive-bs5/js/responsive.bootstrap5.min.js"></script>
+    <script src="../assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="../assets/libs/datatables.net-buttons-bs5/js/buttons.bootstrap5.min.js"></script>
+    <script src="../assets/libs/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="../assets/libs/datatables.net-buttons/js/buttons.flash.min.js"></script>
+    <script src="../assets/libs/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="../assets/libs/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
+    <script src="../assets/libs/datatables.net-select/js/dataTables.select.min.js"></script>
+    <script src="../assets/libs/pdfmake/build/pdfmake.min.js"></script>
+    <script src="../assets/libs/pdfmake/build/vfs_fonts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
     <!-- third party js ends -->
 
-    <!-- Tickets js -->
-    <script src="../assets/js/pages/tickets.js"></script>
+    <!-- Datatables init -->
+    <!-- <script src="../assets/js/pages/datatables.init.js"></script>  -->
+    <script src="../assets/js/pages/datatables-custom.init.js"></script>
 
     <!-- App js -->
     <script src="../assets/js/app.min.js"></script>
