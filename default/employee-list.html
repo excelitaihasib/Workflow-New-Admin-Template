@@ -24,7 +24,9 @@
 
 
     <!-- Bootstrap Tables css -->
+    <link href="../assets/libs/datatables.net-bs5/css/dataTables.bootstrap5.min.css" rel="stylesheet" type="text/css" />
     <link href="../assets/libs/bootstrap-table/bootstrap-table.min.css" rel="stylesheet" type="text/css" />
+
 
 
     <!-- App css -->
@@ -1384,10 +1386,10 @@
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="javascript: void(0);">UBold</a></li>
                                         <li class="breadcrumb-item"><a href="javascript: void(0);">Tables</a></li>
-                                        <li class="breadcrumb-item active">Add Employee Information</li>
+                                        <li class="breadcrumb-item active">View Employee</li>
                                     </ol>
                                 </div>
-                                <h4 class="page-title"> Add Employee Information </h4>
+                                <h4 class="page-title"> View Employee </h4>
                             </div>
                         </div>
                     </div>
@@ -1397,819 +1399,47 @@
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-body">
-                                    <form>
-                                        <div id="progressbarwizard">
+                                    <div style="overflow-x:auto;">
+                                        <table id="datatable-buttons"
+                                            class="table dt-responsive nowrap w-100 datatable-buttons">
+                                            <thead>
+                                                <tr>
+                                                    <th>Id</th>
+                                                    <th>Photo</th>
+                                                    <th>Name</th>
+                                                    <th>Department</th>
+                                                    <th>Designation</th>
+                                                    <th>Phone</th>
+                                                    <th>Task Status</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>101</td>
+                                                    <td><img height="80" width="80" class="img-fluid"
+                                                            src="../assets/images/users/user-5.jpg" alt="" srcset="">
+                                                    </td>
+                                                    <td>Jackson Adam</td>
+                                                    <td>Web Development</td>
+                                                    <td>Lead Frontend Developer</td>
+                                                    <td>017987987984</td>
+                                                    <td>1</td>
+                                                    <td>                                                      
+                                                        <button 
+                                                            type="button"
+                                                            data-bs-toggle="modal" 
+                                                            data-bs-target="#add-task-modal"
+                                                            class="btn fs-3 p-0"><span
+                                                                class="mdi mdi-playlist-plus"></span></button>
+                                                        <a href="./employee-profile.html" class="btn fs-3 p-0"><span
+                                                                class="mdi mdi-eye"></span></a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
 
-                                            <!-- ----------------------------- Form Tab Nav Menu -------------------------------- -->
-                                            <ul class="nav nav-pills bg-light nav-justified form-wizard-header mb-3">
-                                                <li class="nav-item">
-                                                    <a href="#account-info" data-bs-toggle="tab" data-toggle="tab"
-                                                        class="nav-link rounded-0 pt-2 pb-2 active">
-                                                        <i class="mdi mdi-account-circle me-1"></i>
-                                                        <span class="d-none d-sm-inline">Account Info</span>
-                                                    </a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a href="#personal-details" data-bs-toggle="tab" data-toggle="tab"
-                                                        class="nav-link rounded-0 pt-2 pb-2">
-                                                        <i class="mdi mdi-face-profile me-1"></i>
-                                                        <span class="d-none d-sm-inline">Personal Details</span>
-                                                    </a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a href="#education-training" data-bs-toggle="tab" data-toggle="tab"
-                                                        class="nav-link rounded-0 pt-2 pb-2">
-                                                        <i class="mdi mdi-school me-1"></i>
-                                                        <span class="d-none d-sm-inline">Education and Training</span>
-                                                    </a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a href="#promotion-info" data-bs-toggle="tab" data-toggle="tab"
-                                                        class="nav-link rounded-0 pt-2 pb-2">
-                                                        <i class="mdi mdi-transfer-up me-1"></i>
-                                                        <span class="d-none d-sm-inline">Promotion Info</span>
-                                                    </a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a href="#training-assignment" data-bs-toggle="tab"
-                                                        data-toggle="tab" class="nav-link rounded-0 pt-2 pb-2">
-                                                        <i class="mdi mdi-certificate-outline me-1"></i>
-                                                        <span class="d-none d-sm-inline">Training Assignment</span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-
-                                            <!-- ----------------------------- Form Tab Contents Progress -------------------------------- -->
-                                            <div class="tab-content b-0 mb-0 pt-0">
-
-                                                <div id="bar" class="progress mb-3" style="height: 7px;">
-                                                    <div
-                                                        class="bar progress-bar progress-bar-striped progress-bar-animated bg-success">
-                                                    </div>
-                                                </div>
-
-
-                                                <!-- ----------------------------- Form Tab Contents Start -------------------------------- -->
-                                                <!-- -------------------------- Form Tab Contents - Account Info --------------------------- -->
-                                                <div class="tab-pane " id="account-info">
-                                                    <form>
-                                                        <div class="row">
-                                                            <div class="col-lg-6 col-12">
-                                                                <div class="mb-3">
-                                                                    <label for="" class="form-label">
-                                                                        Employee Name <span class="text-danger">*</span>
-                                                                    </label>
-                                                                    <input type="text" class="form-control" id=""
-                                                                        placeholder="Name" required>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-lg-6 col-12">
-                                                                <div class="mb-3">
-                                                                    <label for="" class="form-label">
-                                                                        Employee ID <span class="text-danger">*</span>
-                                                                    </label>
-                                                                    <input type="text" class="form-control" id=""
-                                                                        placeholder="A-Z & 0-9" required>
-                                                                </div>
-                                                            </div>
-
-
-                                                            <div class="col-lg-6">
-                                                                <div class="mb-3">
-                                                                    <label for="" class="form-label">Department <span
-                                                                            class="text-danger">*</span></label>
-
-                                                                    <select class="form-select" name="" id="" required>
-                                                                        <option value="" disabled selected>Select
-                                                                            Department</option>
-                                                                        <option value="">Software Development</option>
-                                                                        <option value="">UI/UX</option>
-                                                                        <option value="">Digital Marketing</option>
-                                                                        <option value="">HR</option>
-                                                                        <option value="">Marketing</option>
-                                                                        <option value="">Animator</option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-
-
-                                                            <div class="col-lg-6">
-                                                                <div class="mb-3">
-                                                                    <label for="" class="form-label">Designation</label>
-                                                                    <input type="text" class="form-control" id=""
-                                                                        placeholder="Employee Designation">
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-lg-6">
-                                                                <div class="mb-3">
-                                                                    <label for="" class="form-label">Status <span
-                                                                            class="text-danger">*</span></label>
-                                                                    <select class="form-select" name="" id="" required>
-                                                                        <option value="">Active</option>
-                                                                        <option value="">Inactive</option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-lg-6">
-                                                                <div class="mb-3">
-                                                                    <label for="" class="form-label">Email <span
-                                                                            class="text-danger">*</span></label>
-                                                                    <input type="text" class="form-control" id=""
-                                                                        placeholder="Official Email" required>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-lg-6">
-                                                                <div class="mb-3">
-                                                                    <label for="" class="form-label">User
-                                                                        Name <span class="text-danger">*</span></label>
-                                                                    <input type="text" class="form-control" id=""
-                                                                        placeholder="A-Z To 0-9 " required>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-lg-6">
-                                                                <div class="mb-3">
-                                                                    <label for="" class="form-label">
-                                                                        Password <span
-                                                                            class="text-danger">*</span></label>
-                                                                    <input type="password" class="form-control" id=""
-                                                                        placeholder="Enter Password">
-                                                                </div>
-                                                            </div>
-
-
-                                                            <div class="col-lg-6">
-                                                                <div class="mb-3">
-                                                                    <label for="" class="form-label">
-                                                                        Upload Image <span
-                                                                            class="text-danger">*</span></label>
-                                                                    <input type="file" class="form-control" id="">
-                                                                    <small>Format: jpg, png, jpeg, size: 1-2 MB</small>
-                                                                </div>
-                                                            </div>
-
-
-                                                            <div class="col-lg-6">
-                                                                <div class="mb-3">
-                                                                    <label for="" class="form-label">
-                                                                        Upload CV </label>
-                                                                    <input type="file" class="form-control" id="">
-                                                                    <small>Format: Doc, PDF, jpg, png, jpeg, Size: 1-5
-                                                                        MB</small>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </form>
-                                                </div>
-
-                                                <!-- ------------------------ Form Tab Contents - Personal Details -------------------------- -->
-                                                <div class="tab-pane" id="personal-details">
-                                                    <form>
-                                                        <h4 class="mt-3 mb-2">Personal Details</h4>
-                                                        <div class="row">
-                                                            <div class="col-lg-6 col-12">
-                                                                <div class="mb-3">
-                                                                    <label for="" class="form-label"> Father's Name
-                                                                        <span class="text-danger">*</span>
-                                                                    </label>
-                                                                    <input type="text" class="form-control" id=""
-                                                                        placeholder="Father's Name" required>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-lg-6 col-12">
-                                                                <div class="mb-3">
-                                                                    <label for="" class="form-label"> Mother's Name
-                                                                        <span class="text-danger">*</span>
-                                                                    </label>
-                                                                    <input type="text" class="form-control" id=""
-                                                                        placeholder="Mother's Name" required>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-12">
-                                                                <div class="mb-3">
-                                                                    <label for="" class="form-label">
-                                                                        Present Address </label>
-                                                                    <input type="text" class="form-control" id=""
-                                                                        placeholder="Present Address">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-12">
-                                                                <div class="mb-3">
-                                                                    <label for="" class="form-label">
-                                                                        Permanent Address <span
-                                                                            class="text-danger">*</span></label>
-                                                                    <input type="text" class="form-control" id=""
-                                                                        placeholder="Permanent Address" required>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-lg-6 col-12">
-                                                                <div class="mb-3">
-                                                                    <label for="" class="form-label">
-                                                                        About Employee </span></label>
-                                                                    <input type="text" class="form-control" id=""
-                                                                        placeholder="About Employee">
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-lg-6 col-12">
-                                                                <div class="mb-3">
-                                                                    <label for="" class="form-label">
-                                                                        Date of Birth <span
-                                                                            class="text-danger">*</span></label>
-                                                                    <input type="date" class="form-control" id="">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-lg-4 col-12">
-                                                                <div class="mb-3">
-                                                                    <label class="form-label"> Gender <span
-                                                                            class="text-danger">*</span></label>
-                                                                    <select class="form-select"
-                                                                        aria-label="Default select example" required>
-                                                                        <option selected disabled>Select Gender</option>
-                                                                        <option value="">Male</option>
-                                                                        <option value="">Female</option>
-                                                                        <option value="">Others</option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-lg-4 col-12">
-                                                                <div class="mb-3">
-                                                                    <label class="form-label"> Marital Status <span
-                                                                            class="text-danger">*</span></label>
-                                                                    <select class="form-select"
-                                                                        aria-label="Default select example" required>
-                                                                        <option selected disabled>Select Marital Status
-                                                                        </option>
-                                                                        <option value=""> Unmarried </option>
-                                                                        <option value="1"> Married </option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-lg-4 col-12">
-                                                                <div class="mb-3">
-                                                                    <label class="form-label"> Religion <span
-                                                                            class="text-danger">*</span></label>
-                                                                    <select class="form-select"
-                                                                        aria-label="Default select example" required>
-                                                                        <option selected disabled>Select Religion
-                                                                        </option>
-                                                                        <option value="">Islam </option>
-                                                                        <option value="">Hindu </option>
-                                                                        <option value="">Christian </option>
-                                                                        <option value="">Buddhiest </option>
-                                                                        <option value="">Others </option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-lg-6 col-12">
-                                                                <div class="mb-3">
-                                                                    <label for="" class="form-label">
-                                                                        Emergency Contact </label>
-                                                                    <input type="text" class="form-control" id=""
-                                                                        placeholder="+88">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-lg-6 col-12">
-                                                                <div class="mb-3">
-                                                                    <label for="" class="form-label">
-                                                                        NID No <span class="text-danger">*</span>
-                                                                    </label>
-                                                                    <input type="text" class="form-control" id=""
-                                                                        placeholder="Must be input Min-10-Char. & Max-17-Char. "
-                                                                        required>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-lg-6 col-12">
-                                                                <div class="mb-3">
-                                                                    <label for="" class="form-label">
-                                                                        Phone No
-                                                                    </label>
-                                                                    <input type="text" class="form-control" id=""
-                                                                        placeholder="+88">
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-lg-6 col-12">
-                                                                <div class="mb-3">
-                                                                    <label for="" class="form-label">
-                                                                        Birth Certificate No </label>
-                                                                    <input type="text" class="form-control" id=""
-                                                                        placeholder=" Birth Certificate No">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-lg-6 col-12">
-                                                                <div class="mb-3">
-                                                                    <label for="" class="form-label">
-                                                                        Passport
-                                                                        No </label>
-                                                                    <input type="text" class="form-control" id=""
-                                                                        placeholder="A-Z To 0-9">
-                                                                </div>
-                                                            </div>
-
-
-
-                                                            <h4 class="mt-3 mb-2">Reference</h4>
-                                                            <div class="row">
-                                                                <div class="col-lg-6">
-                                                                    <div class="mb-3">
-                                                                        <label for="" class="form-label">
-                                                                            Reference No 1 (Name) <span
-                                                                                class="text-danger">*</span></label>
-                                                                        <input type="text" class="form-control" id=""
-                                                                            placeholder="Reference Name" required>
-                                                                    </div>
-                                                                    <div class="mb-3">
-                                                                        <label for="" class="form-label">
-                                                                            Relation
-                                                                            With Referral 1 <span
-                                                                                class="text-danger">*</span></label>
-                                                                        <input type="text" class="form-control" id=""
-                                                                            placeholder="Relation With Referral"
-                                                                            required>
-                                                                    </div>
-                                                                    <div class="mb-3">
-                                                                        <label for="" class="form-label">
-                                                                            Reference 1 Contact No <span
-                                                                                class="text-danger">*</span></label>
-                                                                        <input type="text" class="form-control" id=""
-                                                                            placeholder="Reference Contact No" required>
-                                                                    </div>
-                                                                </div>
-
-                                                                <div class="col-lg-6 col-12">
-                                                                    <div class="mb-3">
-                                                                        <label for="" class="form-label">
-                                                                            Reference No 2 (Name) </label>
-                                                                        <input type="text" class="form-control" id=""
-                                                                            placeholder="Reference Name ">
-                                                                    </div>
-                                                                    <div class="mb-3">
-                                                                        <label for="" class="form-label">
-                                                                            Relation
-                                                                            With Referral 2</label>
-                                                                        <input type="text" class="form-control" id=""
-                                                                            placeholder="Relation With Referral">
-                                                                    </div>
-                                                                    <div class="mb-3">
-                                                                        <label for="" class="form-label">
-                                                                            Reference 2 Contact No </label>
-                                                                        <input type="text" class="form-control" id=""
-                                                                            placeholder="Reference Contact No">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </form>
-                                                </div>
-
-                                                <!-- ------------------------ Form Tab Contents - Education and Training -------------------------- -->
-                                                <div class="tab-pane" id="education-training">
-                                                    <form>
-                                                        <div class="degree-wrapper">
-                                                            <h4 class="mb-3"> Last Achieved Educational Degree </h4>
-                                                            <div class="row">
-                                                                <div class="col-lg-6 col-md-6 col-12">
-                                                                    <div class="mb-3">
-                                                                        <label for="" class="form-label"> Degree
-                                                                            Name <span class="text-danger">*</span>
-                                                                        </label>
-                                                                        <input type="text" class="form-control" id=""
-                                                                            placeholder="Degree Name" required>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-lg-6 col-md-6 col-12">
-                                                                    <div class="mb-3">
-                                                                        <label for="" class="form-label">
-                                                                            University/Institute <span
-                                                                                class="text-danger">*</span></label>
-                                                                        <input type="text" class="form-control" id=""
-                                                                            placeholder="University/Institute Name"
-                                                                            required>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="row">
-                                                                <div class="col-lg-4 col-12">
-                                                                    <div class="mb-3">
-                                                                        <label for="" class="form-label">
-                                                                            Passing Year <span
-                                                                                class="text-danger">*</span>
-                                                                        </label>
-                                                                        <input type="text" class="form-control" id=""
-                                                                            placeholder="Enter passing year" required>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-lg-4 col-12">
-                                                                    <div class="mb-3">
-                                                                        <label for="" class="form-label"> Result <span
-                                                                                class="text-danger">*</span>
-                                                                        </label>
-                                                                        <input type="text" class="form-control" id=""
-                                                                            placeholder="0 or 0.00" required>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-lg-4 col-12">
-                                                                    <div class="mb-3">
-                                                                        <label for="" class="form-label"> Upload
-                                                                            Certificate <span
-                                                                                class="text-danger">*</span></label>
-                                                                        <input type="file" class="form-control" id=""
-                                                                            required>
-                                                                        <small>Format: Doc, PDF, jpg, png, jpeg</small>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="row">
-                                                                <div class="col-lg-6 col-12">
-                                                                    <div class="mb-3">
-                                                                        <label for="" class="form-label"> Major
-                                                                            (Subject's Name) </label>
-                                                                        <input type="text" class="form-control" id=""
-                                                                            placeholder="Enter subject name">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-lg-6 col-12">
-                                                                    <div class="mb-3">
-                                                                        <label for="" class="form-label">
-                                                                            Achieved Reward
-                                                                            (if any) </label>
-                                                                        <input type="text" class="form-control" id=""
-                                                                            placeholder="Achieved Reward">
-                                                                    </div>
-                                                                </div>
-
-                                                            </div>
-                                                        </div>
-                                                        <div class="training-wrapper">
-                                                            <h4 class="mb-3 mt-4"> Training </h4>
-                                                            <div class="row">
-                                                                <div class="col-lg-6 col-12">
-                                                                    <div class="mb-3">
-                                                                        <label for="" class="form-label">
-                                                                            Training Name
-                                                                        </label>
-                                                                        <input type="text" class="form-control" id=""
-                                                                            placeholder="Training Name">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-lg-6 col-12">
-                                                                    <div class="mb-3">
-                                                                        <label for="" class="form-label">
-                                                                            Training Topic
-                                                                        </label>
-                                                                        <input type="text" class="form-control" id=""
-                                                                            placeholder="Training Topic">
-                                                                    </div>
-                                                                </div>
-
-                                                                <div class="col-lg-6 col-12">
-                                                                    <div class="mb-3">
-                                                                        <label for="" class="form-label">
-                                                                            Institute Name
-                                                                        </label>
-                                                                        <input type="text" class="form-control" id=""
-                                                                            placeholder="Institute Name">
-                                                                    </div>
-                                                                </div>
-
-                                                                <div class="col-lg-6 col-12">
-                                                                    <div class="mb-3">
-                                                                        <label for="company" class="form-label">
-                                                                            Location
-                                                                        </label>
-                                                                        <input type="text" class="form-control"
-                                                                            id="company" placeholder="Location">
-                                                                    </div>
-                                                                </div>
-
-                                                                <div class="col-lg-6 col-12">
-                                                                    <div class="mb-3">
-                                                                        <label for="" class="form-label">
-                                                                            Duration
-                                                                        </label>
-                                                                        <input type="text" class="form-control" id=""
-                                                                            placeholder="Duration">
-                                                                    </div>
-                                                                </div>
-
-
-                                                                <div class="col-lg-6 col-12">
-                                                                    <div class="mb-3">
-                                                                        <label for="" class="form-label">
-                                                                            Training Period
-                                                                        </label>
-                                                                        <input type="text" id="range-datepicker"
-                                                                            class="form-control"
-                                                                            placeholder="Training Period">
-
-                                                                    </div>
-                                                                </div>
-
-                                                                <div class="col-lg-6 col-12">
-                                                                    <div class="mb-3">
-                                                                        <label for="" class="form-label"> Upload
-                                                                            Document
-                                                                        </label>
-                                                                        <input type="file" class="form-control" id=""
-                                                                            placeholder="Enter Topic Name ">
-                                                                        <small>Format: jpg, png, jpeg</small>
-                                                                    </div>
-                                                                </div>
-
-
-                                                            </div>
-                                                        </div>
-                                                        <div class="experience-wrapper">
-                                                            <div class="ex-title d-flex justify-content-between mb-3">
-                                                                <h4 class="mt-4"> Experience </h4>
-                                                                <div class="addex">
-                                                                    <button class="btn btn-primary">Add More</button>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="row">
-                                                                <div class="col-lg-6 col-12">
-                                                                    <div class="mb-3">
-                                                                        <label for="" class="form-label">
-                                                                            Company Name
-                                                                        </label>
-                                                                        <input type="text" class="form-control" id=""
-                                                                            placeholder="Company Name">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-lg-6 col-12">
-                                                                    <div class="mb-3">
-                                                                        <label for="" class="form-label"> Job
-                                                                            Title
-                                                                        </label>
-                                                                        <input type="text" class="form-control" id=""
-                                                                            placeholder="Job Title">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-lg-6 col-12">
-                                                                    <div class="mb-3">
-                                                                        <label for="" class="form-label">
-                                                                            Responsibility
-                                                                        </label>
-                                                                        <input type="text" class="form-control" id=""
-                                                                            placeholder="Responsibility">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-lg-6 col-12">
-                                                                    <div class="mb-3">
-                                                                        <label for="" class="form-label">
-                                                                            Experience Area
-                                                                        </label>
-                                                                        <input type="text" class="form-control" id=""
-                                                                            placeholder="Experience Area ">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="row">
-                                                                <div class="col-lg-4 col-md-6 col-12">
-                                                                    <div class="mb-3">
-                                                                        <label for="" class="form-label"> From
-                                                                        </label>
-                                                                        <input type="date" class="form-control" id=""
-                                                                            placeholder="Enter position">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-lg-4 col-md-6 col-12">
-                                                                    <div class="mb-3">
-                                                                        <label for="" class="form-label"> End
-                                                                        </label>
-                                                                        <input type="date" class="form-control" id=""
-                                                                            placeholder="Enter company">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-lg-4 col-md-6 col-12">
-                                                                    <div class="mb-3">
-                                                                        <label for="" class="form-label">
-                                                                            Duration
-                                                                        </label>
-                                                                        <input type="text/number" class="form-control"
-                                                                            id="" placeholder="Enter Duration">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="row">
-                                                                <div class="col-lg-5 col-md-6 col-12">
-                                                                    <div class="mb-3">
-                                                                        <label for="" class="form-label"> Upload
-                                                                            Document </label>
-                                                                        <input type="file" class="form-control" id="">
-                                                                        <small>Format: jpg, png, jpeg</small>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </form>
-                                                </div>
-
-                                                <!-- ------------------------ Form Tab Contents - Promotion Info -------------------------- -->
-                                                <div class="tab-pane active" id="promotion-info">
-                                                    <form>
-                                                        <div class="promoinfo">
-                                                            <h4 class="mb-3"> Promotion Details </h4>
-                                                            <div class="row">
-                                                                <div class="col-lg-6 col-md-6 col-12">
-                                                                    <div class="mb-3">
-                                                                        <label for="" class="form-label">
-                                                                            Promotion
-                                                                            Letter Issuing Date </label>
-                                                                        <input type="date" class="form-control" id=""
-                                                                            placeholder="Enter position">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-lg-6 col-md-6 col-12">
-                                                                    <div class="mb-3">
-                                                                        <label for="" class="form-label">
-                                                                            Effective Date
-                                                                        </label>
-                                                                        <input type="date" class="form-control" id=""
-                                                                            placeholder="Enter company">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="row">
-                                                                <div class="col-lg-4 col-md-6 col-12">
-                                                                    <div class="mb-3">
-                                                                        <label for="" class="form-label">
-                                                                            Previous
-                                                                            Designation </label>
-                                                                        <input type="text" class="form-control" id=""
-                                                                            placeholder="Previous Designation">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-lg-4 col-md-6 col-12">
-                                                                    <div class="mb-3">
-                                                                        <label for="" class="form-label">
-                                                                            Promoted
-                                                                            Designation </label>
-                                                                        <input type="text" class="form-control" id=""
-                                                                            placeholder="Promoted Designation">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-lg-4 col-md-6 col-12">
-                                                                    <div class="mb-3">
-                                                                        <label for="" class="form-label">
-                                                                            Approval Doc
-                                                                            Attachment </label>
-                                                                        <input type="file" class="form-control" id="">
-                                                                        <small>Format: jpg, png, jpeg, doc, pdf size:
-                                                                            1-2 MB.</small>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="row">
-                                                                <div class="col-lg-4 col-md-6 col-12">
-                                                                    <div class="mb-3">
-                                                                        <label for="" class="form-label">
-                                                                            Increment
-                                                                            Amount </label>
-                                                                        <input type="text" class="form-control" id=""
-                                                                            placeholder="Enter subject name">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-lg-4 col-md-6 col-12">
-                                                                    <div class="mb-3">
-                                                                        <label for="" class="form-label">
-                                                                            Previous Basic
-                                                                        </label>
-                                                                        <input type="text" class="form-control" id=""
-                                                                            placeholder="Enter Previous Basic Amount">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-lg-4 col-md-6 col-12">
-                                                                    <div class="mb-3">
-                                                                        <label for="" class="form-label"> New
-                                                                            Basic
-                                                                        </label>
-                                                                        <input type="text" class="form-control" id=""
-                                                                            placeholder="New Basic">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-lg-4 col-md-6 col-12">
-                                                                    <div class="mb-3">
-                                                                        <label for="" class="form-label">
-                                                                            Previous Received Salary </label>
-                                                                        <input type="text" class="form-control" id=""
-                                                                            placeholder="Previous Received Salary">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-lg-4 col-md-6 col-12">
-                                                                    <div class="mb-3">
-                                                                        <label for="" class="form-label"> New
-                                                                            Gross
-                                                                            Salary </label>
-                                                                        <input type="text" class="form-control" id=""
-                                                                            placeholder="Enter New Gross Amount">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </form>
-
-                                                </div>
-
-                                                <!-- ------------------------ Form Tab Contents - Training Assignment -------------------------- -->
-                                                <div class="tab-pane" id="training-assignment">
-                                                    <form>
-                                                        <div class="promoinfo">
-                                                            <h4 class="mb-3"> Training Assignment </h4>
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    <div class="mb-3">
-                                                                        <label for="" class="form-label">
-                                                                            Training
-                                                                            Program Name </label>
-                                                                        <input type="text" class="form-control" id=""
-                                                                            placeholder="Training Program Name">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-lg-4 col-12">
-                                                                    <div class="mb-3">
-                                                                        <label for="" class="form-label"> Start
-                                                                            Date
-                                                                        </label>
-                                                                        <input type="date" class="form-control" id=""
-                                                                            placeholder="Enter company">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-lg-4 col-12">
-                                                                    <div class="mb-3">
-                                                                        <label for="" class="form-label"> End
-                                                                            Date
-                                                                        </label>
-                                                                        <input type="date" class="form-control" id=""
-                                                                            placeholder="Enter company">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-lg-4 col-12">
-                                                                    <div class="mb-3">
-                                                                        <label for="" class="form-label">
-                                                                            Duration
-                                                                        </label>
-                                                                        <input type="text" class="form-control" id=""
-                                                                            placeholder="Enter passing year">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-lg-6 col-12">
-                                                                    <div class="mb-3">
-                                                                        <label for="company" class="form-label">
-                                                                            Attachment
-                                                                        </label>
-                                                                        <input type="file" class="form-control"
-                                                                            id="company">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-lg-6 col-12">
-                                                                    <div class="mb-3">
-                                                                        <label for="company" class="form-label">
-                                                                            Location
-                                                                        </label>
-                                                                        <input type="text" class="form-control"
-                                                                            placeholder="Location" id="company">
-                                                                    </div>
-                                                                </div>
-
-                                                                <div class="col-12">
-                                                                    <div class="mb-3">
-                                                                        <label for="company" class="form-label">
-                                                                            About Training
-                                                                        </label>
-                                                                        <textarea class="form-control" rows="6"
-                                                                            placeholder="About Training"></textarea>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </form>
-                                                </div>
-
-                                                <ul class="list-inline mb-0 wizard">
-                                                    <li class="previous list-inline-item">
-                                                        <a href="javascript: void(0);"
-                                                            class="btn btn-secondary">Previous</a>
-                                                    </li>
-                                                    <li class="next list-inline-item float-end">
-                                                        <a href="javascript: void(0);"
-                                                            class="btn btn-secondary">Next</a>
-                                                    </li>
-                                                </ul>
-
-                                            </div> <!-- tab-content -->
-                                        </div> <!-- end #progressbarwizard-->
-                                    </form>
+                                        </table>
+                                    </div>
 
                                 </div> <!-- end card-body -->
                             </div> <!-- end card-->
@@ -2675,6 +1905,97 @@
     <!-- Right bar overlay-->
     <div class="rightbar-overlay"></div>
 
+
+
+    <!-- -----------------------------------------------------------------------------------------
+    --------------------------------  Add Task Modal Start   ---------------------------------
+    -------------------------------------------------------------------------------------------- -->
+    <div id="add-task-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true" style="display: none;">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <form action="">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Add Task</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body p-4">
+                        <div class="row">
+
+                            <div class="col-12">
+                                <div class="mb-3">
+                                    <label for="field-1" class="form-label">Title</label>
+                                    <input type="text" class="form-control" id="field-1" placeholder="Title">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="mb-3">
+                                    <label for="field-2" class="form-label">Description</label>
+                                    <textarea id="field-2" class="form-control" rows="3" ></textarea>                                    
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="mb-3">
+                                    <label for="field-3" class="form-label">Assign To</label>
+                                    <select class="form-select" name="" id="field-3">
+                                        <option value="" selected disabled>Select Employee</option>
+                                        <option value="">Employee 1</option>
+                                        <option value="">Employee 2</option>
+                                        <option value="">Employee 3</option>
+                                        <option value="">Employee 4</option>
+                                    </select>                                   
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="mb-3">
+                                    <label for="field-4" class="form-label">Status</label>
+                                    <select class="form-select" name="" id="field-4">
+                                        <option value="" selected disabled>Select Status</option>
+                                        <option value="">To do</option>
+                                        <option value="">In Progress 2</option>
+                                        <option value="">Testing</option>
+                                        <option value="">Done</option>
+                                    </select>     
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-12">
+                                <div class="mb-3">
+                                    <label for="field-5" class="form-label">Start Date</label>
+                                    <input type="date" class="form-control" id="field-5">                              
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-12">
+                                <div class="mb-3">
+                                    <label for="field-6" class="form-label">Deadline</label>
+                                    <input type="date" class="form-control" id="field-6">                              
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="mb-3">
+                                    <label for="field-6" class="form-label">Upload Doc</label>
+                                    <input type="file" class="form-control" id="field-6">                              
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary waves-effect"
+                            data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-info waves-effect waves-light">Add</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- -----------------------------------------------------------------------------------------
+    ---------------------------------    Add Task   Modal End   ----------------------------------
+    -------------------------------------------------------------------------------------------- -->
+
+
+
     <!-- Vendor js -->
     <script src="../assets/js/vendor.min.js"></script>
 
@@ -2702,6 +2023,28 @@
     <script src="../assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
     <!-- Init js-->
     <script src="../assets/js/pages/form-pickers.init.js"></script>
+
+
+    <!-- third party js -->
+    <script src="../assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="../assets/libs/datatables.net-bs5/js/dataTables.bootstrap5.min.js"></script>
+    <script src="../assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../assets/libs/datatables.net-responsive-bs5/js/responsive.bootstrap5.min.js"></script>
+    <script src="../assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="../assets/libs/datatables.net-buttons-bs5/js/buttons.bootstrap5.min.js"></script>
+    <script src="../assets/libs/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="../assets/libs/datatables.net-buttons/js/buttons.flash.min.js"></script>
+    <script src="../assets/libs/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="../assets/libs/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
+    <script src="../assets/libs/datatables.net-select/js/dataTables.select.min.js"></script>
+    <script src="../assets/libs/pdfmake/build/pdfmake.min.js"></script>
+    <script src="../assets/libs/pdfmake/build/vfs_fonts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
+    <!-- third party js ends -->
+
+    <!-- Datatables init -->
+    <!-- <script src="../assets/js/pages/datatables.init.js"></script>  -->
+    <script src="../assets/js/pages/datatables-custom.init.js"></script>
 
     <!-- App js -->
     <script src="../assets/js/app.min.js"></script>
