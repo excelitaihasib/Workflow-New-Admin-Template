@@ -15,6 +15,7 @@
         <link href="../assets/libs/datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css" rel="stylesheet" type="text/css" />
         <link href="../assets/libs/datatables.net-buttons-bs5/css/buttons.bootstrap5.min.css" rel="stylesheet" type="text/css" />
         <link href="../assets/libs/datatables.net-select-bs5/css//select.bootstrap5.min.css" rel="stylesheet" type="text/css" />
+        <link href="../assets/libs/dropzone/min/dropzone.min.css" rel="stylesheet" type="text/css" />
         <!-- third party css end -->
 
         <!-- App css -->
@@ -28,6 +29,11 @@
         <link href="../assets/css/icons.min.css" rel="stylesheet" type="text/css" />
 
         <link rel="stylesheet" href="../assets/css/sStyle.css">
+        <style>
+            .responsivetable #datatable-buttons_wrapper .col-sm-12{
+                overflow-x: auto;                
+            }
+        </style>
 
     </head>
 
@@ -1324,7 +1330,7 @@
                 <!-- Sidebar -left -->
 
             </div>
-            <!-- Left Sidebar End -->
+            <!-- ========== Left Sidebar End ========== -->
 
             <!-- ============================================================== -->
             <!-- Start Page Content here -->
@@ -1363,7 +1369,7 @@
                                         Activity Log
                                     </a>
                                 </li>
-                              </ul>
+                                </ul>
                               <div class="tab-content">
     <!--============================Start Task List============================= 2023 -->                                
                                   <div class="tab-pane active" id="task-list-1">
@@ -1436,10 +1442,6 @@
                                             </div> <!-- end card -->
                                         </div> <!-- end col -->
                                       </div>
-                                                                 
-                                      
-                                 
-                                 
                                   </div>
     <!--============================End Task List============================= -->   
     <!--============================Start Kanban Board=============================  -->                            
@@ -1587,8 +1589,11 @@
                                     <div class="row">
                                         <div class="col-12">
                                             <div class="card">
-                                                <div class="card-body">
-                                                    <table id="datatable-buttons" class="table table-striped dt-responsive nowrap w-100 project-content-table">
+                                                <div class="card-header">
+                                                    <button type="button" class="btn btn-danger waves-effect waves-light float-end" data-bs-toggle="modal" data-bs-target="#files-modal"><i class="mdi mdi-plus-circle me-1"></i> Add Files</button>
+                                                </div>
+                                                <div class="card-body responsivetable">
+                                                    <table id="datatable-buttons" class="table table-striped dt-responsive nowrap w-100">
                                                         <thead>
                                                             <tr>
                                                                 <th>Sl No</th>
@@ -1606,10 +1611,8 @@
                                                                 <td>MR. ABC</td>
                                                                 <td>20-03-2022</td>
                                                             </tr>
-                                                           
                                                         </tbody>
                                                     </table>
-                                                    
                                                 </div> <!-- end card body-->
                                             </div> <!-- end card -->
                                         </div><!-- end col-->
@@ -1741,7 +1744,6 @@
                     </div>
                 </footer>
                 <!-- end Footer -->
-
             </div>
 
             <!-- ============================================================== -->
@@ -1752,8 +1754,69 @@
         </div>
         <!-- END wrapper -->
 
-
-        <!-- Modal -->
+        <!-- Files Modal -->
+        <div class="modal fade" id="files-modal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header bg-light">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true"></button>
+                    </div>
+                    <div class="modal-body p-4">
+                        <form action="/"  class=" needs-validation" id="myAwesomeDropzone" data-plugin="dropzone" data-previews-container="#file-previews"
+                            data-upload-preview-template="#uploadPreviewTemplate">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label for="file-info" class="form-label">Files Information</label>
+                                        <input type="text" class="form-control" id="file-info" placeholder="File Information">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="fallback">
+                                <input name="file" type="file" multiple/>
+                            </div>
+                            <div class="row dz-message needsclick">
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label for="validationCustom077" class="form-label">Upload File</label>
+                                        <input type="text" class="form-control text-muted " placeholder="Drop file or click to upload">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Image Preview -->
+                            <div class="dropzone-previews mt-3" id="file-previews"></div>  
+                             <!-- file preview template -->
+                            <div class="d-none" id="uploadPreviewTemplate">
+                                <div class="card mt-1 mb-0 shadow-none border">
+                                    <div class="p-2">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto">
+                                                <img data-dz-thumbnail src="#" class="avatar-sm rounded bg-light" alt="">
+                                            </div>
+                                            <div class="col ps-0">
+                                                <a href="javascript:void(0);" class="text-muted fw-bold" data-dz-name></a>
+                                                <p class="mb-0" data-dz-size></p>
+                                            </div>
+                                            <div class="col-auto">
+                                                <!-- Button -->
+                                                <a href="" class="btn btn-link btn-lg text-muted" data-dz-remove>
+                                                    <i class="dripicons-cross"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-end mt-2">
+                                <button type="submit" class="btn btn-success waves-effect waves-light">Upload</button>
+                                <button type="button" class="btn btn-danger waves-effect waves-light" data-bs-dismiss="modal">Continue</button>
+                            </div>
+                        </form>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+        <!-- Task Modal -->
         <div class="modal fade" id="showtask" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
@@ -1816,7 +1879,7 @@
                                 <button type="button" class="btn btn-danger width-xl waves-effect waves-light">Stop Timer</button>
                             </div>
                         </div>
-                        <div class="text-end">
+                        <div class="text-end mt-2">
                             <button type="submit" class="btn btn-success waves-effect waves-light">Done</button>
                             <button type="button" class="btn btn-danger waves-effect waves-light" data-bs-dismiss="modal">Continue</button>
                         </div>
@@ -2232,14 +2295,12 @@
         <!-- Vendor js -->
         <script src="../assets/js/vendor.min.js"></script>
 
-  
-
         <!-- Datatables init -->
         <!-- <script src="../assets/js/pages/datatables.init.js"></script> -->
 
         <script src="../assets/libs/sortablejs/Sortable.min.js"></script>
          <!-- Init -->
-         <script src="../assets/js/pages/kanban.init.js"></script>
+        <script src="../assets/js/pages/kanban.init.js"></script>
 
         <!-- Footable js -->
         <script src="../assets/libs/footable/footable.all.min.js"></script>
@@ -2261,58 +2322,18 @@
         <script src="../assets/libs/datatables.net-select/js/dataTables.select.min.js"></script>
         <script src="../assets/libs/pdfmake/build/pdfmake.min.js"></script>
         <script src="../assets/libs/pdfmake/build/vfs_fonts.js"></script>
+        <script src="../assets/libs/dropzone/min/dropzone.min.js"></script>
         <!-- third party js ends -->
 
         <!-- Datatables init -->
         <script src="../assets/js/pages/datatables.init.js"></script>
 
+        <!-- Init js-->
+        <script src="../assets/js/pages/form-fileuploads.init.js"></script>
+
 
         <!-- App js -->
         <script src="../assets/js/app.min.js"></script>
-   
-
-
-
-        <script type="text/javascript">
-            // <![CDATA[  <-- For SVG support
-            if ('WebSocket' in window) {
-                (function () {
-                    function refreshCSS() {
-                        var sheets = [].slice.call(document.getElementsByTagName("link"));
-                        var head = document.getElementsByTagName("head")[0];
-                        for (var i = 0; i < sheets.length; ++i) {
-                            var elem = sheets[i];
-                            var parent = elem.parentElement || head;
-                            parent.removeChild(elem);
-                            var rel = elem.rel;
-                            if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
-                                var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-                                elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
-                            }
-                            parent.appendChild(elem);
-                        }
-                    }
-                    var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-                    var address = protocol + window.location.host + window.location.pathname + '/ws';
-                    var socket = new WebSocket(address);
-                    socket.onmessage = function (msg) {
-                        if (msg.data == 'reload') window.location.reload();
-                        else if (msg.data == 'refreshcss') refreshCSS();
-                    };
-                    if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
-                        console.log('Live reload enabled.');
-                        sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
-                    }
-                })();
-            }
-            else {
-                console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
-            }
-            // ]]>
-        </script>
-
-
-       
         
     </body>
 </html>
